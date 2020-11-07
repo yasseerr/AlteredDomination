@@ -130,6 +130,9 @@ Item {
             x: 0
             y: 247
             height: 176
+//            ScrollBar.vertical.interactive:true
+//            ScrollBar.vertical.policy : ScrollBar.AlwaysOn
+
             verticalScrollBarPolicy: 0
             highlightOnFocus: true
             horizontalScrollBarPolicy: 1
@@ -178,6 +181,7 @@ Item {
                     anchors.fill: parent
                     onClicked: {
                         adUnitUI.toAddUnits.forEach(function(element){ cityGraphics.addUnitFromQml(element)})
+                        cityGraphics.setPower(cityGraphics.power + adUnitUI.totalCost)
                         adUnitUI.toAddUnits= [];
                         addedRectangle1.children =[]
                         adUnitUI.totalCost = 0;

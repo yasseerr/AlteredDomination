@@ -50,9 +50,24 @@ int City::income() const
     return m_income;
 }
 
-QList<Unit *> City::units() const
+QMap<int,Unit *> City::units() const
 {
     return m_units;
+}
+
+QList<int> City::neigboursId()
+{
+    return m_neigboursId;
+}
+
+void City::addUnit(Unit *u)
+{
+    m_units.insert(u->id(),u);
+}
+
+void City::removeUnit(int idU)
+{
+    m_units.remove(idU);
 }
 
 void City::setId(int id)
@@ -136,11 +151,25 @@ void City::setIncome(int income)
     emit incomeChanged(m_income);
 }
 
-void City::setUnits(QList<Unit *> units)
+void City::setUnits(QMap<int,Unit *> units)
 {
     if (m_units == units)
         return;
 
     m_units = units;
     emit unitsChanged(m_units);
+}
+
+void City::setNeigboursId(QList<int> neigboursId)
+{
+    if (m_neigboursId == neigboursId)
+        return;
+
+    m_neigboursId = neigboursId;
+    emit neigboursIdChanged(m_neigboursId);
+}
+
+void City::addNeighbour(City *c)
+{
+    this->m_neighbours.append(c);
 }

@@ -33,7 +33,9 @@ SOURCES += \
     graphics/mapview.cpp \
     graphics/citygraphics.cpp \
     domain/unit.cpp \
-    graphics/unitgraphics.cpp
+    graphics/unitgraphics.cpp \
+    graphics/linkgraphics.cpp \
+    domain/linkn.cpp
 
 HEADERS += \
         mainmenu.h \
@@ -43,7 +45,9 @@ HEADERS += \
     graphics/mapview.h \
     graphics/citygraphics.h \
     domain/unit.h \
-    graphics/unitgraphics.h
+    graphics/unitgraphics.h \
+    graphics/linkgraphics.h \
+    domain/linkn.h
 
 FORMS += \
         mainmenu.ui

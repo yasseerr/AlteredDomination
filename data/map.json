@@ -13,7 +13,7 @@
 				"y": 162,
 				"cityType": 10,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [3,5,6,631]
 			},
 			{
 				"id": 2,
@@ -23,7 +23,7 @@
 				"y": 171,
 				"cityType": 5,
 				"income": 9,
-				"neighbours": []
+				"neighbours": [6,4,636,632]
 			},
 			{
 				"id": 3,
@@ -33,7 +33,7 @@
 				"y": 155,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [928,843,1]
 			},
 			{
 				"id": 4,
@@ -43,7 +43,7 @@
 				"y": 160,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [432,843,2]
 			},
 			{
 				"id": 5,
@@ -53,7 +53,7 @@
 				"y": 163,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [631,625,1]
 			},
 			{
 				"id": 6,
@@ -63,10 +63,10 @@
 				"y": 164,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [1,2]
 			}
 		],
-		"capital": 0
+		"capital": 1
 	},
 	{
 		"id": 2,
@@ -82,7 +82,7 @@
 				"y": 139,
 				"cityType": 1,
 				"income": 21,
-				"neighbours": []
+				"neighbours": [8,515,570]
 			},
 			{
 				"id": 8,
@@ -92,10 +92,10 @@
 				"y": 142,
 				"cityType": 1,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [7,351]
 			}
 		],
-		"capital": 0
+		"capital": 7
 	},
 	{
 		"id": 3,
@@ -111,7 +111,7 @@
 				"y": 155,
 				"cityType": 9,
 				"income": 139,
-				"neighbours": []
+				"neighbours": [18,12,17]
 			},
 			{
 				"id": 10,
@@ -121,7 +121,7 @@
 				"y": 159,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [19,18]
 			},
 			{
 				"id": 11,
@@ -131,7 +131,7 @@
 				"y": 158,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [12,824]
 			},
 			{
 				"id": 12,
@@ -141,7 +141,7 @@
 				"y": 156,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [20,11,9,17]
 			},
 			{
 				"id": 13,
@@ -151,7 +151,7 @@
 				"y": 204,
 				"income": 50,
 				"cityType": 2,
-				"neighbours": []
+				"neighbours": [599,14,510]
 			},
 			{
 				"id": 14,
@@ -161,7 +161,7 @@
 				"y": 184,
 				"income": 50,
 				"cityType": 2,
-				"neighbours": []
+				"neighbours": [15,16,13,537]
 			},
 			{
 				"id": 15,
@@ -171,7 +171,7 @@
 				"y": 184,
 				"cityType": 2,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [14,575,543]
 			},
 			{
 				"id": 16,
@@ -181,7 +181,7 @@
 				"y": 170,
 				"cityType": 2,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [17,19,21,14]
 			},
 			{
 				"id": 17,
@@ -191,7 +191,7 @@
 				"y": 161,
 				"cityType": 2,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [18,9,12,16]
 			},
 			{
 				"id": 18,
@@ -201,7 +201,7 @@
 				"y": 158,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [9,17,10]
 			},
 			{
 				"id": 19,
@@ -211,7 +211,7 @@
 				"y": 163,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [10,16,14,577]
 			},
 			{
 				"id": 20,
@@ -221,7 +221,7 @@
 				"y": 154,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [12,823]
 			},
 			{
 				"id": 21,
@@ -231,17 +231,17 @@
 				"y": 169,
 				"cityType": 2,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [16,11,825]
 			}
 		],
-		"capital": 0
+		"capital": 9
 	},
 	{
 		"id": 4,
 		"name": "Andora",
 		"color": "#8b4d43",
 		"flag": "ad",
-		"capital": 0,
+		"capital": 22,
 		"cities": [
 			{
 				"id": 22,
@@ -251,7 +251,7 @@
 				"y": 134,
 				"cityType": 1,
 				"income": 4,
-				"neighbours": []
+				"neighbours": [314,322,763,766]
 			}
 		]
 	},
@@ -260,7 +260,7 @@
 		"name": "Angola",
 		"color": "#c1872f",
 		"flag": "ao",
-		"capital": 0,
+		"capital": 23,
 		"cities": [
 			{
 				"id": 23,
@@ -270,7 +270,7 @@
 				"y": 313,
 				"cityType": 9,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [28,24,26]
 			},
 			{
 				"id": 24,
@@ -280,7 +280,7 @@
 				"y": 317,
 				"cityType": 3,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [266,25,23]
 			},
 			{
 				"id": 25,
@@ -290,7 +290,7 @@
 				"y": 327,
 				"cityType": 6,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [24,26,956]
 			},
 			{
 				"id": 26,
@@ -300,7 +300,7 @@
 				"y": 326,
 				"cityType": 6,
 				"income": 39,
-				"neighbours": []
+				"neighbours": [23,27,25]
 			},
 			{
 				"id": 27,
@@ -310,7 +310,7 @@
 				"y": 336,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [26,586]
 			},
 			{
 				"id": 28,
@@ -320,7 +320,7 @@
 				"y": 305,
 				"cityType": 3,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [23,29,270]
 			},
 			{
 				"id": 29,
@@ -330,7 +330,7 @@
 				"y": 300,
 				"cityType": 3,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [247,270,28]
 			}
 		]
 	},
@@ -339,7 +339,7 @@
 		"name": "Argentina",
 		"color": "#4c2033",
 		"flag": "ar",
-		"capital": 0,
+		"capital": 30,
 		"cities": [
 			{
 				"id": 30,
@@ -349,7 +349,7 @@
 				"y": 402,
 				"cityType": 10,
 				"income": 180,
-				"neighbours": []
+				"neighbours": [920,32,39]
 			},
 			{
 				"id": 31,
@@ -359,7 +359,7 @@
 				"y": 395,
 				"cityType": 7,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [33,32,41,34]
 			},
 			{
 				"id": 32,
@@ -369,7 +369,7 @@
 				"y": 399,
 				"cityType": 7,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [31,30,921,43]
 			},
 			{
 				"id": 33,
@@ -379,7 +379,7 @@
 				"y": 398,
 				"cityType": 7,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [31,173,43,44]
 			},
 			{
 				"id": 34,
@@ -389,7 +389,7 @@
 				"y": 375,
 				"cityType": 7,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [40,41,177,31]
 			},
 			{
 				"id": 35,
@@ -399,7 +399,7 @@
 				"y": 416,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [43,39,36]
 			},
 			{
 				"id": 36,
@@ -409,7 +409,7 @@
 				"y": 441,
 				"cityType": 1,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [35,44,37]
 			},
 			{
 				"id": 37,
@@ -419,7 +419,7 @@
 				"y": 460,
 				"cityType": 1,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [36,38]
 			},
 			{
 				"id": 38,
@@ -429,7 +429,7 @@
 				"y": 470,
 				"cityType": 1,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [37]
 			},
 			{
 				"id": 39,
@@ -439,7 +439,7 @@
 				"y": 415,
 				"cityType": 7,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [30,35]
 			},
 			{
 				"id": 40,
@@ -449,7 +449,7 @@
 				"y": 367,
 				"cityType": 7,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [89,644,34]
 			},
 			{
 				"id": 41,
@@ -459,7 +459,7 @@
 				"y": 377,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [641,42,34,31]
 			},
 			{
 				"id": 42,
@@ -469,7 +469,7 @@
 				"y": 378,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [41,642,104,921]
 			},
 			{
 				"id": 43,
@@ -479,7 +479,7 @@
 				"y": 409,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [33,32,35,44]
 			},
 			{
 				"id": 44,
@@ -489,7 +489,7 @@
 				"y": 423,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [175,43,36]
 			}
 		]
 	},
@@ -498,17 +498,17 @@
 		"name": "Armenia",
 		"color": "#9d2018",
 		"flag": "am",
-		"capital": 0,
+		"capital": 45,
 		"cities": [
 			{
 				"id": 45,
 				"name": "Yerevan",
 				"country": "Armenia",
-				"x": 635,
-				"y": 138,
+				"x": 642,
+				"y": 141,
 				"cityType": 7,
 				"income": 27,
-				"neighbours": []
+				"neighbours": [69,329,837,838]
 			}
 		]
 	},
@@ -517,7 +517,7 @@
 		"name": "Aruba",
 		"color": "#ff9933",
 		"flag": "aw",
-		"capital": 0,
+		"capital": 46,
 		"cities": [
 			{
 				"id": 46,
@@ -527,7 +527,7 @@
 				"y": 240,
 				"cityType": 3,
 				"income": 4,
-				"neighbours": []
+				"neighbours": [929,930,674]
 			}
 		]
 	},
@@ -536,7 +536,7 @@
 		"name": "Australia",
 		"color": "#a8e61d",
 		"flag": "au",
-		"capital": 0,
+		"capital": 47,
 		"cities": [
 			{
 				"id": 47,
@@ -546,7 +546,7 @@
 				"y": 406,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [61,48,49]
 			},
 			{
 				"id": 48,
@@ -556,7 +556,7 @@
 				"y": 393,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [64,59,47]
 			},
 			{
 				"id": 49,
@@ -566,7 +566,7 @@
 				"y": 413,
 				"cityType": 7,
 				"income": 160,
-				"neighbours": []
+				"neighbours": [61,47,51,53]
 			},
 			{
 				"id": 50,
@@ -576,7 +576,7 @@
 				"y": 393,
 				"cityType": 7,
 				"income": 130,
-				"neighbours": []
+				"neighbours": [60,58,62]
 			},
 			{
 				"id": 51,
@@ -586,7 +586,7 @@
 				"y": 404,
 				"cityType": 7,
 				"income": 80,
-				"neighbours": []
+				"neighbours": [59,61,49,60]
 			},
 			{
 				"id": 52,
@@ -596,7 +596,7 @@
 				"y": 366,
 				"cityType": 7,
 				"income": 80,
-				"neighbours": []
+				"neighbours": [57,64,59]
 			},
 			{
 				"id": 53,
@@ -606,7 +606,7 @@
 				"y": 430,
 				"cityType": 4,
 				"income": 80,
-				"neighbours": []
+				"neighbours": [49,605]
 			},
 			{
 				"id": 54,
@@ -616,7 +616,7 @@
 				"y": 350,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [55,57,63]
 			},
 			{
 				"id": 55,
@@ -626,7 +626,7 @@
 				"y": 339,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [639,54,63]
 			},
 			{
 				"id": 56,
@@ -636,7 +636,7 @@
 				"y": 325,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [415,62,63]
 			},
 			{
 				"id": 57,
@@ -646,7 +646,7 @@
 				"y": 358,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [54,52]
 			},
 			{
 				"id": 58,
@@ -656,7 +656,7 @@
 				"y": 402,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [60,50]
 			},
 			{
 				"id": 59,
@@ -666,7 +666,7 @@
 				"y": 367,
 				"cityType": 2,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [63,62,60,51,52,48]
 			},
 			{
 				"id": 60,
@@ -676,7 +676,7 @@
 				"y": 384,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [50,58,62,59,51]
 			},
 			{
 				"id": 61,
@@ -686,7 +686,7 @@
 				"y": 405,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [47,48,49,51]
 			},
 			{
 				"id": 62,
@@ -696,7 +696,7 @@
 				"y": 348,
 				"cityType": 1,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [56,63,59,60,50]
 			},
 			{
 				"id": 63,
@@ -706,7 +706,7 @@
 				"y": 341,
 				"cityType": 1,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [56,54,59,62]
 			},
 			{
 				"id": 64,
@@ -716,7 +716,7 @@
 				"y": 374,
 				"cityType": 1,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [52,48]
 			}
 		]
 	},
@@ -725,7 +725,7 @@
 		"name": "Austria",
 		"color": "#7c0045",
 		"flag": "at",
-		"capital": 0,
+		"capital": 65,
 		"cities": [
 			{
 				"id": 65,
@@ -735,7 +735,7 @@
 				"y": 114,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [262,737,365,67,66]
 			},
 			{
 				"id": 66,
@@ -745,7 +745,7 @@
 				"y": 118,
 				"cityType": 7,
 				"income": 117,
-				"neighbours": []
+				"neighbours": [67,65,739]
 			},
 			{
 				"id": 67,
@@ -755,7 +755,7 @@
 				"y": 115,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [333,65,66,261,792]
 			}
 		]
 	},
@@ -764,7 +764,7 @@
 		"name": "Azerbaijan",
 		"color": "#ceb561",
 		"flag": "az",
-		"capital": 0,
+		"capital": 68,
 		"cities": [
 			{
 				"id": 68,
@@ -774,7 +774,7 @@
 				"y": 141,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [708,69,842,426]
 			},
 			{
 				"id": 69,
@@ -784,7 +784,7 @@
 				"y": 140,
 				"cityType": 4,
 				"income": 68,
-				"neighbours": []
+                "neighbours": [329,68,426,45]
 			}
 		]
 	},
@@ -793,7 +793,7 @@
 		"name": "Bahamas",
 		"color": "#01796f",
 		"flag": "bs",
-		"capital": 0,
+		"capital": 70,
 		"cities": [
 			{
 				"id": 70,
@@ -803,7 +803,7 @@
 				"y": 195,
 				"cityType": 6,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [898,259]
 			}
 		]
 	},
@@ -812,17 +812,17 @@
 		"name": "Bahrain",
 		"color": "#ffb27f",
 		"flag": "bh",
-		"capital": 0,
+		"capital": 71,
 		"cities": [
 			{
 				"id": 71,
 				"name": "manama",
 				"country": "Bahrain",
-				"x": 666,
-				"y": 192,
+				"x": 665,
+				"y": 193,
 				"cityType": 5,
 				"income": 66,
-				"neighbours": []
+				"neighbours": [723,675]
 			}
 		]
 	},
@@ -831,7 +831,7 @@
 		"name": "Bangladesh",
 		"color": "#a25bff",
 		"flag": "bd",
-		"capital": 0,
+		"capital": 72,
 		"cities": [
 			{
 				"id": 72,
@@ -841,7 +841,7 @@
 				"y": 199,
 				"cityType": 10,
 				"income": 228,
-				"neighbours": []
+				"neighbours": [76,73,74,75]
 			},
 			{
 				"id": 73,
@@ -851,17 +851,17 @@
 				"y": 203,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [134,394,76,72]
 			},
 			{
 				"id": 74,
 				"name": "Khulna",
 				"country": "Bangladesh ",
 				"x": 781,
-				"y": 200,
+				"y": 202,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [72,371]
 			},
 			{
 				"id": 75,
@@ -871,7 +871,7 @@
 				"y": 195,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [393,396,76,72]
 			},
 			{
 				"id": 76,
@@ -881,7 +881,7 @@
 				"y": 195,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [396,394,72,75]
 			}
 		]
 	},
@@ -890,7 +890,7 @@
 		"name": "Belarus",
 		"color": "#5d45a8",
 		"flag": "by",
-		"capital": 0,
+		"capital": 77,
 		"cities": [
 			{
 				"id": 77,
@@ -900,7 +900,7 @@
 				"y": 95,
 				"cityType": 7,
 				"income": 86,
-				"neighbours": []
+				"neighbours": [512,669,79,78]
 			},
 			{
 				"id": 78,
@@ -910,7 +910,7 @@
 				"y": 101,
 				"cityType": 4,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [849,857,79,77]
 			},
 			{
 				"id": 79,
@@ -920,7 +920,7 @@
 				"y": 93,
 				"cityType": 4,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [712,500,77,78]
 			}
 		]
 	},
@@ -929,7 +929,7 @@
 		"name": "Belgium",
 		"color": "#cc66ff",
 		"flag": "be",
-		"capital": 0,
+		"capital": 80,
 		"cities": [
 			{
 				"id": 80,
@@ -939,7 +939,7 @@
 				"y": 106,
 				"cityType": 7,
 				"income": 209,
-				"neighbours": []
+				"neighbours": [592,82,319,81]
 			},
 			{
 				"id": 81,
@@ -949,7 +949,7 @@
 				"y": 104,
 				"cityType": 4,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [861,592,321,319,80]
 			},
 			{
 				"id": 82,
@@ -959,7 +959,7 @@
 				"y": 107,
 				"cityType": 4,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [80,319,514,334]
 			}
 		]
 	},
@@ -968,7 +968,7 @@
 		"name": "Belize",
 		"color": "#73c2fb",
 		"flag": "bz",
-		"capital": 0,
+		"capital": 83,
 		"cities": [
 			{
 				"id": 83,
@@ -978,7 +978,7 @@
 				"y": 221,
 				"cityType": 3,
 				"income": 8,
-				"neighbours": []
+				"neighbours": [554,355,363,458]
 			}
 		]
 	},
@@ -987,7 +987,7 @@
 		"name": "Benin",
 		"color": "#0075b9",
 		"flag": "bj",
-		"capital": 0,
+		"capital": 84,
 		"cities": [
 			{
 				"id": 84,
@@ -997,7 +997,7 @@
 				"y": 259,
 				"cityType": 8,
 				"income": 8,
-				"neighbours": []
+				"neighbours": [85,820,607]
 			},
 			{
 				"id": 85,
@@ -1007,7 +1007,7 @@
 				"y": 244,
 				"cityType": 8,
 				"income": 8,
-				"neighbours": []
+				"neighbours": [596,128,821,84,614]
 			}
 		]
 	},
@@ -1016,7 +1016,7 @@
 		"name": "Bolivia",
 		"color": "#77531d",
 		"flag": "bo",
-		"capital": 0,
+		"capital": 86,
 		"cities": [
 			{
 				"id": 86,
@@ -1026,7 +1026,7 @@
 				"y": 343,
 				"cityType": 7,
 				"income": 33,
-				"neighbours": []
+				"neighbours": [122,644,87,89]
 			},
 			{
 				"id": 87,
@@ -1036,7 +1036,7 @@
 				"y": 344,
 				"cityType": 4,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [86,88,89]
 			},
 			{
 				"id": 88,
@@ -1046,7 +1046,7 @@
 				"y": 340,
 				"cityType": 4,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [112,646,87]
 			},
 			{
 				"id": 89,
@@ -1056,7 +1056,7 @@
 				"y": 357,
 				"cityType": 4,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [87,176,40,644]
 			}
 		]
 	},
@@ -1065,7 +1065,7 @@
 		"name": "Bosnia and Herzegovina",
 		"color": "#0bbd48",
 		"flag": "ba",
-		"capital": 0,
+		"capital": 90,
 		"cities": [
 			{
 				"id": 90,
@@ -1075,7 +1075,7 @@
 				"y": 130,
 				"cityType": 7,
 				"income": 25,
-				"neighbours": []
+				"neighbours": [91,570,731]
 			},
 			{
 				"id": 91,
@@ -1085,7 +1085,7 @@
 				"y": 126,
 				"cityType": 4,
 				"income": 17,
-				"neighbours": []
+				"neighbours": [255,256,90,733]
 			}
 		]
 	},
@@ -1094,7 +1094,7 @@
 		"name": "Botswana",
 		"color": "#757fae",
 		"flag": "bw",
-		"capital": 0,
+		"capital": 92,
 		"cities": [
 			{
 				"id": 92,
@@ -1104,7 +1104,7 @@
 				"y": 367,
 				"cityType": 5,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [94,584,746,93]
 			},
 			{
 				"id": 93,
@@ -1114,7 +1114,7 @@
 				"y": 355,
 				"cityType": 2,
 				"income": 8,
-				"neighbours": []
+				"neighbours": [958,94,92,751]
 			},
 			{
 				"id": 94,
@@ -1124,7 +1124,7 @@
 				"y": 350,
 				"cityType": 2,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [585,92,93]
 			}
 		]
 	},
@@ -1133,7 +1133,7 @@
 		"name": "Brazil",
 		"color": "#00ff80",
 		"flag": "br",
-		"capital": 0,
+		"capital": 95,
 		"cities": [
 			{
 				"id": 95,
@@ -1143,7 +1143,7 @@
 				"y": 335,
 				"cityType": 9,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [121,122,107,97]
 			},
 			{
 				"id": 96,
@@ -1153,7 +1153,7 @@
 				"y": 364,
 				"cityType": 10,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [99,118,100,111]
 			},
 			{
 				"id": 97,
@@ -1163,17 +1163,17 @@
 				"y": 325,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [120,95,121,99]
 			},
 			{
 				"id": 98,
 				"name": "Fortaleza",
 				"country": "Brazil",
 				"x": 398,
-				"y": 396,
+				"y": 296,
 				"cityType": 9,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [106,109,108]
 			},
 			{
 				"id": 99,
@@ -1183,7 +1183,7 @@
 				"y": 353,
 				"cityType": 9,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [107,118,111,97]
 			},
 			{
 				"id": 100,
@@ -1193,7 +1193,7 @@
 				"y": 368,
 				"cityType": 9,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [118,642,104,96]
 			},
 			{
 				"id": 101,
@@ -1203,7 +1203,7 @@
 				"y": 292,
 				"cityType": 9,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [243,119,114]
 			},
 			{
 				"id": 102,
@@ -1213,7 +1213,7 @@
 				"y": 309,
 				"cityType": 9,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [108,109,105]
 			},
 			{
 				"id": 103,
@@ -1223,7 +1223,7 @@
 				"y": 288,
 				"cityType": 9,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [115,114,117,106]
 			},
 			{
 				"id": 104,
@@ -1233,7 +1233,7 @@
 				"y": 386,
 				"cityType": 9,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [922,100,42]
 			},
 			{
 				"id": 105,
@@ -1243,7 +1243,7 @@
 				"y": 317,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [102,120]
 			},
 			{
 				"id": 106,
@@ -1253,7 +1253,7 @@
 				"y": 293,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [103,117,109,98]
 			},
 			{
 				"id": 107,
@@ -1263,7 +1263,7 @@
 				"y": 347,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [95,110,99,118]
 			},
 			{
 				"id": 108,
@@ -1273,7 +1273,7 @@
 				"y": 301,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [98,102]
 			},
 			{
 				"id": 109,
@@ -1283,7 +1283,7 @@
 				"y": 303,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [106,117,121,108]
 			},
 			{
 				"id": 110,
@@ -1293,7 +1293,7 @@
 				"y": 352,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [122,644,107,118]
 			},
 			{
 				"id": 111,
@@ -1303,7 +1303,7 @@
 				"y": 361,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [99,96]
 			},
 			{
 				"id": 112,
@@ -1313,17 +1313,17 @@
 				"y": 317,
 				"cityType": 6,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [119,652,116,87]
 			},
 			{
 				"id": 113,
 				"name": "Boa Vista",
 				"country": "Brazil",
 				"x": 330,
-				"y": 372,
+				"y": 272,
 				"cityType": 6,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [935,101,360]
 			},
 			{
 				"id": 114,
@@ -1333,7 +1333,7 @@
 				"y": 292,
 				"cityType": 6,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [101,115,103,117]
 			},
 			{
 				"id": 115,
@@ -1343,7 +1343,7 @@
 				"y": 282,
 				"cityType": 6,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [325,783,114,103]
 			},
 			{
 				"id": 116,
@@ -1353,7 +1353,7 @@
 				"y": 319,
 				"cityType": 6,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [112,119,122,87]
 			},
 			{
 				"id": 117,
@@ -1363,7 +1363,7 @@
 				"y": 300,
 				"cityType": 6,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [103,114,121,109,106]
 			},
 			{
 				"id": 118,
@@ -1373,7 +1373,7 @@
 				"y": 362,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [107,110,100,96,99]
 			},
 			{
 				"id": 119,
@@ -1383,7 +1383,7 @@
 				"y": 310,
 				"cityType": 6,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [101,112,116]
 			},
 			{
 				"id": 120,
@@ -1393,7 +1393,7 @@
 				"y": 320,
 				"cityType": 6,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [105,97]
 			},
 			{
 				"id": 121,
@@ -1403,7 +1403,7 @@
 				"y": 313,
 				"cityType": 6,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [117,116,95,97,109]
 			},
 			{
 				"id": 122,
@@ -1413,7 +1413,7 @@
 				"y": 336,
 				"cityType": 6,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [116,86,110,95]
 			}
 		]
 	},
@@ -1422,7 +1422,7 @@
 		"name": "Brunei",
 		"color": "#cc0000",
 		"flag": "bn",
-		"capital": 0,
+		"capital": 123,
 		"cities": [
 			{
 				"id": 123,
@@ -1432,7 +1432,7 @@
 				"y": 266,
 				"cityType": 6,
 				"income": 80,
-				"neighbours": []
+				"neighbours": [530,529,412]
 			}
 		]
 	},
@@ -1441,7 +1441,7 @@
 		"name": "Bulgaria",
 		"color": "#008284",
 		"flag": "bg",
-		"capital": 0,
+		"capital": 124,
 		"cities": [
 			{
 				"id": 124,
@@ -1451,7 +1451,7 @@
 				"y": 133,
 				"cityType": 7,
 				"income": 87,
-				"neighbours": []
+				"neighbours": [680,732,515,353,125]
 			},
 			{
 				"id": 125,
@@ -1461,7 +1461,7 @@
 				"y": 132,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [681,676,124,836]
 			}
 		]
 	},
@@ -1470,7 +1470,7 @@
 		"name": "Burkina Faso",
 		"color": "#001a57",
 		"flag": "bf",
-		"capital": 0,
+		"capital": 126,
 		"cities": [
 			{
 				"id": 126,
@@ -1480,7 +1480,7 @@
 				"y": 240,
 				"cityType": 8,
 				"income": 12,
-				"neighbours": []
+				"neighbours": [533,127,347,128]
 			},
 			{
 				"id": 127,
@@ -1490,7 +1490,7 @@
 				"y": 242,
 				"cityType": 5,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [532,254,126]
 			},
 			{
 				"id": 128,
@@ -1500,7 +1500,7 @@
 				"y": 237,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [596,126,821,85]
 			}
 		]
 	},
@@ -1509,7 +1509,7 @@
 		"name": "Burma",
 		"color": "#6e7b3b",
 		"flag": "mm",
-		"capital": 0,
+		"capital": 129,
 		"cities": [
 			{
 				"id": 129,
@@ -1519,7 +1519,7 @@
 				"y": 214,
 				"cityType": 9,
 				"income": 67,
-				"neighbours": []
+				"neighbours": [131,134,133,132,815]
 			},
 			{
 				"id": 130,
@@ -1529,7 +1529,7 @@
 				"y": 225,
 				"cityType": 6,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [133,132]
 			},
 			{
 				"id": 131,
@@ -1539,7 +1539,7 @@
 				"y": 206,
 				"cityType": 6,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [135,134,129,394,196]
 			},
 			{
 				"id": 132,
@@ -1549,7 +1549,7 @@
 				"y": 224,
 				"cityType": 6,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [129,130,811,815]
 			},
 			{
 				"id": 133,
@@ -1559,7 +1559,7 @@
 				"y": 222,
 				"cityType": 3,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [134,130,129]
 			},
 			{
 				"id": 134,
@@ -1569,7 +1569,7 @@
 				"y": 209,
 				"cityType": 3,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [73,133,129,131]
 			},
 			{
 				"id": 135,
@@ -1579,7 +1579,7 @@
 				"y": 191,
 				"cityType": 3,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [219,395,131]
 			}
 		]
 	},
@@ -1588,7 +1588,7 @@
 		"name": "Burundi",
 		"color": "#b1b4b1",
 		"flag": "bi",
-		"capital": 0,
+		"capital": 136,
 		"cities": [
 			{
 				"id": 136,
@@ -1598,7 +1598,7 @@
 				"y": 294,
 				"cityType": 4,
 				"income": 8,
-				"neighbours": []
+				"neighbours": [719,272,803]
 			}
 		]
 	},
@@ -1607,7 +1607,7 @@
 		"name": "Cambodia",
 		"color": "#9781c5",
 		"flag": "kh",
-		"capital": 0,
+		"capital": 137,
 		"cities": [
 			{
 				"id": 137,
@@ -1617,7 +1617,7 @@
 				"y": 241,
 				"cityType": 8,
 				"income": 28,
-				"neighbours": []
+				"neighbours": [139,138,937]
 			},
 			{
 				"id": 138,
@@ -1627,7 +1627,7 @@
 				"y": 243,
 				"cityType": 3,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [139,139,942]
 			},
 			{
 				"id": 139,
@@ -1637,7 +1637,7 @@
 				"y": 236,
 				"cityType": 3,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [813,138,137,498]
 			}
 		]
 	},
@@ -1656,7 +1656,7 @@
 				"y": 268,
 				"cityType": 9,
 				"income": 17,
-				"neighbours": []
+				"neighbours": [141,144,295]
 			},
 			{
 				"id": 141,
@@ -1666,7 +1666,7 @@
 				"y": 268,
 				"cityType": 9,
 				"income": 20,
-				"neighbours": []
+                "neighbours": [611,294,140]
 			},
 			{
 				"id": 142,
@@ -1676,7 +1676,7 @@
 				"y": 248,
 				"cityType": 6,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [143,615,145,168]
 			},
 			{
 				"id": 143,
@@ -1686,7 +1686,7 @@
 				"y": 244,
 				"cityType": 6,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [168,613,142]
 			},
 			{
 				"id": 144,
@@ -1696,7 +1696,7 @@
 				"y": 268,
 				"cityType": 3,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [145,140,327,248,165]
 			},
 			{
 				"id": 145,
@@ -1706,7 +1706,7 @@
 				"y": 258,
 				"cityType": 3,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [142,140,144,168]
 			}
 		]
 	},
@@ -1725,17 +1725,17 @@
 				"y": 124,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [151,148,891,157]
 			},
 			{
 				"id": 147,
 				"name": "Vancover",
 				"country": "Canada",
 				"x": 194,
-				"y": 111,
+				"y": 106,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [150,162,914,149]
 			},
 			{
 				"id": 148,
@@ -1745,7 +1745,7 @@
 				"y": 122,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [146,890,154]
 			},
 			{
 				"id": 149,
@@ -1755,7 +1755,7 @@
 				"y": 104,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [150,147,913,158]
 			},
 			{
 				"id": 150,
@@ -1765,17 +1765,17 @@
 				"y": 90,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [160,161,147,149,159]
 			},
 			{
 				"id": 151,
 				"name": "Toronto",
 				"country": "Canada",
-				"x": 289,
+				"x": 300,
 				"y": 130,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [146,889,892]
 			},
 			{
 				"id": 152,
@@ -1784,8 +1784,8 @@
 				"x": 373,
 				"y": 114,
 				"cityType": 4,
-				"income": 50,
-				"neighbours": []
+				"income": 100,
+				"neighbours": [156,155]
 			},
 			{
 				"id": 153,
@@ -1795,7 +1795,7 @@
 				"y": 126,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [154,155]
 			},
 			{
 				"id": 154,
@@ -1805,7 +1805,7 @@
 				"y": 122,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [148,153,155,890]
 			},
 			{
 				"id": 155,
@@ -1815,7 +1815,7 @@
 				"y": 120,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [154,153,152]
 			},
 			{
 				"id": 156,
@@ -1825,7 +1825,7 @@
 				"y": 63,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [152,969,148]
 			},
 			{
 				"id": 157,
@@ -1835,7 +1835,7 @@
 				"y": 108,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [158,906,146]
 			},
 			{
 				"id": 158,
@@ -1845,7 +1845,7 @@
 				"y": 104,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [157,159,149,911]
 			},
 			{
 				"id": 159,
@@ -1855,7 +1855,7 @@
 				"y": 95,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [160,150,158]
 			},
 			{
 				"id": 160,
@@ -1865,7 +1865,7 @@
 				"y": 68,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [161,150,159]
 			},
 			{
 				"id": 161,
@@ -1875,27 +1875,17 @@
 				"y": 70,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [160,150]
 			},
 			{
 				"id": 162,
 				"name": "Victoria",
 				"country": "Canada",
-				"x": 189,
-				"y": 112,
+				"x": 187,
+				"y": 110,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
-			},
-			{
-				"id": 163,
-				"name": "Mississauga",
-				"country": "Canada",
-				"x": 249,
-				"y": 133,
-				"cityType": 1,
-				"income": 50,
-				"neighbours": []
+				"neighbours": [147,914]
 			}
 		]
 	},
@@ -1904,7 +1894,7 @@
 		"name": "Cap Verde",
 		"color": "#321414",
 		"flag": "cv",
-		"capital": 0,
+		"capital": 164,
 		"cities": [
 			{
 				"id": 164,
@@ -1914,7 +1904,7 @@
 				"y": 230,
 				"cityType": 5,
 				"income": 6,
-				"neighbours": []
+				"neighbours": [729,674]
 			}
 		]
 	},
@@ -1923,7 +1913,7 @@
 		"name": "Central African Rep",
 		"color": "#900020",
 		"flag": "cf",
-		"capital": 0,
+		"capital": 165,
 		"cities": [
 			{
 				"id": 165,
@@ -1933,7 +1923,7 @@
 				"y": 263,
 				"cityType": 5,
 				"income": 3,
-				"neighbours": []
+				"neighbours": [144,271,166]
 			},
 			{
 				"id": 166,
@@ -1943,7 +1933,7 @@
 				"y": 256,
 				"cityType": 2,
 				"income": 2,
-				"neighbours": []
+				"neighbours": [169,761,165,782]
 			}
 		]
 	},
@@ -1952,7 +1942,7 @@
 		"name": "Chad",
 		"color": "#bf7568",
 		"flag": "td",
-		"capital": 0,
+		"capital": 167,
 		"cities": [
 			{
 				"id": 167,
@@ -1962,7 +1952,7 @@
 				"y": 238,
 				"cityType": 8,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [613,143,168,170,171]
 			},
 			{
 				"id": 168,
@@ -1972,7 +1962,7 @@
 				"y": 251,
 				"cityType": 2,
 				"income": 4,
-				"neighbours": []
+				"neighbours": [142,167,169]
 			},
 			{
 				"id": 169,
@@ -1982,7 +1972,7 @@
 				"y": 249,
 				"cityType": 2,
 				"income": 4,
-				"neighbours": []
+				"neighbours": [170,168,166]
 			},
 			{
 				"id": 170,
@@ -1992,7 +1982,7 @@
 				"y": 233,
 				"cityType": 2,
 				"income": 4,
-				"neighbours": []
+				"neighbours": [171,167,169,782]
 			},
 			{
 				"id": 171,
@@ -2002,7 +1992,7 @@
 				"y": 218,
 				"cityType": 2,
 				"income": 4,
-				"neighbours": []
+				"neighbours": [172,170]
 			},
 			{
 				"id": 172,
@@ -2012,7 +2002,7 @@
 				"y": 205,
 				"cityType": 2,
 				"income": 4,
-				"neighbours": []
+				"neighbours": [510,511]
 			}
 		]
 	},
@@ -2021,7 +2011,7 @@
 		"name": "Chile",
 		"color": "#004f2a",
 		"flag": "cl",
-		"capital": 0,
+		"capital": 173,
 		"cities": [
 			{
 				"id": 173,
@@ -2031,7 +2021,7 @@
 				"y": 402,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [177,175,33]
 			},
 			{
 				"id": 174,
@@ -2041,7 +2031,7 @@
 				"y": 364,
 				"cityType": 4,
 				"income": 63,
-				"neighbours": []
+				"neighbours": [176,177,89,40]
 			},
 			{
 				"id": 175,
@@ -2051,7 +2041,7 @@
 				"y": 414,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [173,44]
 			},
 			{
 				"id": 176,
@@ -2061,7 +2051,7 @@
 				"y": 351,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [646,174,88]
 			},
 			{
 				"id": 177,
@@ -2071,7 +2061,7 @@
 				"y": 371,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [174,173,34]
 			}
 		]
 	},
@@ -2080,7 +2070,7 @@
 		"name": "China",
 		"color": "#ff0099",
 		"flag": "cn",
-		"capital": 0,
+		"capital": 178,
 		"cities": [
 			{
 				"id": 178,
@@ -2090,17 +2080,17 @@
 				"y": 141,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [234,180,202,201,189]
 			},
 			{
 				"id": 179,
 				"name": "Shanghai",
 				"country": "China",
-				"x": 838,
+				"x": 866,
 				"y": 173,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [217,203,182,188]
 			},
 			{
 				"id": 180,
@@ -2110,7 +2100,7 @@
 				"y": 144,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [178,202,220]
 			},
 			{
 				"id": 181,
@@ -2120,7 +2110,7 @@
 				"y": 201,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [205,185,235,364,192]
 			},
 			{
 				"id": 182,
@@ -2130,7 +2120,7 @@
 				"y": 177,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [203,183,205,188]
 			},
 			{
 				"id": 183,
@@ -2140,7 +2130,7 @@
 				"y": 181,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [212,184,218,182]
 			},
 			{
 				"id": 184,
@@ -2150,7 +2140,7 @@
 				"y": 180,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [208,219,218,183]
 			},
 			{
 				"id": 185,
@@ -2160,7 +2150,7 @@
 				"y": 202,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [218,940,204,181]
 			},
 			{
 				"id": 186,
@@ -2170,7 +2160,7 @@
 				"y": 164,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [211,199,208,213]
 			},
 			{
 				"id": 187,
@@ -2180,7 +2170,7 @@
 				"y": 137,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [221,194,202,963]
 			},
 			{
 				"id": 188,
@@ -2190,7 +2180,7 @@
 				"y": 176,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [179,182,215,200,210]
 			},
 			{
 				"id": 189,
@@ -2200,7 +2190,7 @@
 				"y": 121,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [222,234,194,223]
 			},
 			{
 				"id": 190,
@@ -2210,7 +2200,7 @@
 				"y": 155,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [220,207,193,203,197]
 			},
 			{
 				"id": 191,
@@ -2220,7 +2210,7 @@
 				"y": 198,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [216,192,799]
 			},
 			{
 				"id": 192,
@@ -2230,7 +2220,7 @@
 				"y": 201,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [191,210,181,364]
 			},
 			{
 				"id": 193,
@@ -2240,7 +2230,7 @@
 				"y": 162,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [207,213,212,190,203]
 			},
 			{
 				"id": 194,
@@ -2250,7 +2240,7 @@
 				"y": 130,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [189,178,187,221,223]
 			},
 			{
 				"id": 195,
@@ -2260,7 +2250,7 @@
 				"y": 147,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [187,202,963]
 			},
 			{
 				"id": 196,
@@ -2270,7 +2260,7 @@
 				"y": 197,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [219,131,940,497,218,184]
 			},
 			{
 				"id": 197,
@@ -2280,7 +2270,7 @@
 				"y": 155,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [198,190,217]
 			},
 			{
 				"id": 198,
@@ -2290,7 +2280,7 @@
 				"y": 151,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [220,197]
 			},
 			{
 				"id": 199,
@@ -2300,7 +2290,7 @@
 				"y": 162,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [209,208,186,211]
 			},
 			{
 				"id": 200,
@@ -2310,7 +2300,7 @@
 				"y": 179,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [188,215]
 			},
 			{
 				"id": 201,
@@ -2320,7 +2310,7 @@
 				"y": 147,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [201,234,211,207,178]
 			},
 			{
 				"id": 202,
@@ -2330,7 +2320,7 @@
 				"y": 142,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [178,180,187]
 			},
 			{
 				"id": 203,
@@ -2340,7 +2330,7 @@
 				"y": 169,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [190,212,182,217]
 			},
 			{
 				"id": 204,
@@ -2350,7 +2340,7 @@
 				"y": 208,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [185,232,235]
 			},
 			{
 				"id": 205,
@@ -2360,7 +2350,7 @@
 				"y": 185,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [182,183,218,181,210]
 			},
 			{
 				"id": 206,
@@ -2370,7 +2360,7 @@
 				"y": 127,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [568,225,227,226]
 			},
 			{
 				"id": 207,
@@ -2380,7 +2370,7 @@
 				"y": 152,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [201,213,193,190,220]
 			},
 			{
 				"id": 208,
@@ -2390,7 +2380,7 @@
 				"y": 170,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [199,233,184,219]
 			},
 			{
 				"id": 209,
@@ -2400,7 +2390,7 @@
 				"y": 159,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [231,233,199,211]
 			},
 			{
 				"id": 210,
@@ -2410,7 +2400,7 @@
 				"y": 186,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [181]
 			},
 			{
 				"id": 211,
@@ -2420,7 +2410,7 @@
 				"y": 143,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [214,186,201,209,234]
 			},
 			{
 				"id": 212,
@@ -2430,7 +2420,7 @@
 				"y": 167,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [193,213,183,203]
 			},
 			{
 				"id": 213,
@@ -2440,7 +2430,7 @@
 				"y": 162,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [201,186,212,193]
 			},
 			{
 				"id": 214,
@@ -2450,7 +2440,7 @@
 				"y": 138,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [567,227,211,234]
 			},
 			{
 				"id": 215,
@@ -2460,7 +2450,7 @@
 				"y": 185,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [210,200,216]
 			},
 			{
 				"id": 216,
@@ -2470,7 +2460,7 @@
 				"y": 192,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [210,191,215,798]
 			},
 			{
 				"id": 217,
@@ -2480,7 +2470,7 @@
 				"y": 166,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [197,203,179]
 			},
 			{
 				"id": 218,
@@ -2490,7 +2480,7 @@
 				"y": 192,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [184,196,185,183]
 			},
 			{
 				"id": 219,
@@ -2500,7 +2490,7 @@
 				"y": 185,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [208,233,135,196,184]
 			},
 			{
 				"id": 220,
@@ -2510,7 +2500,7 @@
 				"y": 148,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [180,207,190,198]
 			},
 			{
 				"id": 221,
@@ -2520,7 +2510,7 @@
 				"y": 135,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [194,187,965]
 			},
 			{
 				"id": 222,
@@ -2530,7 +2520,7 @@
 				"y": 115,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [707,224,189,234]
 			},
 			{
 				"id": 223,
@@ -2540,7 +2530,7 @@
 				"y": 121,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [704,189,194,702]
 			},
 			{
 				"id": 224,
@@ -2550,7 +2540,7 @@
 				"y": 107,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [716,566,222]
 			},
 			{
 				"id": 225,
@@ -2560,7 +2550,7 @@
 				"y": 125,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [477,226,206,482]
 			},
 			{
 				"id": 226,
@@ -2570,7 +2560,7 @@
 				"y": 144,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [206,230,496,802]
 			},
 			{
 				"id": 227,
@@ -2580,7 +2570,7 @@
 				"y": 137,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [206,567,231,214]
 			},
 			{
 				"id": 228,
@@ -2590,7 +2580,7 @@
 				"y": 168,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [231,230,229,233,588]
 			},
 			{
 				"id": 229,
@@ -2600,7 +2590,7 @@
 				"y": 179,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [228,589,395,233]
 			},
 			{
 				"id": 230,
@@ -2610,7 +2600,7 @@
 				"y": 168,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [401,400,226,228]
 			},
 			{
 				"id": 231,
@@ -2620,7 +2610,7 @@
 				"y": 156,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [227,228,209]
 			},
 			{
 				"id": 232,
@@ -2630,7 +2620,7 @@
 				"y": 217,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [204]
 			},
 			{
 				"id": 233,
@@ -2640,7 +2630,7 @@
 				"y": 168,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [209,228,229,208,219]
 			},
 			{
 				"id": 234,
@@ -2650,7 +2640,7 @@
 				"y": 133,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [214,222,178]
 			},
 			{
 				"id": 235,
@@ -2660,7 +2650,7 @@
 				"y": 205,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [181,204,364]
 			}
 		]
 	},
@@ -2669,7 +2659,7 @@
 		"name": "Colombia",
 		"color": "#c7be58",
 		"flag": "co",
-		"capital": 0,
+		"capital": 236,
 		"cities": [
 			{
 				"id": 236,
@@ -2679,7 +2669,7 @@
 				"y": 265,
 				"cityType": 11,
 				"income": 188,
-				"neighbours": []
+				"neighbours": [240,242,238,243]
 			},
 			{
 				"id": 237,
@@ -2689,17 +2679,17 @@
 				"y": 271,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [238,236,241]
 			},
 			{
 				"id": 238,
 				"name": "Medeline",
 				"country": "Colombia",
 				"x": 284,
-				"y": 271,
+				"y": 259,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [242,637,237,236,240]
 			},
 			{
 				"id": 239,
@@ -2709,7 +2699,7 @@
 				"y": 244,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [930,242]
 			},
 			{
 				"id": 240,
@@ -2719,7 +2709,7 @@
 				"y": 259,
 				"cityType": 5,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [934,242,238,236,244]
 			},
 			{
 				"id": 241,
@@ -2729,7 +2719,7 @@
 				"y": 277,
 				"cityType": 5,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [237,279,243]
 			},
 			{
 				"id": 242,
@@ -2739,7 +2729,7 @@
 				"y": 250,
 				"cityType": 5,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [239,238,637,240]
 			},
 			{
 				"id": 243,
@@ -2749,7 +2739,7 @@
 				"y": 279,
 				"cityType": 3,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [236,241,649,101]
 			},
 			{
 				"id": 244,
@@ -2759,7 +2749,7 @@
 				"y": 261,
 				"cityType": 3,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [933,240,243]
 			}
 		]
 	},
@@ -2768,7 +2758,7 @@
 		"name": "Comoros",
 		"color": "#e53380",
 		"flag": "km",
-		"capital": 0,
+		"capital": 245,
 		"cities": [
 			{
 				"id": 245,
@@ -2778,7 +2768,7 @@
 				"y": 323,
 				"cityType": 3,
 				"income": 3,
-				"neighbours": []
+				"neighbours": [810,520]
 			}
 		]
 	},
@@ -2787,7 +2777,7 @@
 		"name": "Congo",
 		"color": "#5984a3",
 		"flag": "cg",
-		"capital": 0,
+		"capital": 246,
 		"cities": [
 			{
 				"id": 246,
@@ -2797,7 +2787,7 @@
 				"y": 295,
 				"cityType": 8,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [264,247,248,327]
 			},
 			{
 				"id": 247,
@@ -2807,7 +2797,7 @@
 				"y": 297,
 				"cityType": 5,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [29,246,326]
 			},
 			{
 				"id": 248,
@@ -2817,7 +2807,7 @@
 				"y": 281,
 				"cityType": 3,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [327,246,271,165,144]
 			}
 		]
 	},
@@ -2826,7 +2816,7 @@
 		"name": "Costa Rica",
 		"color": "#ffa95f",
 		"flag": "cr",
-		"capital": 0,
+		"capital": 249,
 		"cities": [
 			{
 				"id": 249,
@@ -2836,7 +2826,7 @@
 				"y": 247,
 				"cityType": 6,
 				"income": 79,
-				"neighbours": []
+				"neighbours": [595,638]
 			}
 		]
 	},
@@ -2845,7 +2835,7 @@
 		"name": "Ivery Coast",
 		"color": "#c6c6ff",
 		"flag": "ci",
-		"capital": 0,
+		"capital": 250,
 		"cities": [
 			{
 				"id": 250,
@@ -2855,7 +2845,7 @@
 				"y": 262,
 				"cityType": 9,
 				"income": 26,
-				"neighbours": []
+				"neighbours": [251,252,348]
 			},
 			{
 				"id": 251,
@@ -2865,7 +2855,7 @@
 				"y": 257,
 				"cityType": 6,
 				"income": 12,
-				"neighbours": []
+				"neighbours": [254,253,252,250,346]
 			},
 			{
 				"id": 252,
@@ -2875,7 +2865,7 @@
 				"y": 264,
 				"cityType": 3,
 				"income": 12,
-				"neighbours": []
+				"neighbours": [251,504,250]
 			},
 			{
 				"id": 253,
@@ -2885,7 +2875,7 @@
 				"y": 255,
 				"cityType": 3,
 				"income": 12,
-				"neighbours": []
+				"neighbours": [254,358,251]
 			},
 			{
 				"id": 254,
@@ -2895,7 +2885,7 @@
 				"y": 250,
 				"cityType": 3,
 				"income": 12,
-				"neighbours": []
+				"neighbours": [127,532,253,251,347]
 			}
 		]
 	},
@@ -2904,7 +2894,7 @@
 		"name": "Croatiia",
 		"color": "#0066ff",
 		"flag": "hr",
-		"capital": 0,
+		"capital": 255,
 		"cities": [
 			{
 				"id": 255,
@@ -2914,7 +2904,7 @@
 				"y": 123,
 				"cityType": 7,
 				"income": 68,
-				"neighbours": []
+				"neighbours": [739,365,91,256,733]
 			},
 			{
 				"id": 256,
@@ -2924,7 +2914,7 @@
 				"y": 128,
 				"cityType": 4,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [255,739,91]
 			}
 		]
 	},
@@ -2933,7 +2923,7 @@
 		"name": "Cuba",
 		"color": "#b53389",
 		"flag": "cu",
-		"capital": 0,
+		"capital": 257,
 		"cities": [
 			{
 				"id": 257,
@@ -2943,7 +2933,7 @@
 				"y": 201,
 				"cityType": 9,
 				"income": 53,
-				"neighbours": []
+				"neighbours": [554,259]
 			},
 			{
 				"id": 258,
@@ -2953,7 +2943,7 @@
 				"y": 212,
 				"cityType": 6,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [259,458,361]
 			},
 			{
 				"id": 259,
@@ -2963,7 +2953,7 @@
 				"y": 205,
 				"cityType": 6,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [70,257,258]
 			}
 		]
 	},
@@ -2972,7 +2962,7 @@
 		"name": "Cyprus",
 		"color": "#d8d852",
 		"flag": "cy",
-		"capital": 0,
+		"capital": 260,
 		"cities": [
 			{
 				"id": 260,
@@ -2982,7 +2972,7 @@
 				"y": 159,
 				"cityType": 4,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [970,502]
 			}
 		]
 	},
@@ -2991,7 +2981,7 @@
 		"name": "Czech",
 		"color": "#65344a",
 		"flag": "cz",
-		"capital": 0,
+		"capital": 261,
 		"cities": [
 			{
 				"id": 261,
@@ -3001,7 +2991,7 @@
 				"y": 107,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [342,341,262]
 			},
 			{
 				"id": 262,
@@ -3011,7 +3001,7 @@
 				"y": 111,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [65,263,261,737]
 			},
 			{
 				"id": 263,
@@ -3021,7 +3011,7 @@
 				"y": 109,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [665,262,737,664]
 			}
 		]
 	},
@@ -3030,7 +3020,7 @@
 		"name": "Dem Congo ",
 		"color": "#e68099",
 		"flag": "cd",
-		"capital": 0,
+		"capital": 264,
 		"cities": [
 			{
 				"id": 264,
@@ -3040,7 +3030,7 @@
 				"y": 298,
 				"cityType": 12,
 				"income": 25,
-				"neighbours": []
+				"neighbours": [246,270,268,264]
 			},
 			{
 				"id": 265,
@@ -3050,17 +3040,17 @@
 				"y": 321,
 				"cityType": 9,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [269,952,954]
 			},
 			{
 				"id": 266,
 				"name": "Mbujimayi",
 				"country": "Dem Congo",
-				"x": 588,
-				"y": 322,
+				"x": 586,
+				"y": 316,
 				"cityType": 9,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [268,24,269]
 			},
 			{
 				"id": 267,
@@ -3070,7 +3060,7 @@
 				"y": 279,
 				"cityType": 6,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [271,273,847,719,264]
 			},
 			{
 				"id": 268,
@@ -3080,17 +3070,17 @@
 				"y": 303,
 				"cityType": 6,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [264,269,272]
 			},
 			{
 				"id": 269,
 				"name": "Kolwezi",
 				"country": "Dem Congo",
 				"x": 592,
-				"y": 317,
+				"y": 319,
 				"cityType": 6,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [268,272,266,265]
 			},
 			{
 				"id": 270,
@@ -3100,7 +3090,7 @@
 				"y": 302,
 				"cityType": 6,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [29,28,264]
 			},
 			{
 				"id": 271,
@@ -3110,17 +3100,17 @@
 				"y": 271,
 				"cityType": 3,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [165,248,267]
 			},
 			{
 				"id": 272,
 				"name": "Kalemaie",
 				"country": "Dem Congo ",
-				"x": 604,
+				"x": 602,
 				"y": 302,
 				"cityType": 3,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [136,267,268,269,809]
 			},
 			{
 				"id": 273,
@@ -3130,7 +3120,7 @@
 				"y": 271,
 				"cityType": 3,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [759,267,846]
 			}
 		]
 	},
@@ -3139,17 +3129,17 @@
 		"name": "Denmark",
 		"color": "#00ffff",
 		"flag": "dk",
-		"capital": 0,
+		"capital": 274,
 		"cities": [
 			{
 				"id": 274,
 				"name": "Copenhagen",
 				"country": "Denmark",
-				"x": 552,
+				"x": 551,
 				"y": 90,
 				"cityType": 7,
 				"income": 165,
-				"neighbours": []
+				"neighbours": [787,275]
 			},
 			{
 				"id": 275,
@@ -3159,17 +3149,17 @@
 				"y": 89,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [332,274]
 			},
 			{
-				"id": 354,
+				"id": 969,
 				"name": "Godthab",
 				"country": "Denmark",
 				"x": 412,
 				"y": 71,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [156,367]
 			}
 		]
 	},
@@ -3178,7 +3168,7 @@
 		"name": "Djibouti",
 		"color": "#a7d452",
 		"flag": "dj",
-		"capital": 0,
+		"capital": 276,
 		"cities": [
 			{
 				"id": 276,
@@ -3188,7 +3178,7 @@
 				"y": 241,
 				"cityType": 5,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [297,304,741,947]
 			}
 		]
 	},
@@ -3197,7 +3187,7 @@
 		"name": "Dominican",
 		"color": "#16166b",
 		"flag": "do",
-		"capital": 0,
+		"capital": 277,
 		"cities": [
 			{
 				"id": 277,
@@ -3207,7 +3197,7 @@
 				"y": 217,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [674,278]
 			},
 			{
 				"id": 278,
@@ -3217,7 +3207,7 @@
 				"y": 213,
 				"cityType": 6,
 				"income": 62,
-				"neighbours": []
+				"neighbours": [361,277]
 			}
 		]
 	},
@@ -3236,7 +3226,7 @@
 				"y": 282,
 				"cityType": 9,
 				"income": 62,
-				"neighbours": []
+				"neighbours": [241,280]
 			},
 			{
 				"id": 280,
@@ -3246,7 +3236,7 @@
 				"y": 289,
 				"cityType": 9,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [279,281]
 			},
 			{
 				"id": 281,
@@ -3256,7 +3246,7 @@
 				"y": 294,
 				"cityType": 6,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [648,651,280]
 			}
 		]
 	},
@@ -3265,7 +3255,7 @@
 		"name": "Egypte",
 		"color": "#c7b187",
 		"flag": "eg",
-		"capital": 0,
+		"capital": 282,
 		"cities": [
 			{
 				"id": 282,
@@ -3275,7 +3265,7 @@
 				"y": 178,
 				"cityType": 11,
 				"income": 160,
-				"neighbours": []
+				"neighbours": [285,286,283,287]
 			},
 			{
 				"id": 283,
@@ -3285,7 +3275,7 @@
 				"y": 174,
 				"cityType": 8,
 				"income": 130,
-				"neighbours": []
+				"neighbours": [286,291,282]
 			},
 			{
 				"id": 284,
@@ -3295,7 +3285,7 @@
 				"y": 174,
 				"cityType": 8,
 				"income": 130,
-				"neighbours": []
+				"neighbours": [286,285]
 			},
 			{
 				"id": 285,
@@ -3305,7 +3295,7 @@
 				"y": 177,
 				"cityType": 5,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [284,282,290,445]
 			},
 			{
 				"id": 286,
@@ -3315,7 +3305,7 @@
 				"y": 173,
 				"cityType": 5,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [283,282,284]
 			},
 			{
 				"id": 287,
@@ -3325,7 +3315,7 @@
 				"y": 187,
 				"cityType": 5,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [282,288,292]
 			},
 			{
 				"id": 288,
@@ -3335,7 +3325,7 @@
 				"y": 192,
 				"cityType": 5,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [287,292,289]
 			},
 			{
 				"id": 289,
@@ -3345,7 +3335,7 @@
 				"y": 198,
 				"cityType": 5,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [288,292,781]
 			},
 			{
 				"id": 290,
@@ -3355,7 +3345,7 @@
 				"y": 184,
 				"cityType": 2,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [445,285,724]
 			},
 			{
 				"id": 291,
@@ -3365,7 +3355,7 @@
 				"y": 173,
 				"cityType": 2,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [283,509]
 			},
 			{
 				"id": 292,
@@ -3375,7 +3365,7 @@
 				"y": 193,
 				"cityType": 2,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [287,288,511]
 			}
 		]
 	},
@@ -3384,7 +3374,7 @@
 		"name": "El Salvador",
 		"color": "#cc4e3c",
 		"flag": "sv",
-		"capital": 0,
+		"capital": 293,
 		"cities": [
 			{
 				"id": 293,
@@ -3394,7 +3384,7 @@
 				"y": 234,
 				"cityType": 6,
 				"income": 55,
-				"neighbours": []
+				"neighbours": [362,354]
 			}
 		]
 	},
@@ -3403,7 +3393,7 @@
 		"name": "Equatorial Guenea",
 		"color": "#b6ff00",
 		"flag": "gq",
-		"capital": 0,
+		"capital": 294,
 		"cities": [
 			{
 				"id": 294,
@@ -3413,7 +3403,7 @@
 				"y": 270,
 				"cityType": 6,
 				"income": 21,
-				"neighbours": []
+				"neighbours": [141,295,611]
 			},
 			{
 				"id": 295,
@@ -3423,7 +3413,7 @@
 				"y": 275,
 				"cityType": 3,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [141,326]
 			}
 		]
 	},
@@ -3432,7 +3422,7 @@
 		"name": "Eriteria",
 		"color": "#2f4780",
 		"flag": "er",
-		"capital": 0,
+		"capital": 296,
 		"cities": [
 			{
 				"id": 296,
@@ -3442,7 +3432,7 @@
 				"y": 226,
 				"cityType": 6,
 				"income": 38,
-				"neighbours": []
+				"neighbours": [778,301,297]
 			},
 			{
 				"id": 297,
@@ -3452,7 +3442,7 @@
 				"y": 235,
 				"cityType": 3,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [296,276,304]
 			}
 		]
 	},
@@ -3461,7 +3451,7 @@
 		"name": "Estonia",
 		"color": "#959acc",
 		"flag": "ee",
-		"capital": 0,
+		"capital": 298,
 		"cities": [
 			{
 				"id": 298,
@@ -3471,7 +3461,7 @@
 				"y": 78,
 				"cityType": 4,
 				"income": 38,
-				"neighbours": []
+				"neighbours": [307,500,683,499]
 			}
 		]
 	},
@@ -3480,7 +3470,7 @@
 		"name": "Ethiopia",
 		"color": "#e1ff00",
 		"flag": "et",
-		"capital": 0,
+		"capital": 299,
 		"cities": [
 			{
 				"id": 299,
@@ -3490,7 +3480,7 @@
 				"y": 250,
 				"cityType": 7,
 				"income": 35,
-				"neighbours": []
+				"neighbours": [303,304,300,302]
 			},
 			{
 				"id": 300,
@@ -3500,7 +3490,7 @@
 				"y": 247,
 				"cityType": 4,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [741,304,299]
 			},
 			{
 				"id": 301,
@@ -3510,7 +3500,7 @@
 				"y": 233,
 				"cityType": 1,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [296,303]
 			},
 			{
 				"id": 302,
@@ -3520,7 +3510,7 @@
 				"y": 254,
 				"cityType": 1,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [299,305,306]
 			},
 			{
 				"id": 303,
@@ -3530,7 +3520,7 @@
 				"y": 240,
 				"cityType": 1,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [301,780,304,299]
 			},
 			{
 				"id": 304,
@@ -3540,7 +3530,7 @@
 				"y": 243,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [297,276,300,303,299]
 			},
 			{
 				"id": 305,
@@ -3550,7 +3540,7 @@
 				"y": 257,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [302,759,306]
 			},
 			{
 				"id": 306,
@@ -3560,7 +3550,7 @@
 				"y": 264,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [302,306,740,492]
 			}
 		]
 	},
@@ -3569,7 +3559,7 @@
 		"name": "Finland",
 		"color": "#bb98bb",
 		"flag": "fi",
-		"capital": 0,
+		"capital": 307,
 		"cities": [
 			{
 				"id": 307,
@@ -3579,7 +3569,7 @@
 				"y": 73,
 				"cityType": 4,
 				"income": 76,
-				"neighbours": []
+				"neighbours": [308,298,683]
 			},
 			{
 				"id": 308,
@@ -3589,7 +3579,7 @@
 				"y": 67,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [309,307]
 			},
 			{
 				"id": 309,
@@ -3599,7 +3589,7 @@
 				"y": 59,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [310,308]
 			},
 			{
 				"id": 310,
@@ -3609,7 +3599,7 @@
 				"y": 51,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [790,620,710]
 			}
 		]
 	},
@@ -3618,7 +3608,7 @@
 		"name": "France",
 		"color": "#3333ff",
 		"flag": "fr",
-		"capital": 0,
+		"capital": 57,
 		"cities": [
 			{
 				"id": 311,
@@ -3628,7 +3618,7 @@
 				"y": 113,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [321,320,967,323,324,319]
 			},
 			{
 				"id": 312,
@@ -3638,7 +3628,7 @@
 				"y": 130,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [313,322,315]
 			},
 			{
 				"id": 313,
@@ -3648,7 +3638,7 @@
 				"y": 122,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [323,967,312,315,793]
 			},
 			{
 				"id": 314,
@@ -3658,7 +3648,7 @@
 				"y": 130,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [318,22,322,967]
 			},
 			{
 				"id": 315,
@@ -3668,27 +3658,27 @@
 				"y": 129,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [313,312,968,449]
 			},
 			{
 				"id": 316,
 				"name": "Nantes",
 				"country": "France",
-				"x": 514,
-				"y": 117,
+				"x": 515,
+				"y": 116,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [320,318,967]
 			},
 			{
 				"id": 317,
 				"name": "Strasbourg",
 				"country": "France",
-				"x": 539,
+				"x": 538,
 				"y": 114,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [792,343,337,514,324,323]
 			},
 			{
 				"id": 318,
@@ -3697,8 +3687,8 @@
 				"x": 517,
 				"y": 126,
 				"cityType": 4,
-				"income": 200,
-				"neighbours": []
+				"income": 150,
+				"neighbours": [316,771,314,967]
 			},
 			{
 				"id": 319,
@@ -3707,18 +3697,18 @@
 				"x": 530,
 				"y": 108,
 				"cityType": 4,
-				"income": 200,
-				"neighbours": []
+				"income": 100,
+				"neighbours": [80,321,324,82]
 			},
 			{
 				"id": 320,
 				"name": "Rennes",
 				"country": "France",
-				"x": 514,
-				"y": 115,
+				"x": 513,
+				"y": 114,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [873,321,311,316]
 			},
 			{
 				"id": 321,
@@ -3728,7 +3718,7 @@
 				"y": 109,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [861,320,311,319,81]
 			},
 			{
 				"id": 322,
@@ -3738,7 +3728,7 @@
 				"y": 131,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [314,22,312]
 			},
 			{
 				"id": 323,
@@ -3748,7 +3738,7 @@
 				"y": 119,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [311,967,313,793,317]
 			},
 			{
 				"id": 324,
@@ -3758,7 +3748,7 @@
 				"y": 112,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [319,311,317,514]
 			},
 			{
 				"id": 325,
@@ -3768,7 +3758,37 @@
 				"y": 265,
 				"cityType": 3,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [783,115]
+			},
+			{
+				"id": 163,
+				"name": "New Caledonia",
+				"country": "France",
+				"x": 1008,
+				"y": 357,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": [639,603]
+			},
+			{
+				"id": 967,
+				"name": "Tours",
+				"country": "France",
+				"x": 522,
+				"y": 122,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": [311,316,318,314,323]
+			},
+			{
+				"id": 968,
+				"name": "Ajaccio",
+				"country": "France",
+				"x": 543,
+				"y": 135,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": [453,315,457]
 			}
 		]
 	},
@@ -3777,7 +3797,7 @@
 		"name": "Gabon",
 		"color": "#944780",
 		"flag": "ga",
-		"capital": 0,
+		"capital": 326,
 		"cities": [
 			{
 				"id": 326,
@@ -3787,7 +3807,7 @@
 				"y": 281,
 				"cityType": 6,
 				"income": 21,
-				"neighbours": []
+				"neighbours": [295,247,327]
 			},
 			{
 				"id": 327,
@@ -3797,7 +3817,7 @@
 				"y": 287,
 				"cityType": 3,
 				"income": 21,
-				"neighbours": []
+				"neighbours": [326,248,246]
 			}
 		]
 	},
@@ -3806,17 +3826,17 @@
 		"name": "Gambia",
 		"color": "#a52a2a",
 		"flag": "gm",
-		"capital": 0,
+		"capital": 328,
 		"cities": [
 			{
 				"id": 328,
 				"name": "Banjul",
 				"country": "Gambia",
-				"x": 566,
+				"x": 466,
 				"y": 235,
 				"cityType": 6,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [729,730,359]
 			}
 		]
 	},
@@ -3825,7 +3845,7 @@
 		"name": "Georgia",
 		"color": "#84cdcf",
 		"flag": "ge",
-		"capital": 0,
+		"capital": 329,
 		"cities": [
 			{
 				"id": 329,
@@ -3835,7 +3855,7 @@
 				"y": 135,
 				"cityType": 7,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [708,330,45,69]
 			},
 			{
 				"id": 330,
@@ -3845,7 +3865,7 @@
 				"y": 135,
 				"cityType": 4,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [717,837,329]
 			}
 		]
 	},
@@ -3854,7 +3874,7 @@
 		"name": "Germany",
 		"color": "#4d5d53",
 		"flag": "de",
-		"capital": 0,
+		"capital": 331,
 		"cities": [
 			{
 				"id": 331,
@@ -3864,7 +3884,7 @@
 				"y": 100,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [344,339,340,342,668]
 			},
 			{
 				"id": 332,
@@ -3874,7 +3894,7 @@
 				"y": 96,
 				"cityType": 10,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [275,338,344,339]
 			},
 			{
 				"id": 333,
@@ -3884,7 +3904,7 @@
 				"y": 114,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [67,341,337,343]
 			},
 			{
 				"id": 334,
@@ -3894,7 +3914,7 @@
 				"y": 105,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [336,82,335,80,514]
 			},
 			{
 				"id": 335,
@@ -3904,7 +3924,7 @@
 				"y": 108,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [339,334,337,341,340]
 			},
 			{
 				"id": 336,
@@ -3914,7 +3934,7 @@
 				"y": 103,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [592,334,339,591]
 			},
 			{
 				"id": 337,
@@ -3924,7 +3944,7 @@
 				"y": 112,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [335,341,333,343]
 			},
 			{
 				"id": 338,
@@ -3934,7 +3954,7 @@
 				"y": 98,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [593,339,332]
 			},
 			{
 				"id": 339,
@@ -3944,17 +3964,17 @@
 				"y": 101,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [338,344,331]
 			},
 			{
 				"id": 340,
 				"name": "Leipzig",
 				"country": "Germany",
-				"x": 552,
+				"x": 551,
 				"y": 104,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [331,339,335,341,342]
 			},
 			{
 				"id": 341,
@@ -3964,17 +3984,17 @@
 				"y": 110,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [340,335,337,333,261]
 			},
 			{
 				"id": 342,
 				"name": "Dresden",
 				"country": "Germany",
 				"x": 557,
-				"y": 105,
+				"y": 103,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [331,340,261,666]
 			},
 			{
 				"id": 343,
@@ -3984,7 +4004,7 @@
 				"y": 115,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [337,317,792,333]
 			},
 			{
 				"id": 344,
@@ -3994,7 +4014,7 @@
 				"y": 95,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [332,331,668]
 			}
 		]
 	},
@@ -4003,7 +4023,7 @@
 		"name": "Ghana",
 		"color": "#2e8b57",
 		"flag": "gh",
-		"capital": 0,
+		"capital": 345,
 		"cities": [
 			{
 				"id": 345,
@@ -4013,7 +4033,7 @@
 				"y": 261,
 				"cityType": 9,
 				"income": 71,
-				"neighbours": []
+				"neighbours": [820,346,348]
 			},
 			{
 				"id": 346,
@@ -4023,7 +4043,7 @@
 				"y": 257,
 				"cityType": 9,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [347,251,348,345]
 			},
 			{
 				"id": 347,
@@ -4033,7 +4053,7 @@
 				"y": 247,
 				"cityType": 6,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [126,254,346,821]
 			},
 			{
 				"id": 348,
@@ -4043,7 +4063,7 @@
 				"y": 264,
 				"cityType": 6,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [346,250,345]
 			}
 		]
 	},
@@ -4052,7 +4072,7 @@
 		"name": "Greece",
 		"color": "#702963",
 		"flag": "gr",
-		"capital": 0,
+		"capital": 349,
 		"cities": [
 			{
 				"id": 349,
@@ -4062,7 +4082,7 @@
 				"y": 149,
 				"cityType": 7,
 				"income": 91,
-				"neighbours": []
+				"neighbours": [350,351,352]
 			},
 			{
 				"id": 350,
@@ -4072,7 +4092,7 @@
 				"y": 140,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [353,349,515]
 			},
 			{
 				"id": 351,
@@ -4082,7 +4102,7 @@
 				"y": 148,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [8,350,349,352]
 			},
 			{
 				"id": 352,
@@ -4092,7 +4112,7 @@
 				"y": 159,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [349,351,509,970]
 			},
 			{
 				"id": 353,
@@ -4102,13 +4122,13 @@
 				"y": 139,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [124,350,836]
 			}
 		]
 	},
 	{
 		"id": 64,
-		"name": "Guaemala",
+		"name": "Guatemala",
 		"color": "#819fbc",
 		"flag": "gt",
 		"capital": 0,
@@ -4116,22 +4136,22 @@
 			{
 				"id": 354,
 				"name": "Guatemala",
-				"country": "Guaemala",
+				"country": "Guatemala",
 				"x": 245,
 				"y": 230,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [556,293,355,363]
 			},
 			{
 				"id": 355,
 				"name": "Flores",
-				"country": "Guaemala",
+				"country": "Guatemala",
 				"x": 246,
 				"y": 222,
 				"cityType": 6,
 				"income": 36,
-				"neighbours": []
+				"neighbours": [554,556,83,354]
 			}
 		]
 	},
@@ -4150,7 +4170,7 @@
 				"y": 247,
 				"cityType": 9,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [359,735,357]
 			},
 			{
 				"id": 357,
@@ -4160,7 +4180,7 @@
 				"y": 244,
 				"cityType": 3,
 				"income": 6,
-				"neighbours": []
+				"neighbours": [356,730,531,358]
 			},
 			{
 				"id": 358,
@@ -4170,7 +4190,7 @@
 				"y": 252,
 				"cityType": 3,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [357,504,253]
 			}
 		]
 	},
@@ -4179,7 +4199,7 @@
 		"name": "Guinea Bissau",
 		"color": "#ff4500",
 		"flag": "gw",
-		"capital": 0,
+		"capital": 359,
 		"cities": [
 			{
 				"id": 359,
@@ -4189,7 +4209,7 @@
 				"y": 240,
 				"cityType": 6,
 				"income": 4,
-				"neighbours": []
+				"neighbours": [328,730,356]
 			}
 		]
 	},
@@ -4208,7 +4228,7 @@
 				"y": 258,
 				"cityType": 6,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [932,113,783]
 			}
 		]
 	},
@@ -4217,7 +4237,7 @@
 		"name": "Haiti",
 		"color": "#318ce7",
 		"flag": "ht",
-		"capital": 0,
+		"capital": 361,
 		"cities": [
 			{
 				"id": 361,
@@ -4227,7 +4247,7 @@
 				"y": 216,
 				"cityType": 9,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [258,458,278]
 			}
 		]
 	},
@@ -4236,7 +4256,7 @@
 		"name": "Honduras",
 		"color": "#ffdead",
 		"flag": "hn",
-		"capital": 0,
+		"capital": 362,
 		"cities": [
 			{
 				"id": 362,
@@ -4246,7 +4266,7 @@
 				"y": 234,
 				"cityType": 9,
 				"income": 23,
-				"neighbours": []
+				"neighbours": [354,362,595]
 			},
 			{
 				"id": 363,
@@ -4256,7 +4276,7 @@
 				"y": 227,
 				"cityType": 6,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [355,362,595]
 			}
 		]
 	},
@@ -4265,7 +4285,7 @@
 		"name": "Hong Kong",
 		"color": "#b6ff00",
 		"flag": "hk",
-		"capital": 0,
+		"capital": 364,
 		"cities": [
 			{
 				"id": 364,
@@ -4275,7 +4295,7 @@
 				"y": 204,
 				"cityType": 10,
 				"income": 460,
-				"neighbours": []
+				"neighbours": [181,235,192]
 			}
 		]
 	},
@@ -4284,7 +4304,7 @@
 		"name": "Hungary",
 		"color": "#003636",
 		"flag": "hu",
-		"capital": 0,
+		"capital": 365,
 		"cities": [
 			{
 				"id": 365,
@@ -4294,7 +4314,7 @@
 				"y": 118,
 				"cityType": 7,
 				"income": 168,
-				"neighbours": []
+				"neighbours": [737,66,739,255,733,366]
 			},
 			{
 				"id": 366,
@@ -4304,7 +4324,7 @@
 				"y": 117,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [738,365,679,678,856]
 			}
 		]
 	},
@@ -4313,7 +4333,7 @@
 		"name": "Iceland",
 		"color": "#71a6d2",
 		"flag": "is",
-		"capital": 0,
+		"capital": 367,
 		"cities": [
 			{
 				"id": 367,
@@ -4323,7 +4343,7 @@
 				"y": 63,
 				"cityType": 4,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [969,869]
 			}
 		]
 	},
@@ -4332,7 +4352,7 @@
 		"name": "India",
 		"color": "#a25bff",
 		"flag": "in",
-		"capital": 0,
+		"capital": 368,
 		"cities": [
 			{
 				"id": 368,
@@ -4342,7 +4362,7 @@
 				"y": 183,
 				"cityType": 11,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [383,400,378,384]
 			},
 			{
 				"id": 369,
@@ -4352,7 +4372,7 @@
 				"y": 221,
 				"cityType": 11,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [385,375,370]
 			},
 			{
 				"id": 370,
@@ -4362,7 +4382,7 @@
 				"y": 236,
 				"cityType": 11,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [369,387,372]
 			},
 			{
 				"id": 371,
@@ -4372,7 +4392,7 @@
 				"y": 204,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [393,392,389,74]
 			},
 			{
 				"id": 372,
@@ -4382,7 +4402,7 @@
 				"y": 235,
 				"cityType": 7,
 				"income": 250,
-				"neighbours": []
+				"neighbours": [388,370,386]
 			},
 			{
 				"id": 373,
@@ -4392,7 +4412,7 @@
 				"y": 199,
 				"cityType": 7,
 				"income": 250,
-				"neighbours": []
+				"neighbours": [630,397,376,380,378,398]
 			},
 			{
 				"id": 374,
@@ -4402,7 +4422,7 @@
 				"y": 220,
 				"cityType": 7,
 				"income": 250,
-				"neighbours": []
+				"neighbours": [375,370,388,389,379]
 			},
 			{
 				"id": 375,
@@ -4412,7 +4432,7 @@
 				"y": 218,
 				"cityType": 7,
 				"income": 250,
-				"neighbours": []
+				"neighbours": [385,369,370,374,379]
 			},
 			{
 				"id": 376,
@@ -4422,7 +4442,7 @@
 				"y": 206,
 				"cityType": 7,
 				"income": 250,
-				"neighbours": []
+				"neighbours": [373,397,380,385]
 			},
 			{
 				"id": 377,
@@ -4432,7 +4452,7 @@
 				"y": 187,
 				"cityType": 7,
 				"income": 250,
-				"neighbours": []
+				"neighbours": [590,384,399,590]
 			},
 			{
 				"id": 378,
@@ -4442,7 +4462,7 @@
 				"y": 189,
 				"cityType": 7,
 				"income": 250,
-				"neighbours": []
+				"neighbours": [383,398,373,382,368,384]
 			},
 			{
 				"id": 379,
@@ -4452,7 +4472,7 @@
 				"y": 206,
 				"cityType": 7,
 				"income": 250,
-				"neighbours": []
+				"neighbours": [380,385,375,390,391,380]
 			},
 			{
 				"id": 380,
@@ -4462,7 +4482,7 @@
 				"y": 202,
 				"cityType": 7,
 				"income": 250,
-				"neighbours": []
+				"neighbours": [382,373,376,385,379]
 			},
 			{
 				"id": 381,
@@ -4472,17 +4492,17 @@
 				"y": 193,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [589,399,391,392,393]
 			},
 			{
 				"id": 382,
 				"name": "Bhopal",
 				"country": "India",
 				"x": 742,
-				"y": 199,
+				"y": 197,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [384,378,373,380,391]
 			},
 			{
 				"id": 383,
@@ -4492,7 +4512,7 @@
 				"y": 177,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [633,401,368,400]
 			},
 			{
 				"id": 384,
@@ -4502,7 +4522,7 @@
 				"y": 186,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [400,368,382,377,590]
 			},
 			{
 				"id": 385,
@@ -4512,7 +4532,7 @@
 				"y": 210,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [376,380,379,375]
 			},
 			{
 				"id": 386,
@@ -4522,7 +4542,7 @@
 				"y": 247,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [775,387,372]
 			},
 			{
 				"id": 387,
@@ -4532,7 +4552,7 @@
 				"y": 240,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [369,370,386]
 			},
 			{
 				"id": 388,
@@ -4542,7 +4562,7 @@
 				"y": 226,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [389,374,372,370]
 			},
 			{
 				"id": 389,
@@ -4552,7 +4572,7 @@
 				"y": 212,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [371,390,388,374]
 			},
 			{
 				"id": 390,
@@ -4562,7 +4582,7 @@
 				"y": 207,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [392,391,379,374,389]
 			},
 			{
 				"id": 391,
@@ -4572,7 +4592,7 @@
 				"y": 200,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [399,377,382,379,390,392,381]
 			},
 			{
 				"id": 392,
@@ -4582,7 +4602,7 @@
 				"y": 201,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [393,381,391,390,389,371]
 			},
 			{
 				"id": 393,
@@ -4592,7 +4612,7 @@
 				"y": 196,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [589,381,391,371,75]
 			},
 			{
 				"id": 394,
@@ -4602,7 +4622,7 @@
 				"y": 196,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [396,76,135,73]
 			},
 			{
 				"id": 395,
@@ -4612,7 +4632,7 @@
 				"y": 185,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [229,396,135]
 			},
 			{
 				"id": 396,
@@ -4622,7 +4642,7 @@
 				"y": 190,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [395,76,394,381]
 			},
 			{
 				"id": 397,
@@ -4632,7 +4652,7 @@
 				"y": 204,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [373,376]
 			},
 			{
 				"id": 398,
@@ -4642,7 +4662,7 @@
 				"y": 190,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [634,378,373,630]
 			},
 			{
 				"id": 399,
@@ -4652,7 +4672,7 @@
 				"y": 187,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [588,377,381,391]
 			},
 			{
 				"id": 400,
@@ -4662,7 +4682,7 @@
 				"y": 176,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [230,401,368,384,590]
 			},
 			{
 				"id": 401,
@@ -4672,7 +4692,7 @@
 				"y": 171,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [627,230,383,400]
 			}
 		]
 	},
@@ -4681,7 +4701,7 @@
 		"name": "Indonesia",
 		"color": "#4800ce",
 		"flag": "id",
-		"capital": 0,
+		"capital": 402,
 		"cities": [
 			{
 				"id": 402,
@@ -4691,7 +4711,7 @@
 				"y": 303,
 				"cityType": 12,
 				"income": 530,
-				"neighbours": []
+				"neighbours": [410,405]
 			},
 			{
 				"id": 403,
@@ -4701,7 +4721,7 @@
 				"y": 308,
 				"cityType": 9,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [414,408,413]
 			},
 			{
 				"id": 404,
@@ -4711,7 +4731,7 @@
 				"y": 267,
 				"cityType": 9,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [527,411,409]
 			},
 			{
 				"id": 405,
@@ -4721,7 +4741,7 @@
 				"y": 306,
 				"cityType": 9,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [402,408,413]
 			},
 			{
 				"id": 406,
@@ -4731,7 +4751,7 @@
 				"y": 292,
 				"cityType": 9,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [411,409,406,416]
 			},
 			{
 				"id": 407,
@@ -4741,7 +4761,7 @@
 				"y": 299,
 				"cityType": 9,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [418,421,419]
 			},
 			{
 				"id": 408,
@@ -4751,7 +4771,7 @@
 				"y": 306,
 				"cityType": 9,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [405,413,403]
 			},
 			{
 				"id": 409,
@@ -4761,7 +4781,7 @@
 				"y": 283,
 				"cityType": 9,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [404,411,406]
 			},
 			{
 				"id": 410,
@@ -4771,7 +4791,7 @@
 				"y": 301,
 				"cityType": 9,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [406,409,402]
 			},
 			{
 				"id": 411,
@@ -4781,7 +4801,7 @@
 				"y": 279,
 				"cityType": 9,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [404,409,736,406]
 			},
 			{
 				"id": 412,
@@ -4791,7 +4811,7 @@
 				"y": 285,
 				"cityType": 9,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [528,416,417,412]
 			},
 			{
 				"id": 413,
@@ -4801,7 +4821,7 @@
 				"y": 309,
 				"cityType": 6,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [405,408,403]
 			},
 			{
 				"id": 414,
@@ -4811,7 +4831,7 @@
 				"y": 310,
 				"cityType": 6,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [403,413,421]
 			},
 			{
 				"id": 415,
@@ -4821,7 +4841,7 @@
 				"y": 317,
 				"cityType": 6,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [407,421,56]
 			},
 			{
 				"id": 416,
@@ -4831,7 +4851,7 @@
 				"y": 281,
 				"cityType": 6,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [528,417,412]
 			},
 			{
 				"id": 417,
@@ -4841,7 +4861,7 @@
 				"y": 290,
 				"cityType": 6,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [416,412]
 			},
 			{
 				"id": 418,
@@ -4851,7 +4871,7 @@
 				"y": 281,
 				"cityType": 6,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [412,419,407]
 			},
 			{
 				"id": 419,
@@ -4861,7 +4881,7 @@
 				"y": 293,
 				"cityType": 6,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [420,407]
 			},
 			{
 				"id": 420,
@@ -4871,7 +4891,7 @@
 				"y": 291,
 				"cityType": 6,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [419,640]
 			},
 			{
 				"id": 421,
@@ -4881,7 +4901,7 @@
 				"y": 312,
 				"cityType": 6,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [414,407,415]
 			}
 		]
 	},
@@ -4900,7 +4920,7 @@
 				"y": 156,
 				"cityType": 11,
 				"income": 246,
-				"neighbours": []
+				"neighbours": [434,427,423,429]
 			},
 			{
 				"id": 423,
@@ -4910,7 +4930,7 @@
 				"y": 155,
 				"cityType": 8,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [840,843,432,422]
 			},
 			{
 				"id": 424,
@@ -4920,7 +4940,7 @@
 				"y": 168,
 				"cityType": 8,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [427,428,425,433,432]
 			},
 			{
 				"id": 425,
@@ -4930,7 +4950,7 @@
 				"y": 179,
 				"cityType": 8,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [428,424,433,430]
 			},
 			{
 				"id": 426,
@@ -4940,7 +4960,7 @@
 				"y": 149,
 				"cityType": 8,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [69,838,438,434]
 			},
 			{
 				"id": 427,
@@ -4950,7 +4970,7 @@
 				"y": 162,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [422,429,424]
 			},
 			{
 				"id": 428,
@@ -4960,7 +4980,7 @@
 				"y": 172,
 				"cityType": 5,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [429,424,436,425]
 			},
 			{
 				"id": 429,
@@ -4970,7 +4990,7 @@
 				"y": 161,
 				"cityType": 5,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [434,435,428,422,427]
 			},
 			{
 				"id": 430,
@@ -4980,7 +5000,7 @@
 				"y": 187,
 				"cityType": 2,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [433,425,431,860]
 			},
 			{
 				"id": 431,
@@ -4990,7 +5010,7 @@
 				"y": 179,
 				"cityType": 2,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [432,433,430,636]
 			},
 			{
 				"id": 432,
@@ -5000,7 +5020,7 @@
 				"y": 166,
 				"cityType": 2,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [432,424,433,431,4]
 			},
 			{
 				"id": 433,
@@ -5010,7 +5030,7 @@
 				"y": 176,
 				"cityType": 2,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [424,425,430,431,432]
 			},
 			{
 				"id": 434,
@@ -5020,7 +5040,7 @@
 				"y": 153,
 				"cityType": 2,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [426,429,422]
 			}
 		]
 	},
@@ -5029,7 +5049,7 @@
 		"name": "Iraq",
 		"color": "#9090ff",
 		"flag": "iq",
-		"capital": 0,
+		"capital": 435,
 		"cities": [
 			{
 				"id": 435,
@@ -5039,7 +5059,7 @@
 				"y": 165,
 				"cityType": 8,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [438,440,439,436,429]
 			},
 			{
 				"id": 436,
@@ -5049,7 +5069,7 @@
 				"y": 174,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [428,435,439,494]
 			},
 			{
 				"id": 437,
@@ -5059,7 +5079,7 @@
 				"y": 154,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [834,797,438,440]
 			},
 			{
 				"id": 438,
@@ -5069,7 +5089,7 @@
 				"y": 156,
 				"cityType": 8,
 				"income": 80,
-				"neighbours": []
+				"neighbours": [437,426,435]
 			},
 			{
 				"id": 439,
@@ -5079,7 +5099,7 @@
 				"y": 172,
 				"cityType": 5,
 				"income": 80,
-				"neighbours": []
+				"neighbours": [435,436,440,727]
 			},
 			{
 				"id": 440,
@@ -5089,7 +5109,7 @@
 				"y": 165,
 				"cityType": 5,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [797,474,727,439,435,437,438]
 			}
 		]
 	},
@@ -5098,17 +5118,17 @@
 		"name": "Ireland",
 		"color": "#50c878",
 		"flag": "ie",
-		"capital": 0,
+		"capital": 441,
 		"cities": [
 			{
 				"id": 441,
 				"name": "Dublin",
 				"country": "Ireland",
 				"x": 503,
-				"y": 197,
+				"y": 97,
 				"cityType": 7,
 				"income": 122,
-				"neighbours": []
+				"neighbours": [870,443,442,871]
 			},
 			{
 				"id": 442,
@@ -5118,7 +5138,7 @@
 				"y": 101,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [443,441]
 			},
 			{
 				"id": 443,
@@ -5128,7 +5148,7 @@
 				"y": 96,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [442,441]
 			}
 		]
 	},
@@ -5137,37 +5157,37 @@
 		"name": "Israel",
 		"color": "#0b6f77",
 		"flag": "il",
-		"capital": 0,
+		"capital": 971,
 		"cities": [
 			{
-				"id": 443,
+				"id": 971,
 				"name": "Tel Aviv",
 				"country": "Israel",
 				"x": 618,
 				"y": 170,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [444,961,962,445]
 			},
 			{
 				"id": 444,
 				"name": "Haifa",
 				"country": "Israel",
-				"x": 619,
+				"x": 618,
 				"y": 167,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [501,794,473,971]
 			},
 			{
 				"id": 445,
 				"name": "Beer Sheva",
 				"country": "Israel",
 				"x": 618,
-				"y": 174,
+				"y": 175,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [971,962,285,475]
 			}
 		]
 	},
@@ -5176,7 +5196,7 @@
 		"name": "Italy",
 		"color": "#993300",
 		"flag": "it",
-		"capital": 0,
+		"capital": 446,
 		"cities": [
 			{
 				"id": 446,
@@ -5186,7 +5206,7 @@
 				"y": 136,
 				"cityType": 7,
 				"income": 420,
-				"neighbours": []
+				"neighbours": [453,448,457]
 			},
 			{
 				"id": 447,
@@ -5196,7 +5216,7 @@
 				"y": 122,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [792,449,456,452,451]
 			},
 			{
 				"id": 448,
@@ -5206,7 +5226,7 @@
 				"y": 139,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [446,455,454]
 			},
 			{
 				"id": 449,
@@ -5216,7 +5236,7 @@
 				"y": 125,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [313,315,447,451]
 			},
 			{
 				"id": 450,
@@ -5226,7 +5246,7 @@
 				"y": 149,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [454,823]
 			},
 			{
 				"id": 451,
@@ -5236,7 +5256,7 @@
 				"y": 128,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [449,447,452,453]
 			},
 			{
 				"id": 452,
@@ -5246,7 +5266,7 @@
 				"y": 126,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [456,447,451,453]
 			},
 			{
 				"id": 453,
@@ -5256,7 +5276,7 @@
 				"y": 131,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [452,451,968,446]
 			},
 			{
 				"id": 454,
@@ -5266,7 +5286,7 @@
 				"y": 150,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [448,450,538]
 			},
 			{
 				"id": 455,
@@ -5276,7 +5296,7 @@
 				"y": 138,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [7,448]
 			},
 			{
 				"id": 456,
@@ -5286,7 +5306,7 @@
 				"y": 122,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [67,739,447,452]
 			},
 			{
 				"id": 457,
@@ -5296,7 +5316,7 @@
 				"y": 144,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [446,968,20]
 			}
 		]
 	},
@@ -5305,7 +5325,7 @@
 		"name": "Jamaica",
 		"color": "#7f9bd4",
 		"flag": "jm",
-		"capital": 0,
+		"capital": 458,
 		"cities": [
 			{
 				"id": 458,
@@ -5315,7 +5335,7 @@
 				"y": 218,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [258,361]
 			}
 		]
 	},
@@ -5324,27 +5344,27 @@
 		"name": "Japan",
 		"color": "#ffff00",
 		"flag": "jp",
-		"capital": 0,
+		"capital": 459,
 		"cities": [
 			{
 				"id": 459,
 				"name": "Tokyo",
 				"country": "Japan",
-				"x": 916,
+				"x": 917,
 				"y": 157,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [466,467,460]
 			},
 			{
 				"id": 460,
 				"name": "Yokohama",
 				"country": "Japan",
-				"x": 915,
+				"x": 914,
 				"y": 159,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [459,462]
 			},
 			{
 				"id": 461,
@@ -5354,17 +5374,17 @@
 				"y": 161,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [462,464,471]
 			},
 			{
 				"id": 462,
 				"name": "Nagoya",
 				"country": "Japan",
-				"x": 905,
+				"x": 909,
 				"y": 161,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [460,467,464,461]
 			},
 			{
 				"id": 463,
@@ -5374,17 +5394,17 @@
 				"y": 131,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [714,702]
 			},
 			{
 				"id": 464,
 				"name": "Kyoto",
 				"country": "Japan",
 				"x": 905,
-				"y": 159,
+				"y": 158,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [467,468,460,462]
 			},
 			{
 				"id": 465,
@@ -5394,7 +5414,7 @@
 				"y": 165,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [758,469,468,471]
 			},
 			{
 				"id": 466,
@@ -5404,7 +5424,7 @@
 				"y": 148,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [470,467,459]
 			},
 			{
 				"id": 467,
@@ -5414,17 +5434,17 @@
 				"y": 150,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [470,466,459,464]
 			},
 			{
 				"id": 468,
 				"name": "Hiroshima",
 				"country": "Japan",
 				"x": 897,
-				"y": 162,
+				"y": 161,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [464,468,465]
 			},
 			{
 				"id": 469,
@@ -5434,7 +5454,7 @@
 				"y": 169,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [465,471,472]
 			},
 			{
 				"id": 470,
@@ -5444,7 +5464,7 @@
 				"y": 139,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [463,467,466]
 			},
 			{
 				"id": 471,
@@ -5454,7 +5474,7 @@
 				"y": 165,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [464,468,465,469]
 			},
 			{
 				"id": 472,
@@ -5464,7 +5484,7 @@
 				"y": 189,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [469,798]
 			}
 		]
 	},
@@ -5473,7 +5493,7 @@
 		"name": "Jordan",
 		"color": "#f231a7",
 		"flag": "jo",
-		"capital": 0,
+		"capital": 473,
 		"cities": [
 			{
 				"id": 473,
@@ -5483,7 +5503,7 @@
 				"y": 170,
 				"cityType": 8,
 				"income": 36,
-				"neighbours": []
+				"neighbours": [794,444,961,475,474]
 			},
 			{
 				"id": 474,
@@ -5493,7 +5513,7 @@
 				"y": 170,
 				"cityType": 2,
 				"income": 25,
-				"neighbours": []
+				"neighbours": [440,473,727,475]
 			},
 			{
 				"id": 475,
@@ -5503,7 +5523,7 @@
 				"y": 177,
 				"cityType": 2,
 				"income": 25,
-				"neighbours": []
+				"neighbours": [473,445,474,724]
 			}
 		]
 	},
@@ -5512,7 +5532,7 @@
 		"name": "Kazakhstan",
 		"color": "#a2a25b",
 		"flag": "kz",
-		"capital": 0,
+		"capital": 476,
 		"cities": [
 			{
 				"id": 476,
@@ -5522,7 +5542,7 @@
 				"y": 105,
 				"cityType": 5,
 				"income": 25,
-				"neighbours": []
+				"neighbours": [688,485,478,481]
 			},
 			{
 				"id": 477,
@@ -5532,7 +5552,7 @@
 				"y": 130,
 				"cityType": 8,
 				"income": 101,
-				"neighbours": []
+				"neighbours": [225,482,482,495]
 			},
 			{
 				"id": 478,
@@ -5542,7 +5562,7 @@
 				"y": 112,
 				"cityType": 5,
 				"income": 101,
-				"neighbours": []
+				"neighbours": [482,481,476,486,480]
 			},
 			{
 				"id": 479,
@@ -5552,7 +5572,7 @@
 				"y": 131,
 				"cityType": 5,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [480,486,923]
 			},
 			{
 				"id": 480,
@@ -5562,7 +5582,7 @@
 				"y": 130,
 				"cityType": 2,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [478,479,477]
 			},
 			{
 				"id": 481,
@@ -5572,7 +5592,7 @@
 				"y": 99,
 				"cityType": 2,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [482,476,688]
 			},
 			{
 				"id": 482,
@@ -5582,17 +5602,17 @@
 				"y": 109,
 				"cityType": 2,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [701,568,477,481]
 			},
 			{
 				"id": 483,
 				"name": "Aktau",
 				"country": "Kazakhstan",
-				"x": 656,
+				"x": 659,
 				"y": 130,
 				"cityType": 2,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [484,842,927]
 			},
 			{
 				"id": 484,
@@ -5602,7 +5622,7 @@
 				"y": 116,
 				"cityType": 2,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [705,718,485,483]
 			},
 			{
 				"id": 485,
@@ -5612,7 +5632,7 @@
 				"y": 110,
 				"cityType": 2,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [484,476,486]
 			},
 			{
 				"id": 486,
@@ -5622,7 +5642,7 @@
 				"y": 123,
 				"cityType": 2,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [485,478,479]
 			}
 		]
 	},
@@ -5631,7 +5651,7 @@
 		"name": "Kenya",
 		"color": "#a35450",
 		"flag": "ke",
-		"capital": 0,
+		"capital": 487,
 		"cities": [
 			{
 				"id": 487,
@@ -5641,17 +5661,17 @@
 				"y": 287,
 				"cityType": 9,
 				"income": 33,
-				"neighbours": []
+				"neighbours": [489,490,806,488,491]
 			},
 			{
 				"id": 488,
 				"name": "Mombasa",
 				"country": "Kenya",
-				"x": 639,
-				"y": 296,
+				"x": 637,
+				"y": 295,
 				"cityType": 8,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [487,491,808]
 			},
 			{
 				"id": 489,
@@ -5661,7 +5681,7 @@
 				"y": 283,
 				"cityType": 6,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [492,491,490,487]
 			},
 			{
 				"id": 490,
@@ -5671,7 +5691,7 @@
 				"y": 283,
 				"cityType": 6,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [848,487,489,493]
 			},
 			{
 				"id": 491,
@@ -5681,7 +5701,7 @@
 				"y": 283,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [492,489,488,742]
 			},
 			{
 				"id": 492,
@@ -5691,7 +5711,7 @@
 				"y": 273,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [306,493,489,491]
 			},
 			{
 				"id": 493,
@@ -5701,7 +5721,7 @@
 				"y": 269,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [759,846,492,305,490]
 			}
 		]
 	},
@@ -5710,7 +5730,7 @@
 		"name": "Kuwait",
 		"color": "#3d7f2a",
 		"flag": "kw",
-		"capital": 0,
+		"capital": 494,
 		"cities": [
 			{
 				"id": 494,
@@ -5720,7 +5740,7 @@
 				"y": 179,
 				"cityType": 8,
 				"income": 301,
-				"neighbours": []
+				"neighbours": [436,725,723]
 			}
 		]
 	},
@@ -5729,7 +5749,7 @@
 		"name": "Kyrghizstan",
 		"color": "#c6814f",
 		"flag": "kg",
-		"capital": 0,
+		"capital": 495,
 		"cities": [
 			{
 				"id": 495,
@@ -5739,7 +5759,7 @@
 				"y": 134,
 				"cityType": 8,
 				"income": 25,
-				"neighbours": []
+				"neighbours": [477,480,496]
 			},
 			{
 				"id": 496,
@@ -5749,7 +5769,7 @@
 				"y": 141,
 				"cityType": 5,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [495,924,226,802]
 			}
 		]
 	},
@@ -5758,7 +5778,7 @@
 		"name": "Laos",
 		"color": "#ed9121",
 		"flag": "la",
-		"capital": 0,
+		"capital": 497,
 		"cities": [
 			{
 				"id": 497,
@@ -5768,7 +5788,7 @@
 				"y": 216,
 				"cityType": 6,
 				"income": 21,
-				"neighbours": []
+				"neighbours": [941,812,815,498]
 			},
 			{
 				"id": 498,
@@ -5778,7 +5798,7 @@
 				"y": 228,
 				"cityType": 3,
 				"income": 21,
-				"neighbours": []
+				"neighbours": [497,816,938,139]
 			}
 		]
 	},
@@ -5787,7 +5807,7 @@
 		"name": "Latvia",
 		"color": "#801818",
 		"flag": "lv",
-		"capital": 0,
+		"capital": 499,
 		"cities": [
 			{
 				"id": 499,
@@ -5797,7 +5817,7 @@
 				"y": 85,
 				"cityType": 7,
 				"income": 26,
-				"neighbours": []
+				"neighbours": [513,500]
 			},
 			{
 				"id": 500,
@@ -5807,7 +5827,7 @@
 				"y": 87,
 				"cityType": 1,
 				"income": 26,
-				"neighbours": []
+				"neighbours": [298,499,512,79,683]
 			}
 		]
 	},
@@ -5816,7 +5836,7 @@
 		"name": "Lebannon",
 		"color": "#66023c",
 		"flag": "lb",
-		"capital": 0,
+		"capital": 501,
 		"cities": [
 			{
 				"id": 501,
@@ -5826,7 +5846,7 @@
 				"y": 165,
 				"cityType": 7,
 				"income": 45,
-				"neighbours": []
+				"neighbours": [502,444,794]
 			},
 			{
 				"id": 502,
@@ -5836,7 +5856,7 @@
 				"y": 162,
 				"cityType": 7,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [796,260,501,795]
 			}
 		]
 	},
@@ -5845,7 +5865,7 @@
 		"name": "Lesotho",
 		"color": "#518a88",
 		"flag": "ls",
-		"capital": 0,
+		"capital": 503,
 		"cities": [
 			{
 				"id": 503,
@@ -5855,7 +5875,7 @@
 				"y": 385,
 				"cityType": 2,
 				"income": 9,
-				"neighbours": []
+				"neighbours": [746,749,750]
 			}
 		]
 	},
@@ -5864,7 +5884,7 @@
 		"name": "Liberia",
 		"color": "#f79e00",
 		"flag": "lr",
-		"capital": 0,
+		"capital": 504,
 		"cities": [
 			{
 				"id": 504,
@@ -5874,7 +5894,7 @@
 				"y": 260,
 				"cityType": 9,
 				"income": 8,
-				"neighbours": []
+				"neighbours": [735,358,253,252]
 			}
 		]
 	},
@@ -5883,7 +5903,7 @@
 		"name": "Libya",
 		"color": "#75507b",
 		"flag": "ly",
-		"capital": 0,
+		"capital": 505,
 		"cities": [
 			{
 				"id": 505,
@@ -5893,7 +5913,7 @@
 				"y": 168,
 				"cityType": 8,
 				"income": 35,
-				"neighbours": []
+				"neighbours": [826,507,510]
 			},
 			{
 				"id": 506,
@@ -5903,7 +5923,7 @@
 				"y": 171,
 				"cityType": 5,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [508,511,509]
 			},
 			{
 				"id": 507,
@@ -5913,7 +5933,7 @@
 				"y": 171,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [505,508]
 			},
 			{
 				"id": 508,
@@ -5923,7 +5943,7 @@
 				"y": 174,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [507,510,506]
 			},
 			{
 				"id": 509,
@@ -5933,7 +5953,7 @@
 				"y": 171,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [352,506,291,511]
 			},
 			{
 				"id": 510,
@@ -5943,7 +5963,7 @@
 				"y": 190,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [505,508,13,172]
 			},
 			{
 				"id": 511,
@@ -5953,7 +5973,7 @@
 				"y": 194,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [506,172]
 			}
 		]
 	},
@@ -5962,17 +5982,17 @@
 		"name": "Lithuania",
 		"color": "#9c5a3c",
 		"flag": "lt",
-		"capital": 0,
+		"capital": 512,
 		"cities": [
 			{
 				"id": 512,
 				"name": "Vilinus",
 				"country": "Lithuania",
-				"x": 585,
-				"y": 93,
+				"x": 584,
+				"y": 92,
 				"cityType": 4,
 				"income": 45,
-				"neighbours": []
+				"neighbours": [500,77,669]
 			},
 			{
 				"id": 513,
@@ -5982,7 +6002,7 @@
 				"y": 89,
 				"cityType": 1,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [499,512,667]
 			}
 		]
 	},
@@ -5991,7 +6011,7 @@
 		"name": "Luxembourg",
 		"color": "#e9d66b",
 		"flag": "lu",
-		"capital": 0,
+		"capital": 514,
 		"cities": [
 			{
 				"id": 514,
@@ -6001,7 +6021,7 @@
 				"y": 109,
 				"cityType": 4,
 				"income": 38,
-				"neighbours": []
+				"neighbours": [82,324,317,334,335]
 			}
 		]
 	},
@@ -6010,7 +6030,7 @@
 		"name": "Macedonia",
 		"color": "#40e0d0",
 		"flag": "mk",
-		"capital": 0,
+		"capital": 515,
 		"cities": [
 			{
 				"id": 515,
@@ -6020,7 +6040,7 @@
 				"y": 137,
 				"cityType": 4,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [732,7,350,124]
 			}
 		]
 	},
@@ -6029,17 +6049,17 @@
 		"name": "Mdagascar",
 		"color": "#ba7086",
 		"flag": "mg",
-		"capital": 0,
+		"capital": 516,
 		"cities": [
 			{
 				"id": 516,
 				"name": "Tananarive",
 				"country": "Mdagascar",
-				"x": 556,
+				"x": 656,
 				"y": 348,
 				"cityType": 8,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [517,518,520]
 			},
 			{
 				"id": 517,
@@ -6049,7 +6069,7 @@
 				"y": 343,
 				"cityType": 5,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [516,520]
 			},
 			{
 				"id": 518,
@@ -6059,7 +6079,7 @@
 				"y": 353,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [516,519]
 			},
 			{
 				"id": 519,
@@ -6069,7 +6089,7 @@
 				"y": 360,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [518,521]
 			},
 			{
 				"id": 520,
@@ -6079,7 +6099,7 @@
 				"y": 335,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [245,517,516]
 			},
 			{
 				"id": 521,
@@ -6089,7 +6109,7 @@
 				"y": 368,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [583,519]
 			}
 		]
 	},
@@ -6108,7 +6128,7 @@
 				"y": 328,
 				"cityType": 6,
 				"income": 11,
-				"neighbours": []
+				"neighbours": [807,955,523]
 			},
 			{
 				"id": 523,
@@ -6118,7 +6138,7 @@
 				"y": 335,
 				"cityType": 3,
 				"income": 11,
-				"neighbours": []
+				"neighbours": [522,581,580]
 			}
 		]
 	},
@@ -6137,7 +6157,7 @@
 				"y": 271,
 				"cityType": 9,
 				"income": 263,
-				"neighbours": []
+				"neighbours": [525,527,526]
 			},
 			{
 				"id": 525,
@@ -6147,17 +6167,17 @@
 				"y": 261,
 				"cityType": 9,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [814,527,524]
 			},
 			{
 				"id": 526,
 				"name": "Johor Bahru",
 				"country": "Malaysia",
 				"x": 830,
-				"y": 276,
+				"y": 275,
 				"cityType": 9,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [524,736,528]
 			},
 			{
 				"id": 527,
@@ -6167,7 +6187,7 @@
 				"y": 264,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [814,404,524,525]
 			},
 			{
 				"id": 528,
@@ -6177,7 +6197,7 @@
 				"y": 276,
 				"cityType": 6,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [526,416,529,412]
 			},
 			{
 				"id": 529,
@@ -6187,17 +6207,17 @@
 				"y": 271,
 				"cityType": 6,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [123,528]
 			},
 			{
 				"id": 530,
 				"name": "Sandakan",
 				"country": "Malaysia",
-				"x": 71,
+				"x": 871,
 				"y": 262,
 				"cityType": 6,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [661,123]
 			}
 		]
 	},
@@ -6216,7 +6236,7 @@
 				"y": 238,
 				"cityType": 8,
 				"income": 12,
-				"neighbours": []
+				"neighbours": [535,357,532,533]
 			},
 			{
 				"id": 532,
@@ -6226,7 +6246,7 @@
 				"y": 241,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [531,254,127,533]
 			},
 			{
 				"id": 533,
@@ -6236,7 +6256,7 @@
 				"y": 232,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [536,535,531,532,126,534]
 			},
 			{
 				"id": 534,
@@ -6246,7 +6266,7 @@
 				"y": 224,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [599,601,537,536,533]
 			},
 			{
 				"id": 535,
@@ -6256,17 +6276,17 @@
 				"y": 233,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [730,542,531,533]
 			},
 			{
 				"id": 536,
-				"name": "TOmbouctou",
+				"name": "Tombouctou",
 				"country": "Mali",
 				"x": 502,
 				"y": 223,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [537,541,533,534]
 			},
 			{
 				"id": 537,
@@ -6276,7 +6296,7 @@
 				"y": 206,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [14,543,536,534]
 			}
 		]
 	},
@@ -6285,7 +6305,7 @@
 		"name": "Malta",
 		"color": "#cc0033",
 		"flag": "mt",
-		"capital": 0,
+		"capital": 100,
 		"cities": [
 			{
 				"id": 538,
@@ -6295,7 +6315,7 @@
 				"y": 157,
 				"cityType": 4,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [454,505]
 			}
 		]
 	},
@@ -6314,7 +6334,7 @@
 				"y": 220,
 				"cityType": 5,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [540,729,542]
 			},
 			{
 				"id": 540,
@@ -6324,7 +6344,7 @@
 				"y": 211,
 				"cityType": 2,
 				"income": 4,
-				"neighbours": []
+				"neighbours": [944,539,543]
 			},
 			{
 				"id": 541,
@@ -6334,7 +6354,7 @@
 				"y": 223,
 				"cityType": 2,
 				"income": 4,
-				"neighbours": []
+				"neighbours": [543,542,536]
 			},
 			{
 				"id": 542,
@@ -6344,7 +6364,7 @@
 				"y": 225,
 				"cityType": 2,
 				"income": 4,
-				"neighbours": []
+				"neighbours": [539,730,535,541]
 			},
 			{
 				"id": 543,
@@ -6354,7 +6374,7 @@
 				"y": 202,
 				"cityType": 2,
 				"income": 4,
-				"neighbours": []
+				"neighbours": [15,944]
 			}
 		]
 	},
@@ -6369,11 +6389,11 @@
 				"id": 544,
 				"name": "Port Louis",
 				"country": "Mauritius",
-				"x": 388,
+				"x": 688,
 				"y": 352,
 				"cityType": 3,
 				"income": 26,
-				"neighbours": []
+				"neighbours": [517,62]
 			}
 		]
 	},
@@ -6392,7 +6412,7 @@
 				"y": 215,
 				"cityType": 11,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [552,546,558,547,559]
 			},
 			{
 				"id": 546,
@@ -6402,17 +6422,17 @@
 				"y": 210,
 				"cityType": 7,
 				"income": 160,
-				"neighbours": []
+				"neighbours": [555,558,545,552]
 			},
 			{
 				"id": 547,
 				"name": "Puebla",
 				"country": "Mexico",
-				"x": 224,
+				"x": 225,
 				"y": 216,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [545,557,556]
 			},
 			{
 				"id": 548,
@@ -6422,7 +6442,7 @@
 				"y": 173,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [909,549,553,560]
 			},
 			{
 				"id": 549,
@@ -6432,7 +6452,7 @@
 				"y": 171,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [883,562,560,548]
 			},
 			{
 				"id": 550,
@@ -6442,7 +6462,7 @@
 				"y": 199,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [551,559]
 			},
 			{
 				"id": 551,
@@ -6452,7 +6472,7 @@
 				"y": 193,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [882,561,550]
 			},
 			{
 				"id": 552,
@@ -6462,7 +6482,7 @@
 				"y": 206,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [561,555,546,545,559]
 			},
 			{
 				"id": 553,
@@ -6472,7 +6492,7 @@
 				"y": 184,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [548,560,561]
 			},
 			{
 				"id": 554,
@@ -6482,7 +6502,7 @@
 				"y": 209,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [257,556,355,83]
 			},
 			{
 				"id": 555,
@@ -6492,7 +6512,7 @@
 				"y": 196,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [560,562,546,561]
 			},
 			{
 				"id": 556,
@@ -6502,7 +6522,7 @@
 				"y": 225,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [557,554,355,354]
 			},
 			{
 				"id": 557,
@@ -6512,7 +6532,7 @@
 				"y": 223,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [554,547,556,558]
 			},
 			{
 				"id": 558,
@@ -6522,7 +6542,7 @@
 				"y": 219,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [546,545,557]
 			},
 			{
 				"id": 559,
@@ -6532,7 +6552,7 @@
 				"y": 204,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [550,552,545]
 			},
 			{
 				"id": 560,
@@ -6542,7 +6562,7 @@
 				"y": 185,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [549,555,553,548]
 			},
 			{
 				"id": 561,
@@ -6552,7 +6572,7 @@
 				"y": 192,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [553,555,552,551]
 			},
 			{
 				"id": 562,
@@ -6562,7 +6582,7 @@
 				"y": 194,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [549,555]
 			}
 		]
 	},
@@ -6571,7 +6591,7 @@
 		"name": "Moldova",
 		"color": "#c6c600",
 		"flag": "md",
-		"capital": 0,
+		"capital": 563,
 		"cities": [
 			{
 				"id": 563,
@@ -6581,7 +6601,7 @@
 				"y": 118,
 				"cityType": 7,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [853,677]
 			}
 		]
 	},
@@ -6600,7 +6620,7 @@
 				"y": 117,
 				"cityType": 7,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [569,565,566,567]
 			},
 			{
 				"id": 565,
@@ -6610,7 +6630,7 @@
 				"y": 111,
 				"cityType": 1,
 				"income": 6,
-				"neighbours": []
+				"neighbours": [703,568,567,564]
 			},
 			{
 				"id": 566,
@@ -6620,7 +6640,7 @@
 				"y": 114,
 				"cityType": 1,
 				"income": 6,
-				"neighbours": []
+				"neighbours": [224,716,564]
 			},
 			{
 				"id": 567,
@@ -6630,7 +6650,7 @@
 				"y": 128,
 				"cityType": 1,
 				"income": 6,
-				"neighbours": []
+				"neighbours": [564,565,568,227,214]
 			},
 			{
 				"id": 568,
@@ -6640,7 +6660,7 @@
 				"y": 110,
 				"cityType": 1,
 				"income": 6,
-				"neighbours": []
+				"neighbours": [695,482,206,565,567]
 			},
 			{
 				"id": 569,
@@ -6650,7 +6670,7 @@
 				"y": 108,
 				"cityType": 1,
 				"income": 6,
-				"neighbours": []
+				"neighbours": [565,564,566]
 			}
 		]
 	},
@@ -6659,7 +6679,7 @@
 		"name": "montenegro",
 		"color": "#764891",
 		"flag": "me",
-		"capital": 0,
+		"capital": 570,
 		"cities": [
 			{
 				"id": 570,
@@ -6669,7 +6689,7 @@
 				"y": 133,
 				"cityType": 1,
 				"income": 13,
-				"neighbours": []
+				"neighbours": [90,7,732]
 			}
 		]
 	},
@@ -6678,7 +6698,7 @@
 		"name": "morocco",
 		"color": "#5f0000",
 		"flag": "ma",
-		"capital": 0,
+		"capital": 571,
 		"cities": [
 			{
 				"id": 571,
@@ -6688,7 +6708,7 @@
 				"y": 164,
 				"cityType": 7,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [576,572,573]
 			},
 			{
 				"id": 572,
@@ -6698,7 +6718,7 @@
 				"y": 167,
 				"cityType": 7,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [571,574,575]
 			},
 			{
 				"id": 573,
@@ -6708,7 +6728,7 @@
 				"y": 166,
 				"cityType": 4,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [576,571,574,577]
 			},
 			{
 				"id": 574,
@@ -6718,7 +6738,7 @@
 				"y": 174,
 				"cityType": 4,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [572,575,573]
 			},
 			{
 				"id": 575,
@@ -6728,7 +6748,7 @@
 				"y": 179,
 				"cityType": 4,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [574,15]
 			},
 			{
 				"id": 576,
@@ -6738,7 +6758,7 @@
 				"y": 158,
 				"cityType": 4,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [767,571,573,577]
 			},
 			{
 				"id": 577,
@@ -6748,7 +6768,7 @@
 				"y": 162,
 				"cityType": 4,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [19,576,573]
 			}
 		]
 	},
@@ -6757,7 +6777,7 @@
 		"name": "Mozambique",
 		"color": "#ffdf00",
 		"flag": "mz",
-		"capital": 0,
+		"capital": 578,
 		"cities": [
 			{
 				"id": 578,
@@ -6767,7 +6787,7 @@
 				"y": 370,
 				"cityType": 8,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [751,784,583]
 			},
 			{
 				"id": 579,
@@ -6777,7 +6797,7 @@
 				"y": 350,
 				"cityType": 4,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [581,957,580,583]
 			},
 			{
 				"id": 580,
@@ -6787,7 +6807,7 @@
 				"y": 337,
 				"cityType": 4,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [582,523,581,579]
 			},
 			{
 				"id": 581,
@@ -6797,17 +6817,17 @@
 				"y": 337,
 				"cityType": 1,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [951,955,579,580,957]
 			},
 			{
 				"id": 582,
 				"name": "Pemba",
 				"country": "Mozambique",
 				"x": 631,
-				"y": 348,
+				"y": 327,
 				"cityType": 1,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [245,810,522,580]
 			},
 			{
 				"id": 583,
@@ -6817,7 +6837,7 @@
 				"y": 363,
 				"cityType": 1,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [579,960,578,521]
 			}
 		]
 	},
@@ -6826,7 +6846,7 @@
 		"name": "Nambia",
 		"color": "#ab9273",
 		"flag": "na",
-		"capital": 0,
+		"capital": 584,
 		"cities": [
 			{
 				"id": 584,
@@ -6836,7 +6856,7 @@
 				"y": 359,
 				"cityType": 5,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [585,586,587,92]
 			},
 			{
 				"id": 585,
@@ -6846,7 +6866,7 @@
 				"y": 346,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [956,94,25,584]
 			},
 			{
 				"id": 586,
@@ -6856,7 +6876,7 @@
 				"y": 357,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [27,584,587]
 			},
 			{
 				"id": 587,
@@ -6866,7 +6886,7 @@
 				"y": 375,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [584,586,752]
 			}
 		]
 	},
@@ -6875,7 +6895,7 @@
 		"name": "Nepal",
 		"color": "#ffe293",
 		"flag": "np",
-		"capital": 0,
+		"capital": 588,
 		"cities": [
 			{
 				"id": 588,
@@ -6885,7 +6905,7 @@
 				"y": 185,
 				"cityType": 7,
 				"income": 35,
-				"neighbours": []
+				"neighbours": [228,590,399,589]
 			},
 			{
 				"id": 589,
@@ -6895,7 +6915,7 @@
 				"y": 188,
 				"cityType": 1,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [588,381,229]
 			},
 			{
 				"id": 590,
@@ -6905,7 +6925,7 @@
 				"y": 181,
 				"cityType": 1,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [230,400,377,588]
 			}
 		]
 	},
@@ -6924,7 +6944,7 @@
 				"y": 100,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [593,592,336]
 			},
 			{
 				"id": 592,
@@ -6934,7 +6954,7 @@
 				"y": 102,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [591,81,80,336]
 			},
 			{
 				"id": 593,
@@ -6944,7 +6964,7 @@
 				"y": 98,
 				"cityType": 4,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [338,591,336]
 			}
 		]
 	},
@@ -6953,17 +6973,17 @@
 		"name": "Nicaragua",
 		"color": "#3b5b79",
 		"flag": "ni",
-		"capital": 0,
+		"capital": 594,
 		"cities": [
 			{
 				"id": 594,
 				"name": "Managua",
 				"country": "Nicaragua",
-				"x": 557,
+				"x": 257,
 				"y": 239,
 				"cityType": 9,
 				"income": 23,
-				"neighbours": []
+				"neighbours": [595,362,249]
 			},
 			{
 				"id": 595,
@@ -6973,7 +6993,7 @@
 				"y": 235,
 				"cityType": 3,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [363,362,594,249]
 			}
 		]
 	},
@@ -6982,7 +7002,7 @@
 		"name": "Niger",
 		"color": "#001a00",
 		"flag": "ne",
-		"capital": 0,
+		"capital": 596,
 		"cities": [
 			{
 				"id": 596,
@@ -6992,7 +7012,7 @@
 				"y": 234,
 				"cityType": 8,
 				"income": 6,
-				"neighbours": []
+				"neighbours": [128,85,534,601,614]
 			},
 			{
 				"id": 597,
@@ -7002,7 +7022,7 @@
 				"y": 231,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [167,598,613,608]
 			},
 			{
 				"id": 598,
@@ -7012,7 +7032,7 @@
 				"y": 231,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [599,601,614,608,597]
 			},
 			{
 				"id": 599,
@@ -7022,17 +7042,17 @@
 				"y": 221,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [13,534,601,598]
 			},
 			{
 				"id": 600,
 				"name": "Madama",
 				"country": "Niger",
 				"x": 555,
-				"y": 506,
+				"y": 206,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [172,599,597,510]
 			},
 			{
 				"id": 601,
@@ -7042,7 +7062,7 @@
 				"y": 229,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [596,534,614,598,599]
 			}
 		]
 	},
@@ -7051,7 +7071,7 @@
 		"name": "New Zealand",
 		"color": "#00b7ef",
 		"flag": "nz",
-		"capital": 0,
+		"capital": 602,
 		"cities": [
 			{
 				"id": 602,
@@ -7061,7 +7081,7 @@
 				"y": 424,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [603,604]
 			},
 			{
 				"id": 603,
@@ -7071,7 +7091,7 @@
 				"y": 410,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [163,602]
 			},
 			{
 				"id": 604,
@@ -7081,7 +7101,7 @@
 				"y": 432,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [602,605]
 			},
 			{
 				"id": 605,
@@ -7091,7 +7111,7 @@
 				"y": 441,
 				"cityType": 1,
 				"income": 25,
-				"neighbours": []
+				"neighbours": [604,53]
 			}
 		]
 	},
@@ -7110,7 +7130,7 @@
 				"y": 252,
 				"cityType": 4,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [610,609,614,612,615]
 			},
 			{
 				"id": 607,
@@ -7120,7 +7140,7 @@
 				"y": 258,
 				"cityType": 10,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [609,84,612]
 			},
 			{
 				"id": 608,
@@ -7130,7 +7150,7 @@
 				"y": 239,
 				"cityType": 8,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [597,598,614,610,615,613]
 			},
 			{
 				"id": 609,
@@ -7140,7 +7160,7 @@
 				"y": 254,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [607,612,606,610,614]
 			},
 			{
 				"id": 610,
@@ -7150,7 +7170,7 @@
 				"y": 243,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [608,614,606,615]
 			},
 			{
 				"id": 611,
@@ -7160,7 +7180,7 @@
 				"y": 264,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [612,615,294,141]
 			},
 			{
 				"id": 612,
@@ -7170,7 +7190,7 @@
 				"y": 258,
 				"cityType": 7,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [606,609,607,611]
 			},
 			{
 				"id": 613,
@@ -7180,7 +7200,7 @@
 				"y": 239,
 				"cityType": 8,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [597,608,615,143,167]
 			},
 			{
 				"id": 614,
@@ -7190,7 +7210,7 @@
 				"y": 239,
 				"cityType": 5,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [598,601,596,85,609,610]
 			},
 			{
 				"id": 615,
@@ -7200,7 +7220,7 @@
 				"y": 248,
 				"cityType": 5,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [613,610,606,142]
 			}
 		]
 	},
@@ -7209,7 +7229,7 @@
 		"name": "Norway",
 		"color": "#759fa3",
 		"flag": "no",
-		"capital": 0,
+		"capital": 616,
 		"cities": [
 			{
 				"id": 616,
@@ -7219,7 +7239,7 @@
 				"y": 75,
 				"cityType": 7,
 				"income": 123,
-				"neighbours": []
+				"neighbours": [618,617,619,788]
 			},
 			{
 				"id": 617,
@@ -7229,7 +7249,7 @@
 				"y": 71,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [618,619,616]
 			},
 			{
 				"id": 618,
@@ -7239,7 +7259,7 @@
 				"y": 63,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [620,789,617,616]
 			},
 			{
 				"id": 619,
@@ -7249,7 +7269,7 @@
 				"y": 77,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [617,616]
 			},
 			{
 				"id": 620,
@@ -7259,7 +7279,7 @@
 				"y": 47,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [310,790,618]
 			}
 		]
 	},
@@ -7268,7 +7288,7 @@
 		"name": "Oman",
 		"color": "#df73ff",
 		"flag": "om",
-		"capital": 0,
+		"capital": 621,
 		"cities": [
 			{
 				"id": 621,
@@ -7278,7 +7298,7 @@
 				"y": 202,
 				"cityType": 8,
 				"income": 53,
-				"neighbours": []
+				"neighbours": [623,624]
 			},
 			{
 				"id": 622,
@@ -7288,7 +7308,7 @@
 				"y": 221,
 				"cityType": 2,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [624,950]
 			},
 			{
 				"id": 623,
@@ -7298,7 +7318,7 @@
 				"y": 197,
 				"cityType": 2,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [860,859,621]
 			},
 			{
 				"id": 624,
@@ -7308,7 +7328,7 @@
 				"y": 213,
 				"cityType": 2,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [728,622,621]
 			}
 		]
 	},
@@ -7317,7 +7337,7 @@
 		"name": "Pakistan",
 		"color": "#490075",
 		"flag": "pk",
-		"capital": 0,
+		"capital": 625,
 		"cities": [
 			{
 				"id": 625,
@@ -7327,7 +7347,7 @@
 				"y": 164,
 				"cityType": 11,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [631,5,627,628]
 			},
 			{
 				"id": 626,
@@ -7337,7 +7357,7 @@
 				"y": 195,
 				"cityType": 11,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [635,634,626]
 			},
 			{
 				"id": 627,
@@ -7347,7 +7367,7 @@
 				"y": 170,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [625,628,401]
 			},
 			{
 				"id": 628,
@@ -7357,7 +7377,7 @@
 				"y": 171,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [625,5,629,627]
 			},
 			{
 				"id": 629,
@@ -7367,7 +7387,7 @@
 				"y": 177,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [628,632,634,633]
 			},
 			{
 				"id": 630,
@@ -7377,7 +7397,7 @@
 				"y": 194,
 				"cityType": 8,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [634,626,398,373]
 			},
 			{
 				"id": 631,
@@ -7387,17 +7407,17 @@
 				"y": 159,
 				"cityType": 8,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [802,5,625,226]
 			},
 			{
 				"id": 632,
 				"name": "Quetta",
 				"country": "Pakistan",
-				"x": 11,
+				"x": 711,
 				"y": 176,
 				"cityType": 5,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [2,636,628]
 			},
 			{
 				"id": 633,
@@ -7407,7 +7427,7 @@
 				"y": 181,
 				"cityType": 5,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [383,629,634,628]
 			},
 			{
 				"id": 634,
@@ -7417,7 +7437,7 @@
 				"y": 185,
 				"cityType": 5,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [629,636,635,626,630]
 			},
 			{
 				"id": 635,
@@ -7427,7 +7447,7 @@
 				"y": 193,
 				"cityType": 5,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [636,634,626]
 			},
 			{
 				"id": 636,
@@ -7437,7 +7457,7 @@
 				"y": 181,
 				"cityType": 5,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [2,431,634,635]
 			}
 		]
 	},
@@ -7446,7 +7466,7 @@
 		"name": "Panama",
 		"color": "#b97f6a",
 		"flag": "pa",
-		"capital": 0,
+		"capital": 637,
 		"cities": [
 			{
 				"id": 637,
@@ -7456,7 +7476,7 @@
 				"y": 250,
 				"cityType": 5,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [638,242,238]
 			},
 			{
 				"id": 638,
@@ -7466,7 +7486,7 @@
 				"y": 252,
 				"cityType": 1,
 				"income": 45,
-				"neighbours": []
+				"neighbours": [249,637]
 			}
 		]
 	},
@@ -7475,7 +7495,7 @@
 		"name": "Papua NG",
 		"color": "#e48400",
 		"flag": "pg",
-		"capital": 0,
+		"capital": 639,
 		"cities": [
 			{
 				"id": 639,
@@ -7485,7 +7505,7 @@
 				"y": 314,
 				"cityType": 6,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [640,55,163]
 			},
 			{
 				"id": 640,
@@ -7495,7 +7515,7 @@
 				"y": 295,
 				"cityType": 3,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [420,639]
 			}
 		]
 	},
@@ -7504,7 +7524,7 @@
 		"name": "Paraguay",
 		"color": "#8db600",
 		"flag": "py",
-		"capital": 0,
+		"capital": 641,
 		"cities": [
 			{
 				"id": 641,
@@ -7514,7 +7534,7 @@
 				"y": 370,
 				"cityType": 7,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [643,41,642]
 			},
 			{
 				"id": 642,
@@ -7524,7 +7544,7 @@
 				"y": 367,
 				"cityType": 4,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [110,643]
 			},
 			{
 				"id": 643,
@@ -7534,7 +7554,7 @@
 				"y": 362,
 				"cityType": 1,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [644,641,642]
 			},
 			{
 				"id": 644,
@@ -7544,7 +7564,7 @@
 				"y": 357,
 				"cityType": 1,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [110,86,89,40,643]
 			}
 		]
 	},
@@ -7553,17 +7573,17 @@
 		"name": "Peru",
 		"color": "#cc0066",
 		"flag": "pe",
-		"capital": 0,
+		"capital": 645,
 		"cities": [
 			{
 				"id": 645,
 				"name": "Lima",
 				"country": "Peru",
-				"x": 284,
-				"y": 232,
+				"x": 286,
+				"y": 332,
 				"cityType": 12,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [647,650,652,646]
 			},
 			{
 				"id": 646,
@@ -7573,7 +7593,7 @@
 				"y": 340,
 				"cityType": 7,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [652,645,176,88]
 			},
 			{
 				"id": 647,
@@ -7583,7 +7603,7 @@
 				"y": 309,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [648,650,645,651]
 			},
 			{
 				"id": 648,
@@ -7593,7 +7613,7 @@
 				"y": 301,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [281,651,647]
 			},
 			{
 				"id": 649,
@@ -7603,7 +7623,7 @@
 				"y": 294,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [243,651]
 			},
 			{
 				"id": 650,
@@ -7613,7 +7633,7 @@
 				"y": 317,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [651,647,645,652]
 			},
 			{
 				"id": 651,
@@ -7623,7 +7643,7 @@
 				"y": 301,
 				"cityType": 4,
 				"income": 25,
-				"neighbours": []
+				"neighbours": [649,648,647,650]
 			},
 			{
 				"id": 652,
@@ -7633,7 +7653,7 @@
 				"y": 325,
 				"cityType": 4,
 				"income": 25,
-				"neighbours": []
+				"neighbours": [650,645,646,112]
 			}
 		]
 	},
@@ -7642,7 +7662,7 @@
 		"name": "philippines",
 		"color": "#69bf94",
 		"flag": "ph",
-		"capital": 0,
+		"capital": 653,
 		"cities": [
 			{
 				"id": 653,
@@ -7652,7 +7672,7 @@
 				"y": 230,
 				"cityType": 12,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [657,660,659]
 			},
 			{
 				"id": 654,
@@ -7662,7 +7682,7 @@
 				"y": 257,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [658,656]
 			},
 			{
 				"id": 655,
@@ -7672,7 +7692,7 @@
 				"y": 246,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [659,661,658]
 			},
 			{
 				"id": 656,
@@ -7682,7 +7702,7 @@
 				"y": 260,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [654,530]
 			},
 			{
 				"id": 657,
@@ -7692,7 +7712,7 @@
 				"y": 220,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [799,657]
 			},
 			{
 				"id": 658,
@@ -7702,7 +7722,7 @@
 				"y": 251,
 				"cityType": 6,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [655,654]
 			},
 			{
 				"id": 659,
@@ -7712,7 +7732,7 @@
 				"y": 242,
 				"cityType": 6,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [660,653,661,655]
 			},
 			{
 				"id": 660,
@@ -7722,7 +7742,7 @@
 				"y": 235,
 				"cityType": 6,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [653,659]
 			},
 			{
 				"id": 661,
@@ -7732,7 +7752,7 @@
 				"y": 249,
 				"cityType": 6,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [653,655,530]
 			}
 		]
 	},
@@ -7751,7 +7771,7 @@
 				"y": 101,
 				"cityType": 7,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [669,667,663,664,855]
 			},
 			{
 				"id": 663,
@@ -7761,7 +7781,7 @@
 				"y": 103,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [667,662,664,666,665]
 			},
 			{
 				"id": 664,
@@ -7771,7 +7791,7 @@
 				"y": 109,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [663,263,738]
 			},
 			{
 				"id": 665,
@@ -7781,7 +7801,7 @@
 				"y": 105,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [666,261,263,663]
 			},
 			{
 				"id": 666,
@@ -7791,7 +7811,7 @@
 				"y": 101,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [667,668,342,665,663]
 			},
 			{
 				"id": 667,
@@ -7801,7 +7821,7 @@
 				"y": 94,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [513,668,666,662]
 			},
 			{
 				"id": 668,
@@ -7811,7 +7831,7 @@
 				"y": 96,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [344,331,666,667]
 			},
 			{
 				"id": 669,
@@ -7821,7 +7841,7 @@
 				"y": 98,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [512,667,662,77]
 			}
 		]
 	},
@@ -7830,7 +7850,7 @@
 		"name": "Portugal",
 		"color": "#007c45",
 		"flag": "pt",
-		"capital": 0,
+		"capital": 670,
 		"cities": [
 			{
 				"id": 670,
@@ -7840,7 +7860,7 @@
 				"y": 146,
 				"cityType": 7,
 				"income": 72,
-				"neighbours": []
+				"neighbours": [673,672]
 			},
 			{
 				"id": 671,
@@ -7850,7 +7870,7 @@
 				"y": 138,
 				"cityType": 7,
 				"income": 80,
-				"neighbours": []
+				"neighbours": [772,773,673]
 			},
 			{
 				"id": 672,
@@ -7860,7 +7880,7 @@
 				"y": 152,
 				"cityType": 4,
 				"income": 80,
-				"neighbours": []
+				"neighbours": [670,765,576]
 			},
 			{
 				"id": 673,
@@ -7870,7 +7890,7 @@
 				"y": 142,
 				"cityType": 4,
 				"income": 80,
-				"neighbours": []
+				"neighbours": [671,773,670]
 			}
 		]
 	},
@@ -7879,7 +7899,7 @@
 		"name": "Puerto Rico",
 		"color": "#508686",
 		"flag": "pr",
-		"capital": 0,
+		"capital": 674,
 		"cities": [
 			{
 				"id": 674,
@@ -7889,7 +7909,7 @@
 				"y": 218,
 				"cityType": 4,
 				"income": 80,
-				"neighbours": []
+				"neighbours": [164,277,46]
 			}
 		]
 	},
@@ -7908,7 +7928,7 @@
 				"y": 194,
 				"cityType": 5,
 				"income": 335,
-				"neighbours": []
+				"neighbours": [71,858,728]
 			}
 		]
 	},
@@ -7917,7 +7937,7 @@
 		"name": "Romania",
 		"color": "#a81507",
 		"flag": "ro",
-		"capital": 0,
+		"capital": 676,
 		"cities": [
 			{
 				"id": 676,
@@ -7927,7 +7947,7 @@
 				"y": 127,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [677,678,680,681]
 			},
 			{
 				"id": 677,
@@ -7937,7 +7957,7 @@
 				"y": 118,
 				"cityType": 4,
 				"income": 70,
-				"neighbours": []
+				"neighbours": [856,678,676,563,681]
 			},
 			{
 				"id": 678,
@@ -7947,7 +7967,7 @@
 				"y": 119,
 				"cityType": 4,
 				"income": 70,
-				"neighbours": []
+				"neighbours": [856,366,679,680,676,677]
 			},
 			{
 				"id": 679,
@@ -7957,7 +7977,7 @@
 				"y": 123,
 				"cityType": 4,
 				"income": 70,
-				"neighbours": []
+				"neighbours": [366,733,680,678]
 			},
 			{
 				"id": 680,
@@ -7967,7 +7987,7 @@
 				"y": 127,
 				"cityType": 4,
 				"income": 70,
-				"neighbours": []
+				"neighbours": [678,679,124,676]
 			},
 			{
 				"id": 681,
@@ -7977,7 +7997,7 @@
 				"y": 127,
 				"cityType": 4,
 				"income": 70,
-				"neighbours": []
+				"neighbours": [853,677,676,125]
 			}
 		]
 	},
@@ -7986,7 +8006,7 @@
 		"name": "Russia",
 		"color": "#3c5d48",
 		"flag": "ru",
-		"capital": 0,
+		"capital": 682,
 		"cities": [
 			{
 				"id": 682,
@@ -7996,7 +8016,7 @@
 				"y": 87,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [711,683,712,697,700,706]
 			},
 			{
 				"id": 683,
@@ -8006,7 +8026,7 @@
 				"y": 76,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [710,307,298,500,712,682,711]
 			},
 			{
 				"id": 684,
@@ -8016,7 +8036,7 @@
 				"y": 92,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [688,701,695,481]
 			},
 			{
 				"id": 685,
@@ -8026,7 +8046,7 @@
 				"y": 87,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [694,692,691,688,699]
 			},
 			{
 				"id": 686,
@@ -8036,7 +8056,7 @@
 				"y": 85,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [700,706,696,699,689]
 			},
 			{
 				"id": 687,
@@ -8046,7 +8066,7 @@
 				"y": 98,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [699,696,692,705]
 			},
 			{
 				"id": 688,
@@ -8056,7 +8076,7 @@
 				"y": 90,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [685,684,481,476]
 			},
 			{
 				"id": 689,
@@ -8066,7 +8086,7 @@
 				"y": 85,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [686,699,972]
 			},
 			{
 				"id": 690,
@@ -8076,7 +8096,7 @@
 				"y": 118,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [852,693,718,698]
 			},
 			{
 				"id": 691,
@@ -8086,7 +8106,7 @@
 				"y": 91,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [685,692,485,476]
 			},
 			{
 				"id": 692,
@@ -8096,7 +8116,7 @@
 				"y": 94,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [694,699,687,705,685,691]
 			},
 			{
 				"id": 693,
@@ -8106,7 +8126,7 @@
 				"y": 111,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [696,697,690,718]
 			},
 			{
 				"id": 694,
@@ -8116,7 +8136,7 @@
 				"y": 75,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [700,972,685,711]
 			},
 			{
 				"id": 695,
@@ -8126,7 +8146,7 @@
 				"y": 88,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [715,703,684,701,568]
 			},
 			{
 				"id": 696,
@@ -8136,7 +8156,7 @@
 				"y": 102,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [699,686,706,697,693,687]
 			},
 			{
 				"id": 697,
@@ -8146,7 +8166,7 @@
 				"y": 103,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [682,712,850,693,696,706]
 			},
 			{
 				"id": 698,
@@ -8156,7 +8176,7 @@
 				"y": 125,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [690,709,717]
 			},
 			{
 				"id": 699,
@@ -8166,17 +8186,17 @@
 				"y": 93,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [685,689,686,696]
 			},
 			{
-				"id": 699,
+				"id": 972,
 				"name": "Izhevsk",
 				"country": "Russia",
 				"x": 649,
 				"y": 84,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [694,689]
 			},
 			{
 				"id": 700,
@@ -8186,7 +8206,7 @@
 				"y": 79,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [711,682,706,686]
 			},
 			{
 				"id": 701,
@@ -8196,7 +8216,7 @@
 				"y": 101,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [688,482,695,684]
 			},
 			{
 				"id": 702,
@@ -8206,7 +8226,7 @@
 				"y": 126,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [704,223,965,463]
 			},
 			{
 				"id": 703,
@@ -8216,7 +8236,7 @@
 				"y": 100,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [695,715,716,565]
 			},
 			{
 				"id": 704,
@@ -8226,7 +8246,7 @@
 				"y": 111,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [707,702,223]
 			},
 			{
 				"id": 705,
@@ -8236,7 +8256,7 @@
 				"y": 103,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [692,687,484,485]
 			},
 			{
 				"id": 706,
@@ -8246,7 +8266,7 @@
 				"y": 88,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [700,682,697,696]
 			},
 			{
 				"id": 707,
@@ -8256,7 +8276,7 @@
 				"y": 105,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [715,716,222,704]
 			},
 			{
 				"id": 708,
@@ -8266,7 +8286,7 @@
 				"y": 128,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [718,717,329,483]
 			},
 			{
 				"id": 709,
@@ -8276,7 +8296,7 @@
 				"y": 125,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [854,698]
 			},
 			{
 				"id": 710,
@@ -8286,17 +8306,17 @@
 				"y": 53,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [310,711,683]
 			},
 			{
 				"id": 711,
-				"name": "Arkha,gelsk",
+				"name": "Arkhagelsk",
 				"country": "Russia",
 				"x": 616,
 				"y": 63,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [710,683,682,700,694]
 			},
 			{
 				"id": 712,
@@ -8306,7 +8326,7 @@
 				"y": 90,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [683,79,697,682]
 			},
 			{
 				"id": 713,
@@ -8316,7 +8336,7 @@
 				"y": 62,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [715,714]
 			},
 			{
 				"id": 714,
@@ -8326,7 +8346,7 @@
 				"y": 102,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [713,714]
 			},
 			{
 				"id": 715,
@@ -8336,7 +8356,7 @@
 				"y": 69,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [713,707,695]
 			},
 			{
 				"id": 716,
@@ -8346,7 +8366,7 @@
 				"y": 102,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [715,703,566,224,707]
 			},
 			{
 				"id": 717,
@@ -8356,7 +8376,7 @@
 				"y": 128,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [698,330,708]
 			},
 			{
 				"id": 718,
@@ -8366,7 +8386,7 @@
 				"y": 120,
 				"cityType": 1,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [693,690,708,484]
 			}
 		]
 	},
@@ -8375,7 +8395,7 @@
 		"name": "Rwanda",
 		"color": "#5e7b8e",
 		"flag": "rw",
-		"capital": 0,
+		"capital": 719,
 		"cities": [
 			{
 				"id": 719,
@@ -8385,7 +8405,7 @@
 				"y": 289,
 				"cityType": 9,
 				"income": 23,
-				"neighbours": []
+				"neighbours": [847,267,136,805]
 			}
 		]
 	},
@@ -8394,7 +8414,7 @@
 		"name": "Saudi Arabia",
 		"color": "#009900",
 		"flag": "sa",
-		"capital": 0,
+		"capital": 720,
 		"cities": [
 			{
 				"id": 720,
@@ -8404,7 +8424,7 @@
 				"y": 195,
 				"cityType": 8,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [725,722,721,726,728]
 			},
 			{
 				"id": 721,
@@ -8414,7 +8434,7 @@
 				"y": 208,
 				"cityType": 8,
 				"income": 210,
-				"neighbours": []
+				"neighbours": [722,720,726]
 			},
 			{
 				"id": 722,
@@ -8424,7 +8444,7 @@
 				"y": 192,
 				"cityType": 8,
 				"income": 160,
-				"neighbours": []
+				"neighbours": [724,725,721]
 			},
 			{
 				"id": 723,
@@ -8434,7 +8454,7 @@
 				"y": 190,
 				"cityType": 8,
 				"income": 160,
-				"neighbours": []
+				"neighbours": [494,725,720,71]
 			},
 			{
 				"id": 724,
@@ -8444,7 +8464,7 @@
 				"y": 184,
 				"cityType": 5,
 				"income": 160,
-				"neighbours": []
+				"neighbours": [727,475,290,722]
 			},
 			{
 				"id": 725,
@@ -8454,7 +8474,7 @@
 				"y": 188,
 				"cityType": 5,
 				"income": 160,
-				"neighbours": []
+				"neighbours": [494,727,722,720,723]
 			},
 			{
 				"id": 726,
@@ -8464,7 +8484,7 @@
 				"y": 218,
 				"cityType": 2,
 				"income": 160,
-				"neighbours": []
+				"neighbours": [721,945,720,728]
 			},
 			{
 				"id": 727,
@@ -8474,7 +8494,7 @@
 				"y": 174,
 				"cityType": 2,
 				"income": 160,
-				"neighbours": []
+				"neighbours": [440,474,724,725,439]
 			},
 			{
 				"id": 728,
@@ -8484,7 +8504,7 @@
 				"y": 201,
 				"cityType": 2,
 				"income": 160,
-				"neighbours": []
+				"neighbours": [675,720,726,624]
 			}
 		]
 	},
@@ -8493,7 +8513,7 @@
 		"name": "Senegal",
 		"color": "#3d2b1f",
 		"flag": "sn",
-		"capital": 0,
+		"capital": 729,
 		"cities": [
 			{
 				"id": 729,
@@ -8503,7 +8523,7 @@
 				"y": 230,
 				"cityType": 8,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [539,164,328,730]
 			},
 			{
 				"id": 730,
@@ -8513,7 +8533,7 @@
 				"y": 233,
 				"cityType": 5,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [542,729,328,359,357,535]
 			}
 		]
 	},
@@ -8522,7 +8542,7 @@
 		"name": "Serbia",
 		"color": "#2a2a5b",
 		"flag": "rs",
-		"capital": 0,
+		"capital": 731,
 		"cities": [
 			{
 				"id": 731,
@@ -8532,7 +8552,7 @@
 				"y": 127,
 				"cityType": 7,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [733,90,679,732]
 			},
 			{
 				"id": 732,
@@ -8542,7 +8562,7 @@
 				"y": 133,
 				"cityType": 4,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [570,515,124,731]
 			},
 			{
 				"id": 733,
@@ -8552,7 +8572,7 @@
 				"y": 124,
 				"cityType": 4,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [365,255,91,731,679]
 			}
 		]
 	},
@@ -8561,7 +8581,7 @@
 		"name": "Seychelles",
 		"color": "#00ff00",
 		"flag": "sc",
-		"capital": 0,
+		"capital": 734,
 		"cities": [
 			{
 				"id": 734,
@@ -8571,7 +8591,7 @@
 				"y": 298,
 				"cityType": 3,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [774,488]
 			}
 		]
 	},
@@ -8580,7 +8600,7 @@
 		"name": "Sierra Leone",
 		"color": "#8b0000",
 		"flag": "sl",
-		"capital": 0,
+		"capital": 735,
 		"cities": [
 			{
 				"id": 735,
@@ -8590,7 +8610,7 @@
 				"y": 252,
 				"cityType": 9,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [356,504]
 			}
 		]
 	},
@@ -8599,7 +8619,7 @@
 		"name": "Singapore",
 		"color": "#002a2a",
 		"flag": "sg",
-		"capital": 0,
+		"capital": 736,
 		"cities": [
 			{
 				"id": 736,
@@ -8609,7 +8629,7 @@
 				"y": 278,
 				"cityType": 9,
 				"income": 488,
-				"neighbours": []
+				"neighbours": [526,411,416]
 			}
 		]
 	},
@@ -8628,7 +8648,7 @@
 				"y": 114,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [263,262,65,365,738]
 			},
 			{
 				"id": 738,
@@ -8638,7 +8658,7 @@
 				"y": 112,
 				"cityType": 4,
 				"income": 70,
-				"neighbours": []
+				"neighbours": [664,737,366,856]
 			}
 		]
 	},
@@ -8647,7 +8667,7 @@
 		"name": "Slovenia",
 		"color": "#ff80ff",
 		"flag": "si",
-		"capital": 0,
+		"capital": 739,
 		"cities": [
 			{
 				"id": 739,
@@ -8657,7 +8677,7 @@
 				"y": 121,
 				"cityType": 4,
 				"income": 70,
-				"neighbours": []
+				"neighbours": [66,456,256,255,365]
 			}
 		]
 	},
@@ -8676,7 +8696,7 @@
 				"y": 270,
 				"cityType": 8,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [743,306,742]
 			},
 			{
 				"id": 741,
@@ -8686,7 +8706,7 @@
 				"y": 248,
 				"cityType": 5,
 				"income": 3,
-				"neighbours": []
+				"neighbours": [276,300,743]
 			},
 			{
 				"id": 742,
@@ -8696,7 +8716,7 @@
 				"y": 281,
 				"cityType": 2,
 				"income": 3,
-				"neighbours": []
+				"neighbours": [491,740]
 			},
 			{
 				"id": 743,
@@ -8706,7 +8726,7 @@
 				"y": 250,
 				"cityType": 2,
 				"income": 3,
-				"neighbours": []
+				"neighbours": [741,740]
 			}
 		]
 	},
@@ -8715,27 +8735,27 @@
 		"name": "South Africa",
 		"color": "#cd5700",
 		"flag": "za",
-		"capital": 0,
+		"capital": 744,
 		"cities": [
 			{
 				"id": 744,
 				"name": "Pretoria",
 				"country": "South Africa",
-				"x": 560,
+				"x": 605,
 				"y": 373,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [751,784,578,746,750]
 			},
 			{
 				"id": 745,
 				"name": "Cape Town",
 				"country": "South Africa",
-				"x": 271,
+				"x": 571,
 				"y": 401,
 				"cityType": 7,
 				"income": 90,
-				"neighbours": []
+				"neighbours": [752,753]
 			},
 			{
 				"id": 746,
@@ -8745,7 +8765,7 @@
 				"y": 375,
 				"cityType": 7,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [744,92,749]
 			},
 			{
 				"id": 747,
@@ -8755,17 +8775,17 @@
 				"y": 399,
 				"cityType": 7,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [748,753,749]
 			},
 			{
 				"id": 748,
 				"name": "East London",
 				"country": "South Africa",
-				"x": 560,
+				"x": 602,
 				"y": 393,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [749,748,503,747]
 			},
 			{
 				"id": 749,
@@ -8775,7 +8795,7 @@
 				"y": 382,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [746,752,747]
 			},
 			{
 				"id": 750,
@@ -8785,7 +8805,7 @@
 				"y": 383,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [784,746,748]
 			},
 			{
 				"id": 751,
@@ -8795,7 +8815,7 @@
 				"y": 361,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [960,93,744,578]
 			},
 			{
 				"id": 752,
@@ -8805,7 +8825,7 @@
 				"y": 386,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [587,745,749,753]
 			},
 			{
 				"id": 753,
@@ -8815,7 +8835,7 @@
 				"y": 399,
 				"cityType": 4,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [752,745,747]
 			}
 		]
 	},
@@ -8824,7 +8844,7 @@
 		"name": "South Korea",
 		"color": "#b9e983",
 		"flag": "kr",
-		"capital": 0,
+		"capital": 754,
 		"cities": [
 			{
 				"id": 754,
@@ -8834,7 +8854,7 @@
 				"y": 152,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [966,756,757]
 			},
 			{
 				"id": 755,
@@ -8844,7 +8864,7 @@
 				"y": 158,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [756,757]
 			},
 			{
 				"id": 756,
@@ -8854,7 +8874,7 @@
 				"y": 155,
 				"cityType": 7,
 				"income": 360,
-				"neighbours": []
+				"neighbours": [754,755,757]
 			},
 			{
 				"id": 757,
@@ -8864,7 +8884,7 @@
 				"y": 160,
 				"cityType": 7,
 				"income": 330,
-				"neighbours": []
+				"neighbours": [754,756,755,758]
 			},
 			{
 				"id": 758,
@@ -8874,7 +8894,7 @@
 				"y": 165,
 				"cityType": 7,
 				"income": 330,
-				"neighbours": []
+				"neighbours": [757,179,465]
 			}
 		]
 	},
@@ -8883,7 +8903,7 @@
 		"name": "South Sudan",
 		"color": "#889f29",
 		"flag": "ss",
-		"capital": 0,
+		"capital": 759,
 		"cities": [
 			{
 				"id": 759,
@@ -8893,7 +8913,7 @@
 				"y": 263,
 				"cityType": 6,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [305,760,761,273,846,493]
 			},
 			{
 				"id": 760,
@@ -8903,7 +8923,7 @@
 				"y": 249,
 				"cityType": 3,
 				"income": 6,
-				"neighbours": []
+				"neighbours": [303,779,761,759]
 			},
 			{
 				"id": 761,
@@ -8913,7 +8933,7 @@
 				"y": 255,
 				"cityType": 3,
 				"income": 6,
-				"neighbours": []
+				"neighbours": [760,166,759]
 			}
 		]
 	},
@@ -8922,7 +8942,7 @@
 		"name": "Spain",
 		"color": "#7c7c1a",
 		"flag": "es",
-		"capital": 0,
+		"capital": 762,
 		"cities": [
 			{
 				"id": 762,
@@ -8932,7 +8952,7 @@
 				"y": 142,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [771,773,765,768,764,766]
 			},
 			{
 				"id": 763,
@@ -8942,17 +8962,17 @@
 				"y": 138,
 				"cityType": 7,
 				"income": 270,
-				"neighbours": []
+				"neighbours": [22,766,764,769]
 			},
 			{
 				"id": 764,
 				"name": "Valencia",
 				"country": "Spain",
-				"x": 527,
+				"x": 516,
 				"y": 144,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [763,766,762,768,769]
 			},
 			{
 				"id": 765,
@@ -8962,7 +8982,7 @@
 				"y": 151,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [672,767,768,762,773]
 			},
 			{
 				"id": 766,
@@ -8972,7 +8992,7 @@
 				"y": 135,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [22,771,762,763]
 			},
 			{
 				"id": 767,
@@ -8982,7 +9002,7 @@
 				"y": 154,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [768,765,576]
 			},
 			{
 				"id": 768,
@@ -8992,7 +9012,7 @@
 				"y": 151,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [764,762,765,767]
 			},
 			{
 				"id": 769,
@@ -9002,17 +9022,17 @@
 				"y": 144,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [763,764]
 			},
 			{
 				"id": 770,
 				"name": "Canaria",
 				"country": "Spain",
-				"x": 569,
+				"x": 469,
 				"y": 183,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [575]
 			},
 			{
 				"id": 771,
@@ -9022,7 +9042,7 @@
 				"y": 131,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [318,772,773,766]
 			},
 			{
 				"id": 772,
@@ -9032,7 +9052,7 @@
 				"y": 132,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [771,671,773]
 			},
 			{
 				"id": 773,
@@ -9042,7 +9062,7 @@
 				"y": 138,
 				"cityType": 4,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [771,772,671,673,762]
 			}
 		]
 	},
@@ -9051,7 +9071,7 @@
 		"name": "Sri Lanka",
 		"color": "#a88c88",
 		"flag": "lk",
-		"capital": 0,
+		"capital": 774,
 		"cities": [
 			{
 				"id": 774,
@@ -9061,7 +9081,7 @@
 				"y": 258,
 				"cityType": 7,
 				"income": 137,
-				"neighbours": []
+				"neighbours": [775,404,734]
 			},
 			{
 				"id": 775,
@@ -9071,7 +9091,7 @@
 				"y": 249,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [386,774]
 			}
 		]
 	},
@@ -9080,7 +9100,7 @@
 		"name": "Sudan",
 		"color": "#875031",
 		"flag": "sd",
-		"capital": 0,
+		"capital": 776,
 		"cities": [
 			{
 				"id": 776,
@@ -9090,7 +9110,7 @@
 				"y": 227,
 				"cityType": 8,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [781,777,778,780,779]
 			},
 			{
 				"id": 777,
@@ -9100,7 +9120,7 @@
 				"y": 211,
 				"cityType": 5,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [781,776,778]
 			},
 			{
 				"id": 778,
@@ -9110,7 +9130,7 @@
 				"y": 228,
 				"cityType": 5,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [296,777,776,780]
 			},
 			{
 				"id": 779,
@@ -9120,7 +9140,7 @@
 				"y": 237,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [776,782,760,780]
 			},
 			{
 				"id": 780,
@@ -9130,7 +9150,7 @@
 				"y": 236,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [778,776,779,303]
 			},
 			{
 				"id": 781,
@@ -9140,7 +9160,7 @@
 				"y": 206,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [289,777,776,782]
 			},
 			{
 				"id": 782,
@@ -9150,7 +9170,7 @@
 				"y": 238,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [170,166,779]
 			}
 		]
 	},
@@ -9159,7 +9179,7 @@
 		"name": "Suriname",
 		"color": "#6082b6",
 		"flag": "sr",
-		"capital": 0,
+		"capital": 783,
 		"cities": [
 			{
 				"id": 783,
@@ -9169,7 +9189,7 @@
 				"y": 263,
 				"cityType": 3,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [360,325,115]
 			}
 		]
 	},
@@ -9178,7 +9198,7 @@
 		"name": "Swaziland",
 		"color": "#36454f",
 		"flag": "sz",
-		"capital": 0,
+		"capital": 784,
 		"cities": [
 			{
 				"id": 784,
@@ -9188,7 +9208,7 @@
 				"y": 375,
 				"cityType": 1,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [578,744,750]
 			}
 		]
 	},
@@ -9197,7 +9217,7 @@
 		"name": "Sweden",
 		"color": "#003466",
 		"flag": "se",
-		"capital": 0,
+		"capital": 785,
 		"cities": [
 			{
 				"id": 785,
@@ -9207,7 +9227,7 @@
 				"y": 77,
 				"cityType": 7,
 				"income": 140,
-				"neighbours": []
+				"neighbours": [298,789,788,791]
 			},
 			{
 				"id": 786,
@@ -9217,17 +9237,17 @@
 				"y": 82,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [788,785,787,791]
 			},
 			{
 				"id": 787,
 				"name": "Malmo",
 				"country": "Sweden",
-				"x": 554,
-				"y": 90,
+				"x": 555,
+				"y": 89,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [786,791,274]
 			},
 			{
 				"id": 788,
@@ -9237,7 +9257,7 @@
 				"y": 76,
 				"cityType": 4,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [789,786,616,785]
 			},
 			{
 				"id": 789,
@@ -9247,7 +9267,7 @@
 				"y": 64,
 				"cityType": 1,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [790,618,788,785]
 			},
 			{
 				"id": 790,
@@ -9257,7 +9277,7 @@
 				"y": 53,
 				"cityType": 1,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [310,620,789]
 			},
 			{
 				"id": 791,
@@ -9267,7 +9287,7 @@
 				"y": 83,
 				"cityType": 1,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [785,786,787]
 			}
 		]
 	},
@@ -9276,7 +9296,7 @@
 		"name": "Switzerland",
 		"color": "#b5a5d5",
 		"flag": "ch",
-		"capital": 0,
+		"capital": 792,
 		"cities": [
 			{
 				"id": 792,
@@ -9286,17 +9306,17 @@
 				"y": 119,
 				"cityType": 4,
 				"income": 300,
-				"neighbours": []
+				"neighbours": [343,317,793,447]
 			},
 			{
 				"id": 793,
 				"name": "Geneva",
 				"country": "Switzerland",
-				"x": 536,
+				"x": 537,
 				"y": 120,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [323,313,792]
 			}
 		]
 	},
@@ -9305,7 +9325,7 @@
 		"name": "Syria",
 		"color": "#8d6ba5",
 		"flag": "sy",
-		"capital": 0,
+		"capital": 794,
 		"cities": [
 			{
 				"id": 794,
@@ -9315,7 +9335,7 @@
 				"y": 166,
 				"cityType": 7,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [795,501,444,473,797]
 			},
 			{
 				"id": 795,
@@ -9325,7 +9345,7 @@
 				"y": 161,
 				"cityType": 4,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [796,502,794,797]
 			},
 			{
 				"id": 796,
@@ -9335,7 +9355,7 @@
 				"y": 156,
 				"cityType": 7,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [832,797,795,502]
 			},
 			{
 				"id": 797,
@@ -9345,7 +9365,7 @@
 				"y": 159,
 				"cityType": 4,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [437,796,795,794]
 			}
 		]
 	},
@@ -9354,7 +9374,7 @@
 		"name": "Taiwan",
 		"color": "#00a86b",
 		"flag": "tw",
-		"capital": 0,
+		"capital": 798,
 		"cities": [
 			{
 				"id": 798,
@@ -9364,7 +9384,7 @@
 				"y": 195,
 				"cityType": 10,
 				"income": 630,
-				"neighbours": []
+				"neighbours": [472,216,799]
 			},
 			{
 				"id": 799,
@@ -9374,7 +9394,7 @@
 				"y": 201,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [798,191,657]
 			}
 		]
 	},
@@ -9393,7 +9413,7 @@
 				"y": 147,
 				"cityType": 7,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [801,928,802,3]
 			},
 			{
 				"id": 801,
@@ -9403,7 +9423,7 @@
 				"y": 141,
 				"cityType": 1,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [923,925,800]
 			},
 			{
 				"id": 802,
@@ -9413,7 +9433,7 @@
 				"y": 150,
 				"cityType": 1,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [226,496,800,631]
 			}
 		]
 	},
@@ -9422,7 +9442,7 @@
 		"name": "Tanzania",
 		"color": "#387242",
 		"flag": "tz",
-		"capital": 0,
+		"capital": 803,
 		"cities": [
 			{
 				"id": 803,
@@ -9432,7 +9452,7 @@
 				"y": 301,
 				"cityType": 4,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [805,136,809,807,804,806]
 			},
 			{
 				"id": 804,
@@ -9442,7 +9462,7 @@
 				"y": 307,
 				"cityType": 7,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [808,803,810]
 			},
 			{
 				"id": 805,
@@ -9452,7 +9472,7 @@
 				"y": 291,
 				"cityType": 4,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [719,803,806]
 			},
 			{
 				"id": 806,
@@ -9462,7 +9482,7 @@
 				"y": 292,
 				"cityType": 4,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [487,805,803,808]
 			},
 			{
 				"id": 807,
@@ -9472,7 +9492,7 @@
 				"y": 314,
 				"cityType": 1,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [803,809,804,810,954,522]
 			},
 			{
 				"id": 808,
@@ -9482,7 +9502,7 @@
 				"y": 299,
 				"cityType": 1,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [488,806,803,804]
 			},
 			{
 				"id": 809,
@@ -9492,7 +9512,7 @@
 				"y": 304,
 				"cityType": 1,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [803,272,807]
 			},
 			{
 				"id": 810,
@@ -9502,7 +9522,7 @@
 				"y": 318,
 				"cityType": 1,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [804,807,582,245]
 			}
 		]
 	},
@@ -9511,7 +9531,7 @@
 		"name": "Thailand",
 		"color": "#b4497e",
 		"flag": "th",
-		"capital": 0,
+		"capital": 811,
 		"cities": [
 			{
 				"id": 811,
@@ -9521,7 +9541,7 @@
 				"y": 234,
 				"cityType": 12,
 				"income": 260,
-				"neighbours": []
+				"neighbours": [815,132,817,813,812]
 			},
 			{
 				"id": 812,
@@ -9531,7 +9551,7 @@
 				"y": 220,
 				"cityType": 6,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [497,815,816]
 			},
 			{
 				"id": 813,
@@ -9541,7 +9561,7 @@
 				"y": 230,
 				"cityType": 6,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [816,811,818,139]
 			},
 			{
 				"id": 814,
@@ -9551,7 +9571,7 @@
 				"y": 257,
 				"cityType": 3,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [819,527,525]
 			},
 			{
 				"id": 815,
@@ -9561,7 +9581,7 @@
 				"y": 217,
 				"cityType": 3,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [129,497,132,812,811]
 			},
 			{
 				"id": 816,
@@ -9571,7 +9591,7 @@
 				"y": 226,
 				"cityType": 3,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [812,813,818]
 			},
 			{
 				"id": 817,
@@ -9581,17 +9601,17 @@
 				"y": 249,
 				"cityType": 3,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [811,819]
 			},
 			{
 				"id": 818,
 				"name": "Ubon Ratchathan",
 				"country": "Thailand",
 				"x": 831,
-				"y": 29,
+				"y": 229,
 				"cityType": 3,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [816,813,498]
 			},
 			{
 				"id": 819,
@@ -9601,36 +9621,36 @@
 				"y": 253,
 				"cityType": 3,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [817,814]
 			}
 		]
 	},
 	{
 		"id": 155,
-		"name": "TOgo",
+		"name": "Togo",
 		"color": "#1f5276",
 		"flag": "tg",
-		"capital": 0,
+		"capital": 820,
 		"cities": [
 			{
 				"id": 820,
 				"name": "Lome",
-				"country": "TOgo",
+				"country": "Togo",
 				"x": 519,
 				"y": 259,
 				"cityType": 9,
 				"income": 7,
-				"neighbours": []
+				"neighbours": [821,345,84]
 			},
 			{
 				"id": 821,
 				"name": "Kara",
-				"country": "TOgo",
+				"country": "Togo",
 				"x": 518,
 				"y": 248,
 				"cityType": 3,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [128,347,85,820]
 			}
 		]
 	},
@@ -9639,17 +9659,17 @@
 		"name": "Trinidad Tobago",
 		"color": "#a3be34",
 		"flag": "tt",
-		"capital": 0,
+		"capital": 822,
 		"cities": [
 			{
 				"id": 822,
-				"name": "Port  of Spain",
+				"name": "Port of Spain",
 				"country": "Trinidad Tobago",
 				"x": 331,
 				"y": 245,
 				"cityType": 3,
 				"income": 45,
-				"neighbours": []
+				"neighbours": [674,932]
 			}
 		]
 	},
@@ -9668,7 +9688,7 @@
 				"y": 154,
 				"cityType": 7,
 				"income": 45,
-				"neighbours": []
+				"neighbours": [450,20,824]
 			},
 			{
 				"id": 824,
@@ -9678,7 +9698,7 @@
 				"y": 161,
 				"cityType": 4,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [823,11,825,826]
 			},
 			{
 				"id": 825,
@@ -9688,7 +9708,7 @@
 				"y": 164,
 				"cityType": 2,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [11,824,21,826]
 			},
 			{
 				"id": 826,
@@ -9698,7 +9718,7 @@
 				"y": 167,
 				"cityType": 2,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [824,825,505,21]
 			}
 		]
 	},
@@ -9707,7 +9727,7 @@
 		"name": "Turkey",
 		"color": "#2c4e1c",
 		"flag": "tr",
-		"capital": 0,
+		"capital": 827,
 		"cities": [
 			{
 				"id": 827,
@@ -9717,7 +9737,7 @@
 				"y": 143,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [839,830,833,835]
 			},
 			{
 				"id": 828,
@@ -9727,7 +9747,7 @@
 				"y": 138,
 				"cityType": 10,
 				"income": 300,
-				"neighbours": []
+                "neighbours": [836,830,836]
 			},
 			{
 				"id": 829,
@@ -9737,7 +9757,7 @@
 				"y": 148,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [830,833,970]
 			},
 			{
 				"id": 830,
@@ -9747,7 +9767,7 @@
 				"y": 141,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [828,829,827,833]
 			},
 			{
 				"id": 831,
@@ -9757,7 +9777,7 @@
 				"y": 152,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [832,835,833,970]
 			},
 			{
 				"id": 832,
@@ -9767,7 +9787,7 @@
 				"y": 152,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [835,831,834,796]
 			},
 			{
 				"id": 833,
@@ -9777,17 +9797,17 @@
 				"y": 148,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [827,829,970,835,830]
 			},
 			{
-				"id": 834,
+				"id": 970,
 				"name": "Antalya",
 				"country": "Turkey",
 				"x": 604,
 				"y": 154,
 				"cityType": 7,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [833,829,352,260,831]
 			},
 			{
 				"id": 834,
@@ -9797,7 +9817,7 @@
 				"y": 149,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [837,832,838,437]
 			},
 			{
 				"id": 835,
@@ -9807,7 +9827,7 @@
 				"y": 148,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [827,833,837,831,832]
 			},
 			{
 				"id": 836,
@@ -9817,7 +9837,7 @@
 				"y": 137,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [125,353,828]
 			},
 			{
 				"id": 837,
@@ -9827,7 +9847,7 @@
 				"y": 140,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [330,45,838,839,835]
 			},
 			{
 				"id": 838,
@@ -9837,7 +9857,7 @@
 				"y": 146,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [45,837,834,426]
 			},
 			{
 				"id": 839,
@@ -9847,7 +9867,7 @@
 				"y": 138,
 				"cityType": 4,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [828,827,837]
 			}
 		]
 	},
@@ -9856,7 +9876,7 @@
 		"name": "Turkmenistan",
 		"color": "#71b330",
 		"flag": "tm",
-		"capital": 0,
+		"capital": 840,
 		"cities": [
 			{
 				"id": 840,
@@ -9866,7 +9886,7 @@
 				"y": 149,
 				"cityType": 7,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [844,842,423,843,841]
 			},
 			{
 				"id": 841,
@@ -9876,7 +9896,7 @@
 				"y": 145,
 				"cityType": 4,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [844,925,840,843]
 			},
 			{
 				"id": 842,
@@ -9886,7 +9906,7 @@
 				"y": 143,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [483,68,840,844]
 			},
 			{
 				"id": 843,
@@ -9896,7 +9916,7 @@
 				"y": 153,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [841,840,423,4,3]
 			},
 			{
 				"id": 844,
@@ -9906,7 +9926,7 @@
 				"y": 137,
 				"cityType": 2,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [927,842,841,840]
 			}
 		]
 	},
@@ -9915,7 +9935,7 @@
 		"name": "Uganda",
 		"color": "#ff6f5e",
 		"flag": "ug",
-		"capital": 0,
+		"capital": 845,
 		"cities": [
 			{
 				"id": 845,
@@ -9925,7 +9945,7 @@
 				"y": 280,
 				"cityType": 9,
 				"income": 25,
-				"neighbours": []
+				"neighbours": [846,847,848]
 			},
 			{
 				"id": 846,
@@ -9935,7 +9955,7 @@
 				"y": 272,
 				"cityType": 3,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [759,273,845,848,493]
 			},
 			{
 				"id": 847,
@@ -9945,7 +9965,7 @@
 				"y": 283,
 				"cityType": 3,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [267,719,845]
 			},
 			{
 				"id": 848,
@@ -9955,7 +9975,7 @@
 				"y": 277,
 				"cityType": 3,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [846,845,490]
 			}
 		]
 	},
@@ -9964,7 +9984,7 @@
 		"name": "Ukraine",
 		"color": "#22b14c",
 		"flag": "ua",
-		"capital": 0,
+		"capital": 849,
 		"cities": [
 			{
 				"id": 849,
@@ -9974,7 +9994,7 @@
 				"y": 106,
 				"cityType": 7,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [78,857,850,851]
 			},
 			{
 				"id": 850,
@@ -9984,7 +10004,7 @@
 				"y": 108,
 				"cityType": 7,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [697,849,851,852]
 			},
 			{
 				"id": 851,
@@ -9994,7 +10014,7 @@
 				"y": 113,
 				"cityType": 7,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [850,849,854,852]
 			},
 			{
 				"id": 852,
@@ -10004,17 +10024,17 @@
 				"y": 114,
 				"cityType": 7,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [690,850,851,854]
 			},
 			{
 				"id": 853,
 				"name": "Odesa",
 				"country": "Ukraine",
 				"x": 601,
-				"y": 121,
+				"y": 119,
 				"cityType": 7,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [849,563,681,854]
 			},
 			{
 				"id": 854,
@@ -10024,17 +10044,17 @@
 				"y": 117,
 				"cityType": 4,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [852,851,709,853]
 			},
 			{
 				"id": 855,
 				"name": "Lviv",
 				"country": "Ukraine",
 				"x": 584,
-				"y": 118,
+				"y": 106,
 				"cityType": 4,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [669,856,857]
 			},
 			{
 				"id": 856,
@@ -10044,7 +10064,7 @@
 				"y": 112,
 				"cityType": 4,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [857,738,855,677,678,366]
 			},
 			{
 				"id": 857,
@@ -10054,7 +10074,7 @@
 				"y": 107,
 				"cityType": 4,
 				"income": 40,
-				"neighbours": []
+				"neighbours": [78,849,856,855]
 			}
 		]
 	},
@@ -10063,7 +10083,7 @@
 		"name": "UA Emirates",
 		"color": "#0f3821",
 		"flag": "ae",
-		"capital": 0,
+		"capital": 858,
 		"cities": [
 			{
 				"id": 858,
@@ -10073,7 +10093,7 @@
 				"y": 198,
 				"cityType": 4,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [859,728,675]
 			},
 			{
 				"id": 859,
@@ -10083,7 +10103,7 @@
 				"y": 198,
 				"cityType": 7,
 				"income": 260,
-				"neighbours": []
+				"neighbours": [860,858,623]
 			},
 			{
 				"id": 860,
@@ -10093,7 +10113,7 @@
 				"y": 194,
 				"cityType": 4,
 				"income": 260,
-				"neighbours": []
+				"neighbours": [430,859,623]
 			}
 		]
 	},
@@ -10102,7 +10122,7 @@
 		"name": "United Kingdom",
 		"color": "#ff9090",
 		"flag": "gb",
-		"capital": 0,
+		"capital": 861,
 		"cities": [
 			{
 				"id": 861,
@@ -10112,7 +10132,7 @@
 				"y": 103,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [862,868,321,81]
 			},
 			{
 				"id": 862,
@@ -10122,7 +10142,7 @@
 				"y": 99,
 				"cityType": 7,
 				"income": 350,
-				"neighbours": []
+				"neighbours": [866,864,871,868,861]
 			},
 			{
 				"id": 863,
@@ -10132,7 +10152,7 @@
 				"y": 88,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [869,867,874]
 			},
 			{
 				"id": 864,
@@ -10142,57 +10162,57 @@
 				"y": 97,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [865,866,862,871]
 			},
 			{
 				"id": 865,
 				"name": "Leeds",
 				"country": "United Kingdom",
-				"x": 516,
-				"y": 95,
+				"x": 517,
+				"y": 94,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [872,864,866]
 			},
 			{
 				"id": 866,
 				"name": "Sheffield",
 				"country": "United Kingdom",
-				"x": 515,
+				"x": 518,
 				"y": 97,
 				"cityType": 7,
 				"income": 200,
-				"neighbours": []
+				"neighbours": [865,864,862]
 			},
 			{
 				"id": 867,
 				"name": "Edinburg",
 				"country": "United Kingdom",
-				"x": 513,
+				"x": 514,
 				"y": 89,
 				"cityType": 7,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [863,874,872]
 			},
 			{
 				"id": 868,
 				"name": "Bristol",
 				"country": "United Kingdom",
-				"x": 514,
+				"x": 515,
 				"y": 103,
 				"cityType": 4,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [871,862,861,873]
 			},
 			{
 				"id": 869,
-				"name": "Manchester",
+				"name": "Inverness",
 				"country": "United Kingdom",
-				"x": 514,
-				"y": 96,
+				"x": 510,
+				"y": 82,
 				"cityType": 4,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [367,863]
 			},
 			{
 				"id": 870,
@@ -10202,17 +10222,17 @@
 				"y": 92,
 				"cityType": 4,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [441,874]
 			},
 			{
 				"id": 871,
 				"name": "Cardiff",
 				"country": "United Kingdom",
-				"x": 511,
+				"x": 510,
 				"y": 102,
 				"cityType": 4,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [441,864,868]
 			},
 			{
 				"id": 872,
@@ -10222,7 +10242,7 @@
 				"y": 92,
 				"cityType": 4,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [867,874,865]
 			},
 			{
 				"id": 873,
@@ -10232,17 +10252,17 @@
 				"y": 106,
 				"cityType": 4,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [868,320]
 			},
 			{
 				"id": 874,
 				"name": "Dumfries",
 				"country": "United Kingdom",
 				"x": 511,
-				"y": 91,
+				"y": 92,
 				"cityType": 4,
 				"income": 150,
-				"neighbours": []
+				"neighbours": [870,863,867,872]
 			}
 		]
 	},
@@ -10251,17 +10271,17 @@
 		"name": "USA",
 		"color": "#508686",
 		"flag": "us",
-		"capital": 0,
+		"capital": 875,
 		"cities": [
 			{
 				"id": 875,
 				"name": "Washington DC",
 				"country": "USA",
 				"x": 302,
-				"y": 167,
+				"y": 147,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [892,894,893,880]
 			},
 			{
 				"id": 876,
@@ -10271,17 +10291,17 @@
 				"y": 139,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [891,151,880]
 			},
 			{
 				"id": 877,
 				"name": "Los Angeles",
 				"country": "USA",
 				"x": 178,
-				"y": 164,
+				"y": 163,
 				"cityType": 10,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [885,883,916]
 			},
 			{
 				"id": 878,
@@ -10291,7 +10311,7 @@
 				"y": 137,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [917,906,889,886,894,895,889]
 			},
 			{
 				"id": 879,
@@ -10301,7 +10321,7 @@
 				"y": 179,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [884,882,902,901]
 			},
 			{
 				"id": 880,
@@ -10311,7 +10331,7 @@
 				"y": 143,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [876,892,875]
 			},
 			{
 				"id": 881,
@@ -10321,7 +10341,7 @@
 				"y": 165,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [916,883,909,908]
 			},
 			{
 				"id": 882,
@@ -10331,7 +10351,7 @@
 				"y": 180,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [884,909,551,879]
 			},
 			{
 				"id": 883,
@@ -10341,17 +10361,17 @@
 				"y": 167,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [877,883,881]
 			},
 			{
-				"id": 883,
+				"id": 884,
 				"name": "Dallas",
 				"country": "USA",
 				"x": 234,
 				"y": 167,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [908,909,882,879,901,903]
 			},
 			{
 				"id": 885,
@@ -10361,7 +10381,7 @@
 				"y": 151,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [919,877,916]
 			},
 			{
 				"id": 886,
@@ -10371,7 +10391,7 @@
 				"y": 144,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [878,905,904,894]
 			},
 			{
 				"id": 887,
@@ -10381,7 +10401,7 @@
 				"y": 174,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [896,897,901,918]
 			},
 			{
 				"id": 888,
@@ -10391,7 +10411,7 @@
 				"y": 160,
 				"cityType": 7,
 				"income": 500,
-				"neighbours": []
+				"neighbours": [893,904,900,897,896]
 			},
 			{
 				"id": 889,
@@ -10401,7 +10421,7 @@
 				"y": 133,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [151,895,878]
 			},
 			{
 				"id": 890,
@@ -10411,7 +10431,7 @@
 				"y": 127,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [154,148,891]
 			},
 			{
 				"id": 891,
@@ -10421,7 +10441,7 @@
 				"y": 134,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [890,146,876]
 			},
 			{
 				"id": 892,
@@ -10431,7 +10451,7 @@
 				"y": 140,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [876,151,895,894,875]
 			},
 			{
 				"id": 893,
@@ -10441,7 +10461,7 @@
 				"y": 153,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [875,894,904,888]
 			},
 			{
 				"id": 894,
@@ -10451,7 +10471,7 @@
 				"y": 143,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [892,895,878,886,893,875]
 			},
 			{
 				"id": 895,
@@ -10461,7 +10481,7 @@
 				"y": 138,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [889,875,894,892]
 			},
 			{
 				"id": 896,
@@ -10471,7 +10491,7 @@
 				"y": 166,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [893,888,897,887]
 			},
 			{
 				"id": 897,
@@ -10481,7 +10501,7 @@
 				"y": 165,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [900,901,887,896,888]
 			},
 			{
 				"id": 898,
@@ -10491,17 +10511,17 @@
 				"y": 190,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [918,70]
 			},
 			{
 				"id": 899,
-				"name": "Atlanta",
+				"name": "Anchorage",
 				"country": "USA",
-				"x": 268,
-				"y": 165,
+				"x": 150,
+				"y": 70,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [161,915]
 			},
 			{
 				"id": 900,
@@ -10511,7 +10531,7 @@
 				"y": 159,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [888,904,905,903,901,897]
 			},
 			{
 				"id": 901,
@@ -10521,7 +10541,7 @@
 				"y": 170,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [897,900,903,884,879,902]
 			},
 			{
 				"id": 902,
@@ -10531,7 +10551,7 @@
 				"y": 177,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [901,879]
 			},
 			{
 				"id": 903,
@@ -10541,17 +10561,17 @@
 				"y": 156,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [905,907,908,884,901,900]
 			},
 			{
 				"id": 904,
 				"name": "Louisville",
 				"country": "USA",
 				"x": 274,
-				"y": 148,
+				"y": 150,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [886,905,900,888,893]
 			},
 			{
 				"id": 905,
@@ -10561,7 +10581,7 @@
 				"y": 148,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [886,904,900,903,907]
 			},
 			{
 				"id": 906,
@@ -10571,7 +10591,7 @@
 				"y": 124,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [157,911,907,905,878,917]
 			},
 			{
 				"id": 907,
@@ -10581,7 +10601,7 @@
 				"y": 146,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [911,910,908,903,905]
 			},
 			{
 				"id": 908,
@@ -10591,7 +10611,7 @@
 				"y": 157,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [907,910,909,881,884,903]
 			},
 			{
 				"id": 909,
@@ -10601,7 +10621,7 @@
 				"y": 169,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [884,881,548,882]
 			},
 			{
 				"id": 910,
@@ -10611,7 +10631,7 @@
 				"y": 144,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [911,913,912,916,881,908,907]
 			},
 			{
 				"id": 911,
@@ -10621,7 +10641,7 @@
 				"y": 117,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [158,913,910,907,906]
 			},
 			{
 				"id": 912,
@@ -10631,7 +10651,7 @@
 				"y": 142,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [915,919,916,910,913]
 			},
 			{
 				"id": 913,
@@ -10641,7 +10661,7 @@
 				"y": 120,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [911,149,914,912,910]
 			},
 			{
 				"id": 914,
@@ -10651,7 +10671,7 @@
 				"y": 119,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [147,162,915,913]
 			},
 			{
 				"id": 915,
@@ -10661,7 +10681,7 @@
 				"y": 128,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [914,919,912]
 			},
 			{
 				"id": 916,
@@ -10671,7 +10691,7 @@
 				"y": 155,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [910,919,885,877,883,881]
 			},
 			{
 				"id": 917,
@@ -10681,7 +10701,7 @@
 				"y": 126,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [906,878]
 			},
 			{
 				"id": 918,
@@ -10691,17 +10711,17 @@
 				"y": 183,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [887,898]
 			},
 			{
 				"id": 919,
 				"name": "Sacramanto",
 				"country": "USA",
 				"x": 175,
-				"y": 145,
+				"y": 143,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": []
+				"neighbours": [915,912,885]
 			}
 		]
 	},
@@ -10710,7 +10730,7 @@
 		"name": "Uruguay",
 		"color": "#6f00ff",
 		"flag": "uy",
-		"capital": 0,
+		"capital": 920,
 		"cities": [
 			{
 				"id": 920,
@@ -10720,7 +10740,7 @@
 				"y": 402,
 				"cityType": 7,
 				"income": 35,
-				"neighbours": []
+				"neighbours": [922,921,30]
 			},
 			{
 				"id": 921,
@@ -10730,7 +10750,7 @@
 				"y": 391,
 				"cityType": 1,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [42,32,922,920]
 			},
 			{
 				"id": 922,
@@ -10740,7 +10760,7 @@
 				"y": 397,
 				"cityType": 1,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [104,921,920]
 			}
 		]
 	},
@@ -10759,7 +10779,7 @@
 				"y": 138,
 				"cityType": 8,
 				"income": 60,
-				"neighbours": []
+				"neighbours": [479,925,801,924]
 			},
 			{
 				"id": 924,
@@ -10769,7 +10789,7 @@
 				"y": 139,
 				"cityType": 5,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [496,923]
 			},
 			{
 				"id": 925,
@@ -10779,17 +10799,17 @@
 				"y": 141,
 				"cityType": 5,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [923,801,928,841,926]
 			},
 			{
 				"id": 926,
 				"name": "Bukhara",
 				"country": "Uebekistan",
-				"x": 794,
-				"y": 140,
+				"x": 694,
+				"y": 139,
 				"cityType": 5,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [486,927,925]
 			},
 			{
 				"id": 927,
@@ -10799,7 +10819,7 @@
 				"y": 131,
 				"cityType": 2,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [483,844,926]
 			},
 			{
 				"id": 928,
@@ -10809,7 +10829,7 @@
 				"y": 148,
 				"cityType": 2,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [925,800,3]
 			}
 		]
 	},
@@ -10818,7 +10838,7 @@
 		"name": "Venzuela",
 		"color": "#ba9967",
 		"flag": "ve",
-		"capital": 0,
+		"capital": 929,
 		"cities": [
 			{
 				"id": 929,
@@ -10828,7 +10848,7 @@
 				"y": 246,
 				"cityType": 9,
 				"income": 120,
-				"neighbours": []
+				"neighbours": [46,931,933,932]
 			},
 			{
 				"id": 930,
@@ -10838,7 +10858,7 @@
 				"y": 245,
 				"cityType": 9,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [239,934,931,46]
 			},
 			{
 				"id": 931,
@@ -10848,7 +10868,7 @@
 				"y": 249,
 				"cityType": 9,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [929,930,934,933]
 			},
 			{
 				"id": 932,
@@ -10858,17 +10878,17 @@
 				"y": 253,
 				"cityType": 6,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [822,360,935,929,933]
 			},
 			{
 				"id": 933,
 				"name": "San Fernando",
 				"country": "Venzuela",
-				"x": 312,
+				"x": 313,
 				"y": 259,
 				"cityType": 6,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [929,931,934,932,935]
 			},
 			{
 				"id": 934,
@@ -10878,7 +10898,7 @@
 				"y": 255,
 				"cityType": 3,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [930,240,933,931]
 			},
 			{
 				"id": 935,
@@ -10888,7 +10908,7 @@
 				"y": 264,
 				"cityType": 3,
 				"income": 50,
-				"neighbours": []
+				"neighbours": [932,933,113]
 			}
 		]
 	},
@@ -10897,17 +10917,17 @@
 		"name": "Vietnam",
 		"color": "#9dbb61",
 		"flag": "vn",
-		"capital": 0,
+		"capital": 936,
 		"cities": [
 			{
 				"id": 936,
 				"name": "Hanoi",
 				"country": "Vietnam",
-				"x": 326,
-				"y": 198,
+				"x": 832,
+				"y": 207,
 				"cityType": 9,
 				"income": 100,
-				"neighbours": []
+				"neighbours": [185,940,941]
 			},
 			{
 				"id": 937,
@@ -10917,7 +10937,7 @@
 				"y": 244,
 				"cityType": 9,
 				"income": 130,
-				"neighbours": []
+				"neighbours": [939,137,942]
 			},
 			{
 				"id": 938,
@@ -10927,17 +10947,17 @@
 				"y": 227,
 				"cityType": 9,
 				"income": 80,
-				"neighbours": []
+				"neighbours": [941,939]
 			},
 			{
 				"id": 939,
 				"name": "Nha Trang",
 				"country": "Vietnam",
 				"x": 843,
-				"y": 231,
+				"y": 234,
 				"cityType": 6,
 				"income": 70,
-				"neighbours": []
+				"neighbours": [938,937]
 			},
 			{
 				"id": 940,
@@ -10947,7 +10967,7 @@
 				"y": 204,
 				"cityType": 6,
 				"income": 70,
-				"neighbours": []
+				"neighbours": [185,196,936,941]
 			},
 			{
 				"id": 941,
@@ -10957,7 +10977,7 @@
 				"y": 214,
 				"cityType": 6,
 				"income": 70,
-				"neighbours": []
+				"neighbours": [936,940,938]
 			},
 			{
 				"id": 942,
@@ -10967,7 +10987,7 @@
 				"y": 249,
 				"cityType": 6,
 				"income": 70,
-				"neighbours": []
+				"neighbours": [937,942,138]
 			}
 		]
 	},
@@ -10982,11 +11002,11 @@
 				"id": 943,
 				"name": "Laayoune",
 				"country": "Western Sahara",
-				"x": 179,
+				"x": 479,
 				"y": 189,
 				"cityType": 2,
 				"income": 5,
-				"neighbours": []
+				"neighbours": [15,575,770,944]
 			},
 			{
 				"id": 944,
@@ -10996,7 +11016,7 @@
 				"y": 201,
 				"cityType": 2,
 				"income": 3,
-				"neighbours": []
+				"neighbours": [943,540,543]
 			}
 		]
 	},
@@ -11005,7 +11025,7 @@
 		"name": "Yemen",
 		"color": "#cc5a3e",
 		"flag": "ye",
-		"capital": 0,
+		"capital": 945,
 		"cities": [
 			{
 				"id": 945,
@@ -11015,17 +11035,17 @@
 				"y": 226,
 				"cityType": 8,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [726,946,947,949]
 			},
 			{
 				"id": 946,
 				"name": "Al Hudaydah",
 				"country": "Yemen",
 				"x": 643,
-				"y": 227,
+				"y": 228,
 				"cityType": 5,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [945,947]
 			},
 			{
 				"id": 947,
@@ -11035,17 +11055,17 @@
 				"y": 235,
 				"cityType": 5,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [945,946,948]
 			},
 			{
 				"id": 948,
 				"name": "Mukalla",
 				"country": "Yemen",
 				"x": 663,
-				"y": 227,
+				"y": 228,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [950,949,947]
 			},
 			{
 				"id": 949,
@@ -11055,7 +11075,7 @@
 				"y": 225,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [950,945,948]
 			},
 			{
 				"id": 950,
@@ -11065,7 +11085,7 @@
 				"y": 222,
 				"cityType": 2,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [622,948,949]
 			}
 		]
 	},
@@ -11074,7 +11094,7 @@
 		"name": "Zambia",
 		"color": "#10ad64",
 		"flag": "zm",
-		"capital": 0,
+		"capital": 951,
 		"cities": [
 			{
 				"id": 951,
@@ -11084,17 +11104,17 @@
 				"y": 335,
 				"cityType": 8,
 				"income": 15,
-				"neighbours": []
+				"neighbours": [955,953,956,959,581]
 			},
 			{
 				"id": 952,
 				"name": "Kitwe",
 				"country": "Zambia",
-				"x": 601,
+				"x": 600,
 				"y": 327,
 				"cityType": 5,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [265,953]
 			},
 			{
 				"id": 953,
@@ -11104,7 +11124,7 @@
 				"y": 330,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [952,956,951,955]
 			},
 			{
 				"id": 954,
@@ -11114,7 +11134,7 @@
 				"y": 318,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [807,955,265]
 			},
 			{
 				"id": 955,
@@ -11124,7 +11144,7 @@
 				"y": 328,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [954,953,581,522]
 			},
 			{
 				"id": 956,
@@ -11134,7 +11154,7 @@
 				"y": 334,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [953,25,585]
 			}
 		]
 	},
@@ -11143,7 +11163,7 @@
 		"name": "Zimbabwe",
 		"color": "#446ccf",
 		"flag": "zw",
-		"capital": 0,
+		"capital": 957,
 		"cities": [
 			{
 				"id": 957,
@@ -11153,7 +11173,7 @@
 				"y": 344,
 				"cityType": 8,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [581,959,959,958,960,579]
 			},
 			{
 				"id": 958,
@@ -11163,7 +11183,7 @@
 				"y": 351,
 				"cityType": 5,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [959,93,960,957]
 			},
 			{
 				"id": 959,
@@ -11173,7 +11193,7 @@
 				"y": 341,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [951,957,958]
 			},
 			{
 				"id": 960,
@@ -11183,7 +11203,7 @@
 				"y": 358,
 				"cityType": 2,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [957,958,751,583]
 			}
 		]
 	},
@@ -11192,7 +11212,7 @@
 		"name": "palestine",
 		"color": "#65000b",
 		"flag": "ps",
-		"capital": 0,
+		"capital": 961,
 		"cities": [
 			{
 				"id": 961,
@@ -11202,7 +11222,7 @@
 				"y": 171,
 				"cityType": 7,
 				"income": 30,
-				"neighbours": []
+				"neighbours": [473,971,962]
 			},
 			{
 				"id": 962,
@@ -11212,7 +11232,7 @@
 				"y": 172,
 				"cityType": 7,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [971,284,445,961]
 			}
 		]
 	},
@@ -11231,7 +11251,7 @@
 				"y": 145,
 				"cityType": 7,
 				"income": 20,
-				"neighbours": []
+				"neighbours": [964,187,195,966]
 			},
 			{
 				"id": 964,
@@ -11241,7 +11261,7 @@
 				"y": 142,
 				"cityType": 4,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [965,963,966]
 			},
 			{
 				"id": 965,
@@ -11251,7 +11271,7 @@
 				"y": 137,
 				"cityType": 4,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [702,221,964]
 			},
 			{
 				"id": 966,
@@ -11261,7 +11281,7 @@
 				"y": 149,
 				"cityType": 4,
 				"income": 10,
-				"neighbours": []
+				"neighbours": [963,754,964]
 			}
 		]
 	}

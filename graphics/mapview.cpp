@@ -7,6 +7,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QLayout>
 #include <QMouseEvent>
 #include <QQmlContext>
 #include <QRgb>
@@ -23,6 +24,7 @@ MapView::MapView(QObject *parent):QGraphicsView()
 
     ///initiating the view
     zoomLevel = 8;
+    m_selectedCityGraphics = nullptr ;
     verticalScrollBar()->setRange(1200,600);
     horizontalScrollBar()->setRange(1200,600);
 
@@ -69,9 +71,34 @@ MapView::MapView(QObject *parent):QGraphicsView()
     addUnitUI->rootContext()->setContextProperty("mapUI",this);
     addUnitUI->setSource(QUrl("qrc:/scripts/AddUnitUI.qml"));
     addUnitUI->rootContext()->setContextProperty("addUI",addUnitUI);
-    addUnitUI->show();
+//    addUnitUI->show();
 
 
+    /// setting the moveUnit UI
+    moveUnitUI = new QQuickWidget(CityUI);
+//    CityUI->rootContext()->setContextProperty("addUI",addUnitUI);
+    moveUnitUI->setClearColor(Qt::transparent);
+    moveUnitUI->setWindowFlags(Qt::ToolTip);
+    moveUnitUI->setAttribute(Qt::WA_TranslucentBackground);
+//    moveUnitUI->rootContext()->setContextProperty("cityViewUI",CityUI);
+    moveUnitUI->rootContext()->setContextProperty("mapUI",this);
+    moveUnitUI->setSource(QUrl("qrc:/scripts/MoveUnitsUI.qml"));
+    moveUnitUI->rootContext()->setContextProperty("moveUI",moveUnitUI);
+//    moveUnitUI->show();
+
+
+
+    /// setting the attack UI
+    attackUI = new QQuickWidget(CityUI);
+//    CityUI->rootContext()->setContextProperty("addUI",addUnitUI);
+    attackUI->setClearColor(Qt::transparent);
+    attackUI->setWindowFlags(Qt::ToolTip);
+    attackUI->setAttribute(Qt::WA_TranslucentBackground);
+//    moveUnitUI->rootContext()->setContextProperty("cityViewUI",CityUI);
+    attackUI->rootContext()->setContextProperty("mapUI",this);
+    CityUI->rootContext()->setContextProperty("attackUI",attackUI);
+    attackUI->rootContext()->setContextProperty("attackUI",attackUI);
+    attackUI->setSource(QUrl("qrc:/scripts/AttackUI.qml"));
 
      ///creating the mapgraphics and add it to the view
     glob  = new QGraphicsItemGroup();
@@ -79,15 +106,20 @@ MapView::MapView(QObject *parent):QGraphicsView()
     this->m_mapScene->addItem(m_mapGraphics);
     //glob->setAcceptHoverEvents(true);
     m_mapGraphics->setScale(zoomLevel);
+
     testRect = new QGraphicsRectItem(0,0,100,100);
     testRect->setBrush(Qt::red);
     m_mapScene->addItem(testRect);
+
+    QGraphicsPixmapItem *pItem = new QGraphicsPixmapItem(QPixmap(":/data/mm.jpg"));
+    pItem->setScale(0.57803*8);
+    pItem->setOpacity(0.7);
+//    pItem->moveBy(-725,30);
+    m_mapScene->addItem(pItem);
     this->setScene(m_mapScene);
 
     /// adding the cities
     loadFromJson();
-//    m_mapScene->addWidget(CityUI,Qt::ToolTip);
-//    m_mapScene->addWidget(addUnitUI),Qt::ToolTip;
     CityUI->hide();
     addUnitUI->hide();
     this->show();
@@ -161,24 +193,24 @@ void MapView::loadFromJson()
             city->setType(static_cast<CityType>(cityJ.value("cityType").toInt()));
             city->setIncome(cityJ.value("income").toInt());
             city->setMap(this->map());
-            this->map()->cities().insert(city->id(),city);
 
+            this->map()->cities().insert(city->id(),city);
             city->setCountry(country);
             country->cities().append(city);
 
+            /// loading the neigbours
+            QJsonValue neigboursV = cityJ.value("neighbours");
+            QJsonArray neighbours = neigboursV.toArray();
+            QList<int> nTmp;
+
+            foreach (QJsonValue neighbourV, neighbours) {
+                nTmp.append(neighbourV.toInt());
+            }
+            city->setNeigboursId(nTmp);
+
+
 
             /// cityGraphics
-//            QString fg = ":/flags"+country.value("flag").toString();
-
-//            QGraphicsRectItem *cityR = new QGraphicsRectItem(QRectF(city.x(),city.y(),60,60),glob);
-//            cityR->setBrush(QColor(country.value("color").toString()));
-//            cityR->setOpacity(0.3);
-//            QGraphicsPixmapItem *cityPng = new QGraphicsPixmapItem(":/data/flags/"+country.value("flag").toString()+".png",glob);
-//            QGraphicsTextItem *cityText = new QGraphicsTextItem(city.name()+"(-"+QString::number(city.id())+"-)",glob);
-//            cityText->setPos(city.x(),city.y()+55);
-//            cityPng->setPos(city.x(),city.y());
-//            cityPng->setScale(0.1);
-
             QImage *cityImg;
             if((int)city->type()<4){
                 cityImg = K100;
@@ -208,6 +240,34 @@ void MapView::loadFromJson()
     }
     this->centerOn(citiesGraphics().value(9)->x(),citiesGraphics().value(9)->y());
 
+
+    /// neighbours graphics
+    foreach (CityGraphics *cG, m_citiesGraphics) {
+        foreach (int neighbourID, cG->city()->neigboursId()) {
+//            if(!citiesGraphics().contains(neighbourID)) return;
+            bool exi = false;
+            foreach (LinkGraphics *lgt, citiesGraphics().value(neighbourID)->links()) {
+                if(lgt->link()->des() == cG->city()) {
+                    exi=true;
+                }
+            }
+            if(exi) continue;
+            LinkN *l = new LinkN(this);
+            l->setDep(cG->city());
+            l->setDes(this->citiesGraphics().value(neighbourID)->city());
+
+            cG->city()->addNeighbour(this->citiesGraphics().value(neighbourID)->city());
+            this->citiesGraphics().value(neighbourID)->city()->addNeighbour(cG->city());
+
+            LinkGraphics *lg = new LinkGraphics(l,this);
+            m_links.append(lg);
+            cG->m_links.append(lg);
+            citiesGraphics().value(neighbourID)->m_links.append(lg);
+            m_mapScene->addItem(lg);
+            connect(this,&MapView::zoomChange,lg,&LinkGraphics::zoomChanged);
+
+        }
+    }
 
 }
 
@@ -274,6 +334,16 @@ void MapView::checkMouseInBoerder(QPoint mousePos)
 //    }
     if(!moveViewTimer.isActive()) moveViewTimer.start();
 
+}
+
+QList<LinkGraphics *> MapView::links() const
+{
+    return m_links;
+}
+
+CityGraphics *MapView::selectedCityGraphics() const
+{
+    return m_selectedCityGraphics;
 }
 
 
@@ -382,6 +452,7 @@ void MapView::zoomOut()
     this->setSceneRect(QRectF(0,0,m_mapGraphics->boundingRect().width()*zoomLevel,
                               m_mapGraphics->boundingRect().height()*zoomLevel));
 
+
     //    this->m_mapScene->setSceneRect(m_mapGraphics);
 }
 
@@ -391,5 +462,23 @@ QString MapView::unitsText()
     file.open(QFile::ReadOnly|QFile::Truncate);
     QTextStream st(&file);
     return st.readAll();
+}
+
+void MapView::setLinks(QList<LinkGraphics *> links)
+{
+    if (m_links == links)
+        return;
+
+    m_links = links;
+    emit linksChanged(m_links);
+}
+
+void MapView::setSelectedCityGraphics(CityGraphics *selectedCityGraphics)
+{
+    if (m_selectedCityGraphics == selectedCityGraphics)
+        return;
+
+    m_selectedCityGraphics = selectedCityGraphics;
+    emit selectedCityGraphicsChanged(m_selectedCityGraphics);
 }
 

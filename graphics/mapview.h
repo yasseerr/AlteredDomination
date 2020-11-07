@@ -5,6 +5,7 @@
 #include <QTimer>
 #include <qgraphicsitem.h>
 #include "domain/map.h"
+#include "linkgraphics.h"
 #include <QGraphicsView>
 #include<QGraphicsPixmapItem>
 #include <domain/map.h>
@@ -12,7 +13,7 @@
 #include<QQuickView>
 #include <QtQuickWidgets/QQuickWidget>
 class CityGraphics;
-
+class LinkGraphics;
 class MapView :public QGraphicsView
 {
     Q_OBJECT
@@ -21,7 +22,8 @@ class MapView :public QGraphicsView
     Q_PROPERTY(QMap<int,CityGraphics*> citiesGraphics READ citiesGraphics WRITE setCitiesGraphics NOTIFY citiesGraphicsChanged)
     Q_PROPERTY(QGraphicsSvgItem* mapGraphics READ mapGraphics  NOTIFY mapGraphicsChanged)
     Q_PROPERTY(QGraphicsView* view READ view WRITE setView NOTIFY viewChanged)
-
+    Q_PROPERTY(QList<LinkGraphics*> links READ links WRITE setLinks NOTIFY linksChanged)
+    Q_PROPERTY(CityGraphics* selectedCityGraphics READ selectedCityGraphics WRITE setSelectedCityGraphics NOTIFY selectedCityGraphicsChanged)
     Map* m_map;
 
     QMap<int,CityGraphics*> m_citiesGraphics;
@@ -42,11 +44,15 @@ class MapView :public QGraphicsView
 
     int zoomLevel;
 
+    QList<LinkGraphics*> m_links;
 
+    CityGraphics* m_selectedCityGraphics;
 
 public:
     QQuickWidget *CityUI;
     QQuickWidget *addUnitUI;
+    QQuickWidget *moveUnitUI;
+    QQuickWidget *attackUI;
     QWidget *par1;
 
 
@@ -67,6 +73,10 @@ public:
 //    void mousePressEvent(QMouseEvent *event);
     void checkMouseInBoerder(QPoint mousePos);
 
+
+    QList<LinkGraphics*> links() const;
+
+    CityGraphics* selectedCityGraphics() const;
 
 public slots:
 
@@ -89,6 +99,10 @@ public slots:
 
     Q_INVOKABLE QString unitsText();
 
+    void setLinks(QList<LinkGraphics*> links);
+
+    void setSelectedCityGraphics(CityGraphics* selectedCityGraphics);
+
 signals:
 
     void zoomChange(double z);
@@ -98,6 +112,8 @@ signals:
     void viewChanged(QGraphicsView* view);
     void mapSceneChanged(QGraphicsScene* mapScene);
 
+    void linksChanged(QList<LinkGraphics*> links);
+    void selectedCityGraphicsChanged(CityGraphics* selectedCityGraphics);
 };
 
 #endif // MAPVIEW_H

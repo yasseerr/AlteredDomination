@@ -5,7 +5,6 @@
         <file>data/map3.svg</file>
         <file>data/map4.svg</file>
         <file>data/map5.svg</file>
-        <file>data/map.json</file>
         <file>data/flags/ad.png</file>
         <file>data/flags/ae.png</file>
         <file>data/flags/af.png</file>
@@ -281,5 +280,14 @@
         <file>data/units/attackhelicopter.png</file>
         <file>data/units/sniper.png</file>
         <file>scripts/UnitUIItem.qml</file>
+        <file>data/texture.jpg</file>
+        <file>data/map.json</file>
+        <file>data/mmm.jpg</file>
+        <file>scripts/MoveUnitsUI.qml</file>
+        <file>data/icons/moveto.png</file>
+        <file>scripts/AttackUI.qml</file>
+        <file>data/cities/attackUIBG.jpg</file>
+        <file>data/icons/target.png</file>
+        <file>data/icons/statustexture.jpg</file>
     </qresource>
 </RCC>

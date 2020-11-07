@@ -50,6 +50,11 @@ bool Unit::used() const
     return m_used;
 }
 
+int Unit::power() const
+{
+    return m_power;
+}
+
 void Unit::setId(int id)
 {
     if (m_id == id)
@@ -111,4 +116,13 @@ void Unit::setUsed(bool used)
 
     m_used = used;
     emit usedChanged(m_used);
+}
+
+void Unit::setPower(int power)
+{
+    if (m_power == power)
+        return;
+
+    m_power = power;
+    emit powerChanged(m_power);
 }

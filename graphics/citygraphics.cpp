@@ -7,17 +7,19 @@
 #include <QPropertyAnimation>
 #include <QQmlContext>
 #include <QQuickItem>
+#include <QVariantList>
 
 #include <domain/city.h>
 #include <domain/country.h>
 #include <domain/unit.h>
 
 
-CityGraphics::CityGraphics(City *city_p,QImage *cityImg_p):cityImg(cityImg_p),m_city(city_p)
+CityGraphics::CityGraphics(City *city_p,QImage *cityImg_p):cityImg(cityImg_p),m_city(city_p),m_toAttack(false),m_moveToIt(false)
 {
     setFlags(QGraphicsItem::ItemSendsGeometryChanges);
     setAcceptHoverEvents(true);
-
+    setZValue(10);
+    m_power = 0;
 
 }
 
@@ -29,11 +31,17 @@ QRectF CityGraphics::boundingRect() const
 
 void CityGraphics::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
+
     painter->setOpacity(0.3);
     painter->fillRect(boundingRect(),city()->country()->color());
     painter->setOpacity(1);
     painter->drawImage(100,100,bgImage->scaled(600,600));
 //    painter->drawImage(10,0,*cityImg);
+
+
+    if(m_moveToIt)painter->drawImage(300,-256,QImage(":/data/icons/moveto.png"));
+    if(m_toAttack)painter->drawImage(0,0,QImage(":/data/icons/target.png").scaled(700,700));
+
 
     /// city name rect+text
     painter->setOpacity(0.3);
@@ -60,31 +68,79 @@ City* CityGraphics::city() const
 
 void CityGraphics::hoverEnterEvent(QGraphicsSceneHoverEvent *ev)
 {
-//    qDebug() << " entered ";
-//    QPropertyAnimation *scaleAnim = new QPropertyAnimation(this,"scale",this);
-//    scaleAnim->setDuration(50);
-//    scaleAnim->setStartValue(0.1);
-//    scaleAnim->setEndValue(0.12);
-//    scaleAnim->setEasingCurve(QEasingCurve::OutQuad);
-//    scaleAnim->start();
-    setScale(0.12);
+
+    setScale(0.11);
+    foreach (LinkGraphics *ln, this->links()) {
+        ln->setOpacity(1);
+        if(ln->link()->des()->country() == ln->link()->dep()->country())ln->setPen(QPen(ln->link()->des()->country()->color(),
+                                                                                        4,Qt::SolidLine));
+        else ln->setPen(QPen(Qt::red,4,Qt::SolidLine));
+    }
 }
 
 void CityGraphics::hoverLeaveEvent(QGraphicsSceneHoverEvent *ev)
 {
     this->setScale(0.1);
+
+    foreach (LinkGraphics *ln, this->links()) {
+        ln->setOpacity(0.2);
+        if(ln->link()->des()->country() == ln->link()->dep()->country())ln->setPen(QPen(ln->link()->des()->country()->color(),
+                                                                                        3,Qt::DashDotLine));
+        else ln->setPen(QPen(Qt::red,3,Qt::DotLine));
+    }
 }
 
 void CityGraphics::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    qDebug() << "clicked";
-    mapView()->CityUI->rootObject();
+    ///--------------- cancel the movement if its not a neighbour-----------
+    if((mapView()->selectedCityGraphics()!= nullptr) && (!m_moveToIt) && (!m_toAttack)){
+        foreach (City *c, mapView()->selectedCityGraphics()->city()->neighbours()) {
+            this->mapView()->citiesGraphics().value(c->id())->setMoveToIt(false);
+            this->mapView()->citiesGraphics().value(c->id())->setToAttack(false);
+        }
+        this->mapView()->setSelectedCityGraphics(nullptr);
+        this->mapView()->mapScene()->update();
+        return;
+    }
+
+
+//------------------------------ movement system-------------------------------------------------
+    if(moveToIt()){
+        mapView()->moveUnitUI->rootContext()->setContextProperty("sourceCity",mapView()->selectedCityGraphics());
+        mapView()->moveUnitUI->rootContext()->setContextProperty("destinationCity",this);
+
+        foreach (Unit *u, this->city()->units().values()) {
+            emit unitToQml(u->id(),u->type());
+        }
+        foreach (Unit *u, mapView()->selectedCityGraphics()->city()->units().values()) {
+            emit mapView()->selectedCityGraphics()->unitToQml(u->id(),u->type());
+        }
+        mapView()->moveUnitUI->show();
+        return;
+
+    }else if (m_toAttack) {
+
+///------------------------- attack system----------------------------------------------------
+        mapView()->attackUI->rootContext()->setContextProperty("sourceCity",mapView()->selectedCityGraphics());
+        mapView()->attackUI->rootContext()->setContextProperty("destinationCity",this);
+        foreach (Unit *u, this->city()->units().values()) {
+            emit unitToAttackQml(u->type());
+        }
+        foreach (Unit *u, mapView()->selectedCityGraphics()->city()->units().values()) {
+            emit mapView()->selectedCityGraphics()->unitToAttackQml(u->type());
+        }
+        mapView()->attackUI->show();
+        return;
+    }
+
     mapView()->CityUI->rootContext()->setContextProperty("city",this->city());
+    mapView()->CityUI->rootContext()->setContextProperty("cityGraphics",this);
     mapView()->addUnitUI->rootContext()->setContextProperty("cityGraphics",this);
     mapView()->CityUI->show();
 
-    foreach (QString tmp, unitsListstring) {
-        city()->addedUnitSig(tmp);
+
+    foreach (Unit *tmp, city()->units().values()) {
+        city()->addedUnitSig(tmp->type());
     }
 }
 
@@ -93,11 +149,60 @@ QList<UnitGraphics *> CityGraphics::unitsG() const
     return m_unitsG;
 }
 
+QList<LinkGraphics*> CityGraphics::links()
+{
+    return m_links;
+}
+
+bool CityGraphics::moveToIt() const
+{
+    return m_moveToIt;
+}
+
+bool CityGraphics::toAttack() const
+{
+    return m_toAttack;
+}
+
+void CityGraphics::moveUnits()
+{
+    foreach (City *c,this->city()->neighbours()) {
+        if(!(this->city()->country() == c->country()))continue;
+        this->mapView()->citiesGraphics().value(c->id())->setMoveToIt(true);
+    }
+    this->mapView()->setSelectedCityGraphics(this);
+//    this->mapView()->CityUI->hide();
+
+}
+
+void CityGraphics::attack()
+{
+    foreach (City *c,this->city()->neighbours()) {
+        if((this->city()->country() == c->country()))continue;
+        this->mapView()->citiesGraphics().value(c->id())->setToAttack(true);
+    }
+    this->mapView()->setSelectedCityGraphics(this);
+
+}
+
+void CityGraphics::cancelAttack()
+{
+    foreach (City *c,this->city()->neighbours()) {
+        if((this->city()->country() == c->country()))continue;
+        this->mapView()->citiesGraphics().value(c->id())->setToAttack(false);
+    }
+    this->mapView()->setSelectedCityGraphics(nullptr);
+}
+
+int CityGraphics::power() const
+{
+    return m_power;
+}
+
 MapView* CityGraphics::mapView() const
 {
     return m_mapView;
 }
-
 
 void CityGraphics::setCity(City* city)
 {
@@ -139,8 +244,66 @@ void CityGraphics::addUnitFromQml(QString type)
     tmp->setName(QString::number(tmp->id())+"_"+city()->name());
     tmp->setType(type);
     city()->addedUnitSig(type);
-    city()->units().append(tmp);
+    city()->addUnit(tmp);
 
     unitsListstring << type;
 
+}
+
+void CityGraphics::sendUnitToNeighbour(int idU)
+{
+    Unit *tmp =  city()->units().value(idU);
+    mapView()->selectedCityGraphics()->city()->addUnit(tmp);
+    city()->removeUnit(idU);
+
+}
+
+void CityGraphics::receiveUnitFromNeighbour(int idU)
+{
+    Unit *tmp =  mapView()->selectedCityGraphics()->city()->units().value(idU);
+    mapView()->selectedCityGraphics()->city()->removeUnit(idU);
+    city()->addUnit(tmp);
+
+}
+
+void CityGraphics::deSelect()
+{
+    foreach (City *c,this->city()->neighbours()) {
+        if(!(this->city()->country() == c->country()))continue;
+        this->mapView()->citiesGraphics().value(c->id())->setMoveToIt(false);
+    }
+    this->mapView()->setSelectedCityGraphics(nullptr);
+
+}
+
+void CityGraphics::setPower(int power)
+{
+    m_power = power;
+}
+
+void CityGraphics::setLinks(QList<LinkGraphics*> links)
+{
+    if (m_links == links)
+        return;
+
+    m_links = links;
+    emit linksChanged(m_links);
+}
+
+void CityGraphics::setMoveToIt(bool moveToIt)
+{
+    if (m_moveToIt == moveToIt)
+        return;
+
+    m_moveToIt = moveToIt;
+    emit moveToItChanged(m_moveToIt);
+}
+
+void CityGraphics::setToAttack(bool toAttack)
+{
+    if (m_toAttack == toAttack)
+        return;
+
+    m_toAttack = toAttack;
+    emit toAttackChanged(m_toAttack);
 }

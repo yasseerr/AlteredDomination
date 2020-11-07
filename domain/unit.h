@@ -13,6 +13,7 @@ class Unit : public QObject
     Q_PROPERTY(int y READ y WRITE setY NOTIFY yChanged)
     Q_PROPERTY(QString type READ type WRITE setType NOTIFY typeChanged)
     Q_PROPERTY(bool used READ used WRITE setUsed NOTIFY usedChanged)
+    Q_PROPERTY(int power READ power WRITE setPower NOTIFY powerChanged)
 
     static int idCount;
 
@@ -29,6 +30,8 @@ class Unit : public QObject
     QString m_type;
 
     bool m_used;
+
+    int m_power;
 
 public:
     explicit Unit(QObject *parent = nullptr);
@@ -47,6 +50,8 @@ public:
 
     bool used() const;
 
+    int power() const;
+
 signals:
 
     void idChanged(int id);
@@ -63,6 +68,7 @@ signals:
 
     void usedChanged(bool used);
 
+    void powerChanged(int power);
 
 public slots:
 
@@ -73,6 +79,7 @@ public slots:
     void setY(int y);
     void setType(QString type);
     void setUsed(bool used);
+    void setPower(int power);
 };
 
 #endif // UNIT_H

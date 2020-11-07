@@ -224,7 +224,11 @@ Item{
                     }
                     onEntered: quitRectangle.scale = 1.5
                     onExited: quitRectangle.scale = 1
-
+                    function closeOp(){
+                        unitsList = []
+                        unitsrectangle.children =[]
+                        viewUI.hide();
+                    }
 
                 }
 
@@ -264,8 +268,15 @@ Item{
                     anchors.fill: parent
                     onEntered: {attackRect.color = Qt.lighter(investRect.color); infoText.text="Attack" ; }
                     onExited: {attackRect.color = "#e0bb72"; infoText.text="";}
-                    onPressed: attackRect.color = "#00ff00"
+                    onPressed: {
+                        attackRect.color = "#00ff00"
+                        unitsrectangle.children = []
+                        unitsList = []
+                        viewUI.hide()
+                        cityGraphics.attack()
+                    }
                     onReleased: attackRect.color = "#e0bb72"
+
                 }
 
                 Image {
@@ -297,7 +308,12 @@ Item{
                     anchors.fill: parent
                     onEntered: {moveRect.color = Qt.lighter(investRect.color); infoText.text="move units" ; }
                     onExited: {moveRect.color = "#e0bb72"; infoText.text="";}
-                    onPressed: moveRect.color = "#00ff00"
+                    onPressed: {
+                        moveRect.color = "#00ff00";
+                        closemouseArea.closeOp();
+                        cityGraphics.moveUnits();
+
+                    }
                     onReleased :  moveRect.color="#e0bb72"
 
                 }

@@ -1,6 +1,7 @@
 #ifndef CITY_H
 #define CITY_H
 
+#include <QMap>
 #include <QObject>
 
 class Country;
@@ -20,8 +21,9 @@ class City : public QObject
     Q_PROPERTY(int y READ y WRITE setY NOTIFY yChanged)
     Q_PROPERTY(CityType type READ type WRITE setType NOTIFY typeChanged)
     Q_PROPERTY(QList<City*> neighbours READ neighbours WRITE setNeighbours NOTIFY neighboursChanged)
+    Q_PROPERTY(QList<int> neigboursId READ neigboursId WRITE setNeigboursId NOTIFY neigboursIdChanged)
     Q_PROPERTY(int income READ income WRITE setIncome NOTIFY incomeChanged)
-    Q_PROPERTY(QList<Unit*> units READ units WRITE setUnits NOTIFY unitsChanged)
+    Q_PROPERTY(QMap<int,Unit*> units READ units WRITE setUnits NOTIFY unitsChanged)
 
 
 
@@ -45,7 +47,9 @@ class City : public QObject
 
     int m_income;
 
-    QList<Unit*> m_units;
+    QMap<int,Unit*> m_units;
+
+    QList<int> m_neigboursId;
 
 public:
     explicit City(QObject *parent = nullptr);
@@ -66,9 +70,15 @@ public:
 
     QList<City*> neighbours() const;
 
+
     int income() const;
 
-    QList<Unit*> units() const;
+    QMap<int,Unit*> units() const;
+
+    QList<int> neigboursId();
+
+    void addUnit(Unit *u);
+    void removeUnit(int idU);
 
 signals:
 
@@ -90,9 +100,11 @@ signals:
 
     void incomeChanged(int income);
 
-    void unitsChanged(QList<Unit*> units);
+    void unitsChanged(QMap<int,Unit*> units);
 
     void addedUnitSig(QString typeS);
+
+    void neigboursIdChanged(QList<int> neigboursId);
 
 public slots:
     void setId(int id);
@@ -104,7 +116,9 @@ public slots:
     void setType(CityType type);
     void setNeighbours(QList<City*> neighbours);
     void setIncome(int income);
-    void setUnits(QList<Unit*> units);
+    void setUnits(QMap<int,Unit*> units);
+    void setNeigboursId(QList<int> neigboursId);
+    void addNeighbour(City *c);
 };
 
 #endif // CITY_H
