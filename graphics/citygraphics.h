@@ -51,6 +51,8 @@ public:
     Q_INVOKABLE void moveUnits();
     Q_INVOKABLE void attack();
     Q_INVOKABLE void cancelAttack();
+    Q_INVOKABLE void startBattle();
+
 
     int power() const;
 
@@ -67,8 +69,11 @@ public slots:
     Q_INVOKABLE void sendUnitToNeighbour(int idU);
     Q_INVOKABLE void receiveUnitFromNeighbour(int idU);
     Q_INVOKABLE void deSelect();
+    Q_INVOKABLE void onBattleEnded();
+
 
     void setPower(int power);
+    void onAttackerWon();
 
 signals:
     void cityChanged(City* city);

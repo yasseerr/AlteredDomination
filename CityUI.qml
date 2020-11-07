@@ -266,7 +266,10 @@ Item{
                     id: attackMouseArea
                     hoverEnabled: true
                     anchors.fill: parent
-                    onEntered: {attackRect.color = Qt.lighter(investRect.color); infoText.text="Attack" ; }
+                    onEntered: {
+                        attackRect.color = Qt.lighter(investRect.color);
+                        infoText.text="Attack"+(unitsrectangle.childrenRect.width>0?"":"(no units)") ;
+                    }
                     onExited: {attackRect.color = "#e0bb72"; infoText.text="";}
                     onPressed: {
                         attackRect.color = "#00ff00"

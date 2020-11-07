@@ -31,6 +31,7 @@ public slots  :
     Q_INVOKABLE void reDisplayCities();
     Q_INVOKABLE void focusOnCity(City *c);
     Q_INVOKABLE void runNextTurn();
+    void onAttackerWon(City *C);
 signals:
     void mapViewChanged(MapView* mapView);
     void activePlayerStrChanged(QString activePlayerStr);

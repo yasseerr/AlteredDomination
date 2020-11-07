@@ -24,7 +24,7 @@ class City : public QObject
     Q_PROPERTY(QList<int> neigboursId READ neigboursId WRITE setNeigboursId NOTIFY neigboursIdChanged)
     Q_PROPERTY(int income READ income WRITE setIncome NOTIFY incomeChanged)
     Q_PROPERTY(QMap<int,Unit*> units READ units WRITE setUnits NOTIFY unitsChanged)
-
+    Q_PROPERTY(int power READ power WRITE setPower NOTIFY powerChanged)
 
 
     Q_OBJECT
@@ -50,6 +50,8 @@ class City : public QObject
     QMap<int,Unit*> m_units;
 
     QList<int> m_neigboursId;
+
+    int m_power;
 
 public:
     explicit City(QObject *parent = nullptr);
@@ -80,6 +82,8 @@ public:
     void addUnit(Unit *u);
     void removeUnit(int idU);
 
+    int power() const;
+
 signals:
 
     void idChanged(int id);
@@ -106,6 +110,8 @@ signals:
 
     void neigboursIdChanged(QList<int> neigboursId);
 
+    void powerChanged(int power);
+
 public slots:
     void setId(int id);
     void setName(QString name);
@@ -119,6 +125,7 @@ public slots:
     void setUnits(QMap<int,Unit*> units);
     void setNeigboursId(QList<int> neigboursId);
     void addNeighbour(City *c);
+    void setPower(int power);
 };
 
 #endif // CITY_H

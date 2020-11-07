@@ -108,27 +108,7 @@ Item {
             }
         }
 
-        Rectangle {
-            id: typesRectangle
-            y: 65
-            height: 176
-            color: "#99777777"
-            anchors.right: parent.right
-            anchors.rightMargin: 0
-            anchors.left: parent.left
-            anchors.leftMargin: 0
-            Component.onCompleted: {
-                var i = 0;
-                for(var tp in adUnitUI.unitsTypes){
-                    var obj = typegenerator.createObject(typesRectangle,{"x":85*(i%5),"y":5+Math.floor(i/5)*85});
-                    obj.src = "qrc:/data/units/"+adUnitUI.unitsTypes[i].name+".png";
-                    obj.cost = adUnitUI.unitsTypes[i].cost;
-                    obj.name = adUnitUI.unitsTypes[i].name;
-                    i++;
-                }
-            }
 
-        }
 
         ScrollView{
             id: addedScroll
@@ -230,6 +210,45 @@ Item {
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
             font.pixelSize: 16
+        }
+
+        ScrollView {
+            id: typesScroll
+            x: -1
+            y: 254
+            height: 176
+            anchors.rightMargin: 0
+            anchors.leftMargin: 0
+            anchors.topMargin: 65
+            Rectangle {
+                id: typesRectangle
+                y: 0
+                height: 176
+                color: "#99777777"
+                anchors.right: parent.right
+                anchors.rightMargin: 0
+                anchors.left: parent.left
+                anchors.leftMargin: 0
+                Component.onCompleted: {
+                    var i = 0;
+                    for(var tp in adUnitUI.unitsTypes){
+                        var obj = typegenerator.createObject(typesRectangle,{"x":85*(i%5),"y":5+Math.floor(i/5)*85});
+                        obj.src = "qrc:/data/units/"+adUnitUI.unitsTypes[i].name+".png";
+                        obj.cost = adUnitUI.unitsTypes[i].cost;
+                        obj.name = adUnitUI.unitsTypes[i].name;
+                        i++;
+                    }
+                    typesRectangle.height = typesRectangle.childrenRect.height
+                }
+
+            }
+            anchors.right: parent.right
+            highlightOnFocus: true
+            clip: true
+            horizontalScrollBarPolicy: 1
+            verticalScrollBarPolicy: 0
+            anchors.top: parent.top
+            anchors.left: parent.left
         }
 
     }

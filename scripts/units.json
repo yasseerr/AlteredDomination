@@ -5,95 +5,381 @@
         "cost":5,
         "types":["human","land"],
         "moves":[
-                    {"x":1,"y":0},
-                    {"x":-1,"y":0},
-                    {"x":0,"y":1},
-                    {"x":0,"y":-1}
+                    {"x":1,"y":0,"dependencies":[]},
+                    {"x":-1,"y":0,"dependencies":[]},
+                    {"x":0,"y":1,"dependencies":[]},
+                    {"x":0,"y":-1,"dependencies":[]},
+                    {"x":2,"y":0,"dependencies":[{"x":1,"y":0}]},
+                    {"x":-2,"y":0,"dependencies":[{"x":-1,"y":0}]}
                 ],
         "attacks":[
-                   {"x":2,"y":0,"affect":["human"]}
+                   {"x":1,"y":1,"affect":["human"],"dependencies":[]},
+                   {"x":-1,"y":1,"affect":["human"],"dependencies":[]},
+                   {"x":-1,"y":-1,"affect":["human"],"dependencies":[]},
+                   {"x":1,"y":-1,"affect":["human"],"dependencies":[]}
                   ]
-    },
+    },    
     {
         "id":2,
-        "name":"tank",
-        "types":["machin","land"],
-        "cost":50,
+        "name":"sniper",
+        "types":["human","land"],
+        "cost":10,
         "moves":[
-                 {"x":1,"y":0},
-                 {"x":-1,"y":0},
-                 {"x":0,"y":1},
-                 {"x":0,"y":-1},
-                 {"x":2,"y":0},
-                 {"x":-2,"y":0},
-                 {"x":0,"y":2},
-                 {"x":0,"y":-2}
+                    {"x":1,"y":0,"dependencies":[]},
+                    {"x":-1,"y":0,"dependencies":[]},
+                    {"x":0,"y":1,"dependencies":[]},
+                    {"x":0,"y":-1,"dependencies":[]},
+                    {"x":2,"y":0,"dependencies":[{"x":1,"y":0}]},
+                    {"x":-2,"y":0,"dependencies":[{"x":-1,"y":0}]}
                 ],
         "attacks":[
-                    {"x":2,"y":0,"affect":["land"]},
-                    {"x":3,"y":0,"affect":["land"]},
-                    {"x":0,"y":2,"affect":["land"]},
-                    {"x":0,"y":3,"affect":["land"]},
-                    {"x":-2,"y":0,"affect":["land"]},
-                    {"x":-3,"y":0,"affect":["land"]},
-                    {"x":0,"y":-2,"affect":["land"]}, 
-                    {"x":0,"y":-3,"affect":["land"]}
+                    {"x":2,"y":0,"affect":["human"],"dependencies":[{"x":1,"y":0}]},
+                    {"x":3,"y":0,"affect":["human"],"dependencies":[{"x":1,"y":0},{"x":2,"y":0}]},
+                    {"x":-2,"y":0,"affect":["human"],"dependencies":[{"x":-1,"y":0}]},
+                    {"x":-3,"y":0,"affect":["human"],"dependencies":[{"x":-1,"y":0},{"x":-2,"y":0}]},
+                    {"x":0,"y":2,"affect":["human"],"dependencies":[{"x":0,"y":1}]},
+                    {"x":0,"y":-2,"affect":["human"],"dependencies":[{"x":0,"y":-1}]}
+                    
                   ]
     },
     {
         "id":3,
-        "name":"sniper",
-        "types":["humain","land"],
+        "name":"rocketlauncher",
+        "types":["human","land"],
         "cost":15,
         "moves":[
-                    {"x":1,"y":0},
-                    {"x":-1,"y":0},
-                    {"x":0,"y":1},
-                    {"x":0,"y":-1}
+                    {"x":1,"y":0,"dependencies":[]},
+                    {"x":-1,"y":0,"dependencies":[]},
+                    {"x":0,"y":1,"dependencies":[]},
+                    {"x":0,"y":-1,"dependencies":[]},
+                    {"x":2,"y":0,"dependencies":[{"x":1,"y":0}]},
+                    {"x":-2,"y":0,"dependencies":[{"x":-1,"y":0}]}
                 ],
         "attacks":[
-                    {"x":2,"y":0,"affect":["humain"]},
-                    {"x":3,"y":0,"affect":["humain"]},
-                    {"x":0,"y":2,"affect":["humain"]},
-                    {"x":0,"y":3,"affect":["humain"]}
+                   {"x":1,"y":1,"affect":["machin"],"dependencies":[]},
+                   {"x":-1,"y":1,"affect":["machin"],"dependencies":[]},
+                   {"x":-1,"y":-1,"affect":["machin"],"dependencies":[]},
+                   {"x":1,"y":-1,"affect":["machin"],"dependencies":[]}
                   ]
     },
     {
         "id":4,
-        "name":"attackhelicopter",
-        "types":["land"],
-        "cost":70,
+        "name":"artillery",
+        "types":["human","land"],
+        "cost":20,
         "moves":[
-                    {"x":1,"y":1},
-                    {"x":2,"y":2},
-                    {"x":3,"y":3},
-                    {"x":4,"y":4},
-                    {"x":-1,"y":-1},
-                    {"x":-2,"y":-2},
-                    {"x":-3,"y":-3},
-                    {"x":-4,"y":-4},
-                    {"x":1,"y":-1},
-                    {"x":2,"y":-2},
-                    {"x":3,"y":-3},
-                    {"x":4,"y":-4},
-                    {"x":-1,"y":1},
-                    {"x":-2,"y":2},
-                    {"x":-3,"y":3},
-                    {"x":-4,"y":4}
+                 {"x":1,"y":0,"dependencies":[]},
+                 {"x":-1,"y":0,"dependencies":[]},
+                 {"x":0,"y":1,"dependencies":[]},
+                 {"x":0,"y":-1,"dependencies":[]}
                 ],
         "attacks":[
-                    {"x":3,"y":0,"affect":["land"]},
-                    {"x":3,"y":1,"affect":["land"]},
-                    {"x":3,"y":-1,"affect":["land"]},
-                    {"x":-3,"y":0,"affect":["land"]},
-                    {"x":-3,"y":1,"affect":["land"]},
-                    {"x":-3,"y":-1,"affect":["land"]},
-                    {"x":0,"y":3,"affect":["land"]},
-                    {"x":1,"y":3,"affect":["land"]},
-                    {"x":-1,"y":3,"affect":["land"]},
-                    {"x":0,"y":-3,"affect":["land"]},
-                    {"x":1,"y":-2,"affect":["land"]},
-                    {"x":-1,"y":-3,"affect":["land"]}
+                    {"x":4,"y":0,"affect":["land"],"dependencies":[]},
+                    {"x":-4,"y":0,"affect":["land"],"dependencies":[]}
+                  ]
+    },
+    {
+        "id":5,
+        "name":"afv",
+        "types":["machin","land"],
+        "cost":30,
+        "moves":[
+                 {"x":1,"y":0,"dependencies":[]},
+                 {"x":1,"y":1,"dependencies":[]},
+                 {"x":1,"y":-1,"dependencies":[]},
+                 {"x":-1,"y":0,"dependencies":[]},
+                 {"x":-1,"y":1,"dependencies":[]},
+                 {"x":-1,"y":-1,"dependencies":[]},
+                 
+                 {"x":2,"y":0,"dependencies":[{"x":1,"y":0}]},
+                 {"x":2,"y":2,"dependencies":[{"x":1,"y":1}]},
+                 {"x":2,"y":-2,"dependencies":[{"x":1,"y":-1}]},
+                 {"x":-2,"y":0,"dependencies":[{"x":-1,"y":0}]},
+                 {"x":-2,"y":2,"dependencies":[{"x":-1,"y":1}]},
+                 {"x":-2,"y":-2,"dependencies":[{"x":-1,"y":-1}]},
+                 
+                 {"x":3,"y":0,"dependencies":[{"x":1,"y":0},{"x":2,"y":0}]},
+                 {"x":3,"y":3,"dependencies":[{"x":1,"y":1},{"x":2,"y":2}]},
+                 {"x":3,"y":-3,"dependencies":[{"x":1,"y":-1},{"x":2,"y":-2}]},
+                 {"x":-3,"y":0,"dependencies":[{"x":-1,"y":0},{"x":-2,"y":0}]},
+                 {"x":-3,"y":3,"dependencies":[{"x":-1,"y":1},{"x":-2,"y":2}]},
+                 {"x":-3,"y":-3,"dependencies":[{"x":-1,"y":-1},{"x":-2,"y":-2}]}
+                 
+                ],
+        "attacks":[
+                    {"x":1,"y":0,"affect":["human"],"dependencies":[]},
+                    {"x":1,"y":1,"affect":["human"],"dependencies":[]},
+                    {"x":1,"y":-1,"affect":["human"],"dependencies":[]},
+                    {"x":0,"y":1,"affect":["human"],"dependencies":[]},
+                    {"x":0,"y":-1,"affect":["human"],"dependencies":[]},
+                    {"x":-1,"y":0,"affect":["human"],"dependencies":[]},
+                    {"x":-1,"y":1,"affect":["human"],"dependencies":[]}, 
+                    {"x":-1,"y":-1,"affect":["human"],"dependencies":[]}
+                  ]
+    },
+    {
+        "id":6,
+        "name":"tank",
+        "types":["machin","land"],
+        "cost":50,
+        "moves":[
+                 {"x":1,"y":0,"dependencies":[]},
+                 {"x":2,"y":0,"dependencies":[{"x":1,"y":0}]},
+                 {"x":3,"y":0,"dependencies":[{"x":1,"y":0},{"x":2,"y":0}]},
+                 {"x":-1,"y":0,"dependencies":[]},
+                 {"x":-2,"y":0,"dependencies":[{"x":-1,"y":0}]},
+                 {"x":-3,"y":0,"dependencies":[{"x":-1,"y":0},{"x":-2,"y":0}]},
+                 
+                 {"x":0,"y":1,"dependencies":[]},
+                 {"x":0,"y":2,"dependencies":[{"x":0,"y":1}]},
+                 {"x":0,"y":3,"dependencies":[{"x":0,"y":1},{"x":0,"y":2}]},
+                 {"x":0,"y":-1,"dependencies":[]},
+                 {"x":0,"y":-2,"dependencies":[{"x":0,"y":-1}]},
+                 {"x":0,"y":-3,"dependencies":[{"x":0,"y":-1},{"x":0,"y":-2}]}
+                 
+                ],
+        "attacks":[
+                    {"x":2,"y":0,"affect":["land"],"dependencies":[]},
+                    {"x":3,"y":0,"affect":["land"],"dependencies":[]},
+                    {"x":0,"y":2,"affect":["land"],"dependencies":[]},
+                    {"x":0,"y":3,"affect":["land"],"dependencies":[]},
+                    {"x":-2,"y":0,"affect":["land"],"dependencies":[]},
+                    {"x":-3,"y":0,"affect":["land"],"dependencies":[]},
+                    {"x":0,"y":-2,"affect":["land"],"dependencies":[]}, 
+                    {"x":0,"y":-3,"affect":["land"],"dependencies":[]}
+                  ]
+    },
+    {
+        "id":7,
+        "name":"antiaircraft",
+        "types":["machin","land"],
+        "cost":60,
+        "moves":[
+                 {"x":1,"y":0,"dependencies":[]},
+                 {"x":2,"y":0,"dependencies":[{"x":1,"y":0}]},
+                 {"x":3,"y":0,"dependencies":[{"x":1,"y":0},{"x":2,"y":0}]},
+                 {"x":-1,"y":0,"dependencies":[]},
+                 {"x":-2,"y":0,"dependencies":[{"x":-1,"y":0}]},
+                 {"x":-3,"y":0,"dependencies":[{"x":-1,"y":0},{"x":-2,"y":0}]},
+                 
+                 {"x":0,"y":1,"dependencies":[]},
+                 {"x":0,"y":2,"dependencies":[{"x":0,"y":1}]},
+                 {"x":0,"y":3,"dependencies":[{"x":0,"y":1},{"x":0,"y":2}]},
+                 {"x":0,"y":-1,"dependencies":[]},
+                 {"x":0,"y":-2,"dependencies":[{"x":0,"y":-1}]},
+                 {"x":0,"y":-3,"dependencies":[{"x":0,"y":-1},{"x":0,"y":-2}]}
+                ],
+        "attacks":[
+                    {"x":2,"y":2,"affect":["air"],"dependencies":[]},
+                    {"x":2,"y":1,"affect":["air"],"dependencies":[]},
+                    {"x":2,"y":0,"affect":["air"],"dependencies":[]},
+                    {"x":2,"y":-1,"affect":["air"],"dependencies":[]},
+                    {"x":2,"y":-2,"affect":["air"],"dependencies":[]},
+                    {"x":-2,"y":2,"affect":["air"],"dependencies":[]},
+                    {"x":-2,"y":1,"affect":["air"],"dependencies":[]},
+                    {"x":-2,"y":0,"affect":["air"],"dependencies":[]},
+                    {"x":-2,"y":-1,"affect":["air"],"dependencies":[]},
+                    {"x":-2,"y":-2,"affect":["air"],"dependencies":[]},
+                    {"x":0,"y":2,"affect":["air"],"dependencies":[]},
+                    {"x":0,"y":-2,"affect":["air"],"dependencies":[]}
+                  ]
+    },
+    {
+        "id":8,
+        "name":"attackhelicopter",
+        "types":["air"],
+        "cost":70,
+        "moves":[
+                    {"x":1,"y":1,"dependencies":[]},
+                    {"x":2,"y":2,"dependencies":[]},
+                    {"x":3,"y":3,"dependencies":[]},
+                    {"x":4,"y":4,"dependencies":[]},
+                    {"x":-1,"y":-1,"dependencies":[]},
+                    {"x":-2,"y":-2,"dependencies":[]},
+                    {"x":-3,"y":-3,"dependencies":[]},
+                    {"x":-4,"y":-4,"dependencies":[]},
+                    {"x":1,"y":-1,"dependencies":[]},
+                    {"x":2,"y":-2,"dependencies":[]},
+                    {"x":3,"y":-3,"dependencies":[]},
+                    {"x":4,"y":-4,"dependencies":[]},
+                    {"x":-1,"y":1,"dependencies":[]},
+                    {"x":-2,"y":2,"dependencies":[]},
+                    {"x":-3,"y":3,"dependencies":[]},
+                    {"x":-4,"y":4,"dependencies":[]}
+                ],
+        "attacks":[
+                    {"x":2,"y":0,"affect":["land","air"],"dependencies":[]},
+                    {"x":2,"y":1,"affect":["land","air"],"dependencies":[]},
+                    {"x":2,"y":-1,"affect":["land","air"],"dependencies":[]},
+                    {"x":-2,"y":0,"affect":["land","air"],"dependencies":[]},
+                    {"x":-2,"y":1,"affect":["land","air"],"dependencies":[]},
+                    {"x":-2,"y":-1,"affect":["land","air"],"dependencies":[]},
+                    {"x":0,"y":2,"affect":["land","air"],"dependencies":[]},
+                    {"x":0,"y":-2,"affect":["land","air"],"dependencies":[]}
+                  ]
+    },
+    {
+        "id":9,
+        "name":"mlrs",
+        "types":["machin","land"],
+        "cost":90,
+        "moves":[
+                 {"x":1,"y":1,"dependencies":[]},
+                 {"x":2,"y":2,"dependencies":[{"x":1,"y":1}]},
+                 {"x":-1,"y":1,"dependencies":[]},
+                 {"x":-2,"y":-2,"dependencies":[{"x":-1,"y":-1}]},
+                 {"x":-1,"y":1,"dependencies":[]},
+                 {"x":-2,"y":2,"dependencies":[{"x":-1,"y":1}]},
+                 {"x":1,"y":-1,"dependencies":[]},
+                 {"x":2,"y":-2,"dependencies":[{"x":1,"y":-1}]}
+                ],
+        "attacks":[
+                    {"x":5,"y":1,"affect":["land"],"dependencies":[]},
+                    {"x":5,"y":0,"affect":["land"],"dependencies":[]},
+                    {"x":5,"y":-1,"affect":["land"],"dependencies":[]},
+                    {"x":-5,"y":1,"affect":["land"],"dependencies":[]},
+                    {"x":-5,"y":0,"affect":["land"],"dependencies":[]},
+                    {"x":-5,"y":-1,"affect":["land"],"dependencies":[]},
+                    {"x":0,"y":5,"affect":["land"],"dependencies":[]}, 
+                    {"x":0,"y":-5,"affect":["land"],"dependencies":[]}
+                  ]
+    },
+    {
+        "id":10,
+        "name":"modernarmor",
+        "types":["machin","land"],
+        "cost":100,
+        "moves":[
+                 {"x":1,"y":0,"dependencies":[]},
+                 {"x":1,"y":1,"dependencies":[]},
+                 {"x":1,"y":-1,"dependencies":[]},
+                 {"x":-1,"y":0,"dependencies":[]},
+                 {"x":-1,"y":1,"dependencies":[]},
+                 {"x":-1,"y":-1,"dependencies":[]},
+                 
+                 {"x":2,"y":0,"dependencies":[{"x":1,"y":0}]},
+                 {"x":2,"y":2,"dependencies":[{"x":1,"y":1}]},
+                 {"x":2,"y":-2,"dependencies":[{"x":1,"y":-1}]},
+                 {"x":-2,"y":0,"dependencies":[{"x":-1,"y":0}]},
+                 {"x":-2,"y":2,"dependencies":[{"x":-1,"y":1}]},
+                 {"x":-2,"y":-2,"dependencies":[{"x":-1,"y":-1}]},
+                 
+                 
+                 {"x":0,"y":1,"dependencies":[]},
+                 {"x":0,"y":2,"dependencies":[{"x":0,"y":1}]},
+                 {"x":0,"y":3,"dependencies":[{"x":0,"y":1},{"x":0,"y":2}]},
+                 {"x":0,"y":-1,"dependencies":[]},
+                 {"x":0,"y":-2,"dependencies":[{"x":0,"y":-1}]},
+                 {"x":0,"y":-3,"dependencies":[{"x":0,"y":-1},{"x":0,"y":-2}]},
+                 
+                 {"x":1,"y":0,"dependencies":[]},
+                 {"x":2,"y":0,"dependencies":[{"x":1,"y":0}]},
+                 {"x":3,"y":0,"dependencies":[{"x":1,"y":0},{"x":2,"y":0}]},
+                 {"x":-1,"y":0,"dependencies":[]},
+                 {"x":-2,"y":0,"dependencies":[{"x":-1,"y":0}]},
+                 {"x":-3,"y":0,"dependencies":[{"x":-1,"y":0},{"x":-2,"y":0}]},
+                                  
+                 {"x":3,"y":0,"dependencies":[{"x":1,"y":0},{"x":2,"y":0}]},
+                 {"x":3,"y":3,"dependencies":[{"x":1,"y":1},{"x":2,"y":2}]},
+                 {"x":3,"y":-3,"dependencies":[{"x":1,"y":-1},{"x":2,"y":-2}]},
+                 {"x":-3,"y":0,"dependencies":[{"x":-1,"y":0},{"x":-2,"y":0}]},
+                 {"x":-3,"y":3,"dependencies":[{"x":-1,"y":1},{"x":-2,"y":2}]},
+                 {"x":-3,"y":-3,"dependencies":[{"x":-1,"y":-1},{"x":-2,"y":-2}]}
+                ],
+        "attacks":[
+                    {"x":2,"y":0,"affect":["land"],"dependencies":[]},
+                    {"x":3,"y":0,"affect":["land"],"dependencies":[]},
+                    {"x":0,"y":2,"affect":["land"],"dependencies":[]},
+                    {"x":0,"y":3,"affect":["land"],"dependencies":[]},
+                    {"x":-2,"y":0,"affect":["land"],"dependencies":[]},
+                    {"x":-3,"y":0,"affect":["land"],"dependencies":[]},
+                    {"x":0,"y":-2,"affect":["land"],"dependencies":[]}, 
+                    {"x":0,"y":-3,"affect":["land"],"dependencies":[]},
+                    
+                    
+                    {"x":2,"y":2,"affect":["land"],"dependencies":[]},
+                    {"x":3,"y":3,"affect":["land"],"dependencies":[]},
+                    {"x":2,"y":-2,"affect":["land"],"dependencies":[]},
+                    {"x":3,"y":-3,"affect":["land"],"dependencies":[]},
+                    {"x":-2,"y":2,"affect":["land"],"dependencies":[]},
+                    {"x":-3,"y":3,"affect":["land"],"dependencies":[]},
+                    {"x":2,"y":-2,"affect":["land"],"dependencies":[]}, 
+                    {"x":3,"y":-3,"affect":["land"],"dependencies":[]},
+                    
+                    {"x":1,"y":0,"affect":["human"],"dependencies":[]},
+                    {"x":1,"y":1,"affect":["human"],"dependencies":[]},
+                    {"x":1,"y":-1,"affect":["human"],"dependencies":[]},
+                    {"x":0,"y":1,"affect":["human"],"dependencies":[]},
+                    {"x":0,"y":-1,"affect":["human"],"dependencies":[]},
+                    {"x":-1,"y":0,"affect":["human"],"dependencies":[]},
+                    {"x":-1,"y":1,"affect":["human"],"dependencies":[]}, 
+                    {"x":-1,"y":-1,"affect":["human"],"dependencies":[]}
+                  ]
+    },
+    {
+        "id":11,
+        "name":"fighter",
+        "types":["air"],
+        "cost":120,
+        "moves":[
+                    {"x":1,"y":1,"dependencies":[]},
+                    {"x":2,"y":2,"dependencies":[]},
+                    {"x":3,"y":3,"dependencies":[]},
+                    {"x":4,"y":4,"dependencies":[]},
+                    {"x":5,"y":5,"dependencies":[]},
+                    {"x":-1,"y":-1,"dependencies":[]},
+                    {"x":-2,"y":-2,"dependencies":[]},
+                    {"x":-3,"y":-3,"dependencies":[]},
+                    {"x":-4,"y":-4,"dependencies":[]},
+                    {"x":-5,"y":-5,"dependencies":[]},
+                    {"x":1,"y":-1,"dependencies":[]},
+                    {"x":2,"y":-2,"dependencies":[]},
+                    {"x":3,"y":-3,"dependencies":[]},
+                    {"x":4,"y":-4,"dependencies":[]},
+                    {"x":5,"y":-5,"dependencies":[]},
+                    {"x":-1,"y":1,"dependencies":[]},
+                    {"x":-2,"y":2,"dependencies":[]},
+                    {"x":-3,"y":3,"dependencies":[]},
+                    {"x":-4,"y":4,"dependencies":[]},
+                    {"x":-5,"y":5,"dependencies":[]},
+                    
+                    
+                    {"x":1,"y":0,"dependencies":[]},
+                    {"x":2,"y":0,"dependencies":[]},
+                    {"x":3,"y":0,"dependencies":[]},
+                    {"x":4,"y":0,"dependencies":[]},
+                    {"x":5,"y":0,"dependencies":[]},
+                    {"x":-1,"y":0,"dependencies":[]},
+                    {"x":-2,"y":0,"dependencies":[]},
+                    {"x":-3,"y":0,"dependencies":[]},
+                    {"x":-4,"y":0,"dependencies":[]},
+                    {"x":-5,"y":0,"dependencies":[]},
+                    {"x":0,"y":-1,"dependencies":[]},
+                    {"x":0,"y":-2,"dependencies":[]},
+                    {"x":0,"y":-3,"dependencies":[]},
+                    {"x":0,"y":-4,"dependencies":[]},
+                    {"x":0,"y":-5,"dependencies":[]},
+                    {"x":0,"y":1,"dependencies":[]},
+                    {"x":0,"y":2,"dependencies":[]},
+                    {"x":0,"y":3,"dependencies":[]},
+                    {"x":0,"y":4,"dependencies":[]},
+                    {"x":0,"y":5,"dependencies":[]}
+                    
+                    
+                ],
+        "attacks":[
+                    {"x":1,"y":0,"affect":["land","air"],"dependencies":[]},
+                    {"x":1,"y":1,"affect":["land","air"],"dependencies":[]},
+                    {"x":1,"y":-1,"affect":["land","air"],"dependencies":[]},
+                    {"x":0,"y":1,"affect":["land","air"],"dependencies":[]},
+                    {"x":0,"y":-1,"affect":["land","air"],"dependencies":[]},
+                    {"x":-1,"y":0,"affect":["land","air"],"dependencies":[]},
+                    {"x":-1,"y":1,"affect":["land","air"],"dependencies":[]}, 
+                    {"x":-1,"y":-1,"affect":["land","air"],"dependencies":[]},
+                    {"x":2,"y":0,"affect":["land","air"],"dependencies":[]},
+                    {"x":-2,"y":0,"affect":["land","air"],"dependencies":[]},
+                    {"x":0,"y":2,"affect":["land","air"],"dependencies":[]},
+                    {"x":0,"y":-2,"affect":["land","air"],"dependencies":[]}
                   ]
     }
 ]

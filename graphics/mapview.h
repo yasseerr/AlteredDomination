@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QTimer>
+#include <battleform.h>
 #include <qgraphicsitem.h>
 #include "domain/map.h"
 #include "linkgraphics.h"
@@ -29,6 +30,7 @@ class MapView :public QGraphicsView
     Q_PROPERTY(Player* activePlayer READ activePlayer WRITE setActivePlayer NOTIFY activePlayerChanged)
     Q_PROPERTY(QList<Player*> players READ players WRITE setPlayers NOTIFY playersChanged)
     Q_PROPERTY(QString activePStr READ activePStr WRITE setActivePStr NOTIFY activePStrChanged)
+
     Map* m_map;
 
     QMap<int,CityGraphics*> m_citiesGraphics;
@@ -67,6 +69,7 @@ public:
     QQuickView *moveUnitUI;
     QQuickView *attackUI;
     QQuickView *menuOptUI;
+    BattleForm *battleForm;
     QWidget *par1;
 
 
@@ -148,6 +151,7 @@ signals:
     void selectedCityGraphicsChanged(CityGraphics* selectedCityGraphics);
 
     void activePStrChanged(QString activePStr);
+    void attackerWon(City *C);
 };
 
 #endif // MAPVIEW_H

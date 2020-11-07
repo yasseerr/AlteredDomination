@@ -1,6 +1,6 @@
 #include "city.h"
 #include "unit.h"
-City::City(QObject *parent) : QObject(parent),m_id(0),m_name(""),m_x(0),m_y(0),m_type(K100G),m_income(0)
+City::City(QObject *parent) : QObject(parent),m_id(0),m_name(""),m_x(0),m_y(0),m_type(K100G),m_income(0),m_power(0)
 {
 
 }
@@ -63,11 +63,19 @@ QList<int> City::neigboursId()
 void City::addUnit(Unit *u)
 {
     m_units.insert(u->id(),u);
+    m_power += u->power();
+    u->setCity(this);
 }
 
 void City::removeUnit(int idU)
 {
+    m_power -= units().value(idU)->power();
     m_units.remove(idU);
+}
+
+int City::power() const
+{
+    return m_power;
 }
 
 void City::setId(int id)
@@ -172,4 +180,13 @@ void City::setNeigboursId(QList<int> neigboursId)
 void City::addNeighbour(City *c)
 {
     this->m_neighbours.append(c);
+}
+
+void City::setPower(int power)
+{
+    if (m_power == power)
+        return;
+
+    m_power = power;
+    emit powerChanged(m_power);
 }

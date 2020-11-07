@@ -12,11 +12,13 @@ MainMenu::MainMenu(QWidget *parent) :
 {
     ui->setupUi(this);
     m_mapView = new MapView(this);
-
+    connect(m_mapView,&MapView::attackerWon,this,&MainMenu::onAttackerWon);
 
     ///---- temporary setting the active player country-----------
     m_activePlayerStr = "dz";
     m_mapView->setActivePStr(m_activePlayerStr);
+
+
     m_mapView->loadFromJson();
     ui->CitiesDisplayUI->hide();
     ui->horizontalLayout_2->addWidget(m_mapView);
@@ -96,4 +98,9 @@ void MainMenu::runNextTurn()
     }
     m_mapView->setEnabled(true);
     m_mapView->setActuelPlayer(m_mapView->activePlayer());
+}
+
+void MainMenu::onAttackerWon(City *C)
+{
+    sendCityToDisplay(C);
 }

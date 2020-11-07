@@ -69,7 +69,7 @@ City* CityGraphics::city() const
 void CityGraphics::hoverEnterEvent(QGraphicsSceneHoverEvent *ev)
 {
 
-    setScale(0.11);
+    setScale(0.1);
     foreach (LinkGraphics *ln, this->links()) {
         ln->setOpacity(1);
         if(ln->link()->des()->country() == ln->link()->dep()->country())ln->setPen(QPen(ln->link()->des()->country()->color(),
@@ -80,7 +80,7 @@ void CityGraphics::hoverEnterEvent(QGraphicsSceneHoverEvent *ev)
 
 void CityGraphics::hoverLeaveEvent(QGraphicsSceneHoverEvent *ev)
 {
-    this->setScale(0.1);
+    this->setScale(0.09);
 
     foreach (LinkGraphics *ln, this->links()) {
         ln->setOpacity(0.2);
@@ -133,7 +133,7 @@ void CityGraphics::mousePressEvent(QGraphicsSceneMouseEvent *event)
         return;
     }
 ///------------------------- ownership for the current player -----------------------------------
-    if(mapView()->actuelPlayer() != this->city()->country()->player() ) return;
+//    if(mapView()->actuelPlayer() != this->city()->country()->player() ) return;
 
     mapView()->CityUI->rootContext()->setContextProperty("city",this->city());
     mapView()->CityUI->rootContext()->setContextProperty("cityGraphics",this);
@@ -181,6 +181,7 @@ void CityGraphics::moveUnits()
 
 void CityGraphics::attack()
 {
+    if(this->city()->units().size()==0)return;
     foreach (City *c,this->city()->neighbours()) {
         if((this->city()->country() == c->country()))continue;
         this->mapView()->citiesGraphics().value(c->id())->setToAttack(true);
@@ -196,6 +197,38 @@ void CityGraphics::cancelAttack()
         this->mapView()->citiesGraphics().value(c->id())->setToAttack(false);
     }
     this->mapView()->setSelectedCityGraphics(nullptr);
+}
+
+void CityGraphics::startBattle()
+{
+    /// ---------- i cas the deffender haz no unit--------------
+    if(this->city()->units().size() == 0){
+        this->city()->country()->cities().removeOne(this->city());
+        this->city()->setCountry(this->mapView()->selectedCityGraphics()->city()->country());
+        this->mapView()->selectedCityGraphics()->city()->country()->addCity(this->city());
+        foreach (Unit *u, this->mapView()->selectedCityGraphics()->city()->units()) {
+            this->city()->addUnit(u);
+            this->mapView()->selectedCityGraphics()->city()->removeUnit(u->id());
+        }
+        this->mapView()->selectedCityGraphics()->city()->country()->setIncome(this->mapView()->selectedCityGraphics()->
+                                                                              city()->country()->income()
+                                                                              +this->city()->income());
+        mapView()->selectedCityGraphics()->deSelect();
+        emit mapView()->attackerWon(this->city());
+        return;
+    }
+
+    mapView()->setEnabled(false);
+    mapView()->battleForm = new BattleForm();
+    mapView()->battleForm->bScene()->setCurrentPlayer(mapView()->selectedCityGraphics()->city()->country()->player());
+    BattleMap *bm = new BattleMap(mapView()->selectedCityGraphics()->city(),this->city(),mapView()->battleForm);
+    mapView()->battleForm->bScene()->setBmap(bm);
+
+    connect(mapView()->battleForm,&BattleForm::battleEnded,this,onBattleEnded);
+    connect(mapView()->battleForm,&BattleForm::battleEndedA,this,onAttackerWon);
+
+    mapView()->battleForm->publishMaptoQMl();
+    mapView()->battleForm->show();
 }
 
 int CityGraphics::power() const
@@ -267,22 +300,37 @@ void CityGraphics::receiveUnitFromNeighbour(int idU)
     Unit *tmp =  mapView()->selectedCityGraphics()->city()->units().value(idU);
     mapView()->selectedCityGraphics()->city()->removeUnit(idU);
     city()->addUnit(tmp);
+    tmp->setCity(this->city());
 
 }
 
 void CityGraphics::deSelect()
 {
     foreach (City *c,this->city()->neighbours()) {
-        if(!(this->city()->country() == c->country()))continue;
         this->mapView()->citiesGraphics().value(c->id())->setMoveToIt(false);
+        this->mapView()->citiesGraphics().value(c->id())->setToAttack(false);
     }
     this->mapView()->setSelectedCityGraphics(nullptr);
+    this->mapView()->mapScene()->update();
 
+}
+
+void CityGraphics::onBattleEnded()
+{
+    mapView()->battleForm->hide();
+    mapView()->battleForm->deleteLater();
+    mapView()->selectedCityGraphics()->deSelect();
+    mapView()->setEnabled(true);
 }
 
 void CityGraphics::setPower(int power)
 {
     m_power = power;
+}
+
+void CityGraphics::onAttackerWon()
+{
+    emit mapView()->attackerWon(this->city());
 }
 
 void CityGraphics::setLinks(QList<LinkGraphics*> links)

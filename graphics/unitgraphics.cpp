@@ -1,8 +1,15 @@
 #include "unitgraphics.h"
 #include "citygraphics.h"
+#include "bmapscene.h"
+#include "bframe.h"
+
+#include <QPainter>
+#include <QPropertyAnimation>
+
+#include <domain/country.h>
 UnitGraphics::UnitGraphics(QObject *parent) : QObject(parent)
 {
-
+    setTransformOriginPoint(50,50);
 }
 
 void UnitGraphics::setUnit(Unit *unit)
@@ -14,23 +21,67 @@ void UnitGraphics::setUnit(Unit *unit)
     emit unitChanged(m_unit);
 }
 
-void UnitGraphics::setCityG(CityGraphics *cityG)
+void UnitGraphics::setBmapS(BMapScene *bmapS)
 {
-    if (m_cityG == cityG)
+    if (m_bmapS == bmapS)
         return;
 
-    m_cityG = cityG;
-    emit cityGChanged(m_cityG);
+    m_bmapS = bmapS;
+    emit bmapSChanged(m_bmapS);
 }
+
+void UnitGraphics::setFrame(BFrame *frame)
+{
+    if (m_frame == frame)
+        return;
+
+    m_frame = frame;
+    emit frameChanged(m_frame);
+}
+
+void UnitGraphics::setIsGeneral(bool isGeneral)
+{
+    if (m_isGeneral == isGeneral)
+        return;
+
+    m_isGeneral = isGeneral;
+    emit isGeneralChanged(m_isGeneral);
+}
+
+void UnitGraphics::moveAnimationEnded(QPropertyAnimation::State stat)
+{
+    if(stat != QPropertyAnimation::Stopped) return;
+    this->setPos(0,0);
+    this->frame()->setUnitG(this);
+
+}
+
 
 QRectF UnitGraphics::boundingRect() const
 {
+    return QRectF(0,0,100,100);
 
 }
 
 void UnitGraphics::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
+    painter->setOpacity(0.4);
+    painter->fillRect(10,10,80,80,unit()->city()->country()->color());
+    painter->setOpacity(1);
+    if(this->bmapS()->bmap()->attacker() != this->unit()->city()){
+        painter->drawImage(70,10,QImage(":/data/flags/"+unit()->city()->country()->intID()+".png").scaled(20,15));
+        painter->drawImage(10,10,QImage(":/data/units/"+this->unit()->type()+".png").scaled(80,80).mirrored(true,false));
+    }
+    else{
+        painter->drawImage(10,10,QImage(":/data/units/"+this->unit()->type()+".png").scaled(80,80));
+        painter->drawImage(10,10,QImage(":/data/flags/"+unit()->city()->country()->intID()+".png").scaled(20,15));
+    }
 
+    ///-------- general sign ----------------
+    if(isGeneral()){
+        painter->setOpacity(1);
+        painter->drawImage(35,5,QImage(":/data/icons/general.jpg").scaled(30,30));
+    }
 }
 
 Unit *UnitGraphics::unit() const
@@ -38,7 +89,29 @@ Unit *UnitGraphics::unit() const
     return m_unit;
 }
 
-CityGraphics *UnitGraphics::cityG() const
+BMapScene *UnitGraphics::bmapS() const
 {
-    return m_cityG;
+    return m_bmapS;
+}
+
+BFrame *UnitGraphics::frame() const
+{
+    return m_frame;
+}
+
+bool UnitGraphics::isGeneral() const
+{
+    return m_isGeneral;
+}
+
+void UnitGraphics::moveAnimation(BFrame *f)
+{
+    this->frame()->setUnitG(nullptr);
+    this->setFrame(f);
+    QPropertyAnimation *moveAnim = new QPropertyAnimation(this,"pos",this);
+    connect(moveAnim,&QPropertyAnimation::stateChanged,this,&UnitGraphics::moveAnimationEnded);
+    moveAnim->setEndValue(mapFromScene(f->pos()));
+    moveAnim->setDuration(800);
+    moveAnim->setEasingCurve(QEasingCurve::InOutCubic);
+    moveAnim->start();
 }

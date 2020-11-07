@@ -121,6 +121,7 @@ MapView::MapView(QObject *parent):QGraphicsView()
 
     testRect = new QGraphicsTextItem("Altered Domination by --AFKAAR Games--");
     testRect->setPos(30,30);
+//    testRect->ensureVisible();
     testRect->setFont(QFont("Arial",60));
     m_mapScene->addItem(testRect);
 
@@ -250,7 +251,7 @@ void MapView::loadFromJson()
             cityG->bgImage = bgImage;
 //            this->citiesGraphics().insert(city->id(),cityG);
             cityG->setPos(city->x(),city->y());
-            cityG->setScale(0.1);
+            cityG->setScale(0.09);
             cityG->setMapView(this);
 //            cityG->setParentItem(glob);
             m_mapScene->addItem(cityG);

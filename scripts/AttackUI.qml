@@ -378,6 +378,12 @@ Item {
             anchors.fill: parent
             onEntered: battlerectangle.color = Qt.lighter(battlerectangle.color)
             onExited: battlerectangle.color ="#db2d2d"
+            onPressed: {
+                destinationCity.startBattle();
+                attackerflow.children = []
+                attackedflow.children = []
+                attackUI.hide()
+            }
         }
 
         Text {

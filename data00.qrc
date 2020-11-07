@@ -300,5 +300,20 @@
         <file>scripts/CityItem.qml</file>
         <file>scripts/MapMenuOptions.qml</file>
         <file>data/icons/metal.jpg</file>
+        <file>data/feildtex.jpg</file>
+        <file>data/icons/frame.png</file>
+        <file>data/grass.jpg</file>
+        <file>scripts/BattleMenu.qml</file>
+        <file>data/fire.png</file>
+        <file>data/icons/general.png</file>
+        <file>data/icons/general.jpg</file>
+        <file>data/units/afv.png</file>
+        <file>data/units/antiaircraft.png</file>
+        <file>data/units/artillery.png</file>
+        <file>data/units/mlrs.png</file>
+        <file>data/units/modernarmor.png</file>
+        <file>data/units/rocketlauncher.png</file>
+        <file>data/units/fighter.png</file>
+        <file>data/mapBG3.jpg</file>
     </qresource>
 </RCC>

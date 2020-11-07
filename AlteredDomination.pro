@@ -36,7 +36,14 @@ SOURCES += \
     graphics/unitgraphics.cpp \
     graphics/linkgraphics.cpp \
     domain/linkn.cpp \
-    domain/player.cpp
+    domain/player.cpp \
+    domain/battlemap.cpp \
+    domain/unittype.cpp \
+    domain/umove.cpp \
+    domain/uattack.cpp \
+    graphics/bmapscene.cpp \
+    graphics/bframe.cpp \
+    battleform.cpp
 
 HEADERS += \
         mainmenu.h \
@@ -49,10 +56,20 @@ HEADERS += \
     graphics/unitgraphics.h \
     graphics/linkgraphics.h \
     domain/linkn.h \
-    domain/player.h
+    domain/player.h \
+    domain/battlemap.h \
+    domain/unittype.h \
+    domain/umove.h \
+    domain/uattack.h \
+    graphics/bmapscene.h \
+    graphics/bframe.h \
+    battleform.h
 
 FORMS += \
-        mainmenu.ui
+        mainmenu.ui \
+    battleform.ui
 
 RESOURCES += \
     data00.qrc
+
+DISTFILES +=

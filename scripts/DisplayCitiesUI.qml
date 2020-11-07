@@ -23,6 +23,7 @@ Item {
     }
     Rectangle {
         id: bg
+        border.width: 4
         gradient: Gradient {
             GradientStop {
                 position: 0.846
