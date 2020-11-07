@@ -289,5 +289,16 @@
         <file>data/cities/attackUIBG.jpg</file>
         <file>data/icons/target.png</file>
         <file>data/icons/statustexture.jpg</file>
+        <file>scripts/MapMenu.qml</file>
+        <file>data/mapBG.jpg</file>
+        <file>data/mapBG2.jpg</file>
+        <file>scripts/DisplayCitiesUI.qml</file>
+        <file>data/mapmtex.jpg</file>
+        <file>data/icons/menu.png</file>
+        <file>data/icons/citiesicon.png</file>
+        <file>data/icons/endturn.png</file>
+        <file>scripts/CityItem.qml</file>
+        <file>scripts/MapMenuOptions.qml</file>
+        <file>data/icons/metal.jpg</file>
     </qresource>
 </RCC>

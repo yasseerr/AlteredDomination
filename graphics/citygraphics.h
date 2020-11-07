@@ -18,7 +18,7 @@ class CityGraphics :public QObject,public QGraphicsItem
     Q_PROPERTY(QList<LinkGraphics*> links READ links WRITE setLinks NOTIFY linksChanged)
     Q_PROPERTY(bool moveToIt READ moveToIt WRITE setMoveToIt NOTIFY moveToItChanged)
     Q_PROPERTY(bool toAttack READ toAttack WRITE setToAttack NOTIFY toAttackChanged)
-    Q_PROPERTY(int power READ power WRITE setPower)
+    Q_PROPERTY(int power READ power WRITE setPower NOTIFY powerChanged)
 public:
 
 
@@ -80,6 +80,8 @@ signals:
 
     void unitToQml(int idU,QString typeU);
     void unitToAttackQml(QString typeU);
+
+    void powerChanged(int power);
 
 private :
     QImage *cityImg;

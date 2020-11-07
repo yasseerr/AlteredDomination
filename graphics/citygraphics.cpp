@@ -132,10 +132,14 @@ void CityGraphics::mousePressEvent(QGraphicsSceneMouseEvent *event)
         mapView()->attackUI->show();
         return;
     }
+///------------------------- ownership for the current player -----------------------------------
+    if(mapView()->actuelPlayer() != this->city()->country()->player() ) return;
 
     mapView()->CityUI->rootContext()->setContextProperty("city",this->city());
     mapView()->CityUI->rootContext()->setContextProperty("cityGraphics",this);
     mapView()->addUnitUI->rootContext()->setContextProperty("cityGraphics",this);
+    mapView()->addUnitUI->rootContext()->setContextProperty("cityUI",mapView()->CityUI);
+    mapView()->CityUI->rootContext()->setContextProperty("cityUI",mapView()->CityUI);
     mapView()->CityUI->show();
 
 

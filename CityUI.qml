@@ -217,9 +217,9 @@ Item{
                     hoverEnabled: true
                     anchors.fill: parent
                     onClicked: {
+                        viewUI.hide();
                         unitsList = []
                         unitsrectangle.children =[]
-                        viewUI.hide();
                         mapUI.enabled = true;
                     }
                     onEntered: quitRectangle.scale = 1.5
@@ -346,7 +346,7 @@ Item{
                     hoverEnabled: true
                     onEntered: {addRect.color = Qt.lighter(investRect.color); infoText.text="add Units" ; }
                     onExited: {addRect.color = "#e0bb72"; infoText.text="";}
-                    onPressed: {addRect.color = "#00ff00"; addUI.show(); }
+                    onPressed: {addRect.color = "#00ff00"; cityUI.hide(); addUI.show(); }
                     onReleased: addRect.color = "#e0bb72"
 
                 }

@@ -25,8 +25,11 @@ MapView::MapView(QObject *parent):QGraphicsView()
     ///initiating the view
     zoomLevel = 8;
     m_selectedCityGraphics = nullptr ;
-    verticalScrollBar()->setRange(1200,600);
-    horizontalScrollBar()->setRange(1200,600);
+//    verticalScrollBar()->setRange(1200,600);
+//    horizontalScrollBar()->setRange(1200,600);
+    setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+//    horizontalScrollBar()->setVisible(false);
 
     m_mapScene = new QGraphicsScene();
     m_map = new Map(this);
@@ -38,35 +41,43 @@ MapView::MapView(QObject *parent):QGraphicsView()
 
 
     /// ----------view COnfig---------------
-    this->resize(1200,600);
     this->setTransformationAnchor(QGraphicsView::NoAnchor);
     this->setMouseTracking(true);
 
 
     /// setting the City UI
-    CityUI  = new QQuickWidget(this);
-    CityUI->setParent(this);
-    CityUI->setClearColor(Qt::transparent);
-    CityUI->setWindowFlags(Qt::ToolTip);
-    CityUI->setAttribute(Qt::WA_TranslucentBackground);
+    CityUI  = new QQuickView();
+    CityUI->setColor(Qt::transparent);
+    CityUI->setFlags(Qt::ToolTip);
+//    CityUI->setAttribute(Qt::WA_TranslucentBackground);
     CityUI->rootContext()->setContextProperty("viewUI",CityUI);
     CityUI->rootContext()->setContextProperty("mapUI",this);
     CityUI->rootContext()->setContextProperty("city",new City());
 
+    /// setting the menuOpt UI
+    menuOptUI  = new QQuickView();
+    menuOptUI->setColor(Qt::transparent);
+    menuOptUI->setFlags(Qt::ToolTip);
+//    CityUI->setAttribute(Qt::WA_TranslucentBackground);
+    menuOptUI->rootContext()->setContextProperty("menuOpt",menuOptUI);
+
+
     qmlRegisterType<City>("City",1,0,"City");
     qmlRegisterType<Country>();
     qmlRegisterType<Unit>();
+    qmlRegisterType<Player>();
 
     CityUI->setSource(QUrl("qrc:/CityUI.qml"));
+    menuOptUI->setSource(QUrl("qrc:/scripts/MapMenuOptions.qml"));
 
 
 
     /// setting the addUnit UI
-    addUnitUI = new QQuickWidget(CityUI);
+    addUnitUI = new QQuickView();
     CityUI->rootContext()->setContextProperty("addUI",addUnitUI);
-    addUnitUI->setClearColor(Qt::transparent);
-    addUnitUI->setWindowFlags(Qt::ToolTip);
-    addUnitUI->setAttribute(Qt::WA_TranslucentBackground);
+    addUnitUI->setColor(Qt::transparent);
+    addUnitUI->setFlags(Qt::ToolTip);
+//    addUnitUI->seta(Qt::WA_TranslucentBackground);
     addUnitUI->rootContext()->setContextProperty("cityViewUI",CityUI);
     addUnitUI->rootContext()->setContextProperty("mapUI",this);
     addUnitUI->setSource(QUrl("qrc:/scripts/AddUnitUI.qml"));
@@ -75,11 +86,11 @@ MapView::MapView(QObject *parent):QGraphicsView()
 
 
     /// setting the moveUnit UI
-    moveUnitUI = new QQuickWidget(CityUI);
+    moveUnitUI = new QQuickView();
 //    CityUI->rootContext()->setContextProperty("addUI",addUnitUI);
-    moveUnitUI->setClearColor(Qt::transparent);
-    moveUnitUI->setWindowFlags(Qt::ToolTip);
-    moveUnitUI->setAttribute(Qt::WA_TranslucentBackground);
+    moveUnitUI->setColor(Qt::transparent);
+    moveUnitUI->setFlags(Qt::ToolTip);
+//    moveUnitUI->setAttribute(Qt::WA_TranslucentBackground);
 //    moveUnitUI->rootContext()->setContextProperty("cityViewUI",CityUI);
     moveUnitUI->rootContext()->setContextProperty("mapUI",this);
     moveUnitUI->setSource(QUrl("qrc:/scripts/MoveUnitsUI.qml"));
@@ -89,11 +100,11 @@ MapView::MapView(QObject *parent):QGraphicsView()
 
 
     /// setting the attack UI
-    attackUI = new QQuickWidget(CityUI);
+    attackUI = new QQuickView();
 //    CityUI->rootContext()->setContextProperty("addUI",addUnitUI);
-    attackUI->setClearColor(Qt::transparent);
-    attackUI->setWindowFlags(Qt::ToolTip);
-    attackUI->setAttribute(Qt::WA_TranslucentBackground);
+    attackUI->setColor(Qt::transparent);
+    attackUI->setFlags(Qt::ToolTip);
+//    attackUI->setAttribute(Qt::WA_TranslucentBackground);
 //    moveUnitUI->rootContext()->setContextProperty("cityViewUI",CityUI);
     attackUI->rootContext()->setContextProperty("mapUI",this);
     CityUI->rootContext()->setContextProperty("attackUI",attackUI);
@@ -103,26 +114,24 @@ MapView::MapView(QObject *parent):QGraphicsView()
      ///creating the mapgraphics and add it to the view
     glob  = new QGraphicsItemGroup();
     m_mapGraphics = new  QGraphicsSvgItem(":/data/map.svg");
+    m_mapGraphics->setOpacity(0.7);
     this->m_mapScene->addItem(m_mapGraphics);
     //glob->setAcceptHoverEvents(true);
     m_mapGraphics->setScale(zoomLevel);
 
-    testRect = new QGraphicsRectItem(0,0,100,100);
-    testRect->setBrush(Qt::red);
+    testRect = new QGraphicsTextItem("Altered Domination by --AFKAAR Games--");
+    testRect->setPos(30,30);
+    testRect->setFont(QFont("Arial",60));
     m_mapScene->addItem(testRect);
 
-    QGraphicsPixmapItem *pItem = new QGraphicsPixmapItem(QPixmap(":/data/mm.jpg"));
-    pItem->setScale(0.57803*8);
-    pItem->setOpacity(0.7);
+    QPixmap *pItem = new QPixmap(":/data/mapBG.jpg");
+    m_mapScene->setBackgroundBrush(*pItem);
 //    pItem->moveBy(-725,30);
-    m_mapScene->addItem(pItem);
     this->setScene(m_mapScene);
 
     /// adding the cities
-    loadFromJson();
     CityUI->hide();
     addUnitUI->hide();
-    this->show();
 
 }
 
@@ -181,6 +190,22 @@ void MapView::loadFromJson()
         country->setColor(QColor(countryJ.value("color").toString()));
         this->map()->countries().insert(country->id(),country);
 
+        /// creation of the Player object
+        Player *p = new Player(this);
+        p->setid(country->id());
+        p->setCountry(country);
+        country->setPlayer(p);
+        if(country->intID()== this->activePStr()){
+            p->setName("Player 1");
+            p->setType(PlayerType::HUMAIN);
+            m_activePlayer = p;
+            m_actuelPlayer = p;
+        }else {
+            p->setName("AI_"+country->name());
+            p->setType(PlayerType::AI);
+        }
+        m_players.append(p);
+
         foreach (QJsonValue cityV, cities) {
             QJsonObject cityJ = cityV.toObject();
 
@@ -196,8 +221,8 @@ void MapView::loadFromJson()
 
             this->map()->cities().insert(city->id(),city);
             city->setCountry(country);
-            country->cities().append(city);
-
+            country->addCity(city);
+            country->setIncome(country->income()+city->income());
             /// loading the neigbours
             QJsonValue neigboursV = cityJ.value("neighbours");
             QJsonArray neighbours = neigboursV.toArray();
@@ -236,9 +261,10 @@ void MapView::loadFromJson()
 //            cityR->setBrush(Qt::red);
 
         }
-//        country->setCapital(country->cities().at(0));
+        country->setFunds(country->income());
     }
-    this->centerOn(citiesGraphics().value(9)->x(),citiesGraphics().value(9)->y());
+    this->centerOn(m_activePlayer->country()->cities().at(0)->x(),
+                   m_activePlayer->country()->cities().at(0)->y());
 
 
     /// neighbours graphics
@@ -344,6 +370,26 @@ QList<LinkGraphics *> MapView::links() const
 CityGraphics *MapView::selectedCityGraphics() const
 {
     return m_selectedCityGraphics;
+}
+
+Player *MapView::actuelPlayer() const
+{
+    return m_actuelPlayer;
+}
+
+Player *MapView::activePlayer() const
+{
+    return m_activePlayer;
+}
+
+QList<Player *> MapView::players() const
+{
+    return m_players;
+}
+
+QString MapView::activePStr() const
+{
+    return m_activePStr;
 }
 
 
@@ -480,5 +526,41 @@ void MapView::setSelectedCityGraphics(CityGraphics *selectedCityGraphics)
 
     m_selectedCityGraphics = selectedCityGraphics;
     emit selectedCityGraphicsChanged(m_selectedCityGraphics);
+}
+
+void MapView::setActuelPlayer(Player *actuelPlayer)
+{
+    if (m_actuelPlayer == actuelPlayer)
+        return;
+
+    m_actuelPlayer = actuelPlayer;
+    emit actuelPlayerChanged(m_actuelPlayer);
+}
+
+void MapView::setActivePlayer(Player *activePlayer)
+{
+    if (m_activePlayer == activePlayer)
+        return;
+
+    m_activePlayer = activePlayer;
+    emit activePlayerChanged(m_activePlayer);
+}
+
+void MapView::setPlayers(QList<Player *> players)
+{
+    if (m_players == players)
+        return;
+
+    m_players = players;
+    emit playersChanged(m_players);
+}
+
+void MapView::setActivePStr(QString activePStr)
+{
+    if (m_activePStr == activePStr)
+        return;
+
+    m_activePStr = activePStr;
+    emit activePStrChanged(m_activePStr);
 }
 

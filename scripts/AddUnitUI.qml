@@ -54,6 +54,11 @@ Item {
                         adUnitUI.toAddUnits.pop()
                         return;
                     }
+                    /// > funds
+                    if((adUnitUI.totalCost+mainRect.cost)>cityGraphics.city.country.funds){
+                        return
+                    }
+
                     adUnitUI.toAddUnits.push(mainRect.name)
                     var i = adUnitUI.toAddUnits.length-1;
                     var obj = typegenerator.createObject(addedRectangle1,{"x":85*(i%5),"y":5+Math.floor(i/5)*85});
@@ -91,7 +96,7 @@ Item {
             Text {
                 id: incomeText
                 color: "#f7e768"
-                text: qsTr("Sold : 1500 $")
+                text: "Funds : "+cityGraphics.city.country.funds+" $"
                 anchors.rightMargin: 0
                 anchors.bottomMargin: 0
                 anchors.leftMargin: 0
@@ -182,9 +187,11 @@ Item {
                     onClicked: {
                         adUnitUI.toAddUnits.forEach(function(element){ cityGraphics.addUnitFromQml(element)})
                         cityGraphics.setPower(cityGraphics.power + adUnitUI.totalCost)
+                        cityGraphics.city.country.funds -= adUnitUI.totalCost
                         adUnitUI.toAddUnits= [];
                         addedRectangle1.children =[]
                         adUnitUI.totalCost = 0;
+                        cityUI.show()
                         addUI.hide()
                     }
 

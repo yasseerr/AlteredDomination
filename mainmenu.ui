@@ -6,35 +6,107 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1158</width>
+    <height>735</height>
    </rect>
   </property>
-  <property name="windowTitle">
-   <string>MainMenu</string>
+  <property name="mouseTracking">
+   <bool>true</bool>
   </property>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>70</y>
-     <width>201</width>
-     <height>141</height>
-    </rect>
+  <property name="windowTitle">
+   <string>Altered Domination</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>0</number>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>20</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
+   <property name="leftMargin">
+    <number>0</number>
    </property>
-   <property name="text">
-    <string>Start</string>
+   <property name="topMargin">
+    <number>0</number>
    </property>
-  </widget>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QQuickWidget" name="MapMenuUI">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="resizeMode">
+        <enum>QQuickWidget::SizeRootObjectToView</enum>
+       </property>
+       <property name="source">
+        <url>
+         <string>qrc:/scripts/MapMenu.qml</string>
+        </url>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QQuickWidget" name="CitiesDisplayUI">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="resizeMode">
+          <enum>QQuickWidget::SizeRootObjectToView</enum>
+         </property>
+         <property name="source">
+          <url>
+           <string>qrc:/scripts/DisplayCitiesUI.qml</string>
+          </url>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QQuickWidget</class>
+   <extends>QWidget</extends>
+   <header>QtQuickWidgets/QQuickWidget</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

@@ -35,7 +35,8 @@ SOURCES += \
     domain/unit.cpp \
     graphics/unitgraphics.cpp \
     graphics/linkgraphics.cpp \
-    domain/linkn.cpp
+    domain/linkn.cpp \
+    domain/player.cpp
 
 HEADERS += \
         mainmenu.h \
@@ -47,7 +48,8 @@ HEADERS += \
     domain/unit.h \
     graphics/unitgraphics.h \
     graphics/linkgraphics.h \
-    domain/linkn.h
+    domain/linkn.h \
+    domain/player.h
 
 FORMS += \
         mainmenu.ui

@@ -1,8 +1,15 @@
 #include "country.h"
+#include "player.h"
 
 Country::Country(QObject *parent) : QObject(parent)
 {
+    m_income = 0;
+    m_funds = 0;
 
+}
+void Country::addCity(City *c)
+{
+    m_cities.append(c);
 }
 
 int Country::id() const
@@ -38,6 +45,21 @@ QImage Country::flag() const
 QString Country::intID() const
 {
     return m_intID;
+}
+
+Player *Country::player() const
+{
+    return m_player;
+}
+
+int Country::income() const
+{
+    return m_income;
+}
+
+int Country::funds() const
+{
+    return m_funds;
 }
 
 void Country::setId(int id)
@@ -101,4 +123,31 @@ void Country::setIntID(QString intID)
 
     m_intID = intID;
     emit intIDChanged(m_intID);
+}
+
+void Country::setPlayer(Player *player)
+{
+    if (m_player == player)
+        return;
+
+    m_player = player;
+    emit playerChanged(m_player);
+}
+
+void Country::setIncome(int income)
+{
+    if (m_income == income)
+        return;
+
+    m_income = income;
+    emit incomeChanged(m_income);
+}
+
+void Country::setFunds(int funds)
+{
+    if (m_funds == funds)
+        return;
+
+    m_funds = funds;
+    emit fundsChanged(m_funds);
 }

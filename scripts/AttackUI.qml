@@ -361,7 +361,9 @@ Item {
         width: 86
         height: 41
         color: "#db2d2d"
-        radius: 17
+        radius: 13
+        border.color: "#5e320f"
+        border.width: 3
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: parent.top
         anchors.topMargin: 8
@@ -374,8 +376,8 @@ Item {
             anchors.topMargin: 0
             hoverEnabled: true
             anchors.fill: parent
-            onEntered: battlerectangle.scale = 1.2
-            onExited: battlerectangle.scale = 1
+            onEntered: battlerectangle.color = Qt.lighter(battlerectangle.color)
+            onExited: battlerectangle.color ="#db2d2d"
         }
 
         Text {
@@ -388,7 +390,7 @@ Item {
             horizontalAlignment: Text.AlignHCenter
             anchors.verticalCenter: parent.verticalCenter
             anchors.horizontalCenter: parent.horizontalCenter
-            font.pixelSize: 26
+            font.pixelSize: 21
         }
     }
 
@@ -399,7 +401,9 @@ Item {
         width: 66
         height: 37
         color: "#10663d"
-        radius: 28
+        radius: 15
+        border.color: "#414499"
+        border.width: 3
         anchors.horizontalCenter: parent.horizontalCenter
 
         MouseArea {
@@ -410,8 +414,8 @@ Item {
             anchors.bottom: parent.bottom
             anchors.top: parent.top
             anchors.topMargin: 0
-            onEntered: cancelrectangle.scale = 1.2
-            onExited: cancelrectangle.scale = 1
+            onEntered: cancelrectangle.color = Qt.lighter("#10663d")
+            onExited: cancelrectangle.color = "#10663d"
             onPressed: {
                 sourceCity.cancelAttack()
                 attackerflow.children = []
@@ -431,7 +435,7 @@ Item {
             anchors.horizontalCenterOffset: 0
             horizontalAlignment: Text.AlignHCenter
             anchors.horizontalCenter: parent.horizontalCenter
-            font.pixelSize: 17
+            font.pixelSize: 16
             anchors.verticalCenter: parent.verticalCenter
             verticalAlignment: Text.AlignVCenter
             font.family: "Tahoma"

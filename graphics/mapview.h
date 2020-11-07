@@ -12,6 +12,7 @@
 #include <QtSvg/QGraphicsSvgItem>
 #include<QQuickView>
 #include <QtQuickWidgets/QQuickWidget>
+#include <domain/player.h>
 class CityGraphics;
 class LinkGraphics;
 class MapView :public QGraphicsView
@@ -24,6 +25,10 @@ class MapView :public QGraphicsView
     Q_PROPERTY(QGraphicsView* view READ view WRITE setView NOTIFY viewChanged)
     Q_PROPERTY(QList<LinkGraphics*> links READ links WRITE setLinks NOTIFY linksChanged)
     Q_PROPERTY(CityGraphics* selectedCityGraphics READ selectedCityGraphics WRITE setSelectedCityGraphics NOTIFY selectedCityGraphicsChanged)
+    Q_PROPERTY(Player* actuelPlayer READ actuelPlayer WRITE setActuelPlayer NOTIFY actuelPlayerChanged)
+    Q_PROPERTY(Player* activePlayer READ activePlayer WRITE setActivePlayer NOTIFY activePlayerChanged)
+    Q_PROPERTY(QList<Player*> players READ players WRITE setPlayers NOTIFY playersChanged)
+    Q_PROPERTY(QString activePStr READ activePStr WRITE setActivePStr NOTIFY activePStrChanged)
     Map* m_map;
 
     QMap<int,CityGraphics*> m_citiesGraphics;
@@ -34,7 +39,7 @@ class MapView :public QGraphicsView
 
     QGraphicsScene* m_mapScene;
 
-    QGraphicsRectItem *testRect;
+    QGraphicsTextItem *testRect;
 
     QGraphicsItemGroup *glob ;
 
@@ -48,11 +53,20 @@ class MapView :public QGraphicsView
 
     CityGraphics* m_selectedCityGraphics;
 
+    Player* m_actuelPlayer;
+
+    Player* m_activePlayer;
+
+    QList<Player*> m_players;
+
+    QString m_activePStr;
+
 public:
-    QQuickWidget *CityUI;
-    QQuickWidget *addUnitUI;
-    QQuickWidget *moveUnitUI;
-    QQuickWidget *attackUI;
+    QQuickView *CityUI;
+    QQuickView *addUnitUI;
+    QQuickView *moveUnitUI;
+    QQuickView *attackUI;
+    QQuickView *menuOptUI;
     QWidget *par1;
 
 
@@ -77,6 +91,14 @@ public:
     QList<LinkGraphics*> links() const;
 
     CityGraphics* selectedCityGraphics() const;
+
+    Player* actuelPlayer() const;
+
+    Player* activePlayer() const;
+
+    QList<Player*> players() const;
+
+    QString activePStr() const;
 
 public slots:
 
@@ -103,6 +125,14 @@ public slots:
 
     void setSelectedCityGraphics(CityGraphics* selectedCityGraphics);
 
+    void setActuelPlayer(Player* actuelPlayer);
+
+    void setActivePlayer(Player* activePlayer);
+
+    void setPlayers(QList<Player*> players);
+
+    void setActivePStr(QString activePStr);
+
 signals:
 
     void zoomChange(double z);
@@ -111,9 +141,13 @@ signals:
     void mapGraphicsChanged(QGraphicsSvgItem* mapGraphics);
     void viewChanged(QGraphicsView* view);
     void mapSceneChanged(QGraphicsScene* mapScene);
-
+    void actuelPlayerChanged(Player* actuelPlayer);
+    void activePlayerChanged(Player* activePlayer);
+    void playersChanged(QList<Player*> players);
     void linksChanged(QList<LinkGraphics*> links);
     void selectedCityGraphicsChanged(CityGraphics* selectedCityGraphics);
+
+    void activePStrChanged(QString activePStr);
 };
 
 #endif // MAPVIEW_H
