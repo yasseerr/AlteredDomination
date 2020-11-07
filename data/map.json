@@ -1,0 +1,11268 @@
+[
+	{
+		"id": 1,
+		"name": "Afghanistan",
+		"color": "#90c65b",
+		"flag": "af",
+		"cities": [
+			{
+				"id": 1,
+				"name": "Kaboul",
+				"country": "Afghanistan",
+				"x": 716,
+				"y": 162,
+				"cityType": 10,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 2,
+				"name": "Kandahar",
+				"country": "Afghanistan",
+				"x": 708,
+				"y": 171,
+				"cityType": 5,
+				"income": 9,
+				"neighbours": []
+			},
+			{
+				"id": 3,
+				"name": "Mazar Sherif",
+				"country": "Afghanistan",
+				"x": 707,
+				"y": 155,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 4,
+				"name": "Herat",
+				"country": "Afghanistan",
+				"x": 696,
+				"y": 160,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 5,
+				"name": "Jalalabad",
+				"country": "Afghanistan",
+				"x": 720,
+				"y": 163,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 6,
+				"name": "Kunduz",
+				"country": "Afghanistan",
+				"x": 714,
+				"y": 164,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			}
+		],
+		"capital": 0
+	},
+	{
+		"id": 2,
+		"name": "Albania",
+		"color": "#d8ac00",
+		"flag": "al",
+		"cities": [
+			{
+				"id": 7,
+				"name": "Tirana",
+				"country": "Albania",
+				"x": 573,
+				"y": 139,
+				"cityType": 1,
+				"income": 21,
+				"neighbours": []
+			},
+			{
+				"id": 8,
+				"name": "Vlora",
+				"country": "Albania",
+				"x": 573,
+				"y": 142,
+				"cityType": 1,
+				"income": 10,
+				"neighbours": []
+			}
+		],
+		"capital": 0
+	},
+	{
+		"id": 3,
+		"name": "Algeria",
+		"color": "#4169e1",
+		"flag": "dz",
+		"cities": [
+			{
+				"id": 9,
+				"name": "Algeirs",
+				"country": "Algeria",
+				"x": 527,
+				"y": 155,
+				"cityType": 9,
+				"income": 139,
+				"neighbours": []
+			},
+			{
+				"id": 10,
+				"name": "Oran",
+				"country": "Algeria",
+				"x": 516,
+				"y": 159,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 11,
+				"name": "Tebessa",
+				"country": "Algeria",
+				"x": 540,
+				"y": 158,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 12,
+				"name": "Constantine",
+				"country": "Algeria",
+				"x": 536,
+				"y": 156,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 13,
+				"name": "Tamanrasset",
+				"country": "Algeria",
+				"x": 532,
+				"y": 204,
+				"income": 50,
+				"cityType": 2,
+				"neighbours": []
+			},
+			{
+				"id": 14,
+				"name": "Adrar",
+				"country": "Algeria",
+				"x": 517,
+				"y": 184,
+				"income": 50,
+				"cityType": 2,
+				"neighbours": []
+			},
+			{
+				"id": 15,
+				"name": "Tindouf",
+				"country": "Algeria",
+				"x": 497,
+				"y": 184,
+				"cityType": 2,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 16,
+				"name": "Gardaya",
+				"country": "Algeria",
+				"x": 528,
+				"y": 170,
+				"cityType": 2,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 17,
+				"name": "Djelfa",
+				"country": "Algeria",
+				"x": 528,
+				"y": 161,
+				"cityType": 2,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 18,
+				"name": "Chlef",
+				"country": "Algeria",
+				"x": 523,
+				"y": 158,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 19,
+				"name": "Tlemcen",
+				"country": "Algeria",
+				"x": 514,
+				"y": 163,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 20,
+				"name": "Annaba",
+				"country": "Algeria",
+				"x": 538,
+				"y": 154,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 21,
+				"name": "El Oued ",
+				"country": "Algeria",
+				"x": 540,
+				"y": 169,
+				"cityType": 2,
+				"income": 50,
+				"neighbours": []
+			}
+		],
+		"capital": 0
+	},
+	{
+		"id": 4,
+		"name": "Andora",
+		"color": "#8b4d43",
+		"flag": "ad",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 22,
+				"name": "Andora",
+				"country": "Andora",
+				"x": 523,
+				"y": 134,
+				"cityType": 1,
+				"income": 4,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "Angola",
+		"color": "#c1872f",
+		"flag": "ao",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 23,
+				"name": "Luanda",
+				"country": "Angola",
+				"x": 557,
+				"y": 313,
+				"cityType": 9,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 24,
+				"name": "Malanje",
+				"country": "Angola",
+				"x": 569,
+				"y": 317,
+				"cityType": 3,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 25,
+				"name": "Huambo",
+				"country": "Angola",
+				"x": 569,
+				"y": 327,
+				"cityType": 6,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 26,
+				"name": "Lobito",
+				"country": "Angola",
+				"x": 558,
+				"y": 326,
+				"cityType": 6,
+				"income": 39,
+				"neighbours": []
+			},
+			{
+				"id": 27,
+				"name": "Lubango",
+				"country": "Angola",
+				"x": 556,
+				"y": 336,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 28,
+				"name": "Soio",
+				"country": "Angola",
+				"x": 555,
+				"y": 305,
+				"cityType": 3,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 29,
+				"name": "Cabinda",
+				"country": "Angola",
+				"x": 553,
+				"y": 300,
+				"cityType": 3,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "Argentina",
+		"color": "#4c2033",
+		"flag": "ar",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 30,
+				"name": "Buenos Aires",
+				"country": "Argentina",
+				"x": 348,
+				"y": 402,
+				"cityType": 10,
+				"income": 180,
+				"neighbours": []
+			},
+			{
+				"id": 31,
+				"name": "Cordoba",
+				"country": "Argentina",
+				"x": 330,
+				"y": 395,
+				"cityType": 7,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 32,
+				"name": "Rosario",
+				"country": "Argentina",
+				"x": 340,
+				"y": 399,
+				"cityType": 7,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 33,
+				"name": "Mendoza",
+				"country": "Argentina",
+				"x": 319,
+				"y": 398,
+				"cityType": 7,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 34,
+				"name": "San Miguel",
+				"country": "Argentina",
+				"x": 324,
+				"y": 375,
+				"cityType": 7,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 35,
+				"name": "Bahia Blanca",
+				"country": "Argentina",
+				"x": 343,
+				"y": 416,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 36,
+				"name": "Comodoro Rivadavia",
+				"country": "Argentina",
+				"x": 335,
+				"y": 441,
+				"cityType": 1,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 37,
+				"name": "Rio Gallegos",
+				"country": "Argentina",
+				"x": 339,
+				"y": 460,
+				"cityType": 1,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 38,
+				"name": "Rio Grande",
+				"country": "Argentina",
+				"x": 349,
+				"y": 470,
+				"cityType": 1,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 39,
+				"name": "Mar del Plata",
+				"country": "Argentina",
+				"x": 354,
+				"y": 415,
+				"cityType": 7,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 40,
+				"name": "Salta",
+				"country": "Argentina",
+				"x": 324,
+				"y": 367,
+				"cityType": 7,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 41,
+				"name": "Corrientes",
+				"country": "Argentina",
+				"x": 344,
+				"y": 377,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 42,
+				"name": "Posadas",
+				"country": "Argentina",
+				"x": 353,
+				"y": 378,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 43,
+				"name": "Santa Rosa",
+				"country": "Argentina",
+				"x": 333,
+				"y": 409,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 44,
+				"name": "San Carlos",
+				"country": "Argentina",
+				"x": 321,
+				"y": 423,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 7,
+		"name": "Armenia",
+		"color": "#9d2018",
+		"flag": "am",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 45,
+				"name": "Yerevan",
+				"country": "Armenia",
+				"x": 635,
+				"y": 138,
+				"cityType": 7,
+				"income": 27,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 8,
+		"name": "Aruba",
+		"color": "#ff9933",
+		"flag": "aw",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 46,
+				"name": "Oranjestad",
+				"country": "Aruba",
+				"x": 309,
+				"y": 240,
+				"cityType": 3,
+				"income": 4,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 9,
+		"name": "Australia",
+		"color": "#a8e61d",
+		"flag": "au",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 47,
+				"name": "Canbera",
+				"country": "Australia",
+				"x": 940,
+				"y": 406,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 48,
+				"name": "Sydney",
+				"country": "Australia",
+				"x": 952,
+				"y": 393,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 49,
+				"name": "Melbourne",
+				"country": "Australia",
+				"x": 927,
+				"y": 413,
+				"cityType": 7,
+				"income": 160,
+				"neighbours": []
+			},
+			{
+				"id": 50,
+				"name": "Perth",
+				"country": "Australia",
+				"x": 852,
+				"y": 393,
+				"cityType": 7,
+				"income": 130,
+				"neighbours": []
+			},
+			{
+				"id": 51,
+				"name": "Adelaide",
+				"country": "Australia",
+				"x": 915,
+				"y": 404,
+				"cityType": 7,
+				"income": 80,
+				"neighbours": []
+			},
+			{
+				"id": 52,
+				"name": "Brisbane",
+				"country": "Australia",
+				"x": 963,
+				"y": 366,
+				"cityType": 7,
+				"income": 80,
+				"neighbours": []
+			},
+			{
+				"id": 53,
+				"name": "Hobart",
+				"country": "Australia",
+				"x": 924,
+				"y": 430,
+				"cityType": 4,
+				"income": 80,
+				"neighbours": []
+			},
+			{
+				"id": 54,
+				"name": "Townsville",
+				"country": "Australia",
+				"x": 953,
+				"y": 350,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 55,
+				"name": "cairns",
+				"country": "Australia",
+				"x": 951,
+				"y": 339,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 56,
+				"name": "Darwin",
+				"country": "Australia",
+				"x": 911,
+				"y": 325,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 57,
+				"name": "Mackay",
+				"country": "Australia",
+				"x": 959,
+				"y": 358,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 58,
+				"name": "Albany",
+				"country": "Australia",
+				"x": 857,
+				"y": 402,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 59,
+				"name": "Alice Springs",
+				"country": "Australia",
+				"x": 915,
+				"y": 367,
+				"cityType": 2,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 60,
+				"name": "Kalgoorlie",
+				"country": "Australia",
+				"x": 874,
+				"y": 384,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 61,
+				"name": "Albury",
+				"country": "Australia",
+				"x": 934,
+				"y": 405,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 62,
+				"name": "Broome",
+				"country": "Australia",
+				"x": 882,
+				"y": 348,
+				"cityType": 1,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 63,
+				"name": "Borroloola",
+				"country": "Australia",
+				"x": 921,
+				"y": 341,
+				"cityType": 1,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 64,
+				"name": "Gold Coast",
+				"country": "Australia",
+				"x": 965,
+				"y": 374,
+				"cityType": 1,
+				"income": 30,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 10,
+		"name": "Austria",
+		"color": "#7c0045",
+		"flag": "at",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 65,
+				"name": "Vienna",
+				"country": "Austria",
+				"x": 563,
+				"y": 114,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 66,
+				"name": "Graz",
+				"country": "Austria",
+				"x": 559,
+				"y": 118,
+				"cityType": 7,
+				"income": 117,
+				"neighbours": []
+			},
+			{
+				"id": 67,
+				"name": "Linz",
+				"country": "Austria",
+				"x": 557,
+				"y": 115,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 11,
+		"name": "Azerbaijan",
+		"color": "#ceb561",
+		"flag": "az",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 68,
+				"name": "Baku",
+				"country": "Azerbaijan",
+				"x": 656,
+				"y": 141,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 69,
+				"name": "Ganja",
+				"country": "Azerbaijan",
+				"x": 648,
+				"y": 140,
+				"cityType": 4,
+				"income": 68,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 12,
+		"name": "Bahamas",
+		"color": "#01796f",
+		"flag": "bs",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 70,
+				"name": "Nassau",
+				"country": "Bahamas",
+				"x": 288,
+				"y": 195,
+				"cityType": 6,
+				"income": 10,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 13,
+		"name": "Bahrain",
+		"color": "#ffb27f",
+		"flag": "bh",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 71,
+				"name": "manama",
+				"country": "Bahrain",
+				"x": 666,
+				"y": 192,
+				"cityType": 5,
+				"income": 66,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 14,
+		"name": "Bangladesh",
+		"color": "#a25bff",
+		"flag": "bd",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 72,
+				"name": "Dhaka",
+				"country": "Bangladesh",
+				"x": 783,
+				"y": 199,
+				"cityType": 10,
+				"income": 228,
+				"neighbours": []
+			},
+			{
+				"id": 73,
+				"name": "Chitagong",
+				"country": "Bangladesh ",
+				"x": 789,
+				"y": 203,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 74,
+				"name": "Khulna",
+				"country": "Bangladesh ",
+				"x": 781,
+				"y": 200,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 75,
+				"name": "Rajshahi",
+				"country": "Bangladesh ",
+				"x": 779,
+				"y": 195,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 76,
+				"name": "Sylhet",
+				"country": "Bangladesh ",
+				"x": 787,
+				"y": 195,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 15,
+		"name": "Belarus",
+		"color": "#5d45a8",
+		"flag": "by",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 77,
+				"name": "Minsk",
+				"country": "Belarus",
+				"x": 588,
+				"y": 95,
+				"cityType": 7,
+				"income": 86,
+				"neighbours": []
+			},
+			{
+				"id": 78,
+				"name": "Gomel",
+				"country": "Belarus",
+				"x": 598,
+				"y": 101,
+				"cityType": 4,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 79,
+				"name": "Mahilyow",
+				"country": "Belarus",
+				"x": 598,
+				"y": 93,
+				"cityType": 4,
+				"income": 40,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 16,
+		"name": "Belgium",
+		"color": "#cc66ff",
+		"flag": "be",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 80,
+				"name": "Brussels",
+				"country": "Belgium",
+				"x": 532,
+				"y": 106,
+				"cityType": 7,
+				"income": 209,
+				"neighbours": []
+			},
+			{
+				"id": 81,
+				"name": "Brugge",
+				"country": "Belgium",
+				"x": 528,
+				"y": 104,
+				"cityType": 4,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 82,
+				"name": "Liege",
+				"country": "Belgium",
+				"x": 534,
+				"y": 107,
+				"cityType": 4,
+				"income": 150,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 17,
+		"name": "Belize",
+		"color": "#73c2fb",
+		"flag": "bz",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 83,
+				"name": "Belize City",
+				"country": "Belize",
+				"x": 251,
+				"y": 221,
+				"cityType": 3,
+				"income": 8,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 18,
+		"name": "Benin",
+		"color": "#0075b9",
+		"flag": "bj",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 84,
+				"name": "Porto Novo",
+				"country": "Benin ",
+				"x": 523,
+				"y": 259,
+				"cityType": 8,
+				"income": 8,
+				"neighbours": []
+			},
+			{
+				"id": 85,
+				"name": "Djougou",
+				"country": "Benin ",
+				"x": 521,
+				"y": 244,
+				"cityType": 8,
+				"income": 8,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 19,
+		"name": "Bolivia",
+		"color": "#77531d",
+		"flag": "bo",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 86,
+				"name": "Santa Cruz",
+				"country": "Bolivia",
+				"x": 329,
+				"y": 343,
+				"cityType": 7,
+				"income": 33,
+				"neighbours": []
+			},
+			{
+				"id": 87,
+				"name": "Cochabamba",
+				"country": "Bolivia",
+				"x": 321,
+				"y": 344,
+				"cityType": 4,
+				"income": 15,
+				"neighbours": []
+			},
+			{
+				"id": 88,
+				"name": "La Paz",
+				"country": "Bolivia",
+				"x": 310,
+				"y": 340,
+				"cityType": 4,
+				"income": 15,
+				"neighbours": []
+			},
+			{
+				"id": 89,
+				"name": "Tarija",
+				"country": "Bolivia",
+				"x": 324,
+				"y": 357,
+				"cityType": 4,
+				"income": 15,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 20,
+		"name": "Bosnia and Herzegovina",
+		"color": "#0bbd48",
+		"flag": "ba",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 90,
+				"name": "Sarajevo",
+				"country": "Bosnia and Herzegovina",
+				"x": 569,
+				"y": 130,
+				"cityType": 7,
+				"income": 25,
+				"neighbours": []
+			},
+			{
+				"id": 91,
+				"name": "Banja Luka",
+				"country": "Bosnia and Herzegovina",
+				"x": 565,
+				"y": 126,
+				"cityType": 4,
+				"income": 17,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 21,
+		"name": "Botswana",
+		"color": "#757fae",
+		"flag": "bw",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 92,
+				"name": "Gaborone",
+				"country": "Botswana",
+				"x": 593,
+				"y": 367,
+				"cityType": 5,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 93,
+				"name": "Francistown",
+				"country": "Botswana",
+				"x": 597,
+				"y": 355,
+				"cityType": 2,
+				"income": 8,
+				"neighbours": []
+			},
+			{
+				"id": 94,
+				"name": "Maun",
+				"country": "Botswana",
+				"x": 586,
+				"y": 350,
+				"cityType": 2,
+				"income": 7,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 22,
+		"name": "Brazil",
+		"color": "#00ff80",
+		"flag": "br",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 95,
+				"name": "Brazilia",
+				"country": "Brazil",
+				"x": 368,
+				"y": 335,
+				"cityType": 9,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 96,
+				"name": "Sao Paulo",
+				"country": "Brazil",
+				"x": 380,
+				"y": 364,
+				"cityType": 10,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 97,
+				"name": "Salvador",
+				"country": "Brazil",
+				"x": 398,
+				"y": 325,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 98,
+				"name": "Fortaleza",
+				"country": "Brazil",
+				"x": 398,
+				"y": 396,
+				"cityType": 9,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 99,
+				"name": "Belo Horezonte",
+				"country": "Brazil",
+				"x": 382,
+				"y": 353,
+				"cityType": 9,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 100,
+				"name": "Curitiba",
+				"country": "Brazil",
+				"x": 373,
+				"y": 368,
+				"cityType": 9,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 101,
+				"name": "Manaus",
+				"country": "Brazil",
+				"x": 329,
+				"y": 292,
+				"cityType": 9,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 102,
+				"name": "Recife",
+				"country": "Brazil",
+				"x": 408,
+				"y": 309,
+				"cityType": 9,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 103,
+				"name": "Belem",
+				"country": "Brazil",
+				"x": 369,
+				"y": 288,
+				"cityType": 9,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 104,
+				"name": "Porto Alegre",
+				"country": "Brazil",
+				"x": 368,
+				"y": 386,
+				"cityType": 9,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 105,
+				"name": "Maceio",
+				"country": "Brazil",
+				"x": 405,
+				"y": 317,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 106,
+				"name": "Sao Luis",
+				"country": "Brazil",
+				"x": 380,
+				"y": 293,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 107,
+				"name": "Goiania",
+				"country": "Brazil",
+				"x": 366,
+				"y": 347,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 108,
+				"name": "Natal",
+				"country": "Brazil",
+				"x": 407,
+				"y": 301,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 109,
+				"name": "Terisina",
+				"country": "Brazil",
+				"x": 385,
+				"y": 303,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 110,
+				"name": "Campo Grande",
+				"country": "Brazil",
+				"x": 352,
+				"y": 352,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 111,
+				"name": "Rio De Janiro",
+				"country": "Brazil",
+				"x": 386,
+				"y": 361,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 112,
+				"name": "Rio Branco",
+				"country": "Brazil",
+				"x": 309,
+				"y": 317,
+				"cityType": 6,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 113,
+				"name": "Boa Vista",
+				"country": "Brazil",
+				"x": 330,
+				"y": 372,
+				"cityType": 6,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 114,
+				"name": "Santarem",
+				"country": "Brazil",
+				"x": 345,
+				"y": 292,
+				"cityType": 6,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 115,
+				"name": "Macapa",
+				"country": "Brazil",
+				"x": 359,
+				"y": 282,
+				"cityType": 6,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 116,
+				"name": "Ji-Parana",
+				"country": "Brazil",
+				"x": 324,
+				"y": 319,
+				"cityType": 6,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 117,
+				"name": "Maraba",
+				"country": "Brazil",
+				"x": 370,
+				"y": 300,
+				"cityType": 6,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 118,
+				"name": "Campinas",
+				"country": "Brazil",
+				"x": 374,
+				"y": 362,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 119,
+				"name": "Porto velho",
+				"country": "Brazil",
+				"x": 320,
+				"y": 310,
+				"cityType": 6,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 120,
+				"name": "Aracaju",
+				"country": "Brazil",
+				"x": 402,
+				"y": 320,
+				"cityType": 6,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 121,
+				"name": "Paraiso do Tocantins",
+				"country": "Brazil",
+				"x": 368,
+				"y": 313,
+				"cityType": 6,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 122,
+				"name": "Cuiaba",
+				"country": "Brazil",
+				"x": 347,
+				"y": 336,
+				"cityType": 6,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 23,
+		"name": "Brunei",
+		"color": "#cc0000",
+		"flag": "bn",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 123,
+				"name": "Bandar Seri Begawan",
+				"country": "Brunei",
+				"x": 864,
+				"y": 266,
+				"cityType": 6,
+				"income": 80,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 24,
+		"name": "Bulgaria",
+		"color": "#008284",
+		"flag": "bg",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 124,
+				"name": "Sofia",
+				"country": "Bulgaria",
+				"x": 583,
+				"y": 133,
+				"cityType": 7,
+				"income": 87,
+				"neighbours": []
+			},
+			{
+				"id": 125,
+				"name": "Varna",
+				"country": "Bulgaria",
+				"x": 594,
+				"y": 132,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 25,
+		"name": "Burkina Faso",
+		"color": "#001a57",
+		"flag": "bf",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 126,
+				"name": "ouagadougou",
+				"country": "Burkina Faso",
+				"x": 509,
+				"y": 240,
+				"cityType": 8,
+				"income": 12,
+				"neighbours": []
+			},
+			{
+				"id": 127,
+				"name": "Bobo-Dioulasso",
+				"country": "Burkina Faso",
+				"x": 503,
+				"y": 242,
+				"cityType": 5,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 128,
+				"name": "Kanchari",
+				"country": "Burkina Faso",
+				"x": 518,
+				"y": 237,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 26,
+		"name": "Burma",
+		"color": "#6e7b3b",
+		"flag": "mm",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 129,
+				"name": "Nay pyi Taw",
+				"country": "Burma",
+				"x": 805,
+				"y": 214,
+				"cityType": 9,
+				"income": 67,
+				"neighbours": []
+			},
+			{
+				"id": 130,
+				"name": "Yangon",
+				"country": "Burma",
+				"x": 801,
+				"y": 225,
+				"cityType": 6,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 131,
+				"name": "Mandalay",
+				"country": "Burma",
+				"x": 801,
+				"y": 206,
+				"cityType": 6,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 132,
+				"name": "Mawlamyine",
+				"country": "Burma",
+				"x": 808,
+				"y": 224,
+				"cityType": 6,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 133,
+				"name": "Pathein",
+				"country": "Burma",
+				"x": 799,
+				"y": 222,
+				"cityType": 3,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 134,
+				"name": "Sittwe",
+				"country": "Burma",
+				"x": 793,
+				"y": 209,
+				"cityType": 3,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 135,
+				"name": "Myitkyina",
+				"country": "Burma",
+				"x": 802,
+				"y": 191,
+				"cityType": 3,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 27,
+		"name": "Burundi",
+		"color": "#b1b4b1",
+		"flag": "bi",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 136,
+				"name": "Bujumbura",
+				"country": "Burundi",
+				"x": 605,
+				"y": 294,
+				"cityType": 4,
+				"income": 8,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 28,
+		"name": "Cambodia",
+		"color": "#9781c5",
+		"flag": "kh",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 137,
+				"name": "Phnom Penh",
+				"country": "Cambodia",
+				"x": 832,
+				"y": 241,
+				"cityType": 8,
+				"income": 28,
+				"neighbours": []
+			},
+			{
+				"id": 138,
+				"name": "Sihanoukville",
+				"country": "Cambodia",
+				"x": 828,
+				"y": 243,
+				"cityType": 3,
+				"income": 15,
+				"neighbours": []
+			},
+			{
+				"id": 139,
+				"name": "Battambang",
+				"country": "Cambodia",
+				"x": 827,
+				"y": 236,
+				"cityType": 3,
+				"income": 15,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 29,
+		"name": "Cameroon",
+		"color": "#35c2ff",
+		"flag": "cm",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 140,
+				"name": "Yaounde",
+				"country": "Cameroon",
+				"x": 551,
+				"y": 268,
+				"cityType": 9,
+				"income": 17,
+				"neighbours": []
+			},
+			{
+				"id": 141,
+				"name": "Douala",
+				"country": "Cameroon",
+				"x": 545,
+				"y": 268,
+				"cityType": 9,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 142,
+				"name": "Garoua",
+				"country": "Cameroon",
+				"x": 557,
+				"y": 248,
+				"cityType": 6,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 143,
+				"name": "Marou",
+				"country": "Cameroon",
+				"x": 560,
+				"y": 244,
+				"cityType": 6,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 144,
+				"name": "Brtoua",
+				"country": "Cameroon",
+				"x": 557,
+				"y": 268,
+				"cityType": 3,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 145,
+				"name": "Ngaoundere",
+				"country": "Cameroon",
+				"x": 556,
+				"y": 258,
+				"cityType": 3,
+				"income": 10,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 30,
+		"name": "Canada",
+		"color": "#fc6947",
+		"flag": "ca",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 146,
+				"name": "Ottawa",
+				"country": "Canada",
+				"x": 311,
+				"y": 124,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 147,
+				"name": "Vancover",
+				"country": "Canada",
+				"x": 194,
+				"y": 111,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 148,
+				"name": "Montreal",
+				"country": "Canada",
+				"x": 320,
+				"y": 122,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 149,
+				"name": "Calgary",
+				"country": "Canada",
+				"x": 214,
+				"y": 104,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 150,
+				"name": "Edmonton",
+				"country": "Canada",
+				"x": 212,
+				"y": 90,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 151,
+				"name": "Toronto",
+				"country": "Canada",
+				"x": 289,
+				"y": 130,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 152,
+				"name": "St john",
+				"country": "Canada",
+				"x": 373,
+				"y": 114,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 153,
+				"name": "Halifax",
+				"country": "Canada",
+				"x": 343,
+				"y": 126,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 154,
+				"name": "Fredericton",
+				"country": "Canada",
+				"x": 338,
+				"y": 122,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 155,
+				"name": "Charlottetown",
+				"country": "Canada",
+				"x": 349,
+				"y": 120,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 156,
+				"name": "Iqaluit",
+				"country": "Canada",
+				"x": 361,
+				"y": 63,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 157,
+				"name": "Winnipeg",
+				"country": "Canada",
+				"x": 264,
+				"y": 108,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 158,
+				"name": "Regina",
+				"country": "Canada",
+				"x": 245,
+				"y": 104,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 159,
+				"name": "Sasckatoon",
+				"country": "Canada",
+				"x": 243,
+				"y": 95,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 160,
+				"name": "Yellowknife",
+				"country": "Canada",
+				"x": 240,
+				"y": 68,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 161,
+				"name": "Whitehorse",
+				"country": "Canada",
+				"x": 199,
+				"y": 70,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 162,
+				"name": "Victoria",
+				"country": "Canada",
+				"x": 189,
+				"y": 112,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 163,
+				"name": "Mississauga",
+				"country": "Canada",
+				"x": 249,
+				"y": 133,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 31,
+		"name": "Cap Verde",
+		"color": "#321414",
+		"flag": "cv",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 164,
+				"name": "Praia",
+				"country": "Cap Verde",
+				"x": 445,
+				"y": 230,
+				"cityType": 5,
+				"income": 6,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 32,
+		"name": "Central African Rep",
+		"color": "#900020",
+		"flag": "cf",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 165,
+				"name": "Bangui",
+				"country": "Central African Rep",
+				"x": 572,
+				"y": 263,
+				"cityType": 5,
+				"income": 3,
+				"neighbours": []
+			},
+			{
+				"id": 166,
+				"name": "Kaga Bandoro",
+				"country": "Central African Rep",
+				"x": 575,
+				"y": 256,
+				"cityType": 2,
+				"income": 2,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 33,
+		"name": "Chad",
+		"color": "#bf7568",
+		"flag": "td",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 167,
+				"name": "NDjamena",
+				"country": "Chad",
+				"x": 562,
+				"y": 238,
+				"cityType": 8,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 168,
+				"name": "Moundou",
+				"country": "Chad",
+				"x": 565,
+				"y": 251,
+				"cityType": 2,
+				"income": 4,
+				"neighbours": []
+			},
+			{
+				"id": 169,
+				"name": "Sagh",
+				"country": "Chad",
+				"x": 573,
+				"y": 249,
+				"cityType": 2,
+				"income": 4,
+				"neighbours": []
+			},
+			{
+				"id": 170,
+				"name": "Abeche",
+				"country": "Chad",
+				"x": 580,
+				"y": 233,
+				"cityType": 2,
+				"income": 4,
+				"neighbours": []
+			},
+			{
+				"id": 171,
+				"name": "Faya",
+				"country": "Chad",
+				"x": 575,
+				"y": 218,
+				"cityType": 2,
+				"income": 4,
+				"neighbours": []
+			},
+			{
+				"id": 172,
+				"name": "Aozou",
+				"country": "Chad",
+				"x": 565,
+				"y": 205,
+				"cityType": 2,
+				"income": 4,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 34,
+		"name": "Chile",
+		"color": "#004f2a",
+		"flag": "cl",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 173,
+				"name": "Santiago",
+				"country": "Chile",
+				"x": 313,
+				"y": 402,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 174,
+				"name": "Antofagasta",
+				"country": "Chile",
+				"x": 308,
+				"y": 364,
+				"cityType": 4,
+				"income": 63,
+				"neighbours": []
+			},
+			{
+				"id": 175,
+				"name": "Talcahuano",
+				"country": "Chile",
+				"x": 312,
+				"y": 414,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 176,
+				"name": "Lquiqe",
+				"country": "Chile",
+				"x": 308,
+				"y": 351,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 177,
+				"name": "Copiapo",
+				"country": "Chile",
+				"x": 310,
+				"y": 371,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 35,
+		"name": "China",
+		"color": "#ff0099",
+		"flag": "cn",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 178,
+				"name": "Beijing",
+				"country": "China",
+				"x": 845,
+				"y": 141,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 179,
+				"name": "Shanghai",
+				"country": "China",
+				"x": 838,
+				"y": 173,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 180,
+				"name": "Tianjin",
+				"country": "China",
+				"x": 847,
+				"y": 144,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 181,
+				"name": "Guangzhou",
+				"country": "China",
+				"x": 852,
+				"y": 201,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 182,
+				"name": "Wuhan",
+				"country": "China",
+				"x": 853,
+				"y": 177,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 183,
+				"name": "Chongking",
+				"country": "China",
+				"x": 834,
+				"y": 181,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 184,
+				"name": "Chengdu",
+				"country": "China",
+				"x": 822,
+				"y": 180,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 185,
+				"name": "Nanning",
+				"country": "China",
+				"x": 836,
+				"y": 202,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 186,
+				"name": "Xian",
+				"country": "China",
+				"x": 820,
+				"y": 164,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 187,
+				"name": "Shenyang",
+				"country": "China",
+				"x": 863,
+				"y": 137,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 188,
+				"name": "Hangzhou",
+				"country": "China",
+				"x": 866,
+				"y": 176,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 189,
+				"name": "Herbin",
+				"country": "China",
+				"x": 857,
+				"y": 121,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 190,
+				"name": "Jinan",
+				"country": "China",
+				"x": 848,
+				"y": 155,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 191,
+				"name": "Xiamen",
+				"country": "China",
+				"x": 864,
+				"y": 198,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 192,
+				"name": "Shantou",
+				"country": "China",
+				"x": 859,
+				"y": 201,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 193,
+				"name": "Zhengzhou",
+				"country": "China",
+				"x": 837,
+				"y": 162,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 194,
+				"name": "Changchun",
+				"country": "China",
+				"x": 864,
+				"y": 130,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 195,
+				"name": "Dalian",
+				"country": "China",
+				"x": 859,
+				"y": 147,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 196,
+				"name": "Kunming",
+				"country": "China",
+				"x": 816,
+				"y": 197,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 197,
+				"name": "Quigdao",
+				"country": "China",
+				"x": 860,
+				"y": 155,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 198,
+				"name": "Yantai",
+				"country": "China",
+				"x": 861,
+				"y": 151,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 199,
+				"name": "Tianshui",
+				"country": "China",
+				"x": 813,
+				"y": 162,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 200,
+				"name": "Ningbo",
+				"country": "China",
+				"x": 871,
+				"y": 179,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 201,
+				"name": "Taiyuan",
+				"country": "China",
+				"x": 831,
+				"y": 147,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 202,
+				"name": "Tangshan",
+				"country": "China",
+				"x": 851,
+				"y": 142,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 203,
+				"name": "Hefai",
+				"country": "China",
+				"x": 851,
+				"y": 169,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 204,
+				"name": "Zhongshan",
+				"country": "China",
+				"x": 844,
+				"y": 208,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 205,
+				"name": "Changsha",
+				"country": "China",
+				"x": 852,
+				"y": 185,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 206,
+				"name": "UEruemqi",
+				"country": "China",
+				"x": 753,
+				"y": 127,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 207,
+				"name": " Shijiazhuang",
+				"country": "China",
+				"x": 839,
+				"y": 152,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 208,
+				"name": "Nanchong",
+				"country": "China",
+				"x": 815,
+				"y": 170,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 209,
+				"name": "Lanzhou",
+				"country": "China",
+				"x": 802,
+				"y": 159,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 210,
+				"name": "Nanchang",
+				"country": "China",
+				"x": 860,
+				"y": 186,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 211,
+				"name": "Ordos",
+				"country": "China",
+				"x": 821,
+				"y": 143,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 212,
+				"name": "Xiangyang",
+				"country": "China",
+				"x": 836,
+				"y": 167,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 213,
+				"name": "Luoyang",
+				"country": "China",
+				"x": 830,
+				"y": 162,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 214,
+				"name": "Bayan Nur",
+				"country": "China",
+				"x": 816,
+				"y": 138,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 215,
+				"name": "Wenzhou",
+				"country": "China",
+				"x": 869,
+				"y": 185,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 216,
+				"name": "Fuzhou",
+				"country": "China",
+				"x": 868,
+				"y": 192,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 217,
+				"name": "Yancheng",
+				"country": "China",
+				"x": 863,
+				"y": 166,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 218,
+				"name": "Guiyang",
+				"country": "China",
+				"x": 829,
+				"y": 192,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 219,
+				"name": "Lijiang",
+				"country": "China",
+				"x": 809,
+				"y": 185,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 220,
+				"name": "Zaozhuang",
+				"country": "China",
+				"x": 847,
+				"y": 148,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 221,
+				"name": "Tonghua ",
+				"country": "China",
+				"x": 867,
+				"y": 135,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 222,
+				"name": "Qiqihar",
+				"country": "China",
+				"x": 847,
+				"y": 115,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 223,
+				"name": "Jiamusi",
+				"country": "China",
+				"x": 872,
+				"y": 121,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 224,
+				"name": "hulun buir",
+				"country": "China",
+				"x": 834,
+				"y": 107,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 225,
+				"name": "Karamay",
+				"country": "China",
+				"x": 745,
+				"y": 125,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 226,
+				"name": "Kashgar",
+				"country": "China",
+				"x": 731,
+				"y": 144,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 227,
+				"name": "Kamul",
+				"country": "China",
+				"x": 776,
+				"y": 137,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 228,
+				"name": "Nagqu",
+				"country": "China",
+				"x": 781,
+				"y": 168,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 229,
+				"name": "Lhasa",
+				"country": "China",
+				"x": 787,
+				"y": 179,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 230,
+				"name": "Ngari",
+				"country": "China",
+				"x": 751,
+				"y": 168,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 231,
+				"name": "Heixi",
+				"country": "China",
+				"x": 790,
+				"y": 156,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 232,
+				"name": "Sanya",
+				"country": "China",
+				"x": 845,
+				"y": 217,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 233,
+				"name": "Yushu",
+				"country": "China",
+				"x": 798,
+				"y": 168,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 234,
+				"name": "Hohot",
+				"country": "China",
+				"x": 835,
+				"y": 133,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 235,
+				"name": "Macau",
+				"country": "China",
+				"x": 851,
+				"y": 205,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 36,
+		"name": "Colombia",
+		"color": "#c7be58",
+		"flag": "co",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 236,
+				"name": "Bogota",
+				"country": "Colombia",
+				"x": 291,
+				"y": 265,
+				"cityType": 11,
+				"income": 188,
+				"neighbours": []
+			},
+			{
+				"id": 237,
+				"name": "Cali",
+				"country": "Colombia",
+				"x": 284,
+				"y": 271,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 238,
+				"name": "Medeline",
+				"country": "Colombia",
+				"x": 284,
+				"y": 271,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 239,
+				"name": "Baranquilla",
+				"country": "Colombia",
+				"x": 290,
+				"y": 244,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 240,
+				"name": "Bucaramanga",
+				"country": "Colombia",
+				"x": 297,
+				"y": 259,
+				"cityType": 5,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 241,
+				"name": "Pasto",
+				"country": "Colombia",
+				"x": 282,
+				"y": 277,
+				"cityType": 5,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 242,
+				"name": "Cartagena",
+				"country": "Colombia",
+				"x": 287,
+				"y": 250,
+				"cityType": 5,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 243,
+				"name": "Calamar",
+				"country": "Colombia",
+				"x": 297,
+				"y": 279,
+				"cityType": 3,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 244,
+				"name": "Puireto Carrino",
+				"country": "Colombia",
+				"x": 309,
+				"y": 261,
+				"cityType": 3,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 37,
+		"name": "Comoros",
+		"color": "#e53380",
+		"flag": "km",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 245,
+				"name": "Moroni",
+				"country": "Comoros",
+				"x": 647,
+				"y": 323,
+				"cityType": 3,
+				"income": 3,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 38,
+		"name": "Congo",
+		"color": "#5984a3",
+		"flag": "cg",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 246,
+				"name": "Brazzaville",
+				"country": "Congo",
+				"x": 561,
+				"y": 295,
+				"cityType": 8,
+				"income": 15,
+				"neighbours": []
+			},
+			{
+				"id": 247,
+				"name": "Pointe Noire",
+				"country": "Congo",
+				"x": 552,
+				"y": 297,
+				"cityType": 5,
+				"income": 7,
+				"neighbours": []
+			},
+			{
+				"id": 248,
+				"name": "Makoua",
+				"country": "Congo",
+				"x": 565,
+				"y": 281,
+				"cityType": 3,
+				"income": 7,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 39,
+		"name": "Costa Rica",
+		"color": "#ffa95f",
+		"flag": "cr",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 249,
+				"name": "San Jose",
+				"country": "Costa Rica",
+				"x": 262,
+				"y": 247,
+				"cityType": 6,
+				"income": 79,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 40,
+		"name": "Ivery Coast",
+		"color": "#c6c6ff",
+		"flag": "ci",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 250,
+				"name": "Abidjan",
+				"country": "Ivery Coast",
+				"x": 503,
+				"y": 262,
+				"cityType": 9,
+				"income": 26,
+				"neighbours": []
+			},
+			{
+				"id": 251,
+				"name": "Yamoussoukrou",
+				"country": "Ivery Coast",
+				"x": 500,
+				"y": 257,
+				"cityType": 6,
+				"income": 12,
+				"neighbours": []
+			},
+			{
+				"id": 252,
+				"name": "San Pedro",
+				"country": "Ivery Coast",
+				"x": 496,
+				"y": 264,
+				"cityType": 3,
+				"income": 12,
+				"neighbours": []
+			},
+			{
+				"id": 253,
+				"name": "Man",
+				"country": "Ivery Coast",
+				"x": 493,
+				"y": 255,
+				"cityType": 3,
+				"income": 12,
+				"neighbours": []
+			},
+			{
+				"id": 254,
+				"name": "Korhogo",
+				"country": "Ivery Coast",
+				"x": 499,
+				"y": 250,
+				"cityType": 3,
+				"income": 12,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 41,
+		"name": "Croatiia",
+		"color": "#0066ff",
+		"flag": "hr",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 255,
+				"name": "Zagreb",
+				"country": "Croatiia",
+				"x": 563,
+				"y": 123,
+				"cityType": 7,
+				"income": 68,
+				"neighbours": []
+			},
+			{
+				"id": 256,
+				"name": "Split",
+				"country": "Croatiia",
+				"x": 561,
+				"y": 128,
+				"cityType": 4,
+				"income": 30,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 42,
+		"name": "Cuba",
+		"color": "#b53389",
+		"flag": "cu",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 257,
+				"name": "Havana",
+				"country": "Cuba",
+				"x": 271,
+				"y": 201,
+				"cityType": 9,
+				"income": 53,
+				"neighbours": []
+			},
+			{
+				"id": 258,
+				"name": "Santiago de Cuba",
+				"country": "Cuba",
+				"x": 289,
+				"y": 212,
+				"cityType": 6,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 259,
+				"name": "Camaguey",
+				"country": "Cuba",
+				"x": 282,
+				"y": 205,
+				"cityType": 6,
+				"income": 40,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 43,
+		"name": "Cyprus",
+		"color": "#d8d852",
+		"flag": "cy",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 260,
+				"name": "Nicosia",
+				"country": "Cyprus",
+				"x": 613,
+				"y": 159,
+				"cityType": 4,
+				"income": 40,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 44,
+		"name": "Czech",
+		"color": "#65344a",
+		"flag": "cz",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 261,
+				"name": "Praque",
+				"country": "Czech",
+				"x": 556,
+				"y": 107,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 262,
+				"name": "Brno",
+				"country": "Czech",
+				"x": 563,
+				"y": 111,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 263,
+				"name": "Ostrava",
+				"country": "Czech",
+				"x": 567,
+				"y": 109,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 45,
+		"name": "Dem Congo ",
+		"color": "#e68099",
+		"flag": "cd",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 264,
+				"name": "Kinshasa",
+				"country": "Dem Congo ",
+				"x": 564,
+				"y": 298,
+				"cityType": 12,
+				"income": 25,
+				"neighbours": []
+			},
+			{
+				"id": 265,
+				"name": "Lubumbashi",
+				"country": "Dem Congo",
+				"x": 599,
+				"y": 321,
+				"cityType": 9,
+				"income": 7,
+				"neighbours": []
+			},
+			{
+				"id": 266,
+				"name": "Mbujimayi",
+				"country": "Dem Congo",
+				"x": 588,
+				"y": 322,
+				"cityType": 9,
+				"income": 7,
+				"neighbours": []
+			},
+			{
+				"id": 267,
+				"name": "Kisangani",
+				"country": "Dem Congo",
+				"x": 592,
+				"y": 279,
+				"cityType": 6,
+				"income": 7,
+				"neighbours": []
+			},
+			{
+				"id": 268,
+				"name": "Kananga",
+				"country": "Dem Congo",
+				"x": 583,
+				"y": 303,
+				"cityType": 6,
+				"income": 7,
+				"neighbours": []
+			},
+			{
+				"id": 269,
+				"name": "Kolwezi",
+				"country": "Dem Congo",
+				"x": 592,
+				"y": 317,
+				"cityType": 6,
+				"income": 7,
+				"neighbours": []
+			},
+			{
+				"id": 270,
+				"name": "Boma",
+				"country": "Dem Congo ",
+				"x": 555,
+				"y": 302,
+				"cityType": 6,
+				"income": 7,
+				"neighbours": []
+			},
+			{
+				"id": 271,
+				"name": "Guemena",
+				"country": "Dem Congo ",
+				"x": 577,
+				"y": 271,
+				"cityType": 3,
+				"income": 7,
+				"neighbours": []
+			},
+			{
+				"id": 272,
+				"name": "Kalemaie",
+				"country": "Dem Congo ",
+				"x": 604,
+				"y": 302,
+				"cityType": 3,
+				"income": 7,
+				"neighbours": []
+			},
+			{
+				"id": 273,
+				"name": "Isiro",
+				"country": "Dem Congo ",
+				"x": 600,
+				"y": 271,
+				"cityType": 3,
+				"income": 7,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 46,
+		"name": "Denmark",
+		"color": "#00ffff",
+		"flag": "dk",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 274,
+				"name": "Copenhagen",
+				"country": "Denmark",
+				"x": 552,
+				"y": 90,
+				"cityType": 7,
+				"income": 165,
+				"neighbours": []
+			},
+			{
+				"id": 275,
+				"name": "Arhus",
+				"country": "Denmark",
+				"x": 545,
+				"y": 89,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 354,
+				"name": "Godthab",
+				"country": "Denmark",
+				"x": 412,
+				"y": 71,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 47,
+		"name": "Djibouti",
+		"color": "#a7d452",
+		"flag": "dj",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 276,
+				"name": "Djibouti",
+				"country": "Djibouti",
+				"x": 644,
+				"y": 241,
+				"cityType": 5,
+				"income": 5,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 48,
+		"name": "Dominican",
+		"color": "#16166b",
+		"flag": "do",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 277,
+				"name": "Santo Domingo",
+				"country": "Dominican",
+				"x": 308,
+				"y": 217,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 278,
+				"name": "Los Caballeros",
+				"country": "Dominican",
+				"x": 304,
+				"y": 213,
+				"cityType": 6,
+				"income": 62,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 49,
+		"name": "Equador",
+		"color": "#96ce8f",
+		"flag": "ec",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 279,
+				"name": "Quito",
+				"country": "Equador",
+				"x": 279,
+				"y": 282,
+				"cityType": 9,
+				"income": 62,
+				"neighbours": []
+			},
+			{
+				"id": 280,
+				"name": "Guayaquile",
+				"country": "Equador",
+				"x": 273,
+				"y": 289,
+				"cityType": 9,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 281,
+				"name": "Cuenca",
+				"country": "Equador",
+				"x": 276,
+				"y": 294,
+				"cityType": 6,
+				"income": 60,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 50,
+		"name": "Egypte",
+		"color": "#c7b187",
+		"flag": "eg",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 282,
+				"name": "Cairo",
+				"country": "Egypte",
+				"x": 607,
+				"y": 178,
+				"cityType": 11,
+				"income": 160,
+				"neighbours": []
+			},
+			{
+				"id": 283,
+				"name": "Alexandria",
+				"country": "Egypte",
+				"x": 603,
+				"y": 174,
+				"cityType": 8,
+				"income": 130,
+				"neighbours": []
+			},
+			{
+				"id": 284,
+				"name": "Port Said",
+				"country": "Egypte",
+				"x": 611,
+				"y": 174,
+				"cityType": 8,
+				"income": 130,
+				"neighbours": []
+			},
+			{
+				"id": 285,
+				"name": "Suez",
+				"country": "Egypte",
+				"x": 611,
+				"y": 177,
+				"cityType": 5,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 286,
+				"name": "Tanta",
+				"country": "Egypte",
+				"x": 607,
+				"y": 173,
+				"cityType": 5,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 287,
+				"name": "Asyut",
+				"country": "Egypte",
+				"x": 608,
+				"y": 187,
+				"cityType": 5,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 288,
+				"name": "Luxor",
+				"country": "Egypte",
+				"x": 609,
+				"y": 192,
+				"cityType": 5,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 289,
+				"name": "Aswan",
+				"country": "Egypte",
+				"x": 611,
+				"y": 198,
+				"cityType": 5,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 290,
+				"name": "Sharm el Sheikh",
+				"country": "Egypte",
+				"x": 617,
+				"y": 184,
+				"cityType": 2,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 291,
+				"name": "Marsa Matruh",
+				"country": "Egypte",
+				"x": 596,
+				"y": 173,
+				"cityType": 2,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 292,
+				"name": "Kharja",
+				"country": "Egypte",
+				"x": 600,
+				"y": 193,
+				"cityType": 2,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 51,
+		"name": "El Salvador",
+		"color": "#cc4e3c",
+		"flag": "sv",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 293,
+				"name": "San Salvador",
+				"country": "El Salvador",
+				"x": 249,
+				"y": 234,
+				"cityType": 6,
+				"income": 55,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 52,
+		"name": "Equatorial Guenea",
+		"color": "#b6ff00",
+		"flag": "gq",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 294,
+				"name": "Malbo",
+				"country": "Equatorial Guenea",
+				"x": 542,
+				"y": 270,
+				"cityType": 6,
+				"income": 21,
+				"neighbours": []
+			},
+			{
+				"id": 295,
+				"name": "Bta",
+				"country": "Equatorial Guenea",
+				"x": 546,
+				"y": 275,
+				"cityType": 3,
+				"income": 10,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 53,
+		"name": "Eriteria",
+		"color": "#2f4780",
+		"flag": "er",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 296,
+				"name": "Asmara",
+				"country": "Eriteria",
+				"x": 630,
+				"y": 226,
+				"cityType": 6,
+				"income": 38,
+				"neighbours": []
+			},
+			{
+				"id": 297,
+				"name": "Assab",
+				"country": "Eriteria",
+				"x": 643,
+				"y": 235,
+				"cityType": 3,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 54,
+		"name": "Estonia",
+		"color": "#959acc",
+		"flag": "ee",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 298,
+				"name": "Talinn",
+				"country": "Estonia",
+				"x": 583,
+				"y": 78,
+				"cityType": 4,
+				"income": 38,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 55,
+		"name": "Ethiopia",
+		"color": "#e1ff00",
+		"flag": "et",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 299,
+				"name": "Addis Ababa",
+				"country": "Ethiopia",
+				"x": 634,
+				"y": 250,
+				"cityType": 7,
+				"income": 35,
+				"neighbours": []
+			},
+			{
+				"id": 300,
+				"name": "Dire Dawa",
+				"country": "Ethiopia",
+				"x": 642,
+				"y": 247,
+				"cityType": 4,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 301,
+				"name": "Mekele",
+				"country": "Ethiopia",
+				"x": 634,
+				"y": 233,
+				"cityType": 1,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 302,
+				"name": "Nazret",
+				"country": "Ethiopia",
+				"x": 634,
+				"y": 254,
+				"cityType": 1,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 303,
+				"name": "Gondar",
+				"country": "Ethiopia",
+				"x": 630,
+				"y": 240,
+				"cityType": 1,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 304,
+				"name": "Dese",
+				"country": "Ethiopia",
+				"x": 639,
+				"y": 243,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 305,
+				"name": "Jima",
+				"country": "Ethiopia",
+				"x": 625,
+				"y": 257,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 306,
+				"name": "Finshawa",
+				"country": "Ethiopia",
+				"x": 633,
+				"y": 264,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 56,
+		"name": "Finland",
+		"color": "#bb98bb",
+		"flag": "fi",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 307,
+				"name": "Helsinki",
+				"country": "Finland",
+				"x": 585,
+				"y": 73,
+				"cityType": 4,
+				"income": 76,
+				"neighbours": []
+			},
+			{
+				"id": 308,
+				"name": "Tampere",
+				"country": "Finland",
+				"x": 581,
+				"y": 67,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 309,
+				"name": "Oulu",
+				"country": "Finland",
+				"x": 582,
+				"y": 59,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 310,
+				"name": "Ivalo",
+				"country": "Finland",
+				"x": 584,
+				"y": 51,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 57,
+		"name": "France",
+		"color": "#3333ff",
+		"flag": "fr",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 311,
+				"name": "Paris",
+				"country": "France",
+				"x": 526,
+				"y": 113,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 312,
+				"name": "Marseille",
+				"country": "France",
+				"x": 533,
+				"y": 130,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 313,
+				"name": "Lyon",
+				"country": "France",
+				"x": 534,
+				"y": 122,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 314,
+				"name": "Toulouse",
+				"country": "France",
+				"x": 522,
+				"y": 130,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 315,
+				"name": "Nice",
+				"country": "France",
+				"x": 538,
+				"y": 129,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 316,
+				"name": "Nantes",
+				"country": "France",
+				"x": 514,
+				"y": 117,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 317,
+				"name": "Strasbourg",
+				"country": "France",
+				"x": 539,
+				"y": 114,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 318,
+				"name": "Bordeaux",
+				"country": "France",
+				"x": 517,
+				"y": 126,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 319,
+				"name": "Lille",
+				"country": "France",
+				"x": 530,
+				"y": 108,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 320,
+				"name": "Rennes",
+				"country": "France",
+				"x": 514,
+				"y": 115,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 321,
+				"name": "Le Havre",
+				"country": "France",
+				"x": 520,
+				"y": 109,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 322,
+				"name": "Montpellier",
+				"country": "France",
+				"x": 527,
+				"y": 131,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 323,
+				"name": "Dijon",
+				"country": "France",
+				"x": 532,
+				"y": 119,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 324,
+				"name": "Reims",
+				"country": "France",
+				"x": 530,
+				"y": 112,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 325,
+				"name": "Cayenne",
+				"country": "France",
+				"x": 355,
+				"y": 265,
+				"cityType": 3,
+				"income": 60,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 58,
+		"name": "Gabon",
+		"color": "#944780",
+		"flag": "ga",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 326,
+				"name": "Libreville",
+				"country": "Gabon",
+				"x": 545,
+				"y": 281,
+				"cityType": 6,
+				"income": 21,
+				"neighbours": []
+			},
+			{
+				"id": 327,
+				"name": "Franceville",
+				"country": "Gabon",
+				"x": 556,
+				"y": 287,
+				"cityType": 3,
+				"income": 21,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 59,
+		"name": "Gambia",
+		"color": "#a52a2a",
+		"flag": "gm",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 328,
+				"name": "Banjul",
+				"country": "Gambia",
+				"x": 566,
+				"y": 235,
+				"cityType": 6,
+				"income": 5,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 60,
+		"name": "Georgia",
+		"color": "#84cdcf",
+		"flag": "ge",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 329,
+				"name": "Tabilisi",
+				"country": "Georgia",
+				"x": 642,
+				"y": 135,
+				"cityType": 7,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 330,
+				"name": "Batumi",
+				"country": "Georgia",
+				"x": 633,
+				"y": 135,
+				"cityType": 4,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 61,
+		"name": "Germany",
+		"color": "#4d5d53",
+		"flag": "de",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 331,
+				"name": "Berlin",
+				"country": "Germany",
+				"x": 554,
+				"y": 100,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 332,
+				"name": "Hamburg",
+				"country": "Germany",
+				"x": 545,
+				"y": 96,
+				"cityType": 10,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 333,
+				"name": "Munich",
+				"country": "Germany",
+				"x": 550,
+				"y": 114,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 334,
+				"name": "Koeln",
+				"country": "Germany",
+				"x": 538,
+				"y": 105,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 335,
+				"name": "Frankfurt",
+				"country": "Germany",
+				"x": 543,
+				"y": 108,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 336,
+				"name": "Essen",
+				"country": "Germany",
+				"x": 538,
+				"y": 103,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 337,
+				"name": "Stuttgart",
+				"country": "Germany",
+				"x": 543,
+				"y": 112,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 338,
+				"name": "Bremen",
+				"country": "Germany",
+				"x": 542,
+				"y": 98,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 339,
+				"name": "Hanover",
+				"country": "Germany",
+				"x": 544,
+				"y": 101,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 340,
+				"name": "Leipzig",
+				"country": "Germany",
+				"x": 552,
+				"y": 104,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 341,
+				"name": "Nuremberg",
+				"country": "Germany",
+				"x": 550,
+				"y": 110,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 342,
+				"name": "Dresden",
+				"country": "Germany",
+				"x": 557,
+				"y": 105,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 343,
+				"name": "freiburg",
+				"country": "Germany",
+				"x": 541,
+				"y": 115,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 344,
+				"name": "Rostock",
+				"country": "Germany",
+				"x": 552,
+				"y": 95,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 62,
+		"name": "Ghana",
+		"color": "#2e8b57",
+		"flag": "gh",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 345,
+				"name": "Accra",
+				"country": "Ghana",
+				"x": 516,
+				"y": 261,
+				"cityType": 9,
+				"income": 71,
+				"neighbours": []
+			},
+			{
+				"id": 346,
+				"name": "Kumasi",
+				"country": "Ghana",
+				"x": 511,
+				"y": 257,
+				"cityType": 9,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 347,
+				"name": "Tamale",
+				"country": "Ghana",
+				"x": 512,
+				"y": 247,
+				"cityType": 6,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 348,
+				"name": "Takoradi",
+				"country": "Ghana",
+				"x": 511,
+				"y": 264,
+				"cityType": 6,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 63,
+		"name": "Greece",
+		"color": "#702963",
+		"flag": "gr",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 349,
+				"name": "Athens",
+				"country": "Greece",
+				"x": 585,
+				"y": 149,
+				"cityType": 7,
+				"income": 91,
+				"neighbours": []
+			},
+			{
+				"id": 350,
+				"name": "Thessaloniki",
+				"country": "Greece",
+				"x": 582,
+				"y": 140,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 351,
+				"name": "Patra",
+				"country": "Greece",
+				"x": 578,
+				"y": 148,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 352,
+				"name": "Iraklio",
+				"country": "Greece",
+				"x": 589,
+				"y": 159,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 353,
+				"name": "Kavala",
+				"country": "Greece",
+				"x": 588,
+				"y": 139,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 64,
+		"name": "Guaemala",
+		"color": "#819fbc",
+		"flag": "gt",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 354,
+				"name": "Guatemala",
+				"country": "Guaemala",
+				"x": 245,
+				"y": 230,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 355,
+				"name": "Flores",
+				"country": "Guaemala",
+				"x": 246,
+				"y": 222,
+				"cityType": 6,
+				"income": 36,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 65,
+		"name": "Guinea",
+		"color": "#fc624b",
+		"flag": "gn",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 356,
+				"name": "Conakry",
+				"country": "Guinea",
+				"x": 475,
+				"y": 247,
+				"cityType": 9,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 357,
+				"name": "Kankan",
+				"country": "Guinea",
+				"x": 484,
+				"y": 244,
+				"cityType": 3,
+				"income": 6,
+				"neighbours": []
+			},
+			{
+				"id": 358,
+				"name": "Nzerekore",
+				"country": "Guinea",
+				"x": 489,
+				"y": 252,
+				"cityType": 3,
+				"income": 5,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 66,
+		"name": "Guinea Bissau",
+		"color": "#ff4500",
+		"flag": "gw",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 359,
+				"name": "Bissau",
+				"country": "Guinea Bissau",
+				"x": 470,
+				"y": 240,
+				"cityType": 6,
+				"income": 4,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 67,
+		"name": "Guyana",
+		"color": "#c71585",
+		"flag": "gy",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 360,
+				"name": "Georgetown",
+				"country": "Guyana",
+				"x": 338,
+				"y": 258,
+				"cityType": 6,
+				"income": 7,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 68,
+		"name": "Haiti",
+		"color": "#318ce7",
+		"flag": "ht",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 361,
+				"name": "Port au Prince",
+				"country": "Haiti",
+				"x": 300,
+				"y": 216,
+				"cityType": 9,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 69,
+		"name": "Honduras",
+		"color": "#ffdead",
+		"flag": "hn",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 362,
+				"name": "Tegucigalpa",
+				"country": "Honduras",
+				"x": 254,
+				"y": 234,
+				"cityType": 9,
+				"income": 23,
+				"neighbours": []
+			},
+			{
+				"id": 363,
+				"name": "San Pedro Sula",
+				"country": "Honduras",
+				"x": 255,
+				"y": 227,
+				"cityType": 6,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 70,
+		"name": "Hong Kong",
+		"color": "#b6ff00",
+		"flag": "hk",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 364,
+				"name": "Hong Kong",
+				"country": "Hong Kong",
+				"x": 855,
+				"y": 204,
+				"cityType": 10,
+				"income": 460,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 71,
+		"name": "Hungary",
+		"color": "#003636",
+		"flag": "hu",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 365,
+				"name": "Budapest",
+				"country": "Hungary",
+				"x": 568,
+				"y": 118,
+				"cityType": 7,
+				"income": 168,
+				"neighbours": []
+			},
+			{
+				"id": 366,
+				"name": "Debrecen",
+				"country": "Hungary",
+				"x": 576,
+				"y": 117,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 72,
+		"name": "Iceland",
+		"color": "#71a6d2",
+		"flag": "is",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 367,
+				"name": "Reykjavik",
+				"country": "Iceland",
+				"x": 475,
+				"y": 63,
+				"cityType": 4,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 73,
+		"name": "India",
+		"color": "#a25bff",
+		"flag": "in",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 368,
+				"name": "New Delhi",
+				"country": "India",
+				"x": 740,
+				"y": 183,
+				"cityType": 11,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 369,
+				"name": "Mumbai",
+				"country": "India",
+				"x": 736,
+				"y": 221,
+				"cityType": 11,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 370,
+				"name": "Bangaluru",
+				"country": "India",
+				"x": 749,
+				"y": 236,
+				"cityType": 11,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 371,
+				"name": "Kolkata",
+				"country": "India",
+				"x": 778,
+				"y": 204,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 372,
+				"name": "Chennai",
+				"country": "India",
+				"x": 757,
+				"y": 235,
+				"cityType": 7,
+				"income": 250,
+				"neighbours": []
+			},
+			{
+				"id": 373,
+				"name": "Ahmedabad",
+				"country": "India",
+				"x": 731,
+				"y": 199,
+				"cityType": 7,
+				"income": 250,
+				"neighbours": []
+			},
+			{
+				"id": 374,
+				"name": "Hyderabad",
+				"country": "India",
+				"x": 751,
+				"y": 220,
+				"cityType": 7,
+				"income": 250,
+				"neighbours": []
+			},
+			{
+				"id": 375,
+				"name": "Pune",
+				"country": "India",
+				"x": 739,
+				"y": 218,
+				"cityType": 7,
+				"income": 250,
+				"neighbours": []
+			},
+			{
+				"id": 376,
+				"name": "Surat",
+				"country": "India",
+				"x": 733,
+				"y": 206,
+				"cityType": 7,
+				"income": 250,
+				"neighbours": []
+			},
+			{
+				"id": 377,
+				"name": "Kanpur",
+				"country": "India",
+				"x": 752,
+				"y": 187,
+				"cityType": 7,
+				"income": 250,
+				"neighbours": []
+			},
+			{
+				"id": 378,
+				"name": "Jaipur",
+				"country": "India",
+				"x": 735,
+				"y": 189,
+				"cityType": 7,
+				"income": 250,
+				"neighbours": []
+			},
+			{
+				"id": 379,
+				"name": "Nagpur",
+				"country": "India",
+				"x": 752,
+				"y": 206,
+				"cityType": 7,
+				"income": 250,
+				"neighbours": []
+			},
+			{
+				"id": 380,
+				"name": "Indore",
+				"country": "India",
+				"x": 741,
+				"y": 202,
+				"cityType": 7,
+				"income": 250,
+				"neighbours": []
+			},
+			{
+				"id": 381,
+				"name": "Patna",
+				"country": "India",
+				"x": 767,
+				"y": 193,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 382,
+				"name": "Bhopal",
+				"country": "India",
+				"x": 742,
+				"y": 199,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 383,
+				"name": "Ludhiana",
+				"country": "India",
+				"x": 735,
+				"y": 177,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 384,
+				"name": "Agre",
+				"country": "India",
+				"x": 746,
+				"y": 186,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 385,
+				"name": "Nashik",
+				"country": "India",
+				"x": 737,
+				"y": 210,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 386,
+				"name": "Madurai",
+				"country": "India",
+				"x": 752,
+				"y": 247,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 387,
+				"name": "Coimbatore",
+				"country": "India",
+				"x": 746,
+				"y": 240,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 388,
+				"name": "Vijayawada",
+				"country": "India",
+				"x": 757,
+				"y": 226,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 389,
+				"name": "Puri",
+				"country": "India",
+				"x": 771,
+				"y": 212,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 390,
+				"name": "Raipur",
+				"country": "India",
+				"x": 761,
+				"y": 207,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 391,
+				"name": "Jabalpur",
+				"country": "India",
+				"x": 758,
+				"y": 200,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 392,
+				"name": "Ranchi",
+				"country": "India",
+				"x": 769,
+				"y": 201,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 393,
+				"name": "Pakur",
+				"country": "India",
+				"x": 775,
+				"y": 196,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 394,
+				"name": "Imphal",
+				"country": "India",
+				"x": 792,
+				"y": 196,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 395,
+				"name": "Jorhat",
+				"country": "India",
+				"x": 795,
+				"y": 185,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 396,
+				"name": "Guwahati",
+				"country": "India",
+				"x": 789,
+				"y": 190,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 397,
+				"name": "Rajkot",
+				"country": "India",
+				"x": 724,
+				"y": 204,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 398,
+				"name": "Jodhpur",
+				"country": "India",
+				"x": 728,
+				"y": 190,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 399,
+				"name": "Lucknow",
+				"country": "India",
+				"x": 759,
+				"y": 187,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 400,
+				"name": "Dehradun",
+				"country": "India",
+				"x": 748,
+				"y": 176,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 401,
+				"name": "Gandigarth",
+				"country": "India",
+				"x": 739,
+				"y": 171,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 74,
+		"name": "Indonesia",
+		"color": "#4800ce",
+		"flag": "id",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 402,
+				"name": "Jakarta",
+				"country": "Indonesia",
+				"x": 837,
+				"y": 303,
+				"cityType": 12,
+				"income": 530,
+				"neighbours": []
+			},
+			{
+				"id": 403,
+				"name": "Surabaya",
+				"country": "Indonesia",
+				"x": 858,
+				"y": 308,
+				"cityType": 9,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 404,
+				"name": "Medan",
+				"country": "Indonesia",
+				"x": 813,
+				"y": 267,
+				"cityType": 9,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 405,
+				"name": "Bandung",
+				"country": "Indonesia",
+				"x": 842,
+				"y": 306,
+				"cityType": 9,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 406,
+				"name": "Plembang",
+				"country": "Indonesia",
+				"x": 833,
+				"y": 292,
+				"cityType": 9,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 407,
+				"name": "Makassar",
+				"country": "Indonesia",
+				"x": 879,
+				"y": 299,
+				"cityType": 9,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 408,
+				"name": "Semarang",
+				"country": "Indonesia",
+				"x": 851,
+				"y": 306,
+				"cityType": 9,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 409,
+				"name": "Padang",
+				"country": "Indonesia",
+				"x": 819,
+				"y": 283,
+				"cityType": 9,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 410,
+				"name": "Bandar Lampung",
+				"country": "Indonesia",
+				"x": 833,
+				"y": 301,
+				"cityType": 9,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 411,
+				"name": "Penkanbaru",
+				"country": "Indonesia",
+				"x": 824,
+				"y": 279,
+				"cityType": 9,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 412,
+				"name": "Balikpapan",
+				"country": "Indonesia",
+				"x": 870,
+				"y": 285,
+				"cityType": 9,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 413,
+				"name": "Yogyakarta",
+				"country": "Indonesia",
+				"x": 849,
+				"y": 309,
+				"cityType": 6,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 414,
+				"name": "Situbondo",
+				"country": "Indonesia",
+				"x": 861,
+				"y": 310,
+				"cityType": 6,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 415,
+				"name": "Kupang",
+				"country": "Indonesia",
+				"x": 889,
+				"y": 317,
+				"cityType": 6,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 416,
+				"name": "Pontianak",
+				"country": "Indonesia",
+				"x": 847,
+				"y": 281,
+				"cityType": 6,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 417,
+				"name": "Palangkaraya",
+				"country": "Indonesia",
+				"x": 861,
+				"y": 290,
+				"cityType": 6,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 418,
+				"name": "Palu",
+				"country": "Indonesia",
+				"x": 880,
+				"y": 281,
+				"cityType": 6,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 419,
+				"name": "Ambon",
+				"country": "Indonesia",
+				"x": 908,
+				"y": 293,
+				"cityType": 6,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 420,
+				"name": "Jayapura",
+				"country": "Indonesia",
+				"x": 939,
+				"y": 291,
+				"cityType": 6,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 421,
+				"name": "Bima",
+				"country": "Indonesia",
+				"x": 875,
+				"y": 312,
+				"cityType": 6,
+				"income": 300,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 75,
+		"name": "Iran",
+		"color": "#ecaf2c",
+		"flag": "ir",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 422,
+				"name": "Tahran",
+				"country": "Iran",
+				"x": 663,
+				"y": 156,
+				"cityType": 11,
+				"income": 246,
+				"neighbours": []
+			},
+			{
+				"id": 423,
+				"name": "Mashhad",
+				"country": "Iran",
+				"x": 687,
+				"y": 155,
+				"cityType": 8,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 424,
+				"name": "Isfahan",
+				"country": "Iran",
+				"x": 665,
+				"y": 168,
+				"cityType": 8,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 425,
+				"name": "Shiraz",
+				"country": "Iran",
+				"x": 669,
+				"y": 179,
+				"cityType": 8,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 426,
+				"name": "Tabriz",
+				"country": "Iran",
+				"x": 648,
+				"y": 149,
+				"cityType": 8,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 427,
+				"name": "Qom",
+				"country": "Iran",
+				"x": 665,
+				"y": 162,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 428,
+				"name": "Ahvaz",
+				"country": "Iran",
+				"x": 658,
+				"y": 172,
+				"cityType": 5,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 429,
+				"name": "Kermanshah",
+				"country": "Iran",
+				"x": 652,
+				"y": 161,
+				"cityType": 5,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 430,
+				"name": "Bandar Abbas",
+				"country": "Iran",
+				"x": 681,
+				"y": 187,
+				"cityType": 2,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 431,
+				"name": "Zahedan",
+				"country": "Iran",
+				"x": 693,
+				"y": 179,
+				"cityType": 2,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 432,
+				"name": "Birjand",
+				"country": "Iran",
+				"x": 687,
+				"y": 166,
+				"cityType": 2,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 433,
+				"name": "Kerman",
+				"country": "Iran",
+				"x": 681,
+				"y": 176,
+				"cityType": 2,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 434,
+				"name": "Zanjan",
+				"country": "Iran",
+				"x": 655,
+				"y": 153,
+				"cityType": 2,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 76,
+		"name": "Iraq",
+		"color": "#9090ff",
+		"flag": "iq",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 435,
+				"name": "Baghdad",
+				"country": "Iraq",
+				"x": 645,
+				"y": 165,
+				"cityType": 8,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 436,
+				"name": "Basra",
+				"country": "Iraq",
+				"x": 655,
+				"y": 174,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 437,
+				"name": "Mosul",
+				"country": "Iraq",
+				"x": 638,
+				"y": 154,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 438,
+				"name": "Erbil",
+				"country": "Iraq",
+				"x": 643,
+				"y": 156,
+				"cityType": 8,
+				"income": 80,
+				"neighbours": []
+			},
+			{
+				"id": 439,
+				"name": "Najaf",
+				"country": "Iraq",
+				"x": 644,
+				"y": 172,
+				"cityType": 5,
+				"income": 80,
+				"neighbours": []
+			},
+			{
+				"id": 440,
+				"name": "Rutba",
+				"country": "Iraq",
+				"x": 634,
+				"y": 165,
+				"cityType": 5,
+				"income": 60,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 77,
+		"name": "Ireland",
+		"color": "#50c878",
+		"flag": "ie",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 441,
+				"name": "Dublin",
+				"country": "Ireland",
+				"x": 503,
+				"y": 197,
+				"cityType": 7,
+				"income": 122,
+				"neighbours": []
+			},
+			{
+				"id": 442,
+				"name": "Cork",
+				"country": "Ireland",
+				"x": 500,
+				"y": 101,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 443,
+				"name": "Galway",
+				"country": "Ireland",
+				"x": 497,
+				"y": 96,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 78,
+		"name": "Israel",
+		"color": "#0b6f77",
+		"flag": "il",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 443,
+				"name": "Tel Aviv",
+				"country": "Israel",
+				"x": 618,
+				"y": 170,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 444,
+				"name": "Haifa",
+				"country": "Israel",
+				"x": 619,
+				"y": 167,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 445,
+				"name": "Beer Sheva",
+				"country": "Israel",
+				"x": 618,
+				"y": 174,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 79,
+		"name": "Italy",
+		"color": "#993300",
+		"flag": "it",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 446,
+				"name": "Rome",
+				"country": "Italy",
+				"x": 552,
+				"y": 136,
+				"cityType": 7,
+				"income": 420,
+				"neighbours": []
+			},
+			{
+				"id": 447,
+				"name": "Milano",
+				"country": "Italy",
+				"x": 544,
+				"y": 122,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 448,
+				"name": "Naples",
+				"country": "Italy",
+				"x": 557,
+				"y": 139,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 449,
+				"name": "Turin",
+				"country": "Italy",
+				"x": 539,
+				"y": 125,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 450,
+				"name": "Palermo",
+				"country": "Italy",
+				"x": 556,
+				"y": 149,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 451,
+				"name": "Genoa",
+				"country": "Italy",
+				"x": 545,
+				"y": 128,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 452,
+				"name": "Bologna",
+				"country": "Italy",
+				"x": 550,
+				"y": 126,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 453,
+				"name": "Florance",
+				"country": "Italy",
+				"x": 549,
+				"y": 131,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 454,
+				"name": "Catania",
+				"country": "Italy",
+				"x": 560,
+				"y": 150,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 455,
+				"name": "Bari",
+				"country": "Italy",
+				"x": 564,
+				"y": 138,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 456,
+				"name": "Venice",
+				"country": "Italy",
+				"x": 552,
+				"y": 122,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 457,
+				"name": "Cagliari",
+				"country": "Italy",
+				"x": 543,
+				"y": 144,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 80,
+		"name": "Jamaica",
+		"color": "#7f9bd4",
+		"flag": "jm",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 458,
+				"name": "Kingstone",
+				"country": "Jamaica",
+				"x": 286,
+				"y": 218,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 81,
+		"name": "Japan",
+		"color": "#ffff00",
+		"flag": "jp",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 459,
+				"name": "Tokyo",
+				"country": "Japan",
+				"x": 916,
+				"y": 157,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 460,
+				"name": "Yokohama",
+				"country": "Japan",
+				"x": 915,
+				"y": 159,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 461,
+				"name": "Osaka",
+				"country": "Japan",
+				"x": 905,
+				"y": 161,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 462,
+				"name": "Nagoya",
+				"country": "Japan",
+				"x": 905,
+				"y": 161,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 463,
+				"name": "Sapporo",
+				"country": "Japan",
+				"x": 907,
+				"y": 131,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 464,
+				"name": "Kyoto",
+				"country": "Japan",
+				"x": 905,
+				"y": 159,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 465,
+				"name": "Fukuoka",
+				"country": "Japan",
+				"x": 892,
+				"y": 165,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 466,
+				"name": "Sendai",
+				"country": "Japan",
+				"x": 915,
+				"y": 148,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 467,
+				"name": "Niigata",
+				"country": "Japan",
+				"x": 911,
+				"y": 150,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 468,
+				"name": "Hiroshima",
+				"country": "Japan",
+				"x": 897,
+				"y": 162,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 469,
+				"name": "Kumamoto",
+				"country": "Japan",
+				"x": 895,
+				"y": 169,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 470,
+				"name": "Aomori",
+				"country": "Japan",
+				"x": 910,
+				"y": 139,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 471,
+				"name": "Kochi",
+				"country": "Japan",
+				"x": 901,
+				"y": 165,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 472,
+				"name": "Naha",
+				"country": "Japan",
+				"x": 893,
+				"y": 189,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 82,
+		"name": "Jordan",
+		"color": "#f231a7",
+		"flag": "jo",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 473,
+				"name": "Amman",
+				"country": "Jordan",
+				"x": 622,
+				"y": 170,
+				"cityType": 8,
+				"income": 36,
+				"neighbours": []
+			},
+			{
+				"id": 474,
+				"name": "Ruwayshid",
+				"country": "Jordan",
+				"x": 626,
+				"y": 170,
+				"cityType": 2,
+				"income": 25,
+				"neighbours": []
+			},
+			{
+				"id": 475,
+				"name": "Maan",
+				"country": "Jordan",
+				"x": 621,
+				"y": 177,
+				"cityType": 2,
+				"income": 25,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 83,
+		"name": "Kazakhstan",
+		"color": "#a2a25b",
+		"flag": "kz",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 476,
+				"name": "Astana",
+				"country": "Kazakhstan",
+				"x": 705,
+				"y": 105,
+				"cityType": 5,
+				"income": 25,
+				"neighbours": []
+			},
+			{
+				"id": 477,
+				"name": "Almaty",
+				"country": "Kazakhstan",
+				"x": 733,
+				"y": 130,
+				"cityType": 8,
+				"income": 101,
+				"neighbours": []
+			},
+			{
+				"id": 478,
+				"name": "Karagandy",
+				"country": "Kazakhstan",
+				"x": 709,
+				"y": 112,
+				"cityType": 5,
+				"income": 101,
+				"neighbours": []
+			},
+			{
+				"id": 479,
+				"name": "Shymkent",
+				"country": "Kazakhstan",
+				"x": 712,
+				"y": 131,
+				"cityType": 5,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 480,
+				"name": "Taraz",
+				"country": "Kazakhstan",
+				"x": 717,
+				"y": 130,
+				"cityType": 2,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 481,
+				"name": "pavlodar",
+				"country": "Kazakhstan",
+				"x": 717,
+				"y": 99,
+				"cityType": 2,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 482,
+				"name": "UstKamenogorsk",
+				"country": "Kazakhstan",
+				"x": 738,
+				"y": 109,
+				"cityType": 2,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 483,
+				"name": "Aktau",
+				"country": "Kazakhstan",
+				"x": 656,
+				"y": 130,
+				"cityType": 2,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 484,
+				"name": "Atyrau",
+				"country": "Kazakhstan",
+				"x": 658,
+				"y": 116,
+				"cityType": 2,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 485,
+				"name": "Aktobe",
+				"country": "Kazakhstan",
+				"x": 676,
+				"y": 110,
+				"cityType": 2,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 486,
+				"name": "Kyzylorda",
+				"country": "Kazakhstan",
+				"x": 695,
+				"y": 123,
+				"cityType": 2,
+				"income": 40,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 84,
+		"name": "Kenya",
+		"color": "#a35450",
+		"flag": "ke",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 487,
+				"name": "Nairobi",
+				"country": "Kenya",
+				"x": 627,
+				"y": 287,
+				"cityType": 9,
+				"income": 33,
+				"neighbours": []
+			},
+			{
+				"id": 488,
+				"name": "Mombasa",
+				"country": "Kenya",
+				"x": 639,
+				"y": 296,
+				"cityType": 8,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 489,
+				"name": "Nakuru",
+				"country": "Kenya",
+				"x": 627,
+				"y": 283,
+				"cityType": 6,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 490,
+				"name": "Kisumu",
+				"country": "Kenya",
+				"x": 621,
+				"y": 283,
+				"cityType": 6,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 491,
+				"name": "Dadaab",
+				"country": "Kenya",
+				"x": 638,
+				"y": 283,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 492,
+				"name": "Marsabit",
+				"country": "Kenya",
+				"x": 631,
+				"y": 273,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 493,
+				"name": "Kakuma",
+				"country": "Kenya",
+				"x": 622,
+				"y": 269,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 85,
+		"name": "Kuwait",
+		"color": "#3d7f2a",
+		"flag": "kw",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 494,
+				"name": "Kuwait City",
+				"country": "Kuwait",
+				"x": 656,
+				"y": 179,
+				"cityType": 8,
+				"income": 301,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 86,
+		"name": "Kyrghizstan",
+		"color": "#c6814f",
+		"flag": "kg",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 495,
+				"name": "Bishkek",
+				"country": "Kyrghizstan",
+				"x": 726,
+				"y": 134,
+				"cityType": 8,
+				"income": 25,
+				"neighbours": []
+			},
+			{
+				"id": 496,
+				"name": "Osh",
+				"country": "Kyrghizstan",
+				"x": 723,
+				"y": 141,
+				"cityType": 5,
+				"income": 10,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 87,
+		"name": "Laos",
+		"color": "#ed9121",
+		"flag": "la",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 497,
+				"name": "Vientiane",
+				"country": "Laos",
+				"x": 822,
+				"y": 216,
+				"cityType": 6,
+				"income": 21,
+				"neighbours": []
+			},
+			{
+				"id": 498,
+				"name": "Pakse",
+				"country": "Laos",
+				"x": 835,
+				"y": 228,
+				"cityType": 3,
+				"income": 21,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 88,
+		"name": "Latvia",
+		"color": "#801818",
+		"flag": "lv",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 499,
+				"name": "Riga",
+				"country": "Latvia",
+				"x": 579,
+				"y": 85,
+				"cityType": 7,
+				"income": 26,
+				"neighbours": []
+			},
+			{
+				"id": 500,
+				"name": "Daugavpils",
+				"country": "Latvia",
+				"x": 588,
+				"y": 87,
+				"cityType": 1,
+				"income": 26,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 89,
+		"name": "Lebannon",
+		"color": "#66023c",
+		"flag": "lb",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 501,
+				"name": "Beirut",
+				"country": "Lebannon",
+				"x": 620,
+				"y": 165,
+				"cityType": 7,
+				"income": 45,
+				"neighbours": []
+			},
+			{
+				"id": 502,
+				"name": "Tripoli",
+				"country": "Lebannon",
+				"x": 621,
+				"y": 162,
+				"cityType": 7,
+				"income": 40,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 90,
+		"name": "Lesotho",
+		"color": "#518a88",
+		"flag": "ls",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 503,
+				"name": "maseru",
+				"country": "Lesotho",
+				"x": 598,
+				"y": 385,
+				"cityType": 2,
+				"income": 9,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 91,
+		"name": "Liberia",
+		"color": "#f79e00",
+		"flag": "lr",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 504,
+				"name": "Monrovia",
+				"country": "Liberia",
+				"x": 485,
+				"y": 260,
+				"cityType": 9,
+				"income": 8,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 92,
+		"name": "Libya",
+		"color": "#75507b",
+		"flag": "ly",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 505,
+				"name": "Tripoli",
+				"country": "Libya",
+				"x": 554,
+				"y": 168,
+				"cityType": 8,
+				"income": 35,
+				"neighbours": []
+			},
+			{
+				"id": 506,
+				"name": "Benghazi",
+				"country": "Libya",
+				"x": 575,
+				"y": 171,
+				"cityType": 5,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 507,
+				"name": "Misratah",
+				"country": "Libya",
+				"x": 562,
+				"y": 171,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 508,
+				"name": "Sirte",
+				"country": "Libya",
+				"x": 567,
+				"y": 174,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 509,
+				"name": "Tobruk",
+				"country": "Libya",
+				"x": 586,
+				"y": 171,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 510,
+				"name": "Sabha",
+				"country": "Libya",
+				"x": 557,
+				"y": 190,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 511,
+				"name": "Al jawf",
+				"country": "Libya",
+				"x": 579,
+				"y": 194,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 93,
+		"name": "Lithuania",
+		"color": "#9c5a3c",
+		"flag": "lt",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 512,
+				"name": "Vilinus",
+				"country": "Lithuania",
+				"x": 585,
+				"y": 93,
+				"cityType": 4,
+				"income": 45,
+				"neighbours": []
+			},
+			{
+				"id": 513,
+				"name": "Klaipeda",
+				"country": "Lithuania",
+				"x": 575,
+				"y": 89,
+				"cityType": 1,
+				"income": 40,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 94,
+		"name": "Luxembourg",
+		"color": "#e9d66b",
+		"flag": "lu",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 514,
+				"name": "Luxembourg",
+				"country": "Luxembourg",
+				"x": 536,
+				"y": 109,
+				"cityType": 4,
+				"income": 38,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 95,
+		"name": "Macedonia",
+		"color": "#40e0d0",
+		"flag": "mk",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 515,
+				"name": "Skopje",
+				"country": "Macedonia",
+				"x": 578,
+				"y": 137,
+				"cityType": 4,
+				"income": 30,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 96,
+		"name": "Mdagascar",
+		"color": "#ba7086",
+		"flag": "mg",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 516,
+				"name": "Tananarive",
+				"country": "Mdagascar",
+				"x": 556,
+				"y": 348,
+				"cityType": 8,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 517,
+				"name": "Toamasina",
+				"country": "Mdagascar",
+				"x": 663,
+				"y": 343,
+				"cityType": 5,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 518,
+				"name": "Antsirabe",
+				"country": "Mdagascar",
+				"x": 653,
+				"y": 353,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 519,
+				"name": "Fianarantsoa",
+				"country": "Mdagascar",
+				"x": 653,
+				"y": 360,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 520,
+				"name": "Mahajanga",
+				"country": "Mdagascar",
+				"x": 658,
+				"y": 335,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 521,
+				"name": "Toliara",
+				"country": "Mdagascar",
+				"x": 647,
+				"y": 368,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 97,
+		"name": "Malawi",
+		"color": "#ff0000",
+		"flag": "mw",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 522,
+				"name": "Lilongwe",
+				"country": "Malawi",
+				"x": 618,
+				"y": 328,
+				"cityType": 6,
+				"income": 11,
+				"neighbours": []
+			},
+			{
+				"id": 523,
+				"name": "Blantyre",
+				"country": "Malawi",
+				"x": 621,
+				"y": 335,
+				"cityType": 3,
+				"income": 11,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 98,
+		"name": "Malaysia",
+		"color": "#a89854",
+		"flag": "my",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 524,
+				"name": "Kuala Lumur",
+				"country": "Malaysia",
+				"x": 824,
+				"y": 271,
+				"cityType": 9,
+				"income": 263,
+				"neighbours": []
+			},
+			{
+				"id": 525,
+				"name": "Kota Bharu",
+				"country": "Malaysia",
+				"x": 826,
+				"y": 261,
+				"cityType": 9,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 526,
+				"name": "Johor Bahru",
+				"country": "Malaysia",
+				"x": 830,
+				"y": 276,
+				"cityType": 9,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 527,
+				"name": "Ipoh",
+				"country": "Malaysia",
+				"x": 820,
+				"y": 264,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 528,
+				"name": "Kuching",
+				"country": "Malaysia",
+				"x": 852,
+				"y": 276,
+				"cityType": 6,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 529,
+				"name": "Bintulu",
+				"country": "Malaysia",
+				"x": 859,
+				"y": 271,
+				"cityType": 6,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 530,
+				"name": "Sandakan",
+				"country": "Malaysia",
+				"x": 71,
+				"y": 262,
+				"cityType": 6,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 99,
+		"name": "Mali",
+		"color": "#8886ac",
+		"flag": "ml",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 531,
+				"name": "Bamako",
+				"country": "Mali",
+				"x": 490,
+				"y": 238,
+				"cityType": 8,
+				"income": 12,
+				"neighbours": []
+			},
+			{
+				"id": 532,
+				"name": "Sikasso",
+				"country": "Mali",
+				"x": 496,
+				"y": 241,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 533,
+				"name": "Mopti",
+				"country": "Mali",
+				"x": 503,
+				"y": 232,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 534,
+				"name": "Gao",
+				"country": "Mali",
+				"x": 520,
+				"y": 224,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 535,
+				"name": "Kayes",
+				"country": "Mali",
+				"x": 484,
+				"y": 233,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 536,
+				"name": "TOmbouctou",
+				"country": "Mali",
+				"x": 502,
+				"y": 223,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 537,
+				"name": "Taoudenni",
+				"country": "Mali",
+				"x": 505,
+				"y": 206,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 100,
+		"name": "Malta",
+		"color": "#cc0033",
+		"flag": "mt",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 538,
+				"name": "Valletta",
+				"country": "Malta",
+				"x": 559,
+				"y": 157,
+				"cityType": 4,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 101,
+		"name": "Mauritania",
+		"color": "#725934",
+		"flag": "mr",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 539,
+				"name": "Nouakchott",
+				"country": "Mauritania",
+				"x": 469,
+				"y": 220,
+				"cityType": 5,
+				"income": 7,
+				"neighbours": []
+			},
+			{
+				"id": 540,
+				"name": "Nouadhibou",
+				"country": "Mauritania",
+				"x": 468,
+				"y": 211,
+				"cityType": 2,
+				"income": 4,
+				"neighbours": []
+			},
+			{
+				"id": 541,
+				"name": "Nema",
+				"country": "Mauritania",
+				"x": 495,
+				"y": 223,
+				"cityType": 2,
+				"income": 4,
+				"neighbours": []
+			},
+			{
+				"id": 542,
+				"name": "Kaeidi",
+				"country": "Mauritania",
+				"x": 479,
+				"y": 225,
+				"cityType": 2,
+				"income": 4,
+				"neighbours": []
+			},
+			{
+				"id": 543,
+				"name": "Zouerate",
+				"country": "Mauritania",
+				"x": 483,
+				"y": 202,
+				"cityType": 2,
+				"income": 4,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 102,
+		"name": "Mauritius",
+		"color": "#041233",
+		"flag": "mu",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 544,
+				"name": "Port Louis",
+				"country": "Mauritius",
+				"x": 388,
+				"y": 352,
+				"cityType": 3,
+				"income": 26,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 103,
+		"name": "Mexico",
+		"color": "#ff005b",
+		"flag": "mx",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 545,
+				"name": "Mexico",
+				"country": "Mexico",
+				"x": 221,
+				"y": 215,
+				"cityType": 11,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 546,
+				"name": "Guadalajara",
+				"country": "Mexico",
+				"x": 209,
+				"y": 210,
+				"cityType": 7,
+				"income": 160,
+				"neighbours": []
+			},
+			{
+				"id": 547,
+				"name": "Puebla",
+				"country": "Mexico",
+				"x": 224,
+				"y": 216,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 548,
+				"name": "Ciudad Juarez",
+				"country": "Mexico",
+				"x": 207,
+				"y": 173,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 549,
+				"name": "Tijuana",
+				"country": "Mexico",
+				"x": 180,
+				"y": 171,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 550,
+				"name": "Ciudad Victoria",
+				"country": "Mexico",
+				"x": 224,
+				"y": 199,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 551,
+				"name": "Monterrey",
+				"country": "Mexico",
+				"x": 221,
+				"y": 193,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 552,
+				"name": "Leon",
+				"country": "Mexico",
+				"x": 215,
+				"y": 206,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 553,
+				"name": "Chihuahua",
+				"country": "Mexico",
+				"x": 208,
+				"y": 184,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 554,
+				"name": "Merida",
+				"country": "Mexico",
+				"x": 249,
+				"y": 209,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 555,
+				"name": "Culiacan",
+				"country": "Mexico",
+				"x": 198,
+				"y": 196,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 556,
+				"name": "Tuxtla Gutierrez",
+				"country": "Mexico",
+				"x": 237,
+				"y": 225,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 557,
+				"name": "Oaxaca",
+				"country": "Mexico",
+				"x": 225,
+				"y": 223,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 558,
+				"name": "Acapulco",
+				"country": "Mexico",
+				"x": 214,
+				"y": 219,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 559,
+				"name": "Tampico",
+				"country": "Mexico",
+				"x": 225,
+				"y": 204,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 560,
+				"name": "Hermosillo",
+				"country": "Mexico",
+				"x": 195,
+				"y": 185,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 561,
+				"name": "Torreon",
+				"country": "Mexico",
+				"x": 210,
+				"y": 192,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 562,
+				"name": "La Paz",
+				"country": "Mexico",
+				"x": 188,
+				"y": 194,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 104,
+		"name": "Moldova",
+		"color": "#c6c600",
+		"flag": "md",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 563,
+				"name": "Chisinau",
+				"country": "Moldova",
+				"x": 596,
+				"y": 118,
+				"cityType": 7,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 105,
+		"name": "Mongolia",
+		"color": "#9a7a46",
+		"flag": "mn",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 564,
+				"name": "Ulanbator",
+				"country": "Mongolia",
+				"x": 808,
+				"y": 117,
+				"cityType": 7,
+				"income": 15,
+				"neighbours": []
+			},
+			{
+				"id": 565,
+				"name": "Erdenet",
+				"country": "Mongolia",
+				"x": 794,
+				"y": 111,
+				"cityType": 1,
+				"income": 6,
+				"neighbours": []
+			},
+			{
+				"id": 566,
+				"name": "Choybaison",
+				"country": "Mongolia",
+				"x": 823,
+				"y": 114,
+				"cityType": 1,
+				"income": 6,
+				"neighbours": []
+			},
+			{
+				"id": 567,
+				"name": "Dalandazadgad",
+				"country": "Mongolia",
+				"x": 794,
+				"y": 128,
+				"cityType": 1,
+				"income": 6,
+				"neighbours": []
+			},
+			{
+				"id": 568,
+				"name": "Ulaangom",
+				"country": "Mongolia",
+				"x": 762,
+				"y": 110,
+				"cityType": 1,
+				"income": 6,
+				"neighbours": []
+			},
+			{
+				"id": 569,
+				"name": "Darhan",
+				"country": "Mongolia",
+				"x": 799,
+				"y": 108,
+				"cityType": 1,
+				"income": 6,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 106,
+		"name": "montenegro",
+		"color": "#764891",
+		"flag": "me",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 570,
+				"name": "Podgorica",
+				"country": "montenegro",
+				"x": 571,
+				"y": 133,
+				"cityType": 1,
+				"income": 13,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 107,
+		"name": "morocco",
+		"color": "#5f0000",
+		"flag": "ma",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 571,
+				"name": "Rabat",
+				"country": "morocco",
+				"x": 498,
+				"y": 164,
+				"cityType": 7,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 572,
+				"name": "Casablanca",
+				"country": "morocco",
+				"x": 492,
+				"y": 167,
+				"cityType": 7,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 573,
+				"name": "Fes",
+				"country": "morocco",
+				"x": 503,
+				"y": 166,
+				"cityType": 4,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 574,
+				"name": "Marrakech",
+				"country": "morocco",
+				"x": 494,
+				"y": 174,
+				"cityType": 4,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 575,
+				"name": "Agadir",
+				"country": "morocco",
+				"x": 488,
+				"y": 179,
+				"cityType": 4,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 576,
+				"name": "Tangier",
+				"country": "morocco",
+				"x": 501,
+				"y": 158,
+				"cityType": 4,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 577,
+				"name": "Oujda",
+				"country": "morocco",
+				"x": 511,
+				"y": 162,
+				"cityType": 4,
+				"income": 40,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 108,
+		"name": "Mozambique",
+		"color": "#ffdf00",
+		"flag": "mz",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 578,
+				"name": "Maputo",
+				"country": "Mozambique",
+				"x": 612,
+				"y": 370,
+				"cityType": 8,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 579,
+				"name": "Beira",
+				"country": "Mozambique",
+				"x": 618,
+				"y": 350,
+				"cityType": 4,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 580,
+				"name": "Nampula",
+				"country": "Mozambique",
+				"x": 632,
+				"y": 337,
+				"cityType": 4,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 581,
+				"name": "Tete",
+				"country": "Mozambique",
+				"x": 616,
+				"y": 337,
+				"cityType": 1,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 582,
+				"name": "Pemba",
+				"country": "Mozambique",
+				"x": 631,
+				"y": 348,
+				"cityType": 1,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 583,
+				"name": "inhambane",
+				"country": "Mozambique",
+				"x": 620,
+				"y": 363,
+				"cityType": 1,
+				"income": 5,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 109,
+		"name": "Nambia",
+		"color": "#ab9273",
+		"flag": "na",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 584,
+				"name": "Windhoek",
+				"country": "Nambia",
+				"x": 565,
+				"y": 359,
+				"cityType": 5,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 585,
+				"name": "Rundu",
+				"country": "Nambia",
+				"x": 575,
+				"y": 346,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 586,
+				"name": "Walvis Bay",
+				"country": "Nambia",
+				"x": 558,
+				"y": 357,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 587,
+				"name": "Luderitz",
+				"country": "Nambia",
+				"x": 563,
+				"y": 375,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 110,
+		"name": "Nepal",
+		"color": "#ffe293",
+		"flag": "np",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 588,
+				"name": "Kathmandu",
+				"country": "Nepal",
+				"x": 766,
+				"y": 185,
+				"cityType": 7,
+				"income": 35,
+				"neighbours": []
+			},
+			{
+				"id": 589,
+				"name": "Dharan Bazaar",
+				"country": "Nepal",
+				"x": 773,
+				"y": 188,
+				"cityType": 1,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 590,
+				"name": "Nepalganj",
+				"country": "Nepal",
+				"x": 755,
+				"y": 181,
+				"cityType": 1,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 111,
+		"name": "Netherland",
+		"color": "#ff9933",
+		"flag": "nl",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 591,
+				"name": "Amsterdam",
+				"country": "Netherland",
+				"x": 533,
+				"y": 100,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 592,
+				"name": "Rotterdam",
+				"country": "Netherland",
+				"x": 531,
+				"y": 102,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 593,
+				"name": "Groningen",
+				"country": "Netherland",
+				"x": 537,
+				"y": 98,
+				"cityType": 4,
+				"income": 150,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 112,
+		"name": "Nicaragua",
+		"color": "#3b5b79",
+		"flag": "ni",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 594,
+				"name": "Managua",
+				"country": "Nicaragua",
+				"x": 557,
+				"y": 239,
+				"cityType": 9,
+				"income": 23,
+				"neighbours": []
+			},
+			{
+				"id": 595,
+				"name": "Rosita",
+				"country": "Nicaragua",
+				"x": 262,
+				"y": 235,
+				"cityType": 3,
+				"income": 10,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 113,
+		"name": "Niger",
+		"color": "#001a00",
+		"flag": "ne",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 596,
+				"name": "Niamey",
+				"country": "Niger",
+				"x": 521,
+				"y": 234,
+				"cityType": 8,
+				"income": 6,
+				"neighbours": []
+			},
+			{
+				"id": 597,
+				"name": "Zinder",
+				"country": "Niger",
+				"x": 548,
+				"y": 231,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 598,
+				"name": "Maradi",
+				"country": "Niger",
+				"x": 539,
+				"y": 231,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 599,
+				"name": "Agadez",
+				"country": "Niger",
+				"x": 534,
+				"y": 221,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 600,
+				"name": "Madama",
+				"country": "Niger",
+				"x": 555,
+				"y": 506,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 601,
+				"name": "Tahoua",
+				"country": "Niger",
+				"x": 529,
+				"y": 229,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 114,
+		"name": "New Zealand",
+		"color": "#00b7ef",
+		"flag": "nz",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 602,
+				"name": "Wellington",
+				"country": "New Zealand",
+				"x": 1006,
+				"y": 424,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 603,
+				"name": "Auckland",
+				"country": "New Zealand",
+				"x": 1012,
+				"y": 410,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 604,
+				"name": "Christchurch",
+				"country": "New Zealand",
+				"x": 992,
+				"y": 432,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 605,
+				"name": "Dunedin",
+				"country": "New Zealand",
+				"x": 976,
+				"y": 441,
+				"cityType": 1,
+				"income": 25,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 115,
+		"name": "Nigeria",
+		"color": "#efce49",
+		"flag": "ng",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 606,
+				"name": "Abuja",
+				"country": "Nigeria",
+				"x": 538,
+				"y": 252,
+				"cityType": 4,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 607,
+				"name": "Lagos",
+				"country": "Nigeria",
+				"x": 526,
+				"y": 258,
+				"cityType": 10,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 608,
+				"name": "Kano",
+				"country": "Nigeria",
+				"x": 543,
+				"y": 239,
+				"cityType": 8,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 609,
+				"name": "Ibadan",
+				"country": "Nigeria",
+				"x": 529,
+				"y": 254,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 610,
+				"name": "Kaduna",
+				"country": "Nigeria",
+				"x": 540,
+				"y": 243,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 611,
+				"name": "Port Harcourt",
+				"country": "Nigeria",
+				"x": 537,
+				"y": 264,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 612,
+				"name": "Benin City",
+				"country": "Nigeria",
+				"x": 534,
+				"y": 258,
+				"cityType": 7,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 613,
+				"name": "Maiduguri",
+				"country": "Nigeria",
+				"x": 554,
+				"y": 239,
+				"cityType": 8,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 614,
+				"name": "Sokoto",
+				"country": "Nigeria",
+				"x": 531,
+				"y": 239,
+				"cityType": 5,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 615,
+				"name": "Yola",
+				"country": "Nigeria",
+				"x": 551,
+				"y": 248,
+				"cityType": 5,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 116,
+		"name": "Norway",
+		"color": "#759fa3",
+		"flag": "no",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 616,
+				"name": "Oslo",
+				"country": "Norway",
+				"x": 548,
+				"y": 75,
+				"cityType": 7,
+				"income": 123,
+				"neighbours": []
+			},
+			{
+				"id": 617,
+				"name": "Bergen",
+				"country": "Norway",
+				"x": 536,
+				"y": 71,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 618,
+				"name": "Trondheim",
+				"country": "Norway",
+				"x": 550,
+				"y": 63,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 619,
+				"name": "Stavanger",
+				"country": "Norway",
+				"x": 538,
+				"y": 77,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 620,
+				"name": "Tromso",
+				"country": "Norway",
+				"x": 564,
+				"y": 47,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 117,
+		"name": "Oman",
+		"color": "#df73ff",
+		"flag": "om",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 621,
+				"name": "Muscat",
+				"country": "Oman",
+				"x": 690,
+				"y": 202,
+				"cityType": 8,
+				"income": 53,
+				"neighbours": []
+			},
+			{
+				"id": 622,
+				"name": "Salalah",
+				"country": "Oman",
+				"x": 678,
+				"y": 221,
+				"cityType": 2,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 623,
+				"name": "Sohar",
+				"country": "Oman",
+				"x": 684,
+				"y": 197,
+				"cityType": 2,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 624,
+				"name": "Haima",
+				"country": "Oman",
+				"x": 683,
+				"y": 213,
+				"cityType": 2,
+				"income": 40,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 118,
+		"name": "Pakistan",
+		"color": "#490075",
+		"flag": "pk",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 625,
+				"name": "Islamabad",
+				"country": "Pakistan",
+				"x": 728,
+				"y": 164,
+				"cityType": 11,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 626,
+				"name": "Karachi",
+				"country": "Pakistan",
+				"x": 714,
+				"y": 195,
+				"cityType": 11,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 627,
+				"name": "Lahore",
+				"country": "Pakistan",
+				"x": 731,
+				"y": 170,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 628,
+				"name": "Faisalabad",
+				"country": "Pakistan",
+				"x": 726,
+				"y": 171,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 629,
+				"name": "Multaan",
+				"country": "Pakistan",
+				"x": 721,
+				"y": 177,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 630,
+				"name": "Hyderabad",
+				"country": "Pakistan",
+				"x": 719,
+				"y": 194,
+				"cityType": 8,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 631,
+				"name": "peshawar",
+				"country": "Pakistan",
+				"x": 723,
+				"y": 159,
+				"cityType": 8,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 632,
+				"name": "Quetta",
+				"country": "Pakistan",
+				"x": 11,
+				"y": 176,
+				"cityType": 5,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 633,
+				"name": "Banhawalpur",
+				"country": "Pakistan",
+				"x": 725,
+				"y": 181,
+				"cityType": 5,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 634,
+				"name": "Sukkur",
+				"country": "Pakistan",
+				"x": 716,
+				"y": 185,
+				"cityType": 5,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 635,
+				"name": "Gawdar",
+				"country": "Pakistan",
+				"x": 701,
+				"y": 193,
+				"cityType": 5,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 636,
+				"name": "Nok",
+				"country": "Pakistan",
+				"x": 699,
+				"y": 181,
+				"cityType": 5,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 119,
+		"name": "Panama",
+		"color": "#b97f6a",
+		"flag": "pa",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 637,
+				"name": "Panama",
+				"country": "Panama",
+				"x": 277,
+				"y": 250,
+				"cityType": 5,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 638,
+				"name": "David",
+				"country": "Panama",
+				"x": 267,
+				"y": 252,
+				"cityType": 1,
+				"income": 45,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 120,
+		"name": "Papua NG",
+		"color": "#e48400",
+		"flag": "pg",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 639,
+				"name": "Port Moresby",
+				"country": "Papua NG",
+				"x": 960,
+				"y": 314,
+				"cityType": 6,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 640,
+				"name": "Wewek",
+				"country": "Papua NG",
+				"x": 948,
+				"y": 295,
+				"cityType": 3,
+				"income": 10,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 121,
+		"name": "Paraguay",
+		"color": "#8db600",
+		"flag": "py",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 641,
+				"name": "Asuncion",
+				"country": "Paraguay",
+				"x": 348,
+				"y": 370,
+				"cityType": 7,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 642,
+				"name": "Ciudad del Este",
+				"country": "Paraguay",
+				"x": 355,
+				"y": 367,
+				"cityType": 4,
+				"income": 15,
+				"neighbours": []
+			},
+			{
+				"id": 643,
+				"name": "Horqueta",
+				"country": "Paraguay",
+				"x": 343,
+				"y": 362,
+				"cityType": 1,
+				"income": 15,
+				"neighbours": []
+			},
+			{
+				"id": 644,
+				"name": "Filadelfia",
+				"country": "Paraguay",
+				"x": 336,
+				"y": 357,
+				"cityType": 1,
+				"income": 15,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 122,
+		"name": "Peru",
+		"color": "#cc0066",
+		"flag": "pe",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 645,
+				"name": "Lima",
+				"country": "Peru",
+				"x": 284,
+				"y": 232,
+				"cityType": 12,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 646,
+				"name": "Arequipa",
+				"country": "Peru",
+				"x": 303,
+				"y": 340,
+				"cityType": 7,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 647,
+				"name": "Trujillo",
+				"country": "Peru",
+				"x": 277,
+				"y": 309,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 648,
+				"name": "Chiclayo",
+				"country": "Peru",
+				"x": 272,
+				"y": 301,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 649,
+				"name": "Lquitos",
+				"country": "Peru",
+				"x": 290,
+				"y": 294,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 650,
+				"name": "Huanuco",
+				"country": "Peru",
+				"x": 290,
+				"y": 317,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 651,
+				"name": "Trapoto",
+				"country": "Peru",
+				"x": 284,
+				"y": 301,
+				"cityType": 4,
+				"income": 25,
+				"neighbours": []
+			},
+			{
+				"id": 652,
+				"name": "Cuzco",
+				"country": "Peru",
+				"x": 298,
+				"y": 325,
+				"cityType": 4,
+				"income": 25,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 123,
+		"name": "philippines",
+		"color": "#69bf94",
+		"flag": "ph",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 653,
+				"name": "manila",
+				"country": "philippines",
+				"x": 879,
+				"y": 230,
+				"cityType": 12,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 654,
+				"name": "Davao",
+				"country": "philippines",
+				"x": 896,
+				"y": 257,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 655,
+				"name": "Cebu",
+				"country": "philippines",
+				"x": 889,
+				"y": 246,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 656,
+				"name": "General Santos",
+				"country": "philippines",
+				"x": 894,
+				"y": 260,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 657,
+				"name": "Tuguegrao",
+				"country": "philippines",
+				"x": 880,
+				"y": 220,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 658,
+				"name": "Cagayan",
+				"country": "philippines",
+				"x": 894,
+				"y": 251,
+				"cityType": 6,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 659,
+				"name": "iloilo",
+				"country": "philippines",
+				"x": 886,
+				"y": 242,
+				"cityType": 6,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 660,
+				"name": "Naga",
+				"country": "philippines",
+				"x": 888,
+				"y": 235,
+				"cityType": 6,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 661,
+				"name": "Puerto Princesa",
+				"country": "philippines",
+				"x": 874,
+				"y": 249,
+				"cityType": 6,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 124,
+		"name": "Poland",
+		"color": "#5f2323",
+		"flag": "pl",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 662,
+				"name": "Warsow",
+				"country": "Poland",
+				"x": 577,
+				"y": 101,
+				"cityType": 7,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 663,
+				"name": "Lodz",
+				"country": "Poland",
+				"x": 572,
+				"y": 103,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 664,
+				"name": "Krakow",
+				"country": "Poland",
+				"x": 574,
+				"y": 109,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 665,
+				"name": "Wroclaw",
+				"country": "Poland",
+				"x": 564,
+				"y": 105,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 666,
+				"name": "Poznan",
+				"country": "Poland",
+				"x": 562,
+				"y": 101,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 667,
+				"name": "Gdansk",
+				"country": "Poland",
+				"x": 569,
+				"y": 94,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 668,
+				"name": "Szczecin",
+				"country": "Poland",
+				"x": 559,
+				"y": 96,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 669,
+				"name": "Bialystok",
+				"country": "Poland",
+				"x": 579,
+				"y": 98,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 125,
+		"name": "Portugal",
+		"color": "#007c45",
+		"flag": "pt",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 670,
+				"name": "Lisbon",
+				"country": "Portugal",
+				"x": 493,
+				"y": 146,
+				"cityType": 7,
+				"income": 72,
+				"neighbours": []
+			},
+			{
+				"id": 671,
+				"name": "Porto",
+				"country": "Portugal",
+				"x": 495,
+				"y": 138,
+				"cityType": 7,
+				"income": 80,
+				"neighbours": []
+			},
+			{
+				"id": 672,
+				"name": "Faro",
+				"country": "Portugal",
+				"x": 495,
+				"y": 152,
+				"cityType": 4,
+				"income": 80,
+				"neighbours": []
+			},
+			{
+				"id": 673,
+				"name": "Coimbra",
+				"country": "Portugal",
+				"x": 495,
+				"y": 142,
+				"cityType": 4,
+				"income": 80,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 126,
+		"name": "Puerto Rico",
+		"color": "#508686",
+		"flag": "pr",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 674,
+				"name": "San juan",
+				"country": "Puerto Rico",
+				"x": 318,
+				"y": 218,
+				"cityType": 4,
+				"income": 80,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 127,
+		"name": "Qatar",
+		"color": "#050708",
+		"flag": "qa",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 675,
+				"name": "Doha",
+				"country": "Qatar",
+				"x": 668,
+				"y": 194,
+				"cityType": 5,
+				"income": 335,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 128,
+		"name": "Romania",
+		"color": "#a81507",
+		"flag": "ro",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 676,
+				"name": "Bucharest",
+				"country": "Romania",
+				"x": 590,
+				"y": 127,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 677,
+				"name": "Lasi",
+				"country": "Romania",
+				"x": 592,
+				"y": 118,
+				"cityType": 4,
+				"income": 70,
+				"neighbours": []
+			},
+			{
+				"id": 678,
+				"name": "Cluj Napoca",
+				"country": "Romania",
+				"x": 585,
+				"y": 119,
+				"cityType": 4,
+				"income": 70,
+				"neighbours": []
+			},
+			{
+				"id": 679,
+				"name": "Timisioara",
+				"country": "Romania",
+				"x": 577,
+				"y": 123,
+				"cityType": 4,
+				"income": 70,
+				"neighbours": []
+			},
+			{
+				"id": 680,
+				"name": "Craiova",
+				"country": "Romania",
+				"x": 583,
+				"y": 127,
+				"cityType": 4,
+				"income": 70,
+				"neighbours": []
+			},
+			{
+				"id": 681,
+				"name": "Constanta",
+				"country": "Romania",
+				"x": 597,
+				"y": 127,
+				"cityType": 4,
+				"income": 70,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 129,
+		"name": "Russia",
+		"color": "#3c5d48",
+		"flag": "ru",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 682,
+				"name": "Moscow",
+				"country": "Russia",
+				"x": 615,
+				"y": 87,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 683,
+				"name": "Saint Petersburg",
+				"country": "Russia",
+				"x": 595,
+				"y": 76,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 684,
+				"name": "Novosibrisk",
+				"country": "Russia",
+				"x": 737,
+				"y": 92,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 685,
+				"name": "Yekaterinburg",
+				"country": "Russia",
+				"x": 676,
+				"y": 87,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 686,
+				"name": "Novgorod",
+				"country": "Russia",
+				"x": 633,
+				"y": 85,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 687,
+				"name": "Samara",
+				"country": "Russia",
+				"x": 651,
+				"y": 98,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 688,
+				"name": "Omsk",
+				"country": "Russia",
+				"x": 707,
+				"y": 90,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 689,
+				"name": "Kazan",
+				"country": "Russia",
+				"x": 645,
+				"y": 85,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 690,
+				"name": "Rostov",
+				"country": "Russia",
+				"x": 625,
+				"y": 118,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 691,
+				"name": "Chelyabinsk",
+				"country": "Russia",
+				"x": 679,
+				"y": 91,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 692,
+				"name": "Ufa",
+				"country": "Russia",
+				"x": 665,
+				"y": 94,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 693,
+				"name": "Volgograd",
+				"country": "Russia",
+				"x": 637,
+				"y": 111,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 694,
+				"name": "Perm",
+				"country": "Russia",
+				"x": 660,
+				"y": 75,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 695,
+				"name": "Krasnoyarsk",
+				"country": "Russia",
+				"x": 766,
+				"y": 88,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 696,
+				"name": "Saratov",
+				"country": "Russia",
+				"x": 640,
+				"y": 102,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 697,
+				"name": "Voronezh",
+				"country": "Russia",
+				"x": 617,
+				"y": 103,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 698,
+				"name": "Krasnodar",
+				"country": "Russia",
+				"x": 623,
+				"y": 125,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 699,
+				"name": "Ulyanovsk",
+				"country": "Russia",
+				"x": 644,
+				"y": 93,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 699,
+				"name": "Izhevsk",
+				"country": "Russia",
+				"x": 649,
+				"y": 84,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 700,
+				"name": "Yaroslavl",
+				"country": "Russia",
+				"x": 625,
+				"y": 79,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 701,
+				"name": "Barnul",
+				"country": "Russia",
+				"x": 740,
+				"y": 101,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 702,
+				"name": "Vladivostock",
+				"country": "Russia",
+				"x": 884,
+				"y": 126,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 703,
+				"name": "Irkutsk",
+				"country": "Russia",
+				"x": 789,
+				"y": 100,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 704,
+				"name": "Khabarovsk",
+				"country": "Russia",
+				"x": 879,
+				"y": 111,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 705,
+				"name": "Orenburg",
+				"country": "Russia",
+				"x": 661,
+				"y": 103,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 706,
+				"name": "Rayazan",
+				"country": "Russia",
+				"x": 626,
+				"y": 88,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 707,
+				"name": "Blagoveshchensk",
+				"country": "Russia",
+				"x": 856,
+				"y": 105,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 708,
+				"name": "Makhachkala",
+				"country": "Russia",
+				"x": 646,
+				"y": 128,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 709,
+				"name": "Sevastopol",
+				"country": "Russia",
+				"x": 612,
+				"y": 125,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 710,
+				"name": "Murmansk",
+				"country": "Russia",
+				"x": 594,
+				"y": 53,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 711,
+				"name": "Arkha,gelsk",
+				"country": "Russia",
+				"x": 616,
+				"y": 63,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 712,
+				"name": "Smolensk",
+				"country": "Russia",
+				"x": 601,
+				"y": 90,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 713,
+				"name": "Andyre",
+				"country": "Russia",
+				"x": 932,
+				"y": 62,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 714,
+				"name": "Petropavlovsk",
+				"country": "Russia",
+				"x": 928,
+				"y": 102,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 715,
+				"name": "Yakutsk",
+				"country": "Russia",
+				"x": 837,
+				"y": 69,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 716,
+				"name": "Chita",
+				"country": "Russia",
+				"x": 824,
+				"y": 102,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 717,
+				"name": "Sochi",
+				"country": "Russia",
+				"x": 627,
+				"y": 128,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 718,
+				"name": "Astrakhan",
+				"country": "Russia",
+				"x": 648,
+				"y": 120,
+				"cityType": 1,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 130,
+		"name": "Rwanda",
+		"color": "#5e7b8e",
+		"flag": "rw",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 719,
+				"name": "Kigali",
+				"country": "Rwanda",
+				"x": 606,
+				"y": 289,
+				"cityType": 9,
+				"income": 23,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 131,
+		"name": "Saudi Arabia",
+		"color": "#009900",
+		"flag": "sa",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 720,
+				"name": "Riyadh",
+				"country": "Saudi Arabia",
+				"x": 653,
+				"y": 195,
+				"cityType": 8,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 721,
+				"name": "Jedddah",
+				"country": "Saudi Arabia",
+				"x": 634,
+				"y": 208,
+				"cityType": 8,
+				"income": 210,
+				"neighbours": []
+			},
+			{
+				"id": 722,
+				"name": "Medina",
+				"country": "Saudi Arabia",
+				"x": 630,
+				"y": 192,
+				"cityType": 8,
+				"income": 160,
+				"neighbours": []
+			},
+			{
+				"id": 723,
+				"name": "Dammam",
+				"country": "Saudi Arabia",
+				"x": 662,
+				"y": 190,
+				"cityType": 8,
+				"income": 160,
+				"neighbours": []
+			},
+			{
+				"id": 724,
+				"name": "Tabuk",
+				"country": "Saudi Arabia",
+				"x": 623,
+				"y": 184,
+				"cityType": 5,
+				"income": 160,
+				"neighbours": []
+			},
+			{
+				"id": 725,
+				"name": "Buraydah",
+				"country": "Saudi Arabia",
+				"x": 648,
+				"y": 188,
+				"cityType": 5,
+				"income": 160,
+				"neighbours": []
+			},
+			{
+				"id": 726,
+				"name": "Abha",
+				"country": "Saudi Arabia",
+				"x": 644,
+				"y": 218,
+				"cityType": 2,
+				"income": 160,
+				"neighbours": []
+			},
+			{
+				"id": 727,
+				"name": "Al Jawf",
+				"country": "Saudi Arabia",
+				"x": 632,
+				"y": 174,
+				"cityType": 2,
+				"income": 160,
+				"neighbours": []
+			},
+			{
+				"id": 728,
+				"name": "Harad",
+				"country": "Saudi Arabia",
+				"x": 664,
+				"y": 201,
+				"cityType": 2,
+				"income": 160,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 132,
+		"name": "Senegal",
+		"color": "#3d2b1f",
+		"flag": "sn",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 729,
+				"name": "Dakar",
+				"country": "Senegal",
+				"x": 466,
+				"y": 230,
+				"cityType": 8,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 730,
+				"name": "Tambacounda",
+				"country": "Senegal",
+				"x": 476,
+				"y": 233,
+				"cityType": 5,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 133,
+		"name": "Serbia",
+		"color": "#2a2a5b",
+		"flag": "rs",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 731,
+				"name": "Belgrade",
+				"country": "Serbia",
+				"x": 574,
+				"y": 127,
+				"cityType": 7,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 732,
+				"name": "Nis",
+				"country": "Serbia",
+				"x": 578,
+				"y": 133,
+				"cityType": 4,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 733,
+				"name": "Novi Sad",
+				"country": "Serbia",
+				"x": 573,
+				"y": 124,
+				"cityType": 4,
+				"income": 30,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 134,
+		"name": "Seychelles",
+		"color": "#00ff00",
+		"flag": "sc",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 734,
+				"name": "Victoria",
+				"country": "Seychelles",
+				"x": 684,
+				"y": 298,
+				"cityType": 3,
+				"income": 5,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 135,
+		"name": "Sierra Leone",
+		"color": "#8b0000",
+		"flag": "sl",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 735,
+				"name": "Freetown",
+				"country": "Sierra Leone",
+				"x": 478,
+				"y": 252,
+				"cityType": 9,
+				"income": 15,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 136,
+		"name": "Singapore",
+		"color": "#002a2a",
+		"flag": "sg",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 736,
+				"name": "Singapore",
+				"country": "Singapore",
+				"x": 831,
+				"y": 278,
+				"cityType": 9,
+				"income": 488,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 137,
+		"name": "Slovakia",
+		"color": "#211138",
+		"flag": "sk",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 737,
+				"name": "Bratislava",
+				"country": "Slovakia",
+				"x": 567,
+				"y": 114,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 738,
+				"name": "Kosice",
+				"country": "Slovakia",
+				"x": 577,
+				"y": 112,
+				"cityType": 4,
+				"income": 70,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 138,
+		"name": "Slovenia",
+		"color": "#ff80ff",
+		"flag": "si",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 739,
+				"name": "Ljubijana",
+				"country": "Slovenia",
+				"x": 558,
+				"y": 121,
+				"cityType": 4,
+				"income": 70,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 139,
+		"name": "Somalia",
+		"color": "#51548e",
+		"flag": "so",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 740,
+				"name": "Mogadishu",
+				"country": "Somalia",
+				"x": 656,
+				"y": 270,
+				"cityType": 8,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 741,
+				"name": "Hargeysa",
+				"country": "Somalia",
+				"x": 652,
+				"y": 248,
+				"cityType": 5,
+				"income": 3,
+				"neighbours": []
+			},
+			{
+				"id": 742,
+				"name": "Kismaayo",
+				"country": "Somalia",
+				"x": 643,
+				"y": 281,
+				"cityType": 2,
+				"income": 3,
+				"neighbours": []
+			},
+			{
+				"id": 743,
+				"name": "Gardo",
+				"country": "Somalia",
+				"x": 664,
+				"y": 250,
+				"cityType": 2,
+				"income": 3,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 140,
+		"name": "South Africa",
+		"color": "#cd5700",
+		"flag": "za",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 744,
+				"name": "Pretoria",
+				"country": "South Africa",
+				"x": 560,
+				"y": 373,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 745,
+				"name": "Cape Town",
+				"country": "South Africa",
+				"x": 271,
+				"y": 401,
+				"cityType": 7,
+				"income": 90,
+				"neighbours": []
+			},
+			{
+				"id": 746,
+				"name": "Johannesburg",
+				"country": "South Africa",
+				"x": 599,
+				"y": 375,
+				"cityType": 7,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 747,
+				"name": "Port Elizabet",
+				"country": "South Africa",
+				"x": 592,
+				"y": 399,
+				"cityType": 7,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 748,
+				"name": "East London",
+				"country": "South Africa",
+				"x": 560,
+				"y": 393,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 749,
+				"name": "Bloemfontein",
+				"country": "South Africa",
+				"x": 593,
+				"y": 382,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 750,
+				"name": "Durban",
+				"country": "South Africa",
+				"x": 608,
+				"y": 383,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 751,
+				"name": "Musina",
+				"country": "South Africa",
+				"x": 605,
+				"y": 361,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 752,
+				"name": "Port Nolloth",
+				"country": "South Africa",
+				"x": 568,
+				"y": 386,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 753,
+				"name": "George",
+				"country": "South Africa",
+				"x": 581,
+				"y": 399,
+				"cityType": 4,
+				"income": 30,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 141,
+		"name": "South Korea",
+		"color": "#b9e983",
+		"flag": "kr",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 754,
+				"name": "Seoul",
+				"country": "South Korea",
+				"x": 877,
+				"y": 152,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 755,
+				"name": "Busan",
+				"country": "South Korea",
+				"x": 885,
+				"y": 158,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 756,
+				"name": "Daegu",
+				"country": "South Korea",
+				"x": 882,
+				"y": 155,
+				"cityType": 7,
+				"income": 360,
+				"neighbours": []
+			},
+			{
+				"id": 757,
+				"name": "Guangju",
+				"country": "South Korea",
+				"x": 880,
+				"y": 160,
+				"cityType": 7,
+				"income": 330,
+				"neighbours": []
+			},
+			{
+				"id": 758,
+				"name": "Jeju",
+				"country": "South Korea",
+				"x": 881,
+				"y": 165,
+				"cityType": 7,
+				"income": 330,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 142,
+		"name": "South Sudan",
+		"color": "#889f29",
+		"flag": "ss",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 759,
+				"name": "Juba",
+				"country": "South Sudan",
+				"x": 614,
+				"y": 263,
+				"cityType": 6,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 760,
+				"name": "Malakal",
+				"country": "South Sudan",
+				"x": 613,
+				"y": 249,
+				"cityType": 3,
+				"income": 6,
+				"neighbours": []
+			},
+			{
+				"id": 761,
+				"name": "Wua",
+				"country": "South Sudan",
+				"x": 599,
+				"y": 255,
+				"cityType": 3,
+				"income": 6,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 143,
+		"name": "Spain",
+		"color": "#7c7c1a",
+		"flag": "es",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 762,
+				"name": "Madrid",
+				"country": "Spain",
+				"x": 509,
+				"y": 142,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 763,
+				"name": "Barcelona",
+				"country": "Spain",
+				"x": 523,
+				"y": 138,
+				"cityType": 7,
+				"income": 270,
+				"neighbours": []
+			},
+			{
+				"id": 764,
+				"name": "Valencia",
+				"country": "Spain",
+				"x": 527,
+				"y": 144,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 765,
+				"name": "Sevilla",
+				"country": "Spain",
+				"x": 500,
+				"y": 151,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 766,
+				"name": "Zaragoza",
+				"country": "Spain",
+				"x": 516,
+				"y": 135,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 767,
+				"name": "Malaga",
+				"country": "Spain",
+				"x": 504,
+				"y": 154,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 768,
+				"name": "Murcia",
+				"country": "Spain",
+				"x": 513,
+				"y": 151,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 769,
+				"name": "Palma",
+				"country": "Spain",
+				"x": 527,
+				"y": 144,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 770,
+				"name": "Canaria",
+				"country": "Spain",
+				"x": 569,
+				"y": 183,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 771,
+				"name": "Bilbao",
+				"country": "Spain",
+				"x": 507,
+				"y": 131,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 772,
+				"name": "Coruna",
+				"country": "Spain",
+				"x": 496,
+				"y": 132,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 773,
+				"name": "Valladolid",
+				"country": "Spain",
+				"x": 503,
+				"y": 138,
+				"cityType": 4,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 144,
+		"name": "Sri Lanka",
+		"color": "#a88c88",
+		"flag": "lk",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 774,
+				"name": "Colombo",
+				"country": "Sri Lanka",
+				"x": 758,
+				"y": 258,
+				"cityType": 7,
+				"income": 137,
+				"neighbours": []
+			},
+			{
+				"id": 775,
+				"name": "Jaffna",
+				"country": "Sri Lanka",
+				"x": 758,
+				"y": 249,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 145,
+		"name": "Sudan",
+		"color": "#875031",
+		"flag": "sd",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 776,
+				"name": "Khartoum",
+				"country": "Sudan",
+				"x": 614,
+				"y": 227,
+				"cityType": 8,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 777,
+				"name": "Port Sudan",
+				"country": "Sudan",
+				"x": 625,
+				"y": 211,
+				"cityType": 5,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 778,
+				"name": "Kassala",
+				"country": "Sudan",
+				"x": 623,
+				"y": 228,
+				"cityType": 5,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 779,
+				"name": "El Oubeid",
+				"country": "Sudan",
+				"x": 604,
+				"y": 237,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 780,
+				"name": "Gadaref",
+				"country": "Sudan",
+				"x": 620,
+				"y": 236,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 781,
+				"name": "Wadi Halfa",
+				"country": "Sudan",
+				"x": 609,
+				"y": 206,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 782,
+				"name": "Nyala",
+				"country": "Sudan",
+				"x": 587,
+				"y": 238,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 146,
+		"name": "Suriname",
+		"color": "#6082b6",
+		"flag": "sr",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 783,
+				"name": "Suriname",
+				"country": "Suriname",
+				"x": 346,
+				"y": 263,
+				"cityType": 3,
+				"income": 15,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 147,
+		"name": "Swaziland",
+		"color": "#36454f",
+		"flag": "sz",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 784,
+				"name": "Mbabane",
+				"country": "Swaziland",
+				"x": 609,
+				"y": 375,
+				"cityType": 1,
+				"income": 15,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 148,
+		"name": "Sweden",
+		"color": "#003466",
+		"flag": "se",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 785,
+				"name": "Stockholm",
+				"country": "Sweden",
+				"x": 567,
+				"y": 77,
+				"cityType": 7,
+				"income": 140,
+				"neighbours": []
+			},
+			{
+				"id": 786,
+				"name": "Gothenburg",
+				"country": "Sweden",
+				"x": 551,
+				"y": 82,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 787,
+				"name": "Malmo",
+				"country": "Sweden",
+				"x": 554,
+				"y": 90,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 788,
+				"name": "Orebro",
+				"country": "Sweden",
+				"x": 554,
+				"y": 76,
+				"cityType": 4,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 789,
+				"name": "Umea",
+				"country": "Sweden",
+				"x": 562,
+				"y": 64,
+				"cityType": 1,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 790,
+				"name": "Kiruna",
+				"country": "Sweden",
+				"x": 569,
+				"y": 53,
+				"cityType": 1,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 791,
+				"name": "Visby",
+				"country": "Sweden",
+				"x": 566,
+				"y": 83,
+				"cityType": 1,
+				"income": 60,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 149,
+		"name": "Switzerland",
+		"color": "#b5a5d5",
+		"flag": "ch",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 792,
+				"name": "Bern",
+				"country": "Switzerland",
+				"x": 542,
+				"y": 119,
+				"cityType": 4,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 793,
+				"name": "Geneva",
+				"country": "Switzerland",
+				"x": 536,
+				"y": 120,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 150,
+		"name": "Syria",
+		"color": "#8d6ba5",
+		"flag": "sy",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 794,
+				"name": "Damascus",
+				"country": "Syria",
+				"x": 622,
+				"y": 166,
+				"cityType": 7,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 795,
+				"name": "Homs",
+				"country": "Syria",
+				"x": 624,
+				"y": 161,
+				"cityType": 4,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 796,
+				"name": "Aleppo",
+				"country": "Syria",
+				"x": 623,
+				"y": 156,
+				"cityType": 7,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 797,
+				"name": "Dayr Zawr",
+				"country": "Syria",
+				"x": 632,
+				"y": 159,
+				"cityType": 4,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 151,
+		"name": "Taiwan",
+		"color": "#00a86b",
+		"flag": "tw",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 798,
+				"name": "Taipei",
+				"country": "Taiwan",
+				"x": 875,
+				"y": 195,
+				"cityType": 10,
+				"income": 630,
+				"neighbours": []
+			},
+			{
+				"id": 799,
+				"name": "Kaohsiung",
+				"country": "Taiwan",
+				"x": 873,
+				"y": 201,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 152,
+		"name": "Tajikistan",
+		"color": "#f57900",
+		"flag": "tj",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 800,
+				"name": "Dushanbe",
+				"country": "Tajikistan",
+				"x": 711,
+				"y": 147,
+				"cityType": 7,
+				"income": 15,
+				"neighbours": []
+			},
+			{
+				"id": 801,
+				"name": "Khujand",
+				"country": "Tajikistan",
+				"x": 712,
+				"y": 141,
+				"cityType": 1,
+				"income": 7,
+				"neighbours": []
+			},
+			{
+				"id": 802,
+				"name": "Khorugh",
+				"country": "Tajikistan",
+				"x": 723,
+				"y": 150,
+				"cityType": 1,
+				"income": 7,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 153,
+		"name": "Tanzania",
+		"color": "#387242",
+		"flag": "tz",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 803,
+				"name": "Dodoma",
+				"country": "Tanzania",
+				"x": 615,
+				"y": 301,
+				"cityType": 4,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 804,
+				"name": "Dar Salaam",
+				"country": "Tanzania",
+				"x": 634,
+				"y": 307,
+				"cityType": 7,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 805,
+				"name": "Mwanza",
+				"country": "Tanzania",
+				"x": 616,
+				"y": 291,
+				"cityType": 4,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 806,
+				"name": "Arusha",
+				"country": "Tanzania",
+				"x": 626,
+				"y": 292,
+				"cityType": 4,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 807,
+				"name": "Mbeya",
+				"country": "Tanzania",
+				"x": 618,
+				"y": 314,
+				"cityType": 1,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 808,
+				"name": "Tanga",
+				"country": "Tanzania",
+				"x": 634,
+				"y": 299,
+				"cityType": 1,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 809,
+				"name": "Kigoma",
+				"country": "Tanzania",
+				"x": 607,
+				"y": 304,
+				"cityType": 1,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 810,
+				"name": "Masasi",
+				"country": "Tanzania",
+				"x": 633,
+				"y": 318,
+				"cityType": 1,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 154,
+		"name": "Thailand",
+		"color": "#b4497e",
+		"flag": "th",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 811,
+				"name": "Bangkok",
+				"country": "Thailand",
+				"x": 818,
+				"y": 234,
+				"cityType": 12,
+				"income": 260,
+				"neighbours": []
+			},
+			{
+				"id": 812,
+				"name": "Udon Thani",
+				"country": "Thailand",
+				"x": 822,
+				"y": 220,
+				"cityType": 6,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 813,
+				"name": "Nakhon Ratchasima",
+				"country": "Thailand",
+				"x": 824,
+				"y": 230,
+				"cityType": 6,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 814,
+				"name": "Hat Yai",
+				"country": "Thailand",
+				"x": 820,
+				"y": 257,
+				"cityType": 3,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 815,
+				"name": "Lampang",
+				"country": "Thailand",
+				"x": 813,
+				"y": 217,
+				"cityType": 3,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 816,
+				"name": "Khon Kaen",
+				"country": "Thailand",
+				"x": 825,
+				"y": 226,
+				"cityType": 3,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 817,
+				"name": "Surat Thani",
+				"country": "Thailand",
+				"x": 815,
+				"y": 249,
+				"cityType": 3,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 818,
+				"name": "Ubon Ratchathan",
+				"country": "Thailand",
+				"x": 831,
+				"y": 29,
+				"cityType": 3,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 819,
+				"name": "Nakhon",
+				"country": "Thailand",
+				"x": 816,
+				"y": 253,
+				"cityType": 3,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 155,
+		"name": "TOgo",
+		"color": "#1f5276",
+		"flag": "tg",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 820,
+				"name": "Lome",
+				"country": "TOgo",
+				"x": 519,
+				"y": 259,
+				"cityType": 9,
+				"income": 7,
+				"neighbours": []
+			},
+			{
+				"id": 821,
+				"name": "Kara",
+				"country": "TOgo",
+				"x": 518,
+				"y": 248,
+				"cityType": 3,
+				"income": 5,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 156,
+		"name": "Trinidad Tobago",
+		"color": "#a3be34",
+		"flag": "tt",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 822,
+				"name": "Port  of Spain",
+				"country": "Trinidad Tobago",
+				"x": 331,
+				"y": 245,
+				"cityType": 3,
+				"income": 45,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 157,
+		"name": "Tunisia",
+		"color": "#b17a06",
+		"flag": "tn",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 823,
+				"name": "Tunis",
+				"country": "Tunisia",
+				"x": 547,
+				"y": 154,
+				"cityType": 7,
+				"income": 45,
+				"neighbours": []
+			},
+			{
+				"id": 824,
+				"name": "Sfax",
+				"country": "Tunisia",
+				"x": 547,
+				"y": 161,
+				"cityType": 4,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 825,
+				"name": "Gafsa",
+				"country": "Tunisia",
+				"x": 542,
+				"y": 164,
+				"cityType": 2,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 826,
+				"name": "Zarzis",
+				"country": "Tunisia",
+				"x": 548,
+				"y": 167,
+				"cityType": 2,
+				"income": 30,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 158,
+		"name": "Turkey",
+		"color": "#2c4e1c",
+		"flag": "tr",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 827,
+				"name": "Ankara",
+				"country": "Turkey",
+				"x": 609,
+				"y": 143,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 828,
+				"name": "Istanbul",
+				"country": "Turkey",
+				"x": 599,
+				"y": 138,
+				"cityType": 10,
+				"income": 300,
+				"neighbours": []
+			},
+			{
+				"id": 829,
+				"name": "Izmir",
+				"country": "Turkey",
+				"x": 595,
+				"y": 148,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 830,
+				"name": "Bursa",
+				"country": "Turkey",
+				"x": 600,
+				"y": 141,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 831,
+				"name": "Adana",
+				"country": "Turkey",
+				"x": 618,
+				"y": 152,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 832,
+				"name": "Gaziantep",
+				"country": "Turkey",
+				"x": 625,
+				"y": 152,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 833,
+				"name": "Konya",
+				"country": "Turkey",
+				"x": 607,
+				"y": 148,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 834,
+				"name": "Antalya",
+				"country": "Turkey",
+				"x": 604,
+				"y": 154,
+				"cityType": 7,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 834,
+				"name": "Diyarbakir",
+				"country": "Turkey",
+				"x": 634,
+				"y": 149,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 835,
+				"name": "Kayeseri",
+				"country": "Turkey",
+				"x": 619,
+				"y": 148,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 836,
+				"name": "Edrine",
+				"country": "Turkey",
+				"x": 593,
+				"y": 137,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 837,
+				"name": "Trabzon",
+				"country": "Turkey",
+				"x": 630,
+				"y": 140,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 838,
+				"name": "Van",
+				"country": "Turkey",
+				"x": 639,
+				"y": 146,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 839,
+				"name": "Samsun",
+				"country": "Turkey",
+				"x": 618,
+				"y": 138,
+				"cityType": 4,
+				"income": 100,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 159,
+		"name": "Turkmenistan",
+		"color": "#71b330",
+		"flag": "tm",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 840,
+				"name": "Ashgabat",
+				"country": "Turkmenistan",
+				"x": 682,
+				"y": 149,
+				"cityType": 7,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 841,
+				"name": "Turkmenabat",
+				"country": "Turkmenistan",
+				"x": 695,
+				"y": 145,
+				"cityType": 4,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 842,
+				"name": "Turkmanbashi",
+				"country": "Turkmenistan",
+				"x": 668,
+				"y": 143,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 843,
+				"name": "Mary",
+				"country": "Turkmenistan",
+				"x": 695,
+				"y": 153,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 844,
+				"name": "Dashhowuz",
+				"country": "Turkmenistan",
+				"x": 684,
+				"y": 137,
+				"cityType": 2,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 160,
+		"name": "Uganda",
+		"color": "#ff6f5e",
+		"flag": "ug",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 845,
+				"name": "Kampala",
+				"country": "Uganda",
+				"x": 613,
+				"y": 280,
+				"cityType": 9,
+				"income": 25,
+				"neighbours": []
+			},
+			{
+				"id": 846,
+				"name": "Gulu",
+				"country": "Uganda",
+				"x": 614,
+				"y": 272,
+				"cityType": 3,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 847,
+				"name": "Mbarara",
+				"country": "Uganda",
+				"x": 608,
+				"y": 283,
+				"cityType": 3,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 848,
+				"name": "Mbale",
+				"country": "Uganda",
+				"x": 619,
+				"y": 277,
+				"cityType": 3,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 161,
+		"name": "Ukraine",
+		"color": "#22b14c",
+		"flag": "ua",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 849,
+				"name": "Kiev",
+				"country": "Ukraine",
+				"x": 600,
+				"y": 106,
+				"cityType": 7,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 850,
+				"name": "Kharkiv",
+				"country": "Ukraine",
+				"x": 614,
+				"y": 108,
+				"cityType": 7,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 851,
+				"name": "Dnipropetrovsk",
+				"country": "Ukraine",
+				"x": 613,
+				"y": 113,
+				"cityType": 7,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 852,
+				"name": "Donetsk",
+				"country": "Ukraine",
+				"x": 621,
+				"y": 114,
+				"cityType": 7,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 853,
+				"name": "Odesa",
+				"country": "Ukraine",
+				"x": 601,
+				"y": 121,
+				"cityType": 7,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 854,
+				"name": "Zaporizhzhya",
+				"country": "Ukraine",
+				"x": 613,
+				"y": 117,
+				"cityType": 4,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 855,
+				"name": "Lviv",
+				"country": "Ukraine",
+				"x": 584,
+				"y": 118,
+				"cityType": 4,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 856,
+				"name": "Chernivtsi",
+				"country": "Ukraine",
+				"x": 587,
+				"y": 112,
+				"cityType": 4,
+				"income": 40,
+				"neighbours": []
+			},
+			{
+				"id": 857,
+				"name": "Zhytomyr",
+				"country": "Ukraine",
+				"x": 594,
+				"y": 107,
+				"cityType": 4,
+				"income": 40,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 162,
+		"name": "UA Emirates",
+		"color": "#0f3821",
+		"flag": "ae",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 858,
+				"name": "Abu Dhabi",
+				"country": "UA Emirates",
+				"x": 673,
+				"y": 198,
+				"cityType": 4,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 859,
+				"name": "Dubai",
+				"country": "UA Emirates",
+				"x": 677,
+				"y": 198,
+				"cityType": 7,
+				"income": 260,
+				"neighbours": []
+			},
+			{
+				"id": 860,
+				"name": "Sharjah",
+				"country": "UA Emirates",
+				"x": 680,
+				"y": 194,
+				"cityType": 4,
+				"income": 260,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 163,
+		"name": "United Kingdom",
+		"color": "#ff9090",
+		"flag": "gb",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 861,
+				"name": "London",
+				"country": "United Kingdom",
+				"x": 521,
+				"y": 103,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 862,
+				"name": "Birmingham",
+				"country": "United Kingdom",
+				"x": 517,
+				"y": 99,
+				"cityType": 7,
+				"income": 350,
+				"neighbours": []
+			},
+			{
+				"id": 863,
+				"name": "Glasgow",
+				"country": "United Kingdom",
+				"x": 511,
+				"y": 88,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 864,
+				"name": "Liverpool",
+				"country": "United Kingdom",
+				"x": 514,
+				"y": 97,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 865,
+				"name": "Leeds",
+				"country": "United Kingdom",
+				"x": 516,
+				"y": 95,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 866,
+				"name": "Sheffield",
+				"country": "United Kingdom",
+				"x": 515,
+				"y": 97,
+				"cityType": 7,
+				"income": 200,
+				"neighbours": []
+			},
+			{
+				"id": 867,
+				"name": "Edinburg",
+				"country": "United Kingdom",
+				"x": 513,
+				"y": 89,
+				"cityType": 7,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 868,
+				"name": "Bristol",
+				"country": "United Kingdom",
+				"x": 514,
+				"y": 103,
+				"cityType": 4,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 869,
+				"name": "Manchester",
+				"country": "United Kingdom",
+				"x": 514,
+				"y": 96,
+				"cityType": 4,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 870,
+				"name": "Belfast",
+				"country": "United Kingdom",
+				"x": 505,
+				"y": 92,
+				"cityType": 4,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 871,
+				"name": "Cardiff",
+				"country": "United Kingdom",
+				"x": 511,
+				"y": 102,
+				"cityType": 4,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 872,
+				"name": "Newcastle",
+				"country": "United Kingdom",
+				"x": 517,
+				"y": 92,
+				"cityType": 4,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 873,
+				"name": "Exzter",
+				"country": "United Kingdom",
+				"x": 509,
+				"y": 106,
+				"cityType": 4,
+				"income": 150,
+				"neighbours": []
+			},
+			{
+				"id": 874,
+				"name": "Dumfries",
+				"country": "United Kingdom",
+				"x": 511,
+				"y": 91,
+				"cityType": 4,
+				"income": 150,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 164,
+		"name": "USA",
+		"color": "#508686",
+		"flag": "us",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 875,
+				"name": "Washington DC",
+				"country": "USA",
+				"x": 302,
+				"y": 167,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 876,
+				"name": "New York",
+				"country": "USA",
+				"x": 313,
+				"y": 139,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 877,
+				"name": "Los Angeles",
+				"country": "USA",
+				"x": 178,
+				"y": 164,
+				"cityType": 10,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 878,
+				"name": "Chicago",
+				"country": "USA",
+				"x": 276,
+				"y": 137,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 879,
+				"name": "Houston",
+				"country": "USA",
+				"x": 239,
+				"y": 179,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 880,
+				"name": "Philadelphia",
+				"country": "USA",
+				"x": 309,
+				"y": 143,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 881,
+				"name": "Phoenix",
+				"country": "USA",
+				"x": 193,
+				"y": 165,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 882,
+				"name": "San Antonio",
+				"country": "USA",
+				"x": 228,
+				"y": 180,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 883,
+				"name": "San Diego",
+				"country": "USA",
+				"x": 180,
+				"y": 167,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 883,
+				"name": "Dallas",
+				"country": "USA",
+				"x": 234,
+				"y": 167,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 885,
+				"name": "San Jose",
+				"country": "USA",
+				"x": 173,
+				"y": 151,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 886,
+				"name": "Indianapolis",
+				"country": "USA",
+				"x": 276,
+				"y": 144,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 887,
+				"name": "Jacksonville",
+				"country": "USA",
+				"x": 279,
+				"y": 174,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 888,
+				"name": "Charlotte",
+				"country": "USA",
+				"x": 282,
+				"y": 160,
+				"cityType": 7,
+				"income": 500,
+				"neighbours": []
+			},
+			{
+				"id": 889,
+				"name": "Detroit",
+				"country": "USA",
+				"x": 289,
+				"y": 133,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 890,
+				"name": "Portland",
+				"country": "USA",
+				"x": 330,
+				"y": 127,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 891,
+				"name": "Boston",
+				"country": "USA",
+				"x": 322,
+				"y": 134,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 892,
+				"name": "Pittsburgh",
+				"country": "USA",
+				"x": 295,
+				"y": 140,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 893,
+				"name": "Richmond",
+				"country": "USA",
+				"x": 296,
+				"y": 153,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 894,
+				"name": "Columbus",
+				"country": "USA",
+				"x": 287,
+				"y": 143,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 895,
+				"name": "Cleveland",
+				"country": "USA",
+				"x": 289,
+				"y": 138,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 896,
+				"name": "Columbia",
+				"country": "USA",
+				"x": 284,
+				"y": 166,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 897,
+				"name": "Atlanta",
+				"country": "USA",
+				"x": 272,
+				"y": 165,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 898,
+				"name": "Miami",
+				"country": "USA",
+				"x": 280,
+				"y": 190,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 899,
+				"name": "Atlanta",
+				"country": "USA",
+				"x": 268,
+				"y": 165,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 900,
+				"name": "Nashville",
+				"country": "USA",
+				"x": 263,
+				"y": 159,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 901,
+				"name": "Jakson",
+				"country": "USA",
+				"x": 255,
+				"y": 170,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 902,
+				"name": "New Orleans",
+				"country": "USA",
+				"x": 254,
+				"y": 177,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 903,
+				"name": "Little Rock",
+				"country": "USA",
+				"x": 248,
+				"y": 156,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 904,
+				"name": "Louisville",
+				"country": "USA",
+				"x": 274,
+				"y": 148,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 905,
+				"name": "Saint Louis",
+				"country": "USA",
+				"x": 258,
+				"y": 148,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 906,
+				"name": "Minneapolis",
+				"country": "USA",
+				"x": 264,
+				"y": 124,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 907,
+				"name": "Kansas City",
+				"country": "USA",
+				"x": 237,
+				"y": 146,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 908,
+				"name": "Oklahoma City",
+				"country": "USA",
+				"x": 229,
+				"y": 157,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 909,
+				"name": "El Paso",
+				"country": "USA",
+				"x": 208,
+				"y": 169,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 910,
+				"name": "Denver",
+				"country": "USA",
+				"x": 211,
+				"y": 144,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 911,
+				"name": "Bismark",
+				"country": "USA",
+				"x": 237,
+				"y": 117,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 912,
+				"name": "Salt Lake City",
+				"country": "USA",
+				"x": 197,
+				"y": 142,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 913,
+				"name": "Helina",
+				"country": "USA",
+				"x": 207,
+				"y": 120,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 914,
+				"name": "Seattle",
+				"country": "USA",
+				"x": 190,
+				"y": 119,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 915,
+				"name": "Portlant",
+				"country": "USA",
+				"x": 180,
+				"y": 128,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 916,
+				"name": "Las Vegas",
+				"country": "USA",
+				"x": 187,
+				"y": 155,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 917,
+				"name": "Milwaukee",
+				"country": "USA",
+				"x": 278,
+				"y": 126,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 918,
+				"name": "Orlando",
+				"country": "USA",
+				"x": 279,
+				"y": 183,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			},
+			{
+				"id": 919,
+				"name": "Sacramanto",
+				"country": "USA",
+				"x": 175,
+				"y": 145,
+				"cityType": 7,
+				"income": 400,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 165,
+		"name": "Uruguay",
+		"color": "#6f00ff",
+		"flag": "uy",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 920,
+				"name": "Montevideo",
+				"country": "Uruguay",
+				"x": 356,
+				"y": 402,
+				"cityType": 7,
+				"income": 35,
+				"neighbours": []
+			},
+			{
+				"id": 921,
+				"name": "Salto",
+				"country": "Uruguay",
+				"x": 350,
+				"y": 391,
+				"cityType": 1,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 922,
+				"name": "Melo",
+				"country": "Uruguay",
+				"x": 361,
+				"y": 397,
+				"cityType": 1,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 166,
+		"name": "Uebekistan",
+		"color": "#738678",
+		"flag": "uz",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 923,
+				"name": "Tachkent",
+				"country": "Uebekistan",
+				"x": 712,
+				"y": 138,
+				"cityType": 8,
+				"income": 60,
+				"neighbours": []
+			},
+			{
+				"id": 924,
+				"name": "Namangan",
+				"country": "Uebekistan",
+				"x": 717,
+				"y": 139,
+				"cityType": 5,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 925,
+				"name": "Samarquand",
+				"country": "Uebekistan",
+				"x": 703,
+				"y": 141,
+				"cityType": 5,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 926,
+				"name": "Bukhara",
+				"country": "Uebekistan",
+				"x": 794,
+				"y": 140,
+				"cityType": 5,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 927,
+				"name": "Nukus",
+				"country": "Uebekistan",
+				"x": 681,
+				"y": 131,
+				"cityType": 2,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 928,
+				"name": "Qarshi",
+				"country": "Uebekistan",
+				"x": 707,
+				"y": 148,
+				"cityType": 2,
+				"income": 30,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 167,
+		"name": "Venzuela",
+		"color": "#ba9967",
+		"flag": "ve",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 929,
+				"name": "Caracas",
+				"country": "Venzuela",
+				"x": 314,
+				"y": 246,
+				"cityType": 9,
+				"income": 120,
+				"neighbours": []
+			},
+			{
+				"id": 930,
+				"name": "Maracaibo",
+				"country": "Venzuela",
+				"x": 298,
+				"y": 245,
+				"cityType": 9,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 931,
+				"name": "Valencia",
+				"country": "Venzuela",
+				"x": 308,
+				"y": 249,
+				"cityType": 9,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 932,
+				"name": "Ciudad Guayana",
+				"country": "Venzuela",
+				"x": 330,
+				"y": 253,
+				"cityType": 6,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 933,
+				"name": "San Fernando",
+				"country": "Venzuela",
+				"x": 312,
+				"y": 259,
+				"cityType": 6,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 934,
+				"name": "San Creistobal",
+				"country": "Venzuela",
+				"x": 300,
+				"y": 255,
+				"cityType": 3,
+				"income": 50,
+				"neighbours": []
+			},
+			{
+				"id": 935,
+				"name": "Santa Elena",
+				"country": "Venzuela",
+				"x": 328,
+				"y": 264,
+				"cityType": 3,
+				"income": 50,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 168,
+		"name": "Vietnam",
+		"color": "#9dbb61",
+		"flag": "vn",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 936,
+				"name": "Hanoi",
+				"country": "Vietnam",
+				"x": 326,
+				"y": 198,
+				"cityType": 9,
+				"income": 100,
+				"neighbours": []
+			},
+			{
+				"id": 937,
+				"name": "Ho Chi Minh",
+				"country": "Vietnam",
+				"x": 838,
+				"y": 244,
+				"cityType": 9,
+				"income": 130,
+				"neighbours": []
+			},
+			{
+				"id": 938,
+				"name": "Da Nang",
+				"country": "Vietnam",
+				"x": 841,
+				"y": 227,
+				"cityType": 9,
+				"income": 80,
+				"neighbours": []
+			},
+			{
+				"id": 939,
+				"name": "Nha Trang",
+				"country": "Vietnam",
+				"x": 843,
+				"y": 231,
+				"cityType": 6,
+				"income": 70,
+				"neighbours": []
+			},
+			{
+				"id": 940,
+				"name": "Sa Pa",
+				"country": "Vietnam",
+				"x": 826,
+				"y": 204,
+				"cityType": 6,
+				"income": 70,
+				"neighbours": []
+			},
+			{
+				"id": 941,
+				"name": "Vinh",
+				"country": "Vietnam",
+				"x": 830,
+				"y": 214,
+				"cityType": 6,
+				"income": 70,
+				"neighbours": []
+			},
+			{
+				"id": 942,
+				"name": "Long Xuyen",
+				"country": "Vietnam",
+				"x": 833,
+				"y": 249,
+				"cityType": 6,
+				"income": 70,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 169,
+		"name": "Western Sahara",
+		"color": "#ff9090",
+		"flag": "eh",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 943,
+				"name": "Laayoune",
+				"country": "Western Sahara",
+				"x": 179,
+				"y": 189,
+				"cityType": 2,
+				"income": 5,
+				"neighbours": []
+			},
+			{
+				"id": 944,
+				"name": "Dakhla",
+				"country": "Western Sahara",
+				"x": 470,
+				"y": 201,
+				"cityType": 2,
+				"income": 3,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 170,
+		"name": "Yemen",
+		"color": "#cc5a3e",
+		"flag": "ye",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 945,
+				"name": "Sana",
+				"country": "Yemen",
+				"x": 648,
+				"y": 226,
+				"cityType": 8,
+				"income": 15,
+				"neighbours": []
+			},
+			{
+				"id": 946,
+				"name": "Al Hudaydah",
+				"country": "Yemen",
+				"x": 643,
+				"y": 227,
+				"cityType": 5,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 947,
+				"name": "Taizz",
+				"country": "Yemen",
+				"x": 650,
+				"y": 235,
+				"cityType": 5,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 948,
+				"name": "Mukalla",
+				"country": "Yemen",
+				"x": 663,
+				"y": 227,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 949,
+				"name": "Sayyan",
+				"country": "Yemen",
+				"x": 659,
+				"y": 225,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 950,
+				"name": "Ghaydah",
+				"country": "Yemen",
+				"x": 671,
+				"y": 222,
+				"cityType": 2,
+				"income": 15,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 171,
+		"name": "Zambia",
+		"color": "#10ad64",
+		"flag": "zm",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 951,
+				"name": "Lusaka",
+				"country": "Zambia",
+				"x": 604,
+				"y": 335,
+				"cityType": 8,
+				"income": 15,
+				"neighbours": []
+			},
+			{
+				"id": 952,
+				"name": "Kitwe",
+				"country": "Zambia",
+				"x": 601,
+				"y": 327,
+				"cityType": 5,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 953,
+				"name": "Kabwe",
+				"country": "Zambia",
+				"x": 602,
+				"y": 330,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 954,
+				"name": "Kasama",
+				"country": "Zambia",
+				"x": 610,
+				"y": 318,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 955,
+				"name": "Chipata",
+				"country": "Zambia",
+				"x": 613,
+				"y": 328,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 956,
+				"name": "Mongu",
+				"country": "Zambia",
+				"x": 586,
+				"y": 334,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 172,
+		"name": "Zimbabwe",
+		"color": "#446ccf",
+		"flag": "zw",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 957,
+				"name": "Harare",
+				"country": "Zimbabwe",
+				"x": 610,
+				"y": 344,
+				"cityType": 8,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 958,
+				"name": "Bulawayo",
+				"country": "Zimbabwe",
+				"x": 601,
+				"y": 351,
+				"cityType": 5,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 959,
+				"name": "Kariba",
+				"country": "Zimbabwe",
+				"x": 603,
+				"y": 341,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 960,
+				"name": "Beitbridge",
+				"country": "Zimbabwe",
+				"x": 607,
+				"y": 358,
+				"cityType": 2,
+				"income": 10,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 173,
+		"name": "palestine",
+		"color": "#65000b",
+		"flag": "ps",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 961,
+				"name": "Jerusalem",
+				"country": "palestine",
+				"x": 620,
+				"y": 171,
+				"cityType": 7,
+				"income": 30,
+				"neighbours": []
+			},
+			{
+				"id": 962,
+				"name": "Gaza",
+				"country": "palestine",
+				"x": 617,
+				"y": 172,
+				"cityType": 7,
+				"income": 20,
+				"neighbours": []
+			}
+		]
+	},
+	{
+		"id": 174,
+		"name": "North Korea",
+		"color": "#ace1af",
+		"flag": "kp",
+		"capital": 0,
+		"cities": [
+			{
+				"id": 963,
+				"name": "Pyongyang",
+				"country": "North Korea",
+				"x": 871,
+				"y": 145,
+				"cityType": 7,
+				"income": 20,
+				"neighbours": []
+			},
+			{
+				"id": 964,
+				"name": "Hamhung",
+				"country": "North Korea",
+				"x": 875,
+				"y": 142,
+				"cityType": 4,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 965,
+				"name": "Chongjin",
+				"country": "North Korea",
+				"x": 877,
+				"y": 137,
+				"cityType": 4,
+				"income": 10,
+				"neighbours": []
+			},
+			{
+				"id": 966,
+				"name": "Kaesong",
+				"country": "North Korea",
+				"x": 874,
+				"y": 149,
+				"cityType": 4,
+				"income": 10,
+				"neighbours": []
+			}
+		]
+	}
+]
