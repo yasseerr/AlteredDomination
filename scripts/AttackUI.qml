@@ -55,9 +55,16 @@ Item {
 
         }
     }
+    Image {
+        id: bg
+        opacity: 0.4
+        anchors.fill: parent
+        source: "qrc:/data/cities/attackUIBG.jpg"
+    }
+
     Rectangle {
         id: rectangle1
-        color: "#00000000"
+        color: "#803e3c3c"
         radius: 6
         border.width: 7
         opacity: 1
@@ -78,12 +85,6 @@ Item {
             obj2.src = "qrc:/data/units/"+typeU+".png"
         }
     }
-    Image {
-        id: bg
-        opacity: 0.7
-        anchors.fill: parent
-        source: "qrc:/data/cities/attackUIBG.jpg"
-    }
 
     Item {
         id: attackedItem
@@ -97,7 +98,7 @@ Item {
 
         Rectangle {
             id: attackedRectangle
-            color: "#f4faee"
+            color: "#00000000"
             opacity: 0.3
             visible: true
             anchors.fill: parent
@@ -173,7 +174,7 @@ Item {
 
             Rectangle {
                 id: attackedunitsrectangle
-                color: "#d0bdbd"
+                color: "#99777777"
                 radius: 11
                 opacity: 0.4
                 border.width: 3
@@ -213,7 +214,7 @@ Item {
         anchors.topMargin: 0
         Rectangle {
             id: attackerRectangle
-            color: "#f4faee"
+            color: "#00000000"
             anchors.fill: parent
             visible: true
             opacity: 0.3
@@ -283,7 +284,7 @@ Item {
             anchors.topMargin: 138
             Rectangle {
                 id: attackerunitsrectangle
-                color: "#d0bdbd"
+                color: "#99777777"
                 radius: 11
                 border.width: 3
                 opacity: 0.4
@@ -392,6 +393,7 @@ Item {
                 attackerflow.children = []
                 attackedflow.children = []
                 attackUI.hide()
+                mapUI.enabled = true
             }
         }
 
@@ -436,6 +438,7 @@ Item {
                 attackerflow.children = []
                 attackedflow.children = []
                 attackUI.hide()
+                mapUI.enabled = true
             }
             hoverEnabled: true
         }

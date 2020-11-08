@@ -12,8 +12,8 @@ LinkGraphics::LinkGraphics(LinkN *l,QObject *parent) : QObject(parent),m_link(l)
                 l->des()->x()+40,
                 l->des()->y()+40
                 );
-     setOpacity(0.2);
-    if(l->des()->country() == l->dep()->country())setPen(QPen(l->des()->country()->color(),3,Qt::DashDotLine));
+     setOpacity(0.3);
+    if(l->des()->country() == l->dep()->country())setPen(QPen(l->des()->country()->color().darker(150),3,Qt::DashDotLine));
 
 
 }
@@ -32,8 +32,8 @@ void LinkGraphics::updateAfterBattle()
                 m_link->des()->x()+40,
                 m_link->des()->y()+40
                 );
-     setOpacity(0.2);
-    if(m_link->des()->country() == m_link->dep()->country())setPen(QPen(m_link->des()->country()->color(),3,Qt::DashDotLine));
+     setOpacity(0.3);
+    if(m_link->des()->country() == m_link->dep()->country())setPen(QPen(m_link->des()->country()->color().darker(150),3,Qt::DashDotLine));
     this->update();
 }
 

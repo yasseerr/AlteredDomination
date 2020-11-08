@@ -11,6 +11,11 @@ Animations::Animations(QObject *parent) : QObject(parent),
     explosionSprite(new QImage(":/data/animations/explosion2.png")),
     frameNumber(0)
 {
+
+    bullet.setBrush(Qt::black);
+    bullet.setRect(0,0,30,30);
+
+
     this->setVisible(false);
     m_animtionTimer->setInterval(60);
     connect(m_animtionTimer,&QTimer::timeout,this,&Animations::onTimerTick);
@@ -43,7 +48,7 @@ Animations::Animations(QObject *parent) : QObject(parent),
 
 void Animations::runAnimation(int xp,int yp)
 {
-    this->setPos(xp*100,yp*100);
+    this->setPos(xp,yp);
     this->setVisible(true);
     m_animtionTimer->start();
 //    s->play(":/data/sounds/explosion.wav");

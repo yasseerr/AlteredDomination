@@ -14,6 +14,8 @@ MainMenu::MainMenu(QString c, int m,int t,QString gameSave, QWidget *parent) :
     m_mapView = new MapView(this);
     m_mapView->setRenderHints(QPainter::Antialiasing|QPainter::SmoothPixmapTransform|QPainter::HighQualityAntialiasing);
     connect(m_mapView,&MapView::attackerWon,this,&MainMenu::onAttackerWon);
+    connect(m_mapView,&MapView::showMain,this,&MainMenu::show);
+    connect(m_mapView,&MapView::hideMain,this,&MainMenu::hide);
 
     ///---- temporary setting the active player country-----------
 //    m_activePlayerStr = "fr";
@@ -151,10 +153,33 @@ void MainMenu::runNextTurn()
     m_mapView->setActuelPlayer(m_mapView->activePlayer());
     reDisplayCountries();
     m_mapView->autoSave();
+    mapView()->mg->reavaluteCountrties();
 }
 
 void MainMenu::onAttackerWon(City *C)
 {
     reDisplayCities();
+}
+
+void MainMenu::closeEvent(QCloseEvent *ev)
+{
+    qDebug()<<"closed";
+    QWidget::closeEvent(ev);
+    mapView()->CityUI->close();
+    mapView()->addUnitUI->close();
+    mapView()->moveUnitUI->close();
+    mapView()->attackUI->close();
+    mapView()->menuOptUI->close();
+}
+
+void MainMenu::hideEvent(QHideEvent *event)
+{
+    qDebug()<<"";
+    QWidget::hideEvent(event);
+    mapView()->CityUI->hide();
+    mapView()->addUnitUI->hide();
+    mapView()->moveUnitUI->hide();
+    mapView()->attackUI->hide();
+    mapView()->menuOptUI->hide();
 }
 

@@ -19,6 +19,7 @@ class BattleMap : public QObject
     Q_PROPERTY(int deffenderMoves READ deffenderMoves WRITE setDeffenderMoves NOTIFY deffenderMovesChanged)
     Q_PROPERTY(QMap<QString,UnitType*> unitetypes READ unitetypes WRITE setUnitetypes NOTIFY unitetypesChanged)
     Q_PROPERTY(int baseSize READ baseSize WRITE setBaseSize NOTIFY baseSizeChanged)
+    Q_PROPERTY(bool isMassiveBattle READ isMassiveBattle WRITE setIsMassiveBattle NOTIFY isMassiveBattleChanged)
 
 
     City* m_attacker;
@@ -34,6 +35,8 @@ class BattleMap : public QObject
     QMap<QString,UnitType*> m_unitetypes;
 
     int m_baseSize;
+
+    bool m_isMassiveBattle;
 
 public:
     explicit BattleMap(City *a,City *d,QObject *parent = nullptr);
@@ -52,6 +55,8 @@ public:
 
     int baseSize() const;
 
+    bool isMassiveBattle() const;
+
 signals:
 
     void attackerChanged(City* attacker);
@@ -68,6 +73,8 @@ signals:
 
     void baseSizeChanged(int baseSize);
 
+    void isMassiveBattleChanged(bool isMassiveBattle);
+
 public slots:
     void setAttacker(City* attacker);
     void setDeffender(City* deffender);
@@ -76,6 +83,7 @@ public slots:
     void setDeffenderMoves(int deffenderMoves);
     void setUnitetypes(QMap<QString,UnitType*> unitetypes);
     void setBaseSize(int baseSize);
+    void setIsMassiveBattle(bool isMassiveBattle);
 };
 
 #endif // BATTLEMAP_H

@@ -5,11 +5,13 @@
 
 #include <QObject>
 #include <QGraphicsItem>
+#include <QSvgRenderer>
 class City;
 class MapView;
 class UnitGraphics;
 class CityGraphics :public QObject,public QGraphicsItem
 {
+
     Q_OBJECT
     Q_PROPERTY(City* city READ city WRITE setCity NOTIFY cityChanged)
     Q_PROPERTY(qreal scale READ scale WRITE setScale)
@@ -85,7 +87,6 @@ signals:
 
     void unitToQml(int idU,QString typeU);
     void unitToAttackQml(QString typeU);
-
     void powerChanged(int power);
 
 private :

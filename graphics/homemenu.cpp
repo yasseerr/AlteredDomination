@@ -37,8 +37,8 @@ void HomeMenu::startGame(QString cntr, int mode)
 {
     game  = new MainMenu(cntr,mode,0,"");
     connect(game->mapView(),&MapView::returnHome,this,&HomeMenu::onReturnHome);
-    this->hide();
     game->showMaximized();
+    this->hide();
 }
 
 void HomeMenu::loadGame(QString cntr, int turn, QString gameSaveString)

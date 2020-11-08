@@ -3,6 +3,9 @@
 
 
 
+#include "animationhandlerbattle.h"
+#include "battleborderitem.h"
+
 #include<QDeadlineTimer>
 #include <QGraphicsScene>
 #include <QObject>
@@ -13,7 +16,11 @@
 #include <domain/unit.h>
 
 #include<graphics/animations.h>
+#include <QGraphicsSvgItem>
+#include <QSvgRenderer>
 #include<QTcpSocket>
+
+#include <graphics/unitpupup.h>
 
 class BFrame;
 class UnitGraphics;
@@ -49,6 +56,8 @@ class BMapScene :  public QGraphicsScene
 
 
     BattleMap* m_bmap;
+
+
 
     QMap<QPair<int,int>,BFrame*> m_frames;
 
@@ -92,6 +101,20 @@ public:
     BMapScene::BattlePhase m_phase;
 
     Animations *animItem;
+
+    QList<BFrame*> previousFramesThisTurn;
+    QList<BFrame*> previousFramesLastTurn;
+
+    AnimationHandlerBattle *animHandler;
+
+    QGraphicsRectItem *bar1;
+    QGraphicsRectItem *bar2;
+
+    ///unit resrc
+    unitPupUp *unitPP;
+    QSvgRenderer *unitRend;
+    BattleBorderItem *borderItem;
+    QImage *unitClip;
 
     explicit BMapScene(QTcpSocket *serv = nullptr,QObject *parent = nullptr);
 
@@ -170,6 +193,7 @@ signals:
     void battleEndedA();
     void battleEndedD();
     void setViewEnable(bool isE);
+    void bmapLoaded(bool p);
 
     void battleAIChanged(BattleAI* battleAI);
 

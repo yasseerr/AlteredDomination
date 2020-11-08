@@ -7,6 +7,7 @@
 #include <qgraphicsitem.h>
 #include "domain/map.h"
 #include "linkgraphics.h"
+#include "mapgraphics.h"
 #include <QGraphicsView>
 #include<QGraphicsPixmapItem>
 #include <domain/map.h>
@@ -81,6 +82,13 @@ public:
     QQuickView *menuOptUI;
     BattleForm *battleForm;
     QWidget *par1;
+    QJsonDocument *originalCountries;
+
+    MapGraphics *mg;
+    QSvgRenderer *cityRend ;
+    QGraphicsSvgItem *mapMask;
+    QMap<QString, QImage *> flagsSrc;
+
 
     enum GameMode{
         GDP,CITYCOUNT
@@ -101,6 +109,7 @@ public:
     Q_INVOKABLE void saveGame();
     Q_INVOKABLE void quitGame();
     void autoSave();
+    void loadResouces();
 
     QGraphicsView* view() const;
 
@@ -170,6 +179,9 @@ public slots:
 signals:
 
     Q_INVOKABLE void returnHome();
+
+    void hideMain();
+    void showMain();
 
     void zoomChange(double z);
     void mapChanged(Map* map);

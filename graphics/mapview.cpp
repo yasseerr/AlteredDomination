@@ -28,6 +28,8 @@ MapView::MapView(QObject *parent):QGraphicsView()
 {
 
 
+    cityRend = new QSvgRenderer(QString(":/data/cities/citydisplay.svg"));
+
     ///initiating the view
     zoomLevel = 8;
     m_selectedCityGraphics = nullptr ;
@@ -120,11 +122,32 @@ MapView::MapView(QObject *parent):QGraphicsView()
 
      ///creating the mapgraphics and add it to the view
     glob  = new QGraphicsItemGroup();
-    m_mapGraphics = new  QGraphicsSvgItem(":/data/map_mask.svg");
-    m_mapGraphics->setOpacity(0.8);
-    this->m_mapScene->addItem(m_mapGraphics);
+
+
+
+    mapMask = new QGraphicsSvgItem(":/data/mask.svg");
+    mapMask->setScale(zoomLevel);
+    mapMask->setPos(50,50);
+    m_mapScene->addItem(mapMask);
+
+//    QGraphicsPixmapItem *mms = new QGraphicsPixmapItem(QPixmap(":/data/mapthem.png"));
+//    mms->setScale(zoomLevel/2);
+//    mms->setOpacity(0.7);
+//    mms->setPos(-650,50);
+//    m_mapScene->addItem(mms);
+
+//    m_mapGraphics = new  QGraphicsSvgItem(":/data/out.svg");
+//    m_mapGraphics->setOpacity(0.8);
+//    this->m_mapScene->addItem(m_mapGraphics);
     //glob->setAcceptHoverEvents(true);
-    m_mapGraphics->setScale(zoomLevel);
+//    m_mapGraphics->setScale(zoomLevel);
+//    m_mapGraphics->setPos(30,30);
+    mg =new MapGraphics(this);
+    this->m_mapScene->addItem(mg);
+    mg->setScale(zoomLevel);
+    mg->setPos(50,50);
+
+
 
     testRect = new QGraphicsTextItem("Altered Domination by --AFKAAR Games--");
     testRect->setPos(30,30);
@@ -217,7 +240,7 @@ void MapView::loadFromJson()
         country->setId(countryJ.value("id").toInt());
         country->setName(countryJ.value("name").toString());
         country->setIntID(countryJ.value("flag").toString());
-        country->setFlag(QImage(":/data/flags/"+countryJ.value("flag").toString()+".png"));
+        country->setFlag(QImage(":/data/flags/"+countryJ.value("flag").toString()+".png").scaled(240,120,Qt::KeepAspectRatio));
         country->setColor(QColor(countryJ.value("color").toString()));
         this->map()->countries().insert(country->id(),country);
 
@@ -325,6 +348,7 @@ void MapView::loadFromJson()
 
         }
     }
+    loadResouces();
 
 }
 
@@ -340,13 +364,16 @@ void MapView::loadFromJsonString(QString gamesave)
     /// loading units types
     QJsonDocument doc = QJsonDocument::fromJson(gamesave.toLocal8Bit());
 
+
     /// loading
 //    if(doc.isEmpty() || !doc.isArray()){
 //        qDebug() << "empty or not array";
 //        return;
 //    }
     zoomLevel = doc.object().value("zoom").toInt();
-    m_mapGraphics->setScale(zoomLevel);
+//    m_mapGraphics->setScale(zoomLevel);
+    mg->setScale(zoomLevel);
+    mapMask->setScale(zoomLevel);
     QJsonArray countries = doc.object().value("countries").toArray();
     foreach (QJsonValue valueJ, countries) {
         QJsonObject countryJ = valueJ.toObject();
@@ -358,7 +385,7 @@ void MapView::loadFromJsonString(QString gamesave)
         country->setId(countryJ.value("id").toInt());
         country->setName(countryJ.value("name").toString());
         country->setIntID(countryJ.value("flag").toString());
-        country->setFlag(QImage(":/data/flags/"+countryJ.value("flag").toString()+".png"));
+        country->setFlag(QImage(":/data/flags/"+countryJ.value("flag").toString()+".png").scaled(240,120,Qt::KeepAspectRatio));
         country->setColor(QColor(countryJ.value("color").toString()));
         this->map()->countries().insert(country->id(),country);
 
@@ -480,7 +507,8 @@ void MapView::loadFromJsonString(QString gamesave)
         }
     }
 
-
+    this->mg->reavaluteCountrties();
+    loadResouces();
 
 }
 
@@ -497,11 +525,12 @@ void MapView::saveGame()
     foreach (Player *p, this->players()) {
         countriesList << p->country()->toVariant();
     }
-    QDate d  = QDate::currentDate();
-
+    QDateTime d  = QDateTime::currentDateTime();
+    QString localEn = QLocale(QLocale::English).toString(d,"dd.MMM.yyyy HH:mm");
+    qDebug()<< localEn;
     saveObj.insert("country",this->activePlayer()->country()->name());
     saveObj.insert("turn",this->turnNumber());
-    saveObj.insert("date",d.toString());
+    saveObj.insert("date",localEn);
     saveObj.insert("flag",activePlayer()->country()->intID());
     saveObj.insert("zoom",zoomLevel);
     saveObj.insert("countries",countriesList);
@@ -534,11 +563,11 @@ void MapView::autoSave()
     foreach (Player *p, this->players()) {
         countriesList << p->country()->toVariant();
     }
-    QDate d  = QDate::currentDate();
-
+    QDateTime d  = QDateTime::currentDateTime();
+    QString localEn = QLocale(QLocale::English).toString(d,"dd.MMM.yyyy HH:mm");
     saveObj.insert("country",this->activePlayer()->country()->name());
     saveObj.insert("turn",this->turnNumber());
-    saveObj.insert("date",d.toString());
+    saveObj.insert("date",localEn);
     saveObj.insert("flag",activePlayer()->country()->intID());
     saveObj.insert("zoom",zoomLevel);
     saveObj.insert("countries",countriesList);
@@ -551,6 +580,15 @@ void MapView::autoSave()
     f.resize(0);
     ts << doc.toJson();
     f.close();
+}
+
+void MapView::loadResouces()
+{
+    return;
+    foreach (Player *c, this->players()) {
+        QImage *cFlag =  new QImage(":/data/flags/"+c->country()->intID()+".png");
+        flagsSrc.insert(c->country()->intID(),cFlag);
+    }
 }
 
 QGraphicsView *MapView::view() const
@@ -744,30 +782,32 @@ void MapView::zoomIn()
 
     if(zoomLevel>=16) return;
     zoomLevel += 1;
-    m_mapGraphics->setScale(zoomLevel);
+    mg->setScale(zoomLevel);
+    mapMask->setScale(zoomLevel);
     double z = (double)zoomLevel/(double)(zoomLevel-1);
     emit zoomChange(z);
     this->update();
     QPointF newP = this->mapToScene(this->rect().center());
     QPoint newPP(newP.x()*z,newP.y()*z);
     this->centerOn(newPP.x(),newPP.y());
-    this->setSceneRect(QRectF(0,0,m_mapGraphics->boundingRect().width()*zoomLevel,
-                              m_mapGraphics->boundingRect().height()*zoomLevel));
+    this->setSceneRect(QRectF(0,0,mg->boundingRect().width()*zoomLevel,
+                              mg->boundingRect().height()*zoomLevel));
 }
 
 void MapView::zoomOut()
 {
-    if(zoomLevel<=4) return;
+    if(zoomLevel<=1) return;
     zoomLevel -= 1;
-    m_mapGraphics->setScale(zoomLevel);
+    mg->setScale(zoomLevel);
+    mapMask->setScale(zoomLevel);
     double z = (double)zoomLevel/(double)(zoomLevel+1);
     emit zoomChange(z);
     this->update();
     QPointF newP = this->mapToScene(this->rect().center());
     QPoint newPP(newP.x()*z,newP.y()*z);
     this->centerOn(newPP.x(),newPP.y());
-    this->setSceneRect(QRectF(0,0,m_mapGraphics->boundingRect().width()*zoomLevel,
-                              m_mapGraphics->boundingRect().height()*zoomLevel));
+    this->setSceneRect(QRectF(0,0,mg->boundingRect().width()*zoomLevel,
+                              mg->boundingRect().height()*zoomLevel));
 
 
     //    this->m_mapScene->setSceneRect(m_mapGraphics);

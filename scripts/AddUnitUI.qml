@@ -1,197 +1,25 @@
 import QtQuick 2.0
+import QtQuick.Controls.Styles 1.4
 import QtQuick.Controls 1.6
 
+
+
 Item {
-    id : adUnitUI
-    width: 500
+    id : root
+    width: 650
     height: 500
     visible: true
+//    anchors.fill: parent
     property var unitsTypes: JSON.parse(mapUI.unitsText());
     property var toAddUnits: []
     property var toAddUnitsCost: []
     property int totalCost: 0
     Rectangle {
         id: rectangle
-        color: "#99867070"
-        radius: 11
+        color: "#803e3c3c"
+        radius: 5
         border.width: 6
         anchors.fill: parent
-
-        Rectangle {
-            id: incomeRectangle
-            x: 324
-            width: 168
-            height: 53
-            color: "#cc494826"
-            radius: 15
-            anchors.right: parent.right
-            anchors.rightMargin: 8
-            anchors.top: parent.top
-            anchors.topMargin: 6
-
-            Text {
-                id: incomeText
-                color: "#f7e768"
-                text: "Funds : "+cityGraphics.city.country.funds+" $"
-                anchors.rightMargin: 0
-                anchors.bottomMargin: 0
-                anchors.leftMargin: 0
-                anchors.topMargin: 0
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-                anchors.fill: parent
-                font.pixelSize: 21
-            }
-        }
-
-
-
-        ScrollView{
-            id: addedScroll
-            x: 0
-            y: 247
-            height: 176
-            //            ScrollBar.vertical.interactive:true
-            //            ScrollBar.vertical.policy : ScrollBar.AlwaysOn
-
-            verticalScrollBarPolicy: 0
-            highlightOnFocus: true
-            horizontalScrollBarPolicy: 1
-            anchors.right: parent.right
-            anchors.left: parent.left
-            anchors.top: parent.top
-            anchors.topMargin: 247
-            clip: true
-            Rectangle {
-                id: addedRectangle1
-                color: "#99777777"
-                anchors.left: parent.left
-                anchors.leftMargin: 0
-                anchors.top: parent.top
-                anchors.topMargin: 0
-                height: 176
-                width: 500
-
-            }
-        }
-
-        Rectangle {
-            id: costRectangle
-            x: 221
-            y: 429
-            width: 262
-            height: 55
-            color: "#b3ba932e"
-            radius: 6
-
-            Rectangle {
-                id: submitRectangle
-                x: 239
-                y: 0
-                width: 94
-                height: 55
-                color: "#992c8214"
-                radius: 28
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: 0
-                anchors.right: parent.right
-                anchors.rightMargin: 5
-
-                MouseArea {
-                    id: submitmouseArea
-                    anchors.fill: parent
-                    onClicked: {
-                        for(var i =0;i< adUnitUI.toAddUnits.length;i++){
-                            cityGraphics.addUnitFromQml(adUnitUI.toAddUnits[i],adUnitUI.toAddUnitsCost[i])
-                        }
-                        //                        adUnitUI.toAddUnits.forEach(function(element){ cityGraphics.addUnitFromQml(element)})
-                        //                        cityGraphics.setPower(cityGraphics.power + adUnitUI.totalCost)
-                        //                        cityGraphics.city.setPower(cityGraphics.city.power + adUnitUI.totalCost)
-                        cityGraphics.city.country.funds -= adUnitUI.totalCost
-                        adUnitUI.toAddUnits= [];
-                        adUnitUI.toAddUnitsCost= [];
-                        addedRectangle1.children =[]
-                        adUnitUI.totalCost = 0;
-                        cityUI.show()
-                        addUI.hide()
-                    }
-
-                    Text {
-                        id: text2
-                        color: "#ffffff"
-                        text: qsTr("Submit")
-                        verticalAlignment: Text.AlignVCenter
-                        horizontalAlignment: Text.AlignHCenter
-                        anchors.fill: parent
-                        font.pixelSize: 17
-                    }
-                }
-            }
-
-            Text {
-                id: costtext
-                text: "Cost :"+totalCost
-                anchors.leftMargin: 0
-                anchors.rightMargin: 97
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-                anchors.fill: parent
-                font.pixelSize: 15
-            }
-
-        }
-
-        Text {
-            id: infoText
-            y: 450
-            text: qsTr("")
-            anchors.left: parent.left
-            anchors.leftMargin: 46
-            anchors.verticalCenter: costRectangle.verticalCenter
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-            font.pixelSize: 16
-        }
-
-        ScrollView {
-            id: typesScroll
-            x: -1
-            y: 254
-            height: 176
-            anchors.rightMargin: 0
-            anchors.leftMargin: 0
-            anchors.topMargin: 65
-            Rectangle {
-                id: typesRectangle
-                y: 0
-                height: 176
-                color: "#99777777"
-                anchors.right: parent.right
-                anchors.rightMargin: 0
-                anchors.left: parent.left
-                anchors.leftMargin: 0
-                Component.onCompleted: {
-                    var i = 0;
-                    for(var tp in adUnitUI.unitsTypes){
-                        var obj = typegenerator.createObject(typesRectangle,{"x":85*(i%5),"y":5+Math.floor(i/5)*85});
-                        obj.src = "qrc:/data/units/"+adUnitUI.unitsTypes[i].name+".png";
-                        obj.cost = adUnitUI.unitsTypes[i].cost;
-                        obj.name = adUnitUI.unitsTypes[i].name;
-                        i++;
-                    }
-                    typesRectangle.height = typesRectangle.childrenRect.height
-                }
-
-            }
-            anchors.right: parent.right
-            highlightOnFocus: true
-            clip: true
-            horizontalScrollBarPolicy: 1
-            verticalScrollBarPolicy: 0
-            anchors.top: parent.top
-            anchors.left: parent.left
-        }
-
     }
 
     Component{
@@ -202,6 +30,7 @@ Item {
             property string src: ""
             property bool isSctd: false
             property int cost: 0
+            property int indice: 0
             width: 80
             height: 80
             visible: true
@@ -234,29 +63,29 @@ Item {
                 onExited: {mainRect.scale = 1; fillr.color="#ffffff"}
                 onPressed: {
                     if(mainRect.isSctd){
-                        adUnitUI.totalCost -= addedRectangle1.children[adUnitUI.toAddUnits.length-1].cost
-                        addedRectangle1.children[adUnitUI.toAddUnits.length-1].destroy()
-                        adUnitUI.toAddUnits.pop()
-                        adUnitUI.toAddUnitsCost.pop()
+                        root.totalCost -= mainRect.cost
+                        root.toAddUnits.splice(mainRect.indice,1)
+                        root.toAddUnitsCost.splice(mainRect.indice,1)
+                        mainRect.destroy()
                         return;
                     }
 
                     for(var c =0; c<parseInt(unitPerClickGroup.current.text);c++){
 
                         /// > funds
-                        if((adUnitUI.totalCost+mainRect.cost)>cityGraphics.city.country.funds){
+                        if((root.totalCost+mainRect.cost)>cityGraphics.city.country.funds){
                             return
                         }
 
-                        adUnitUI.toAddUnits.push(mainRect.name)
-                        adUnitUI.toAddUnitsCost.push(mainRect.cost)
-                        var i = adUnitUI.toAddUnits.length-1;
-                        var obj = typegenerator.createObject(addedRectangle1,{"x":85*(i%5),"y":5+Math.floor(i/5)*85});
+                        root.toAddUnits.push(mainRect.name)
+                        root.toAddUnitsCost.push(mainRect.cost)
+                        var i = root.toAddUnits.length-1;
+                        var obj = typegenerator.createObject(addedFlow);
                         obj.src = "qrc:/data/units/"+mainRect.name+".png";
-                        addedRectangle1.height =addedRectangle1.childrenRect.height
                         obj.isSctd = true
                         obj.cost = mainRect.cost
-                        adUnitUI.totalCost += mainRect.cost
+                        obj.indice = i;
+                        root.totalCost += mainRect.cost
                     }
                 }
 
@@ -265,11 +94,241 @@ Item {
         }
     }
 
+    Rectangle {
+        id: incomeRectangle
+        x: 324
+        y: 6
+        width: 168
+        height: 53
+        color: "#cc494826"
+        radius: 4
+        anchors.right: parent.right
+        anchors.rightMargin: 8
+        anchors.top: parent.top
+        anchors.topMargin: 6
+
+        Text {
+            id: incomeText
+            color: "#f7e768"
+            text: "Funds : "+cityGraphics.city.country.funds+" $"
+            anchors.rightMargin: 0
+            anchors.bottomMargin: 0
+            anchors.leftMargin: 0
+            anchors.topMargin: 0
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
+            anchors.fill: parent
+            font.pixelSize: 21
+        }
+    }
+
+    Item{
+        id: addedItem
+        x: 0
+        y: 247
+        height: 176
+        //            ScrollBar.vertical.interactive:true
+        //            ScrollBar.vertical.policy : ScrollBar.AlwaysOn
+        anchors.right: parent.right
+        anchors.left: parent.left
+        anchors.top: parent.top
+        anchors.topMargin: 247
+        clip: true
+        Rectangle {
+            id: addedRectanglebg
+            color: "#99777777"
+            anchors.fill: parent
+        }
+        Flickable{
+            id:addedFlickable
+            width: parent.width
+            height: parent.height
+            contentHeight: addedFlow.height
+            contentWidth: parent.width
+            Flow{
+                id:addedFlow
+                width: parent.width
+                height: childrenRect.height
+            }
+        }
+    }
+
+    Rectangle {
+        id: costRectangle
+        x: 221
+        y: 429
+        width: 262
+        height: 55
+        color: "#b3ba932e"
+        radius: 6
+
+        Rectangle {
+            id: submitRectangle
+            x: 239
+            y: 0
+            width: 94
+            height: 55
+            radius: 4
+            gradient: Gradient {
+                GradientStop {
+                    position: 0
+                    color: "#992c8214"
+                }
+
+                GradientStop {
+                    position: 1
+                    color: "#000000"
+                }
+            }
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 0
+            anchors.right: parent.right
+            anchors.rightMargin: 0
+
+            MouseArea {
+                id: submitmouseArea
+                anchors.fill: parent
+                onClicked: {
+                    for(var i =0;i< root.toAddUnits.length;i++){
+                        cityGraphics.addUnitFromQml(root.toAddUnits[i],root.toAddUnitsCost[i])
+                    }
+                    cityGraphics.city.country.funds -= root.totalCost
+                    root.toAddUnits= [];
+                    root.toAddUnitsCost= [];
+                    addedFlow.children =[]
+                    root.totalCost = 0;
+                    cityUI.show()
+                    addUI.hide()
+                }
+
+                Text {
+                    id: text2
+                    color: "#ffffff"
+                    text: qsTr("Submit")
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    anchors.fill: parent
+                    font.pixelSize: 17
+                }
+            }
+        }
+
+        Text {
+            id: costtext
+            text: "Cost :"+totalCost
+            anchors.leftMargin: 0
+            anchors.rightMargin: 97
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
+            anchors.fill: parent
+            font.pixelSize: 15
+        }
+
+    }
+
+    Text {
+        id: infoText
+        x: 46
+        y: 447
+        color: "#ffffff"
+        text: qsTr("")
+        font.italic: true
+        font.bold: true
+        anchors.left: parent.left
+        anchors.leftMargin: 46
+        anchors.verticalCenter: costRectangle.verticalCenter
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: 16
+    }
+
+    Item {
+        id: typesItem
+        x: 0
+        y: 65
+        height: 176
+        anchors.rightMargin: 0
+        anchors.leftMargin: 0
+        anchors.topMargin: 65
+        Rectangle {
+            id: typesbg
+            y: 0
+            height: 176
+            color: "#99777777"
+            anchors.right: parent.right
+            anchors.rightMargin: 0
+            anchors.left: parent.left
+            anchors.leftMargin: 0
+
+        }
+        Flickable{
+            id:typesFlickable
+            width: parent.width
+            height: parent.height
+            Flow{
+                id:typesFlow
+                height: childrenRect.height
+                width: parent.width
+            }
+        }
+        anchors.right: parent.right
+        clip: true
+        anchors.top: parent.top
+        anchors.left: parent.left
+        Component.onCompleted: {
+            var i = 0;
+            for(var tp in root.unitsTypes){
+                var obj = typegenerator.createObject(typesFlow);
+                obj.src = "qrc:/data/units/"+root.unitsTypes[i].name+".png";
+                obj.cost = root.unitsTypes[i].cost;
+                obj.name = root.unitsTypes[i].name;
+                i++;
+            }
+        }
+    }
+
+    Image {
+        id: countryimage
+        x: 323
+        width: 74
+        height: 34
+        anchors.right: incomeRectangle.left
+        anchors.rightMargin: 10
+        anchors.top: parent.top
+        anchors.topMargin: 5
+        source: "qrc:/data/flags/"+cityGraphics.city.country.intID+".png"
+    }
+
+    Text{
+        id: countrytext
+        x: 387
+        width: 80
+        height: 20
+        color: "#2eeccd"
+        text: cityGraphics.city.country.name
+        font.italic: true
+        anchors.top: countryimage.bottom
+        anchors.topMargin: 0
+        anchors.horizontalCenter: countryimage.horizontalCenter
+        font.pixelSize: 12
+    }
+
+    Text {
+        id: citytext
+        color: "#ffffff"
+        text: cityGraphics.city.name
+        horizontalAlignment: Text.AlignHCenter
+        anchors.verticalCenter: incomeRectangle.verticalCenter
+        verticalAlignment: Text.AlignVCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+        font.pixelSize: 20
+    }
+
     GroupBox {
         id: groupBox
         x: 8
         y: 73
-        width: 292
+        width: 183
         height: 49
         checkable: false
         flat: false
@@ -290,6 +349,12 @@ Item {
                 text: qsTr("1")
                 checked: true
                 exclusiveGroup: unitPerClickGroup
+                style: RadioButtonStyle{
+                    label: Text {
+                        text: "1"
+                        color: "#ffffff"
+                    }
+                }
             }
 
             RadioButton {
@@ -297,6 +362,12 @@ Item {
                 text: qsTr("3")
                 checked: false
                 exclusiveGroup: unitPerClickGroup
+                style: RadioButtonStyle{
+                    label: Text {
+                        text: "3"
+                        color: "#ffffff"
+                    }
+                }
             }
 
             RadioButton {
@@ -304,6 +375,12 @@ Item {
                 text: qsTr("5")
                 checked: false
                 exclusiveGroup: unitPerClickGroup
+                style: RadioButtonStyle{
+                    label: Text {
+                        text: "5"
+                        color: "#ffffff"
+                    }
+                }
             }
         }
 
@@ -313,6 +390,5 @@ Item {
 
 
 
-    
-
 }
+

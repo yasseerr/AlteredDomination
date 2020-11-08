@@ -197,6 +197,7 @@ Item {
                 onCurrentCityPlayingChanged:{
                     stattext.text = bscene.currentCityPlaying.country.name+" : "+Math.max(bscene.generalsToChooseA,bscene.generalsToChooseD)
                             +" moves "
+
                 }
             }
         }
@@ -664,6 +665,27 @@ Item {
         onValueChanged: {
             console.log(value)
             battleForm.zoom(value)
+        }
+    }
+
+    CheckBox {
+        id: checkBox
+        text: qsTr("Massive Battle")
+        anchors.left: zoomslider.left
+        anchors.leftMargin: 0
+        anchors.top: zoomslider.bottom
+        anchors.topMargin: 2
+        font.bold: true
+        font.pointSize: 9
+        onCheckedChanged: {
+            battleForm.setIsMassiveBattle(checkBox.checked)
+
+        }
+        Connections{
+            target:battleForm
+            onBmapLoadedSig:{
+                checkBox.checked = battleForm.isMassiveBattle
+            }
         }
     }
 

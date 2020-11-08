@@ -5,6 +5,7 @@
 #include <QObject>
 #include <QPropertyAnimation>
 #include <QSound>
+#include <QSvgRenderer>
 //#include <QAudioOutput>
 #include <QFile>
 #include "domain/unit.h"
@@ -18,6 +19,7 @@ class UnitGraphics : public QObject,public QGraphicsItem
     Q_PROPERTY(BFrame* frame READ frame WRITE setFrame NOTIFY frameChanged)
     Q_PROPERTY(bool isGeneral READ isGeneral WRITE setIsGeneral NOTIFY isGeneralChanged)
     Q_PROPERTY(QPointF pos READ pos WRITE setPos)
+    Q_PROPERTY(bool isHovered READ isHovered WRITE setIsHovered NOTIFY isHoveredChanged)
     Unit* m_unit;
 
     BMapScene* m_bmapS;
@@ -26,12 +28,15 @@ class UnitGraphics : public QObject,public QGraphicsItem
 
     bool m_isGeneral;
 
+    bool m_isHovered;
+
 public:
 //    QFile *sourseAudioM;
 //    QFile *sourseAudioE;
 
     QSound *movementAudio;
     QSound *explosionAudio;
+    QSvgRenderer *unitRend;
     explicit UnitGraphics(QObject *parent = nullptr);
 
 signals:
@@ -44,6 +49,8 @@ signals:
     void frameChanged(BFrame* frame);
 
     void isGeneralChanged(bool isGeneral);
+
+    void isHoveredChanged(bool isHovered);
 
 public slots:
 
@@ -58,6 +65,8 @@ public slots:
 
     void moveAnimationEnded(QPropertyAnimation::State stat);
 
+    void setIsHovered(bool isHovered);
+
 public:
     virtual QRectF boundingRect() const;
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
@@ -67,6 +76,7 @@ public:
     bool isGeneral() const;
 
     void moveAnimation(BFrame *f);
+    bool isHovered() const;
 };
 
 #endif // UNITGRAPHICS_H

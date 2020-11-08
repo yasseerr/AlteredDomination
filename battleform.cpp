@@ -7,6 +7,7 @@
 #include <domain/city.h>
 #include <domain/country.h>
 #include <domain/unit.h>
+#include <graphics/bframe.h>
 BattleForm::BattleForm(QTcpSocket *serv, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::BattleForm),
@@ -28,7 +29,7 @@ BattleForm::BattleForm(QTcpSocket *serv, QWidget *parent) :
     connect(m_bScene,&BMapScene::battleEndedA,this,&BattleForm::onBattleEndedA);
     connect(m_bScene,&BMapScene::battleEndedD,this,&BattleForm::onBattleEndedD);
     connect(m_bScene,&BMapScene::setViewEnable,this,&BattleForm::setViewEnalble);
-
+    connect(m_bScene,&BMapScene::bmapLoaded,this,&BattleForm::bmapLoaded);
 
     this->setWindowTitle("Let the battle begin ...");
     /// the battle Ai stuff
@@ -44,8 +45,6 @@ BattleForm::BattleForm(QTcpSocket *serv, QWidget *parent) :
     battleResultUI->setFlag(Qt::ToolTip);
     battleResultUI->setSource(QUrl("qrc:/scripts/BattleResult.qml"));
 //    battleResultUI->show();
-
-
 }
 
 BattleForm::~BattleForm()
@@ -83,6 +82,11 @@ QTcpSocket *BattleForm::serverSocket() const
     return m_serverSocket;
 }
 
+bool BattleForm::isMassiveBattle() const
+{
+    return m_isMassiveBattle;
+}
+
 void BattleForm::setBScene(BMapScene *bScene)
 {
     if (m_bScene == bScene)
@@ -109,6 +113,12 @@ void BattleForm::publishMaptoQMl()
 
 void BattleForm::play()
 {
+    /// removing the selected frame
+    if(bScene()->selectedFrame() != nullptr){
+        bScene()->selectedFrame()->setIsSeletedFrame(false);
+        bScene()->setSelectedFrame(nullptr);
+    }
+
     if(isMultiplayer()){
         if(bScene()->isOpponateReady()){
             bScene()->sendChangeStateMultiplayer("play");
@@ -142,11 +152,14 @@ void BattleForm::surrender()
 
     if(this->bScene()->bmap()->attacker() == bScene()->currentCityPlaying()){
 
-        this->onBattleEndedD();
+        bScene()->bmap()->setAttackerMoves(0);
+        bScene()->frames().first()->checkWineLose();
+//        this->onBattleEndedD();
         return;
     }else{
-
-        this->onBattleEndedA();
+        bScene()->bmap()->setDeffenderMoves(0);
+        bScene()->frames().first()->checkWineLose();
+//        this->onBattleEndedA();
     }
 }
 
@@ -166,9 +179,42 @@ void BattleForm::setViewEnalble(bool b)
     ui->graphicsView->setEnabled(b);
 }
 
+void BattleForm::bmapLoaded(bool p)
+{
+    this->setIsMassiveBattle(p);
+    emit bmapLoadedSig();
+
+}
+
+void BattleForm::fixScale()
+{
+
+//    qDebug()<<ui->graphicsView->width();
+//    qDebug()<<bScene()->bmap()->size().y()*100;
+//    qDebug()<<ui->graphicsView->height();
+//    qDebug()<<bScene()->bmap()->size().x()*100;
+
+
+    float bmapy = bScene()->bmap()->size().y()*100;
+    float bmapx = bScene()->bmap()->size().x()*100;
+
+    if(this->bScene()->bmap()->isMassiveBattle()){
+//        float a = 1-((float)()/(float)ui->graphicsView->width());
+//        float b = 1-((float)(bScene()->bmap()->size().x()*100 - ui->graphicsView->height())/(float)ui->graphicsView->height());
+        float a =1/( bmapy/ (ui->graphicsView->width()+300) );
+        float b =1/( bmapx/(ui->graphicsView->height()+300));
+        ui->graphicsView->scale(qMin(a,b),qMin(a,b));
+
+    }else{
+        float a =1/( bmapy/( ui->graphicsView->height()+300) );
+        float b =1/( bmapx/(ui->graphicsView->width()+300));
+        ui->graphicsView->scale(qMin(a,b),qMin(a,b));
+    }
+}
+
 void BattleForm::onBattleEndedA()
 {
-    this->hide();
+//    this->hide();
     battleResultUI->show();
     if(bScene()->bmap()->attacker()->country()->player() == this->bScene()->currentPlayer())
         this->setResultText("Congratulation You toke over "+bScene()->bmap()->deffender()->name()+", Nice Fight");
@@ -192,7 +238,7 @@ void BattleForm::onBattleEndedA()
 
 void BattleForm::onBattleEndedD()
 {
-    this->hide();
+//    this->hide();
     battleResultUI->show();
     if(bScene()->bmap()->attacker()->country()->player() == this->bScene()->currentPlayer())
         this->setResultText("You couldn't take "+bScene()->bmap()->deffender()->name()+",maby next time!");
@@ -245,6 +291,30 @@ void BattleForm::setServerSocket(QTcpSocket *serverSocket)
 
     m_serverSocket = serverSocket;
     emit serverSocketChanged(m_serverSocket);
+}
+
+void BattleForm::setIsMassiveBattle(bool isMassiveBattle)
+{
+    if (m_isMassiveBattle == isMassiveBattle)
+        return;
+
+    m_isMassiveBattle = isMassiveBattle;
+
+    foreach (BFrame* f, bScene()->frames().values()){
+
+        if(isMassiveBattle) f->setPos(f->y()*100,f->x()*100);
+        else f->setPos(f->x()*100,f->y()*100);
+
+    }
+    bScene()->bar1->setRect(isMassiveBattle?QRect(0,300,bScene()->bmap()->size().y()*100,4):
+                                            QRect(300,0,4,bScene()->bmap()->size().y()*100));
+
+    bScene()->bar2->setRect(isMassiveBattle? QRect(0,bScene()->bmap()->size().x()*100-300,bScene()->bmap()->size().y()*100,4):
+                                             QRect(bScene()->bmap()->size().x()*100-300,0, 4,bScene()->bmap()->size().y()*100));
+
+    bScene()->bmap()->setIsMassiveBattle(isMassiveBattle);
+    bScene()->update();
+    emit isMassiveBattleChanged(m_isMassiveBattle);
 }
 
 void BattleForm::setPromote()

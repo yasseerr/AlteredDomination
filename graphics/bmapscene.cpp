@@ -26,11 +26,26 @@ BMapScene::BMapScene(QTcpSocket *serv, QObject *parent) : QGraphicsScene(parent)
     m_isMeReady(false)
 {
     thereIsAnimationRunning =false;
-    setBackgroundBrush(QPixmap(":/data/mapBG7.jpg"));
+    setBackgroundBrush(QPixmap(":/data/mapBG14.jpg"));
     animItem->setZValue(10);
     this->addItem(animItem);
     QSound *s= new QSound(":/data/sounds/introbattle.wav");
     s->play();
+
+    animHandler = new AnimationHandlerBattle(this,this);
+    unitRend = new QSvgRenderer(QString(":/data/units/unitdisplay.svg"));
+
+    unitClip = new QImage(":/data/icons/frame.png");
+
+
+    unitPP = new unitPupUp();
+    unitPP->setZValue(100);
+    this->addItem(unitPP);
+
+    borderItem = new  BattleBorderItem();
+    borderItem->scene = this;
+    this->addItem(borderItem);
+
 }
 
 void BMapScene::removeUnitG(Unit *u)
@@ -100,9 +115,21 @@ void BMapScene::cheCkEndTurn()
             foreach (Unit *u, bmap()->deffender()->units()) {
                 u->setUsed(false);
             }
+            foreach (BFrame* f, this->previousFramesLastTurn) {
+                f->cancelSelected();
+                f->setIsPrevious(false);
+                previousFramesLastTurn.removeOne(f);
+            }
+            foreach (BFrame* f, this->previousFramesThisTurn) {
+                f->setIsActualMove(false);
+                f->setIsPrevious(true);
+                previousFramesLastTurn.append(f);
+                previousFramesThisTurn.removeOne(f);
+            }
             if(m_currentCityPlaying->country()->player()->type() == PlayerType::AI){
                 m_battleAI->playTurn();
             }
+
         }
     }else if (this->currentCityPlaying() == m_bmap->deffender()) {
         this->setGeneralsToChooseD(generalsToChooseD()-1);
@@ -112,9 +139,22 @@ void BMapScene::cheCkEndTurn()
             foreach (Unit *u, bmap()->attacker()->units()) {
                 u->setUsed(false);
             }
+            foreach (BFrame* f, this->previousFramesLastTurn) {
+                f->cancelSelected();
+                f->setIsPrevious(false);
+                previousFramesLastTurn.removeOne(f);
+            }
+            foreach (BFrame* f, this->previousFramesThisTurn) {
+                f->setIsActualMove(false);
+                f->setIsPrevious(true);
+                previousFramesLastTurn.append(f);
+                previousFramesThisTurn.removeOne(f);
+            }
             if(m_currentCityPlaying->country()->player()->type() == PlayerType::AI){
                 m_battleAI->playTurn();
             }
+
+
         }
     }
     if(this->currentCityPlaying()->country()->player()->type() == PlayerType::HUMAIN)emit setViewEnable(true);
@@ -220,7 +260,7 @@ void BMapScene::setBmap(BattleMap *bmap)
             bf->setToMoveTo(false);
             bf->setX(i);
             bf->setY(j);
-            bf->setPos(i*100,j*100);
+            bf->setPos(j*100,i*100);
             QPair<int,int> tmppair;
             tmppair.first = i;
             tmppair.second = j;
@@ -241,6 +281,7 @@ void BMapScene::setBmap(BattleMap *bmap)
         ug->frame()->setUnitG(ug);
         ug->setParentItem(ug->frame());
         ug->setBmapS(this);
+        ug->unitRend = this->unitRend;
     }
     for (int i = 0; i < m_bmap->deffender()->units().size(); ++i) {
         UnitGraphics *ug = new UnitGraphics(this);
@@ -254,7 +295,28 @@ void BMapScene::setBmap(BattleMap *bmap)
         ug->frame()->setUnitG(ug);
         ug->setBmapS(this);
         ug->setParentItem(ug->frame());
+        ug->unitRend = this->unitRend;
     }
+
+    bar1 = bmap->isMassiveBattle()?new QGraphicsRectItem(0,300,bmap->size().y()*100,4):
+                                   new QGraphicsRectItem(300,0,4,bmap->size().y()*100);
+    bar1->setBrush(bmap->attacker()->country()->color());
+    bar1->setZValue(10);
+    bar2 = bmap->isMassiveBattle()?new QGraphicsRectItem(0,bmap->size().x()*100-300, bmap->size().y()*100,4):
+                                   new QGraphicsRectItem(bmap->size().x()*100-300,0, 4,bmap->size().y()*100);
+    bar2->setBrush(bmap->deffender()->country()->color());
+    bar2->setZValue(10);
+    this->addItem(bar1);
+    this->addItem(bar2);
+
+    /// the user start first if its against an AI
+
+
+    if(bmap->attacker()->country()->player()->type() == PlayerType::AI||
+       bmap->deffender()->country()->player()->type() == PlayerType::AI)
+        this->setCurrentCityPlaying(bmap->attacker()->country()->player()->type() == PlayerType::AI?bmap->deffender():bmap->attacker()) ;
+
+
     /// the AI
     if(m_bmap->attacker()->country()->player()->type() == PlayerType::AI){
         this->battleAI()->setPlayer(m_bmap->attacker()->country()->player());
@@ -264,7 +326,10 @@ void BMapScene::setBmap(BattleMap *bmap)
         this->battleAI()->setCity(m_bmap->deffender());
     }
 
+    borderItem->mapWidth = bmap->size().x() *100;
+    borderItem->mapHeight = bmap->size().y() *100;
 
+    emit bmapLoaded(bmap->isMassiveBattle());
     /// the result ui
 
 
@@ -356,6 +421,7 @@ void BMapScene::setCurrentCityPlaying(City *currentCityPlaying)
     if (m_currentCityPlaying == currentCityPlaying)
         return;
 
+    qDebug()<<currentCityPlaying->name() << "isPlaying";
     m_currentCityPlaying = currentCityPlaying;
     emit currentCityPlayingChanged(m_currentCityPlaying);
 }
@@ -400,7 +466,6 @@ void BMapScene::setIsMeReady(bool isMeReady)
 {
     if (m_isMeReady == isMeReady)
         return;
-
     m_isMeReady = isMeReady;
     emit isMeReadyChanged(m_isMeReady);
 }

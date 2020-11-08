@@ -72,7 +72,7 @@ Item {
 
             Rectangle{
                 id:bg
-                color: "#185795"
+                color: root.country.income!=0?"#185795":"#ff0000"
                 radius: 4
                 border.width: 3
                 anchors.fill: parent

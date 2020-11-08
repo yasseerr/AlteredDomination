@@ -9,14 +9,14 @@ Item {
     }
     x: -6
     y: -9
-    width: 120
-    height: 51
+    width: 200
+    height: parent.height/7
     anchors.right: parent.right
     anchors.left: parent.left
     anchors.rightMargin: 0
     anchors.leftMargin: 0
-    anchors.bottom: root.isTop?parent.bottom:null
-    anchors.bottomMargin: root.isTop?450:0
+//    anchors.bottom: root.isTop?parent.bottom:null
+//    anchors.bottomMargin: root.isTop?450:0
     Rectangle {
         id: btnrectangle
         opacity: 0.8
@@ -51,9 +51,13 @@ Item {
         y: 5
         width: 30
         height: 30
+        anchors.verticalCenterOffset: -18
+        anchors.horizontalCenterOffset: -77
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
         antialiasing: true
         source: "qrc:/data/icons/homebuttonrotate.svg"
-        visible: true
+        visible: false
         rotation: 0
 
         NumberAnimation {

@@ -3,7 +3,7 @@ import QtQuick.Controls 1.4
 
 Item {
     id : moveUnitUI
-    width: 500
+    width: 650
     height: 500
     visible: true
     Component{
@@ -51,10 +51,10 @@ Item {
                         destinationCity.receiveUnitFromNeighbour(mainRect.idU)
 
                     }
-//                    else if(mainRect.parent==destinationflow){
-//                        mainRect.parent = sourceflow
-//                        destinationCity.sendUnitToNeighbour(mainRect.idU)
-//                    }
+                    //                    else if(mainRect.parent==destinationflow){
+                    //                        mainRect.parent = sourceflow
+                    //                        destinationCity.sendUnitToNeighbour(mainRect.idU)
+                    //                    }
                 }
 
             }
@@ -80,79 +80,135 @@ Item {
 
     Rectangle {
         id: rectangle
-        color: "#99867070"
+        color: "#803f3c3c"
         radius: 11
         border.width: 6
         anchors.fill: parent
 
 
-        ScrollView{
-            id: sourceScroll
-            x: 0
-            y: 247
-            height: 176
-            verticalScrollBarPolicy: 0
-            highlightOnFocus: true
-            horizontalScrollBarPolicy: 1
-            anchors.right: parent.right
-            anchors.left: parent.left
-            anchors.top: parent.top
-            anchors.topMargin: 53
-            clip: true
-            Rectangle {
-                id: sourceRectangle
-                color: "#99777777"
-                anchors.left: parent.left
-                anchors.leftMargin: 0
-                anchors.top: parent.top
-                anchors.topMargin: 0
-                height: sourceflow.height
-                width: 500
+//        ScrollView{
+//            id: sourceScroll
+//            x: 0
+//            y: 247
+//            height: 176
+//            verticalScrollBarPolicy: 0
+//            highlightOnFocus: true
+//            horizontalScrollBarPolicy: 1
+//            anchors.right: parent.right
+//            anchors.left: parent.left
+//            anchors.top: parent.top
+//            anchors.topMargin: 53
+//            clip: true
+//            Rectangle {
+//                id: sourceRectangle
+//                color: "#99777777"
+//                anchors.left: parent.left
+//                anchors.leftMargin: 0
+//                anchors.top: parent.top
+//                anchors.topMargin: 0
+//                height: sourceflow.height
+//                width: 500
 
-                Flow {
-                    id: sourceflow
-                    height: childrenRect.height
-                    anchors.right: parent.right
-                    anchors.left: parent.left
-                    anchors.top: parent.top
-                }
+//                Flow {
+//                    id: sourceflow1
+//                    height: childrenRect.height
+//                    anchors.right: parent.right
+//                    anchors.left: parent.left
+//                    anchors.top: parent.top
+//                }
+
+//            }
+//        }
+
+        Item {
+            id: sourceItem
+            height: 200
+            anchors.right: parent.right
+            anchors.rightMargin: 2
+            anchors.left: parent.left
+            anchors.leftMargin: 2
+            anchors.top: sourceText.bottom
+            anchors.topMargin: 10
+            Rectangle{
+                anchors.fill: parent
+                color: "#99777777"
 
             }
-        }
-
-        ScrollView{
-            id: destinationScroll
-            x: 0
-            y: 247
-            height: 176
-            verticalScrollBarPolicy: 0
-            highlightOnFocus: true
-            horizontalScrollBarPolicy: 1
-            anchors.right: parent.right
-            anchors.left: parent.left
-            anchors.top: parent.top
-            anchors.topMargin: 257
-            clip: true
-            Rectangle {
-                id: destinationRectangle
-                color: "#99777777"
-                anchors.left: parent.left
-                anchors.leftMargin: 0
-                anchors.top: parent.top
-                anchors.topMargin: 0
-                height: destinationflow.height
-                width: 500
-
-                Flow {
-                    id: destinationflow
+            Flickable{
+                clip: true
+                anchors.fill: parent
+                contentWidth: width
+                contentHeight: sourceflow.height
+                Flow{
+                    id:sourceflow
+                    width: parent.width
                     height: childrenRect.height
-                    anchors.right: parent.right
-                    anchors.left: parent.left
-                    anchors.top: parent.top
                 }
+            }
+
+        }
+        Item {
+            id: destinationItem
+            height: 200
+            anchors.right: parent.right
+            anchors.rightMargin: 2
+            anchors.left: parent.left
+            anchors.leftMargin: 2
+            anchors.top: destinationText.bottom
+            anchors.topMargin: 5
+            Rectangle{
+                anchors.fill: parent
+                color: "#99777777"
 
             }
+            Flickable{
+                clip: true
+                anchors.fill: parent
+                contentWidth: width
+                contentHeight: sourceflow.height
+                Flow{
+                    id:destinationflow
+                    width: parent.width
+                    height: childrenRect.height
+                }
+            }
+
         }
+
+
+//        ScrollView{
+//            id: destinationScroll
+//            x: 0
+//            y: 247
+//            height: 176
+//            verticalScrollBarPolicy: 0
+//            highlightOnFocus: true
+//            horizontalScrollBarPolicy: 1
+//            anchors.right: parent.right
+//            anchors.left: parent.left
+//            anchors.top: parent.top
+//            anchors.topMargin: 257
+//            clip: true
+//            Rectangle {
+//                id: destinationRectangle
+//                color: "#99777777"
+//                anchors.left: parent.left
+//                anchors.leftMargin: 0
+//                anchors.top: parent.top
+//                anchors.topMargin: 0
+//                height: destinationflow.height
+//                width: 500
+
+//                Flow {
+//                    id: destinationflow
+//                    height: childrenRect.height
+//                    anchors.right: parent.right
+//                    anchors.left: parent.left
+//                    anchors.top: parent.top
+//                }
+
+//            }
+//        }
 
         Text {
             id: sourceText
@@ -163,7 +219,7 @@ Item {
             anchors.left: parent.left
             anchors.leftMargin: 16
             anchors.top: parent.top
-            anchors.topMargin: 24
+            anchors.topMargin: 5
             font.pixelSize: 21
         }
 
@@ -177,9 +233,9 @@ Item {
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
             anchors.left: parent.left
-            anchors.topMargin: 226
+            anchors.topMargin: 5
             font.pixelSize: 21
-            anchors.top: parent.top
+            anchors.top: sourceItem.bottom
         }
 
         Rectangle {
@@ -188,8 +244,18 @@ Item {
             y: 436
             width: 94
             height: 55
-            color: "#992c8214"
-            radius: 28
+            radius: 8
+            gradient: Gradient {
+                GradientStop {
+                    position: 0
+                    color: "#247c0c"
+                }
+
+                GradientStop {
+                    position: 1
+                    color: "#2f5723"
+                }
+            }
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 9
             anchors.right: parent.right
@@ -199,22 +265,25 @@ Item {
                 id: submitmouseArea
                 anchors.fill: parent
                 onClicked: {
-//                    adUnitUI.toAddUnits.forEach(function(element){ cityGraphics.addUnitFromQml(element)})
+                    //                    adUnitUI.toAddUnits.forEach(function(element){ cityGraphics.addUnitFromQml(element)})
                     moveUI.hide()
                     sourceflow.children = []
                     destinationflow.children = []
                     sourceCity.deSelect()
+                    mapUI.enabled = true
                 }
+            }
 
-                Text {
-                    id: text2
-                    color: "#ffffff"
-                    text: "Submit"
-                    verticalAlignment: Text.AlignVCenter
-                    horizontalAlignment: Text.AlignHCenter
-                    anchors.fill: parent
-                    font.pixelSize: 17
-                }
+            Text {
+                id: text2
+                x: 0
+                y: 0
+                color: "#ffffff"
+                text: "Submit"
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+                anchors.fill: parent
+                font.pixelSize: 17
             }
         }
 

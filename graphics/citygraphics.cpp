@@ -7,6 +7,7 @@
 #include <QPropertyAnimation>
 #include <QQmlContext>
 #include <QQuickItem>
+#include <QSvgRenderer>
 #include <QVariantList>
 
 #include <domain/city.h>
@@ -15,6 +16,7 @@
 
 #include <AI/battleai.h>
 #include <AI/mapai.h>
+
 
 
 CityGraphics::CityGraphics(City *city_p,QImage *cityImg_p):cityImg(cityImg_p),m_city(city_p),m_toAttack(false),m_moveToIt(false)
@@ -28,40 +30,54 @@ CityGraphics::CityGraphics(City *city_p,QImage *cityImg_p):cityImg(cityImg_p),m_
 
 QRectF CityGraphics::boundingRect() const
 {
-    return QRectF(0,0,700,700);
+    return QRectF(0,0,800,800);
 
 }
 
 void CityGraphics::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-
-    painter->setOpacity(0.3);
-    painter->fillRect(boundingRect(),city()->country()->color());
+/*
+    painter->setOpacity(0.3);*/
+//    painter->fillRect(boundingRect(),city()->country()->color());
+/*
     painter->setOpacity(1);
     painter->drawImage(100,100,bgImage->scaled(600,600));
+*/
 //    painter->drawImage(10,0,*cityImg);
-
+    painter->setOpacity(0.6);
+    painter->setBrush(city()->country()->color());
+    painter->drawEllipse(0,0,800,800);
+    painter->setRenderHint(QPainter::Antialiasing);
+    painter->setOpacity(1);
+//    QSvgRenderer *ren = new QSvgRenderer(QString(":/data/cities/citydisplay.svg"));
+     mapView()->cityRend->render(painter,QRectF(0,0,800,800));
+//    ren->render(painter,);
+//    ic->paint(painter,0,0,800,800);
+//    painter->drawImage(0,0,.scaled(800,800));
 
     if(m_moveToIt)painter->drawImage(300,-256,QImage(":/data/icons/moveto.png"));
-    if(m_toAttack)painter->drawImage(0,0,QImage(":/data/icons/target.png").scaled(700,700));
+    if(m_toAttack)painter->drawImage(0,0,QImage(":/data/icons/target.png").scaled(800,800));
 
-
+    /*
     /// city name rect+text
     painter->setOpacity(0.3);
     painter->setBrush(m_city->country()->color().darker());
     painter->drawRect(0,500,700,200);
+    */
     painter->setOpacity(1);
     QFont nameFont;
-    nameFont.setPointSize(70);
+    nameFont.setPointSize(60);
     nameFont.setBold(true);
     painter->setFont(nameFont);
-    painter->drawText(20,630,m_city->name()+"-"+QString::number(m_city->id())+"-");
-    nameFont.setBold(false);
-    nameFont.setPointSize(150);
     painter->setPen(Qt::white);
+    painter->drawText(200,700,m_city->name()/*+"-"+QString::number(m_city->id())+"-"*/);
+    nameFont.setBold(false);
+    nameFont.setFamily(":/data/fonts/District.ttf");
+    nameFont.setPointSize(100);
     painter->setFont(nameFont);
-    painter->drawText(300,200,QString::number(m_city->income()));
-    painter->drawImage(0,0,this->city()->country()->flag());
+    painter->drawText(270,170,QString::number(m_city->income()));
+    painter->drawImage(100,400,this->city()->country()->flag());
+
 }
 
 City* CityGraphics::city() const
@@ -75,7 +91,7 @@ void CityGraphics::hoverEnterEvent(QGraphicsSceneHoverEvent *ev)
     setScale(0.1);
     foreach (LinkGraphics *ln, this->links()) {
         ln->setOpacity(1);
-        if(ln->link()->des()->country() == ln->link()->dep()->country())ln->setPen(QPen(ln->link()->des()->country()->color(),
+        if(ln->link()->des()->country() == ln->link()->dep()->country())ln->setPen(QPen(ln->link()->des()->country()->color().darker(150),
                                                                                         4,Qt::SolidLine));
         else ln->setPen(QPen(Qt::red,4,Qt::SolidLine));
     }
@@ -86,8 +102,8 @@ void CityGraphics::hoverLeaveEvent(QGraphicsSceneHoverEvent *ev)
     this->setScale(0.09);
 
     foreach (LinkGraphics *ln, this->links()) {
-        ln->setOpacity(0.2);
-        if(ln->link()->des()->country() == ln->link()->dep()->country())ln->setPen(QPen(ln->link()->des()->country()->color(),
+        ln->setOpacity(0.3);
+        if(ln->link()->des()->country() == ln->link()->dep()->country())ln->setPen(QPen(ln->link()->des()->country()->color().darker(150),
                                                                                         3,Qt::DashDotLine));
         else ln->setPen(QPen(Qt::red,2,Qt::DotLine));
     }
@@ -109,6 +125,7 @@ void CityGraphics::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
 //------------------------------ movement system-------------------------------------------------
     if(moveToIt()){
+        mapView()->setEnabled(false);
         this->mapView()->selectedCityGraphics()->city()->setUsed(true);
         mapView()->moveUnitUI->rootContext()->setContextProperty("sourceCity",mapView()->selectedCityGraphics());
         mapView()->moveUnitUI->rootContext()->setContextProperty("destinationCity",this);
@@ -125,6 +142,7 @@ void CityGraphics::mousePressEvent(QGraphicsSceneMouseEvent *event)
     }else if (m_toAttack) {
 
 ///------------------------- attack system----------------------------------------------------
+        mapView()->setEnabled(false);
         mapView()->attackUI->rootContext()->setContextProperty("sourceCity",mapView()->selectedCityGraphics());
         mapView()->attackUI->rootContext()->setContextProperty("destinationCity",this);
         foreach (Unit *u, this->city()->units().values()) {
@@ -145,6 +163,7 @@ void CityGraphics::mousePressEvent(QGraphicsSceneMouseEvent *event)
     mapView()->addUnitUI->rootContext()->setContextProperty("cityUI",mapView()->CityUI);
     mapView()->CityUI->rootContext()->setContextProperty("cityUI",mapView()->CityUI);
     mapView()->CityUI->show();
+    mapView()->setEnabled(false);
 
 
     foreach (Unit *tmp, city()->units().values()) {
@@ -245,7 +264,9 @@ void CityGraphics::startBattle()
     connect(mapView()->battleForm,SIGNAL(battleEndedA()),this,SLOT(onAttackerWon()));
 
     mapView()->battleForm->publishMaptoQMl();
-    mapView()->battleForm->showFullScreen();
+    emit mapView()->hideMain();
+    mapView()->battleForm->showMaximized();
+    mapView()->battleForm->fixScale();
 //    mapView()->battleForm->battleAI()->placeUnits();
 
 }
@@ -350,7 +371,7 @@ void CityGraphics::onBattleEnded()
     if(p->type() == PlayerType::AI){
         mapView()->mapAI()->launchBattleAI_Player();
     }
-
+    emit mapView()->showMain();
 
 }
 
@@ -362,7 +383,9 @@ void CityGraphics::setPower(int power)
 void CityGraphics::onAttackerWon()
 {
     this->city()->setUsed(true);
+
     emit mapView()->attackerWon(this->city());
+    emit mapView()->showMain();
 }
 
 void CityGraphics::setLinks(QList<LinkGraphics*> links)

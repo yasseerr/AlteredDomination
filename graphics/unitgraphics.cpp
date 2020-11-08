@@ -10,9 +10,10 @@
 #include <domain/country.h>
 
 #include <AI/battleai.h>
-UnitGraphics::UnitGraphics(QObject *parent) : QObject(parent)
+UnitGraphics::UnitGraphics(QObject *parent) : QObject(parent),m_isHovered(false)
 {
     setTransformOriginPoint(50,50);
+    unitRend = new QSvgRenderer();
 }
 
 void UnitGraphics::setUnit(Unit *unit)
@@ -73,6 +74,15 @@ void UnitGraphics::moveAnimationEnded(QPropertyAnimation::State stat)
     }
 }
 
+void UnitGraphics::setIsHovered(bool isHovered)
+{
+    if (m_isHovered == isHovered)
+        return;
+
+    m_isHovered = isHovered;
+    emit isHoveredChanged(m_isHovered);
+}
+
 
 QRectF UnitGraphics::boundingRect() const
 {
@@ -82,9 +92,13 @@ QRectF UnitGraphics::boundingRect() const
 
 void UnitGraphics::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    painter->setOpacity(0.4);
-    painter->fillRect(10,10,80,80,unit()->city()->country()->color());
+    painter->setOpacity(0.5);
+    painter->setBrush(isHovered()?unit()->city()->country()->color().lighter(165):unit()->city()->country()->color());
+    painter->drawEllipse(10,10,80,80);
+//    painter->fillRect(10,10,80,80,unit()->city()->country()->color());
     painter->setOpacity(1);
+//    painter->drawImage(10,10,QImage(":/data/units/unitdisplay.svg").scaled(80,80));
+    unitRend->render(painter,QRectF(10,10,80,80));
     if(this->bmapS()->bmap()->attacker() != this->unit()->city()){
         painter->drawImage(70,10,QImage(":/data/flags/"+unit()->city()->country()->intID()+".png").scaled(20,15));
         painter->drawImage(10,10,QImage(":/data/units/"+this->unit()->type()+".png").scaled(80,80).mirrored(true,false));
@@ -140,4 +154,9 @@ void UnitGraphics::moveAnimation(BFrame *f)
     moveAnim->setEasingCurve(QEasingCurve::InOutCubic);
 
     moveAnim->start();
+}
+
+bool UnitGraphics::isHovered() const
+{
+    return m_isHovered;
 }

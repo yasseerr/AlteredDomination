@@ -13,6 +13,7 @@ Item {
             fillMode: Image.Tile
             source: "qrc:/data/mapmtex.jpg"
             anchors.fill: parent
+            visible: false
         }
         Rectangle {
             id: bgrectangle
@@ -20,13 +21,13 @@ Item {
             border.width: 3
             gradient: Gradient {
                 GradientStop {
-                    position: 0
-                    color: "#ccff7b25"
+                    position: 1
+                    color: "#cc222222"
                 }
 
                 GradientStop {
-                    position: 1
-                    color: "#cc6b5b95"
+                    position: 0
+                    color: "#cc555555"
                 }
             }
             anchors.fill: parent

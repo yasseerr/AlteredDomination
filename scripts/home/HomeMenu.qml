@@ -199,6 +199,20 @@ Item {
 
 
     Loader{
+        id:mainloader
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 100
+        anchors.top: parent.top
+        anchors.topMargin: 100
+        anchors.right: menuLoader.left
+        anchors.rightMargin: 20
+        source: ""
+        anchors.left: parent.left
+        anchors.leftMargin: 100
+
+    }
+
+    Loader{
         id:menuLoader
         width: 200
         source: "qrc:/scripts/home/HomeMenuComponant.qml"
@@ -212,19 +226,13 @@ Item {
 
     }
 
-    Loader{
-        id:mainloader
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 100
-        anchors.top: parent.top
-        anchors.topMargin: 100
-        anchors.right: menuLoader.left
-        anchors.rightMargin: 20
-        source: ""
-        anchors.left: parent.left
-        anchors.leftMargin: 100
-
+    Loader {
+        id: loaderFrame
+        visible: false
+        anchors.fill: parent
+        source: "qrc:/scripts/Loading.qml"
     }
+
 
 
     Audio{
@@ -255,6 +263,7 @@ Item {
         }
 
     }
+
 
 
 

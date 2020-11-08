@@ -38,6 +38,8 @@ public slots  :
     Q_INVOKABLE void runNextTurn();
     void onAttackerWon(City *C);
 
+    virtual void closeEvent(QCloseEvent *ev);
+    virtual void hideEvent(QHideEvent *event);
 
 signals:
     void mapViewChanged(MapView* mapView);

@@ -186,7 +186,9 @@ void BattleAI::runAnimation()
 {
     if(scene()->phase() == BMapScene::PLAYING)return;
     if(animationList.size()==0){
+        qDebug("entered");
         scene()->setPhase(BMapScene::PROMOTING);
+        m_battleForm->bScene()->setCurrentCityPlaying(m_city);
         this->selectGenerals();
         m_battleForm->bScene()->setCurrentCityPlaying(enemyCity);
         return;
@@ -217,6 +219,7 @@ void BattleAI::runAnimation()
 
 void BattleAI::selectGenerals()
 {
+    qDebug()<< battleForm()->bScene()->currentCityPlaying()->name();
     int generalsCount = city()==scene()->bmap()->attacker()?scene()->generalsToChooseA():scene()->generalsToChooseD();
     /// selecting the soldiers groupe
     QList<Unit*> soldiers;
@@ -593,6 +596,7 @@ void BattleAI::applyMoves()
         QList<BFrame*> movesandattacks = moveListForFrame(topMove.first->frame(),topMove.first->unit()) +
                                          attackListForFrame(topMove.first->frame(),topMove.first->unit());
         if(!movesandattacks.contains(topMove.second))continue;
+        qDebug() << "fatou mn continue normal";
         topMove.first->frame()->mousePressEventAI();
         topMove.second->mousePressEventAI();
         a--;

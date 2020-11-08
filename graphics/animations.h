@@ -22,6 +22,9 @@ class Animations : public QObject,public QGraphicsItem
 
     int frameNumber;
 
+    QGraphicsRectItem bullet;
+
+
 public:
 
     QMap<QString,QFile*> sounds;

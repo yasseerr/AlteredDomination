@@ -10,7 +10,7 @@ Item {
         id: bg
         height: 50
         radius: 0
-        border.width: 3
+        border.width: 4
         gradient: Gradient {
             GradientStop {
                 position: 0
@@ -19,7 +19,7 @@ Item {
 
             GradientStop {
                 position: 0.962
-                color: "#c9c5ec"
+                color: "#111111"
             }
         }
         opacity: 1
@@ -424,24 +424,15 @@ Item {
 
         Rectangle {
             id: zoomInrectangle
+            color: "#121f52"
             radius: 6
             border.width: 2
-            gradient: Gradient {
-                GradientStop {
-                    position: 0
-                    color: "#ffffff"
-                }
-
-                GradientStop {
-                    position: 1
-                    color: "#b41414"
-                }
-            }
             anchors.fill: parent
         }
 
         Text {
             id: zoomINtext
+            color: "#ffffff"
             text: qsTr("+")
             anchors.verticalCenter: parent.verticalCenter
             anchors.horizontalCenter: parent.horizontalCenter
@@ -454,11 +445,11 @@ Item {
             hoverEnabled: true
             onEntered: {
                 infotext.text  = "zoom in"
-                zoomInrectangle.gradient.stops[1].color = Qt.lighter("#b41414")
+                zoomInrectangle.color = "#35bbe2"
             }
             onExited: {
                 infotext.text  = ""
-                zoomInrectangle.gradient.stops[1].color = "#b41414"
+                zoomInrectangle.color = "#121f52"
             }
             onClicked: {
 //                battleForm.zoomIN()
@@ -478,24 +469,15 @@ Item {
         visible: true
         Rectangle {
             id: zoomOutrectangle
+            color: "#121f52"
             radius: 6
-            gradient: Gradient {
-                GradientStop {
-                    position: 0
-                    color: "#ffffff"
-                }
-
-                GradientStop {
-                    position: 1
-                    color: "#b41414"
-                }
-            }
             anchors.fill: parent
             border.width: 2
         }
 
         Text {
             id: zoomOuttext
+            color: "#ffffff"
             text: qsTr("-")
             anchors.verticalCenter: parent.verticalCenter
             font.pixelSize: 18
@@ -508,11 +490,11 @@ Item {
             hoverEnabled: true
             onEntered: {
                 infotext.text  = "zoom out"
-                zoomOutrectangle.gradient.stops[1].color = Qt.lighter("#b41414")
+                zoomOutrectangle.color = "#35bbe2"
             }
             onExited: {
                 infotext.text  = ""
-                zoomOutrectangle.gradient.stops[1].color = "#b41414"
+                zoomOutrectangle.color = "#121f52"
             }
             onClicked: {
 //                battleForm.zoomOUt()

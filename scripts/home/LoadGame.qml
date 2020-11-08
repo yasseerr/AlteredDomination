@@ -6,24 +6,24 @@ Item {
     visible: true
     Item {
         id: main
-        width: 400
-        height: 401
+        width: 600
+        height: 450
         clip: true
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
         Rectangle {
             id: bgrectangle
-            radius: 17
+            radius: 5
             border.width: 3
             gradient: Gradient {
                 GradientStop {
-                    position: 0
-                    color: "#ccff7b25"
+                    position: 1
+                    color: "#cc222222"
                 }
 
                 GradientStop {
-                    position: 1
-                    color: "#cc6b5b95"
+                    position: 0
+                    color: "#cc555555"
                 }
             }
             anchors.fill: parent
@@ -32,8 +32,8 @@ Item {
         Flickable {
             id: savesflickable
             anchors.bottomMargin: 10
-            anchors.topMargin: 10
-            anchors.rightMargin: 30
+            anchors.topMargin: 20
+            anchors.rightMargin: 20
             anchors.leftMargin: 30
             contentHeight: savesflow.height
             contentWidth: this.width

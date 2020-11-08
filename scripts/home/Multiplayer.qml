@@ -20,6 +20,7 @@ Item {
             fillMode: Image.Tile
             source: "qrc:/data/mapmtex.jpg"
             anchors.fill: parent
+            visible: false
         }
         Rectangle {
             id: bgrectangle
@@ -27,13 +28,13 @@ Item {
             border.width: 3
             gradient: Gradient {
                 GradientStop {
-                    position: 0
-                    color: "#ccff7b25"
+                    position: 1
+                    color: "#cc222222"
                 }
 
                 GradientStop {
-                    position: 1
-                    color: "#cc6b5b95"
+                    position: 0
+                    color: "#cc555555"
                 }
             }
             anchors.fill: parent
@@ -119,6 +120,7 @@ Item {
                     }
                     model = tmp
                 }
+                popup.height: 400
             }
 
             ComboBox {
@@ -342,7 +344,7 @@ Item {
 
             TextField {
                 id: createiptext
-                color: "#000000"
+                color: "#ffffff"
                 text: qsTr("192.168.1.1")
                 anchors.centerIn: parent
                 anchors.fill: parent
@@ -422,6 +424,7 @@ Item {
             anchors.right: joinItem.left
             anchors.rightMargin: 10
             text: qsTr("213.154.12.5")
+            color: "#ffffff"
             placeholderText: "ip of the opponant"
             background: Rectangle {
                 color: "#00000000"

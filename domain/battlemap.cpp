@@ -13,11 +13,14 @@ BattleMap::BattleMap(City *a,City *d,QObject *parent) : QObject(parent),
     m_deffender(d)
 {
 //--------calculating the size--------------------------//
+
     m_size.setX(14);
     m_size.setY(1+qMax(a->units().size()/2,d->units().size()/2));
-    m_attackerMoves = 1+(a->units().size()/16);
-    m_deffenderMoves = 1+(d->units().size()/16);
+    m_attackerMoves = 1+(a->units().size()/8);
+    m_deffenderMoves = 1+(d->units().size()/8);
     m_baseSize = 2;
+    m_isMassiveBattle = m_size.y()>8;
+
 //--------loading the units types---------------------//
 
     QFile typesFile(":/scripts/units.json");
@@ -103,6 +106,11 @@ int BattleMap::baseSize() const
     return m_baseSize;
 }
 
+bool BattleMap::isMassiveBattle() const
+{
+    return m_isMassiveBattle;
+}
+
 void BattleMap::setAttacker(City *attacker)
 {
     if (m_attacker == attacker)
@@ -164,4 +172,13 @@ void BattleMap::setBaseSize(int baseSize)
 
     m_baseSize = baseSize;
     emit baseSizeChanged(m_baseSize);
+}
+
+void BattleMap::setIsMassiveBattle(bool isMassiveBattle)
+{
+    if (m_isMassiveBattle == isMassiveBattle)
+        return;
+
+    m_isMassiveBattle = isMassiveBattle;
+    emit isMassiveBattleChanged(m_isMassiveBattle);
 }

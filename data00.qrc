@@ -437,5 +437,25 @@
         <file>data/icons/homebutton.svg</file>
         <file>data/icons/homebuttonrotate.svg</file>
         <file>scripts/home/HomeButton.qml</file>
+        <file>scripts/Loading.qml</file>
+        <file>data/icons/loading.svg</file>
+        <file>data/cities/citydisplay.svg</file>
+        <file>data/units/unitdisplay.svg</file>
+        <file>data/canon.png</file>
+        <file>data/debris.png</file>
+        <file>data/out.svg</file>
+        <file>data/mask.svg</file>
+        <file>data/mapthem.svg</file>
+        <file>data/mapthem.png</file>
+        <file>data/mapBG11.jpg</file>
+        <file>data/mapBG12.jpg</file>
+        <file>data/chalkboard.jpg</file>
+        <file>data/white-wood.jpg</file>
+        <file>data/mapBG13.jpg</file>
+        <file>data/mapBG14.jpg</file>
+        <file>data/battleborders.svg</file>
+        <file>data/cracking.png</file>
+        <file>data/ocean.jpg</file>
+        <file>data/motivo2.png</file>
     </qresource>
 </RCC>

@@ -6,31 +6,33 @@ Item {
     height: 480
     visible: true
 
+    Image {
+        id: image
+        opacity: 0.7
+        fillMode: Image.Tile
+        anchors.fill: parent
+        source: "qrc:/data/mapmtex.jpg"
+    }
+
     Rectangle {
         id: bg
         width: 300
         radius: 20
+        opacity: 1
         clip: true
         border.width: 4
         gradient: Gradient {
             GradientStop {
-                position: 0
-                color: "#cc5050ce"
-            }
-            GradientStop {
                 position: 1
-                color: "#cc324348"
+                color: "#cc222222"
+            }
+
+            GradientStop {
+                position: 0
+                color: "#cc555555"
             }
         }
         anchors.fill: parent
-
-        Image {
-            id: image
-            opacity: 0.4
-            fillMode: Image.Tile
-            anchors.fill: parent
-            source: "qrc:/data/mapmtex.jpg"
-        }
     }
 
     Item {
@@ -83,17 +85,17 @@ Item {
             id: saverectangle
             radius: 5
             opacity: 0.8
-            border.color: "#0a1d63"
+            border.color: "#ffffff"
             border.width: 3
             gradient: Gradient {
                 GradientStop {
-                    position: 0
-                    color: "#cc11e9e9"
+                    position: 1
+                    color: savemouseArea.containsMouse?"#cc80c4c8":"#cc222222";
                 }
 
                 GradientStop {
-                    position: 1
-                    color: "#cc43475c"
+                    position: 0
+                    color: "#cc555555"
                 }
             }
             anchors.fill: parent
@@ -138,18 +140,18 @@ Item {
             radius: 5
             gradient: Gradient {
                 GradientStop {
-                    position: 0
-                    color: "#cc11e9e9"
+                    position: 1
+                    color: settingmouseArea.containsMouse?"#cc80c4c8":"#cc222222";
                 }
 
                 GradientStop {
-                    position: 1
-                    color: "#cc43475c"
+                    position: 0
+                    color: "#cc555555"
                 }
             }
             anchors.fill: parent
             border.width: 3
-            border.color: "#0a1d63"
+            border.color: "#ffffff"
             opacity: 0.8
         }
 
@@ -188,19 +190,19 @@ Item {
             radius: 5
             gradient: Gradient {
                 GradientStop {
-                    position: 0
-                    color: "#cc11e9e9"
+                    position: 1
+                    color: homemouseArea.containsMouse?"#cc80c4c8":"#cc222222";
                 }
 
                 GradientStop {
-                    position: 1
-                    color: "#cc43475c"
+                    position: 0
+                    color: "#cc555555"
                 }
             }
             anchors.fill: parent
             border.width: 3
             opacity: 0.8
-            border.color: "#0a1d63"
+            border.color: "#ffffff"
         }
 
         Text {
@@ -242,18 +244,18 @@ Item {
             radius: 5
             gradient: Gradient {
                 GradientStop {
-                    position: 0
-                    color: "#cc11e9e9"
+                    position: 1
+                    color: exitmouseArea.containsMouse?"#cc80c4c8":"#cc222222";
                 }
 
                 GradientStop {
-                    position: 1
-                    color: "#cc43475c"
+                    position: 0
+                    color: "#cc555555"
                 }
             }
             anchors.fill: parent
             border.width: 3
-            border.color: "#0a1d63"
+            border.color: "#ffffff"
             opacity: 0.8
         }
 
@@ -277,4 +279,5 @@ Item {
             onClicked: mapView.quitGame()
         }
     }
+
 }

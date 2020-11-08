@@ -16,6 +16,7 @@ Item {
             fillMode: Image.Tile
             source: "qrc:/data/mapmtex.jpg"
             anchors.fill: parent
+            visible: false
         }
         Rectangle {
             id: bgrectangle
@@ -23,13 +24,13 @@ Item {
             border.width: 3
             gradient: Gradient {
                 GradientStop {
-                    position: 0
-                    color: "#ccff7b25"
+                    position: 1
+                    color: "#cc222222"
                 }
 
                 GradientStop {
-                    position: 1
-                    color: "#cc6b5b95"
+                    position: 0
+                    color: "#cc555555"
                 }
             }
             anchors.fill: parent
@@ -78,12 +79,14 @@ Item {
                 displayText: "Country :"+currentText
                 textRole: ""
                 model: tmp
+                popup.height: 400
                 Component.onCompleted: {
                     for(var i =0 ;i< mapFile.length;i++){
                         countrycomboBox.tmp.push(mapFile[i].name)
 
                     }
                     model = tmp
+                    countrycomboBox.currentIndex = Math.random() * tmp.length
                 }
             }
 
@@ -152,11 +155,13 @@ Item {
                     onEntered: {
                         startbgrectangle.gradient.stops[0].color = Qt.lighter("#ccf30c0c")
 
+
                     }
                     onExited: {
                         startbgrectangle.gradient.stops[0].color = "#ccf30c0c"
                     }
                     onClicked: {
+//                        loaderFrame.visible = true
                         bgAmbiant.stop()
                         battleAmbiant.stop()
                         homeClass.startGame(countrycomboBox.currentText,modecomboBox.currentIndex)

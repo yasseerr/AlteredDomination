@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core multimedia network gui svg quick quickwidgets
+QT       += core multimedia network gui svg quick quickwidgets xml
 
 
 CONFIG += resources_big
@@ -51,7 +51,11 @@ SOURCES += \
     graphics/animations.cpp \
     graphics/homemenu.cpp \
     multiplayer/multiplayergame.cpp \
-    multiplayer/serverengin.cpp
+    multiplayer/serverengin.cpp \
+    graphics/animationhandlerbattle.cpp \
+    graphics/mapgraphics.cpp \
+    graphics/unitpupup.cpp \
+    graphics/battleborderitem.cpp
 
 HEADERS += \
         mainmenu.h \
@@ -77,7 +81,11 @@ HEADERS += \
     graphics/animations.h \
     graphics/homemenu.h \
     multiplayer/multiplayergame.h \
-    multiplayer/serverengin.h
+    multiplayer/serverengin.h \
+    graphics/animationhandlerbattle.h \
+    graphics/mapgraphics.h \
+    graphics/unitpupup.h \
+    graphics/battleborderitem.h
 
 FORMS += \
         mainmenu.ui \

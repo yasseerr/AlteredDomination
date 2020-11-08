@@ -18,8 +18,12 @@ class BFrame : public QObject, public QGraphicsItem
     Q_PROPERTY(bool toAttack READ toAttack WRITE setToAttack NOTIFY toAttackChanged)
     Q_PROPERTY(bool toMoveTo READ toMoveTo WRITE setToMoveTo NOTIFY toMoveToChanged)
     Q_PROPERTY(bool isSeletedFrame READ isSeletedFrame WRITE setIsSeletedFrame NOTIFY isSeletedFrameChanged)
-
-
+    Q_PROPERTY(bool isPrevious READ isPrevious WRITE setIsPrevious NOTIFY isPreviousChanged)
+    Q_PROPERTY(bool isActualMove READ isActualMove WRITE setIsActualMove NOTIFY isActualMoveChanged)
+    Q_PROPERTY(int moveId READ moveId WRITE setMoveId NOTIFY moveIdChanged)
+    Q_PROPERTY(bool idDestroyed READ idDestroyed WRITE setIdDestroyed NOTIFY idDestroyedChanged)
+    Q_PROPERTY(bool isDestroyer READ isDestroyer WRITE setIsDestroyer NOTIFY isDestroyerChanged)
+    
 
     int m_x;
 
@@ -33,6 +37,16 @@ class BFrame : public QObject, public QGraphicsItem
 
     bool m_isSeletedFrame;
 
+    bool m_isPrevious;
+
+    bool m_isActualMove;
+    
+    int m_moveId;
+    
+    bool m_idDestroyed;
+    
+    bool m_isDestroyer;
+    
 public:
     UnitGraphics* m_unitG;
 
@@ -46,6 +60,8 @@ public:
     void highlightMovesAttacks();
     void unHighlight();
     void checkWineLose();
+
+    void cancelSelected();
 
 signals:
 
@@ -64,6 +80,16 @@ signals:
     void isSeletedFrameChanged(bool isSeletedFrame);
 
 
+    void isPreviousChanged(bool isPrevious);
+
+    void isActualMoveChanged(bool isActualMove);
+    
+    void moveIdChanged(int moveId);
+    
+    void idDestroyedChanged(bool idDestroyed);
+    
+    void isDestroyerChanged(bool isDestroyer);
+    
 public slots:
 
 // QGraphicsItem interface
@@ -81,6 +107,16 @@ public slots:
 
     void setIsSeletedFrame(bool isSeletedFrame);
 
+    void setIsPrevious(bool isPrevious);
+
+    void setIsActualMove(bool isActualMove);
+    
+    void setMoveId(int moveId);
+    
+    void setIdDestroyed(bool idDestroyed);
+    
+    void setIsDestroyer(bool isDestroyer);
+    
 public:
     virtual QRectF boundingRect() const;
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
@@ -91,6 +127,26 @@ public:
     bool toAttack() const;
     bool toMoveTo() const;
     bool isSeletedFrame() const;
+    bool isPrevious() const
+    {
+        return m_isPrevious;
+    }
+    bool isActualMove() const
+    {
+        return m_isActualMove;
+    }
+    int moveId() const
+    {
+        return m_moveId;
+    }
+    bool idDestroyed() const
+    {
+        return m_idDestroyed;
+    }
+    bool isDestroyer() const
+    {
+        return m_isDestroyer;
+    }
 };
 
 #endif // BFRAME_H

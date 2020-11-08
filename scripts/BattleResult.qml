@@ -10,7 +10,7 @@ Item {
     
     Image {
         id: bgimage
-        opacity: 0.6
+        opacity: 0.5
         anchors.fill: parent
         source: "qrc:/data/cities/attackUIBG.jpg"
     }
@@ -18,11 +18,12 @@ Item {
     Rectangle {
         id: bgrectangle
         radius: 1
-        border.color: "#05ac35"
+        opacity: 0.8
+        border.color: "#070606"
         border.width: 3
         gradient: Gradient {
             GradientStop {
-                position: 0.205
+                position: 0.422
                 color: "#33000000"
             }
             
@@ -126,12 +127,12 @@ Item {
             gradient: Gradient {
                 GradientStop {
                     position: 0
-                    color: "#1b4825"
+                    color: okmouseArea.containsMouse?Qt.lighter("#e32929"):"#e32929"
                 }
 
                 GradientStop {
                     position: 1
-                    color: "#1ca83b"
+                    color: "#d23636"
                 }
             }
             anchors.fill: parent
@@ -151,8 +152,8 @@ Item {
             id: okmouseArea
             hoverEnabled: true
             anchors.fill: parent
-            onEntered: okbgrectangle.gradient.stops[0].color = Qt.lighter("#dddddd")
-            onExited: okbgrectangle.gradient.stops[0].color = "#1b4825"
+//            onEntered: okbgrectangle.gradient.stops[0].color = Qt.lighter("#dddddd")
+//            onExited: okbgrectangle.gradient.stops[0].color = "#1b4825"
             onClicked: {
                 battleResultUI.hide();
                 bform.closeYet = true;                
@@ -172,7 +173,7 @@ Item {
 
         Text {
             id: resulttext
-            color: "#79f8f8"
+            color: "#ffffff"
             text: bform.resultText
             anchors.fill: parent
             font.italic: true

@@ -21,7 +21,9 @@ class BattleForm : public QWidget
     Q_PROPERTY(QString resultText READ resultText WRITE setResultText NOTIFY resultTextChanged)
     Q_PROPERTY(bool closeYet READ closeYet WRITE setCloseYet NOTIFY closeYetChanged)
     Q_PROPERTY(bool isMultiplayer READ isMultiplayer WRITE setIsMultiplayer NOTIFY isMultiplayerChanged)
+    Q_PROPERTY(bool isMassiveBattle READ isMassiveBattle WRITE setIsMassiveBattle NOTIFY isMassiveBattleChanged)
     Q_PROPERTY(QTcpSocket* serverSocket READ serverSocket WRITE setServerSocket NOTIFY serverSocketChanged)
+
 
 public:
 
@@ -43,6 +45,8 @@ public:
 
     QTcpSocket* serverSocket() const;
 
+    bool isMassiveBattle() const;
+
 public slots:
     void setBScene(BMapScene* bScene);
     void publishMaptoQMl();
@@ -52,6 +56,8 @@ public slots:
     Q_INVOKABLE void draw();
     Q_INVOKABLE void zoom(qreal z);
     void setViewEnalble(bool b);
+    void bmapLoaded(bool p);
+    void fixScale();
 
     void onBattleEndedA();
     void onBattleEndedD();
@@ -65,10 +71,13 @@ public slots:
 
     void setServerSocket(QTcpSocket* serverSocket);
 
+    void setIsMassiveBattle(bool isMassiveBattle);
+
 signals:
     void bSceneChanged(BMapScene* bScene);
     Q_INVOKABLE void battleEnded();
     Q_INVOKABLE void battleEndedA();
+    Q_INVOKABLE void bmapLoadedSig();
 
     void battleAIChanged(BattleAI* battleAI);
 
@@ -80,6 +89,8 @@ signals:
 
     void serverSocketChanged(QTcpSocket* serverSocket);
 
+    void isMassiveBattleChanged(bool isMassiveBattle);
+
 private:
     Ui::BattleForm *ui;
     BMapScene* m_bScene;
@@ -88,6 +99,7 @@ private:
     bool m_closeYet;
     bool m_isMultiplayer;
     QTcpSocket* m_serverSocket;
+    bool m_isMassiveBattle;
 };
 
 #endif // BATTLEFORM_H
