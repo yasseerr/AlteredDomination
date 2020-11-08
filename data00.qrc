@@ -321,5 +321,8 @@
         <file>data/mapBG6.jpg</file>
         <file>data/mapBG7.jpg</file>
         <file>data/mapBG8.jpg</file>
+        <file>scripts/BattleResult.qml</file>
+        <file>data/icons/ranking.png</file>
+        <file>scripts/Ranking.qml</file>
     </qresource>
 </RCC>

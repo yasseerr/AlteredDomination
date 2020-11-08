@@ -38,7 +38,7 @@ Item {
         id: displayCitiesitem
         width: 50
         height: 50
-        anchors.left: parent.left
+        anchors.left: rankingItem.right
         anchors.leftMargin: 7
         anchors.top: parent.top
         anchors.topMargin: 5
@@ -312,6 +312,103 @@ Item {
         onActuelPlayerChanged: {
             actualPimage.text =  mainmenu.mapView.actuelPlayer.name
         }
+    }
+
+    Item {
+        id: rankingItem
+        x: -4
+        y: 6
+        width: 50
+        height: 50
+        Rectangle {
+            id: rankingrectangle
+            color: "#121f52"
+            radius: 6
+            anchors.rightMargin: 0
+            anchors.topMargin: 0
+            anchors.fill: parent
+            anchors.leftMargin: 0
+            opacity: 0.7
+            border.width: 1
+            anchors.bottomMargin: 0
+        }
+
+        Image {
+            id: rankingimage
+            source: "qrc:/data/icons/ranking.png"
+            transformOrigin: Item.Center
+            anchors.rightMargin: 5
+            anchors.topMargin: 5
+            anchors.fill: parent
+            anchors.leftMargin: 5
+            anchors.bottomMargin: 5
+        }
+
+        MouseArea {
+            id: rankingmouseArea
+            hoverEnabled: true
+            anchors.fill: parent
+            onEntered:{ rankingrectangle.color = "#35bbe2"; infotext.text="Ranking" }
+            onExited: {rankingrectangle.color = "#121f52";infotext.text=""  }
+            onClicked: {
+                if(rankingUI.visible){
+                    rankingUI.hide();
+                    rankingimage.rotation = 0
+                }else{
+                    rankingUI.show();
+                    rankingimage.rotation = 90
+                }
+            }
+        }
+        anchors.topMargin: 5
+        anchors.leftMargin: 7
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 5
+        anchors.left: parent.left
+        anchors.top: parent.top
+    }
+
+    Item {
+        id: turnItem
+        x: 0
+        y: 2
+        width: 50
+        Rectangle {
+            id: turnrectangle
+            color: "#121f52"
+            radius: 6
+            anchors.topMargin: 0
+            anchors.rightMargin: 0
+            anchors.fill: parent
+            anchors.leftMargin: 0
+            opacity: 0.7
+            border.width: 1
+            anchors.bottomMargin: 0
+        }
+
+        Text {
+            id: turntext
+            color: "#f9f8f8"
+            text: ""+mainmenu.mapView.turnNumber+""
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            font.pixelSize: 15
+        }
+        MouseArea {
+            id: turnmouseArea
+            hoverEnabled: true
+            anchors.fill: parent
+            onEntered:{ turnrectangle.color = "#35bbe2"; infotext.text="Turn Count" }
+            onExited: {turnrectangle.color = "#121f52";infotext.text=""  }
+        }
+        anchors.topMargin: 5
+        anchors.leftMargin: 7
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 5
+        anchors.left: incomeItem.right
+        anchors.top: parent.top
     }
 
 }

@@ -55,6 +55,7 @@ void UnitGraphics::moveAnimationEnded(QPropertyAnimation::State stat)
     if(stat != QPropertyAnimation::Stopped) return;
     this->setPos(0,0);
     this->frame()->setUnitG(this);
+    bmapS()->setSelectedFrame(nullptr);
     bmapS()->thereIsAnimationRunning = false;
     if(this->unit()->city()->country()->player()->type() == PlayerType::AI){
         this->bmapS()->battleAI()->runAnimation();
@@ -117,7 +118,8 @@ void UnitGraphics::moveAnimation(BFrame *f)
     QPropertyAnimation *moveAnim = new QPropertyAnimation(this,"pos",this);
     connect(moveAnim,&QPropertyAnimation::stateChanged,this,&UnitGraphics::moveAnimationEnded);
     moveAnim->setEndValue(mapFromScene(f->pos()));
-    moveAnim->setDuration(800);
+    if(bmapS()->phase() == BMapScene::PLACING) moveAnim->setDuration(200);
+    else moveAnim->setDuration(700);
     moveAnim->setEasingCurve(QEasingCurve::InOutCubic);
     moveAnim->start();
 }

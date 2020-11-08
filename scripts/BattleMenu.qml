@@ -4,12 +4,14 @@ Item {
     id: item1
     width: 1200
     height: 100
+    property alias stattext: stattext
 
     visible: true
 
     Rectangle {
         id: rectangle
         height: 100
+        border.width: 3
         opacity: 0.9
         gradient: Gradient {
             GradientStop {
@@ -32,21 +34,21 @@ Item {
         anchors.fill: parent
         source: "qrc:/data/mapmtex.jpg"
     }
-//    ParticleSystem{
-//        anchors.fill: parent
-//        Emitter{
-//            sizeVariation: 4
-//            size: 20
-//            anchors.fill: parent
-//            lifeSpan: 1000
-//            emitRate: 5
-//            lifeSpanVariation: 200
+    //    ParticleSystem{
+    //        anchors.fill: parent
+    //        Emitter{
+    //            sizeVariation: 4
+    //            size: 20
+    //            anchors.fill: parent
+    //            lifeSpan: 1000
+    //            emitRate: 5
+    //            lifeSpanVariation: 200
 
-//        }
-//        ImageParticle{
-//            source:"qrc:/data/fire.png"
-//        }
-//    }
+    //        }
+    //        ImageParticle{
+    //            source:"qrc:/data/fire.png"
+    //        }
+    //    }
     Item {
         id: surrenderitem
         x: 1100
@@ -71,13 +73,17 @@ Item {
         MouseArea {
             id: surrendermouseArea
             anchors.fill: parent
+            enabled: false
             hoverEnabled: true
             onEntered: surrenderrectangle.color = Qt.lighter("#f50e0e")
             onExited: surrenderrectangle.color = "#f50e0e"
             onClicked:{
+                console.log(bscene.currentCityPlaying.country.player.name!=bscene.currentPlayer.name);
+                if((bscene.currentCityPlaying.country.player.name != bscene.currentPlayer.name))return;
                 battleForm.surrender()
                 battleForm.battleEnded()
             }
+
         }
 
         Text {
@@ -117,11 +123,14 @@ Item {
 
         MouseArea {
             id: drawmouseArea
-            enabled: false
+            enabled: battleForm.battleAI.acceptOrProposeDraw
             anchors.fill: parent
             hoverEnabled: false
             onEntered: drawrectangle.color = Qt.lighter("#757b12")
             onExited: drawrectangle.color = "#757b12"
+            onClicked: {
+                battleForm.onBattleEndedD();
+            }
         }
 
         Text {
@@ -177,9 +186,9 @@ Item {
                 readymouseArea.hoverEnabled = false
                 stattext.text = "turn 1 : "+bscene.generalsToChooseA
                 readytext.text = "playing .."
-
-                drawmouseArea.enabled = true
-                drawmouseArea.hoverEnabled = true              
+//                drawmouseArea.enabled = true
+                drawmouseArea.hoverEnabled = true
+                surrendermouseArea.enabled = true
 
                 battleForm.play()
             }
@@ -187,7 +196,7 @@ Item {
                 target: bscene
                 onCurrentCityPlayingChanged:{
                     stattext.text = bscene.currentCityPlaying.country.name+" : "+Math.max(bscene.generalsToChooseA,bscene.generalsToChooseD)
-                                    +" moves "
+                            +" moves "
                 }
             }
         }
@@ -247,8 +256,8 @@ Item {
                 stattext.text = "choose all your generals : "+bscene.generalsToChooseA
                 promotetext.text = "prmoting .."
 
-//                readymouseArea.enabled = true
-//                readymouseArea.hoverEnabled = true                
+                //                readymouseArea.enabled = true
+                //                readymouseArea.hoverEnabled = true
                 battleForm.setPromote()
             }
         }
@@ -312,7 +321,7 @@ Item {
             }
         }
 
-       Text {
+        Text {
             id: placetext
             x: 6
             y: 16
@@ -332,13 +341,51 @@ Item {
         x: 580
         y: 38
         color: "#ffffff"
-        text: qsTr("build your formation")
+        visible: bscene.phase != 3
+        text:  qsTr("Choose your formation")
         anchors.verticalCenterOffset: -30
-        anchors.horizontalCenterOffset: -12
+        anchors.horizontalCenterOffset: 0
         font.bold: true
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         font.pixelSize: 18
+
+    }
+    Text {
+        id: stattext2
+        x: 580
+        y: 38
+        color: "#ffffff"
+        visible:bscene.phase == 3
+        text:  battleForm.bScene.currentCityPlaying == attacker?"'"+attacker.country.player.name+"' has "+bscene.generalsToChooseA+" move(s)":
+                                                                 "'"+deffender.country.player.name+"' has "+
+                                                                 bscene.generalsToChooseD+" move(s)";
+        anchors.verticalCenterOffset: -30
+        anchors.horizontalCenterOffset: 0
+        font.bold: true
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+        font.pixelSize: 18
+        Connections{
+            target: bscene
+            onPhaseChanged:{
+                console.log(bscene.phase == 1)
+            }
+        }
+    }
+
+    Text {
+        id: drawtextStat
+        x: 579
+        color: "#ffffff"
+        text: battleForm.battleAI.acceptOrProposeDraw?"-"+bscene.currentPlayer.name+"- wants a draw":""
+        anchors.top: stattext2.bottom
+        anchors.topMargin: 1
+        font.pixelSize: 10
+        anchors.horizontalCenter: parent.horizontalCenter
+        font.bold: true
+        visible: bscene.phase == 3
+        anchors.horizontalCenterOffset: 0
     }
 
     Image {
@@ -523,6 +570,50 @@ Item {
             anchors.fill: parent
         }
     }
+
+    Item {
+        id: turnNumber
+        x: 333
+        y: 70
+        width: 125
+        height: 30
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 0
+        anchors.horizontalCenter: parent.horizontalCenter
+
+        Rectangle {
+            id: turnnumberrectangle
+            radius: 7
+            border.width: 2
+            gradient: Gradient {
+                GradientStop {
+                    position: 0
+                    color: "#b3f21616"
+                }
+
+                GradientStop {
+                    position: 1
+                    color: "#1b3c52"
+                }
+            }
+            anchors.fill: parent
+        }
+
+        Text {
+            id: turntext
+            x: 37
+            y: 8
+            color: "#f1e9e9"
+            text: "TurnCount : "+battleForm.bScene.turncount
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
+            font.pixelSize: 14
+        }
+    }
+
+
 
 
 

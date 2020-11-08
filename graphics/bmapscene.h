@@ -14,28 +14,30 @@ class BFrame;
 class UnitGraphics;
 class BattleAI;
 
-enum BattlePhase{
-
-    STARTING,PLACING,PROMOTING,PLAYING
-};
 
 
+//enum BattlePhase{
+
+//    STARTING,PLACING,PROMOTING,PLAYING
+//};
 
 class BMapScene :  public QGraphicsScene
 {
     Q_OBJECT
+
     Q_PROPERTY(BattleMap* bmap READ bmap WRITE setBmap NOTIFY bmapChanged)
     Q_PROPERTY(QMap<QPair<int,int>,BFrame*> frames READ frames WRITE setframes NOTIFY framesChanged)
     Q_PROPERTY(QMap<Unit*,UnitGraphics*> units READ units WRITE setUnits NOTIFY unitsChanged)
     Q_PROPERTY(Player* currentPlayer READ currentPlayer WRITE setCurrentPlayer NOTIFY currentPlayerChanged)
     Q_PROPERTY(City* currentCityPlaying READ currentCityPlaying WRITE setCurrentCityPlaying NOTIFY currentCityPlayingChanged)
-    Q_PROPERTY(BattlePhase phase READ phase WRITE setPhase NOTIFY phaseChanged)
+    Q_PROPERTY(BMapScene::BattlePhase phase READ phase WRITE setPhase NOTIFY phaseChanged)
     Q_PROPERTY(BFrame* selectedFrame READ selectedFrame WRITE setSelectedFrame NOTIFY selectedFrameChanged)
     Q_PROPERTY(QDeadlineTimer* turnTimer READ turnTimer WRITE setTurnTimer NOTIFY turnTimerChanged)
     Q_PROPERTY(int turncount READ turncount WRITE setTurncount NOTIFY turncountChanged)
     Q_PROPERTY(int  generalsToChooseA READ generalsToChooseA WRITE setGeneralsToChooseA NOTIFY generalsToChooseAChanged)
     Q_PROPERTY(int generalsToChooseD READ generalsToChooseD WRITE setGeneralsToChooseD NOTIFY generalsToChooseDChanged)
     Q_PROPERTY(BattleAI* battleAI READ battleAI WRITE setBattleAI NOTIFY battleAIChanged)
+
 
     BattleMap* m_bmap;
 
@@ -45,7 +47,7 @@ class BMapScene :  public QGraphicsScene
 
     Player* m_currentPlayer;
 
-    BattlePhase m_phase;
+
 
     BFrame* m_selectedFrame;
 
@@ -62,8 +64,16 @@ class BMapScene :  public QGraphicsScene
     BattleAI* m_battleAI;
 
 
-
 public:
+
+    enum BattlePhase{
+
+        STARTING,PLACING,PROMOTING,PLAYING
+    };
+
+    Q_ENUM(BattlePhase)
+
+    BMapScene::BattlePhase m_phase;
 
     explicit BMapScene(QObject *parent = nullptr);
 
@@ -80,7 +90,7 @@ public:
 
     Player* currentPlayer() const;
 
-    BattlePhase phase() const;
+    BMapScene::BattlePhase phase() const;
 
     BFrame* selectedFrame() const;
 
@@ -109,7 +119,7 @@ signals:
 
     void currentPlayerChanged(Player* currentPlayer);
 
-    void phaseChanged(BattlePhase phase);
+    void phaseChanged(BMapScene::BattlePhase phase);
 
     void selectedFrameChanged(BFrame* selectedFrame);
 
@@ -133,7 +143,7 @@ public slots:
     void setframes(QMap<QPair<int,int>,BFrame*> frames);
     void setUnits(QMap<Unit*,UnitGraphics*> units);
     void setCurrentPlayer(Player* currentPlayer);
-    void setPhase(BattlePhase phase);
+    void setPhase(BMapScene::BattlePhase phase);
     void setSelectedFrame(BFrame* selectedFrame);
     void setTurnTimer(QDeadlineTimer* turnTimer);
     void setTurncount(int turncount);

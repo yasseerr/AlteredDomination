@@ -42,7 +42,9 @@ class MapAI : public QObject
 
     QMap<QString,int> m_prices;
 
-    QList<QPair<QString,int>> p_widraw;
+    QList<QPair<QString,int>> p_widraw1000;
+    QList<QPair<QString,int>> p_widraw500;
+    QList<QPair<QString,int>> p_widraw100;
 
     QList<QPair<QPair<City*,City*>,QPair<Country*,Country*>>> m_battlesForP1;
 

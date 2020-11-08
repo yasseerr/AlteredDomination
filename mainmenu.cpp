@@ -29,12 +29,14 @@ MainMenu::MainMenu(QWidget *parent) :
     ui->MapMenuUI->rootContext()->setContextProperty("activePlayer",m_mapView->activePlayer());
     ui->MapMenuUI->rootContext()->setContextProperty("actuelPlayer",m_mapView->actuelPlayer());
     ui->MapMenuUI->rootContext()->setContextProperty("citiesDisplayUI",ui->CitiesDisplayUI);
+    ui->MapMenuUI->rootContext()->setContextProperty("rankingUI",ui->rankingUI);
     ui->MapMenuUI->rootContext()->setContextProperty("mainmenu",this);
     ui->MapMenuUI->rootContext()->setContextProperty("menuOpt",mapView()->menuOptUI);
 
     ui->CitiesDisplayUI->rootContext()->setContextProperty("mainmenu",this);
+    ui->rankingUI->rootContext()->setContextProperty("mainmenu",this);
     reDisplayCities();
-
+    reDisplayCountries();
 
 }
 
@@ -84,6 +86,20 @@ void MainMenu::reDisplayCities()
     }
 }
 
+void MainMenu::reDisplayCountries()
+{
+    emit this->clearCountriesInRanking();
+    QMultiMap<int,Country*> tmp;
+    foreach (Player *p, mapView()->players()) {
+        tmp.insert(p->country()->income(),p->country());
+    }
+    QList<Country*> tmpList = tmp.values();
+    for (int i = tmp.size()-1 ; i >= 0 ; --i) {
+        emit this->sendCountryToRanking(tmpList.at(i),tmpList.size()-i);
+    }
+
+}
+
 void MainMenu::focusOnCity(City *c)
 {
     m_mapView->centerOn(c->x(),c->y());
@@ -128,6 +144,7 @@ void MainMenu::runNextTurn()
     mapView()->setTurnNumber(mapView()->turnNumber()+1);
     m_mapView->setEnabled(true);
     m_mapView->setActuelPlayer(m_mapView->activePlayer());
+    reDisplayCountries();
 }
 
 void MainMenu::onAttackerWon(City *C)

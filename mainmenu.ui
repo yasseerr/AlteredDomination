@@ -70,6 +70,30 @@
         <number>0</number>
        </property>
        <item>
+        <widget class="QQuickWidget" name="rankingUI">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="resizeMode">
+          <enum>QQuickWidget::SizeRootObjectToView</enum>
+         </property>
+         <property name="source">
+          <url>
+           <string>qrc:/scripts/Ranking.qml</string>
+          </url>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QQuickWidget" name="CitiesDisplayUI">
          <property name="minimumSize">
           <size>

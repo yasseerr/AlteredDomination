@@ -7,10 +7,12 @@
 
 #include <AI/battleai.h>
 
+#include <battleform.h>
+
 BMapScene::BMapScene(QObject *parent) : QGraphicsScene(parent),
     m_bmap(nullptr),
     m_currentPlayer(nullptr),
-    m_phase(BattlePhase::STARTING),
+    m_phase(BMapScene::BattlePhase::STARTING),
     m_selectedFrame(nullptr),
     m_turnTimer(new QDeadlineTimer()),
     m_turncount(0)
@@ -48,7 +50,7 @@ Player *BMapScene::currentPlayer() const
     return m_currentPlayer;
 }
 
-BattlePhase BMapScene::phase() const
+BMapScene::BattlePhase BMapScene::phase() const
 {
     return m_phase;
 }
@@ -83,10 +85,14 @@ void BMapScene::cheCkEndTurn()
     if(this->currentCityPlaying() == m_bmap->attacker()){
         this->setGeneralsToChooseA(generalsToChooseA()-1);
         if(this->generalsToChooseA() == 0){
+            this->setTurncount(turncount()+1);
             this->setGeneralsToChooseD(bmap()->deffenderMoves());
             this->setCurrentCityPlaying(this->bmap()->deffender());
             foreach (Unit *u, bmap()->deffender()->units()) {
                 u->setUsed(false);
+            }
+            if(m_currentCityPlaying->country()->player()->type() == PlayerType::AI){
+                m_battleAI->playTurn();
             }
         }
     }else if (this->currentCityPlaying() == m_bmap->deffender()) {
@@ -96,6 +102,9 @@ void BMapScene::cheCkEndTurn()
             this->setCurrentCityPlaying(this->bmap()->attacker());
             foreach (Unit *u, bmap()->attacker()->units()) {
                 u->setUsed(false);
+            }
+            if(m_currentCityPlaying->country()->player()->type() == PlayerType::AI){
+                m_battleAI->playTurn();
             }
         }
     }
@@ -173,6 +182,11 @@ void BMapScene::setBmap(BattleMap *bmap)
         this->battleAI()->setPlayer(m_bmap->deffender()->country()->player());
         this->battleAI()->setCity(m_bmap->deffender());
     }
+
+
+    /// the result ui
+
+
 }
 
 void BMapScene::setframes(QMap<QPair<int, int>, BFrame *> frames)
@@ -202,7 +216,7 @@ void BMapScene::setCurrentPlayer(Player *currentPlayer)
     emit currentPlayerChanged(m_currentPlayer);
 }
 
-void BMapScene::setPhase(BattlePhase phase)
+void BMapScene::setPhase(BMapScene::BattlePhase phase)
 {
     if (m_phase == phase)
         return;

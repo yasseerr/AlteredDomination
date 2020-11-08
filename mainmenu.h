@@ -29,6 +29,7 @@ public slots  :
 
 
     Q_INVOKABLE void reDisplayCities();
+    Q_INVOKABLE void reDisplayCountries();
     Q_INVOKABLE void focusOnCity(City *c);
     Q_INVOKABLE void runNextTurn();
     void onAttackerWon(City *C);
@@ -38,6 +39,9 @@ signals:
 
     void sendCityToDisplay(City *c);
     void clearCitiesInDisplay();
+
+    void sendCountryToRanking(Country *c,int r);
+    void clearCountriesInRanking();
 
 private:
 

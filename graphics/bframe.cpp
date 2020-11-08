@@ -41,7 +41,7 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     if(bmapS()->thereIsAnimationRunning)return;
 ///-------------------placing--------------------------------
-    if(this->bmapS()->phase() == BattlePhase::PLACING){
+    if(this->bmapS()->phase() == BMapScene::PLACING){
         if(this == this->bmapS()->selectedFrame())return;
         //*************** attacker**************
         if(this->x()<3){
@@ -105,7 +105,7 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
     }
 ///-------------------promoting--------------------------------
-    else if (this->bmapS()->phase() == BattlePhase::PROMOTING) {
+    else if (this->bmapS()->phase() == BMapScene::PROMOTING) {
         if(unitG() == nullptr)return;
         if(unitG()->unit()->city() == bmapS()->bmap()->attacker()){
             /// attacker
@@ -140,11 +140,12 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
     }
 ///-------------------playing--------------------------------
-    else if (this->bmapS()->phase() == BattlePhase::PLAYING) {
+    else if (this->bmapS()->phase() == BMapScene::PLAYING) {
         /// player turn verification
 
-        /// new selection
-        if(bmapS()->selectedFrame() == nullptr){
+
+        /// new selection        
+        if(bmapS()->selectedFrame() == nullptr ){
             if(this->unitG() == nullptr) return;
             if(this->unitG()->unit()->city() != bmapS()->currentCityPlaying())return;
             if(this->unitG()->unit()->used())return;
@@ -175,6 +176,8 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
                 }
                 this->setUnitG(nullptr);
                 this->update();
+                ug->setVisible(false);
+                ug->update();
                 u->city()->removeUnit(u->id());
                 u->deleteLater();
                 ug->deleteLater();

@@ -22,17 +22,44 @@ MapAI::MapAI(QObject *parent) : QObject(parent),m_mapView(nullptr),m_player(null
     m_widrawVector.insert("modernarmor",1);
     m_widrawVector.insert("fighter",1);
 
-    p_widraw << QPair<QString,int>("soldier",3);
-    p_widraw << QPair<QString,int>("sniper",1);
-    p_widraw << QPair<QString,int>("rocketlauncher",1);
-    p_widraw << QPair<QString,int>("artillery",1);
-    p_widraw << QPair<QString,int>("afv",1);
-    p_widraw << QPair<QString,int>("tank",1);
-    p_widraw << QPair<QString,int>("antiaircraft",1);
-    p_widraw << QPair<QString,int>("attackhelicopter",1);
-    p_widraw << QPair<QString,int>("mlrs",1);
-    p_widraw << QPair<QString,int>("modernarmor",1);
-    p_widraw << QPair<QString,int>("fighter",1);
+    p_widraw1000 << QPair<QString,int>("soldier",5);
+    p_widraw1000 << QPair<QString,int>("sniper",1);
+    p_widraw1000 << QPair<QString,int>("fighter",1);
+    p_widraw1000 << QPair<QString,int>("modernarmor",1);
+    p_widraw1000 << QPair<QString,int>("attackhelicopter",1);
+    p_widraw1000 << QPair<QString,int>("tank",1);
+    p_widraw1000 << QPair<QString,int>("afv",1);
+    p_widraw1000 << QPair<QString,int>("antiaircraft",1);
+    p_widraw1000 << QPair<QString,int>("mlrs",1);
+    p_widraw1000 << QPair<QString,int>("rocketlauncher",1);
+    p_widraw1000 << QPair<QString,int>("artillery",1);
+
+    p_widraw500 << QPair<QString,int>("soldier",5);
+    p_widraw500 << QPair<QString,int>("sniper",1);
+    p_widraw500 << QPair<QString,int>("tank",2);
+    p_widraw500 << QPair<QString,int>("afv",2);
+    p_widraw500 << QPair<QString,int>("attackhelicopter",1);
+    p_widraw500 << QPair<QString,int>("antiaircraft",1);
+    p_widraw500 << QPair<QString,int>("fighter",1);
+    p_widraw500 << QPair<QString,int>("modernarmor",1);
+    p_widraw500 << QPair<QString,int>("mlrs",1);
+    p_widraw500 << QPair<QString,int>("rocketlauncher",1);
+    p_widraw500 << QPair<QString,int>("artillery",1);
+
+    p_widraw100 << QPair<QString,int>("soldier",2);
+    p_widraw100 << QPair<QString,int>("rocketlauncher",2);
+    p_widraw100 << QPair<QString,int>("afv",1);
+    p_widraw100 << QPair<QString,int>("antiaircraft",1);
+    p_widraw100 << QPair<QString,int>("tank",1);
+    p_widraw100 << QPair<QString,int>("attackhelicopter",1);
+    p_widraw100 << QPair<QString,int>("sniper",1);
+    p_widraw100 << QPair<QString,int>("fighter",1);
+    p_widraw100 << QPair<QString,int>("modernarmor",1);
+    p_widraw100 << QPair<QString,int>("mlrs",1);
+    p_widraw100 << QPair<QString,int>("artillery",1);
+
+
+
 
     /// initialise prices
 //    m_prices.
@@ -283,9 +310,13 @@ void MapAI::distributeFunds()
     /// distribute and buy
     foreach (City *c, m_treats.keys()) {
         int cityTurnFunds = m_treats.value(c);
+        QList<QPair<QString,int>> *widraw_type;
+        if(cityTurnFunds <= 100)widraw_type = &p_widraw100;
+        else if(cityTurnFunds > 100 && cityTurnFunds <500 )widraw_type = &p_widraw500;
+        else if(cityTurnFunds >= 500)widraw_type = &p_widraw1000;
         while (cityTurnFunds >= 5 ) {
-            for(int v=0;v< p_widraw.length();v++){
-                QPair<QString,int> type = p_widraw.at(v);
+            for(int v=0;v< widraw_type->length();v++){
+                QPair<QString,int> type = widraw_type->at(v);
                 QString key = type.first;
                 int rept = type.second;
                 for (int i = 0; i < rept; ++i) {
@@ -367,24 +398,28 @@ void MapAI::moveUnitsToFrontLine()
 void MapAI::StudyAttackPossibilities()
 {
     foreach (City *c, this->player()->country()->cities()) {
-
+        QList<City*> citiesToAttack;
         foreach (City *n, c->neighbours()) {
             if(c->country() == n->country())continue;
             if(c->used())continue;
-            if(c->power() > n->power()/2){
-//                this->mapView()->setSelectedCityGraphics(mapView()->citiesGraphics().value(c->id()));
-//                this->mapView()->citiesGraphics().value(n->id())->startBattle();
-                if(this->player()->type() == PlayerType::AI && n->country()->player()->type() == PlayerType::AI){
-                    this->startBattleAI_AI(c,n);
-                    c->setUsed(true);
-                }else if (this->player()->type() == PlayerType::AI && n->country()->player()->type() == PlayerType::HUMAIN) {
-                    QPair<City*,City*> battle(c,n);
-                    QPair<Country*,Country*> cntry(c->country(),n->country());
-                    m_battlesForP1 << QPair<QPair<City*,City*>,QPair<Country*,Country*>>(battle,cntry);
-                    c->setUsed(true);
-                }
+            if(c->power() > (n->power()/2)){
+                citiesToAttack << n;
             }
         }
+        if(citiesToAttack.size()==0)continue;
+        City *randomAttackCity = citiesToAttack.at(qrand()%citiesToAttack.size());
+//                this->mapView()->setSelectedCityGraphics(mapView()->citiesGraphics().value(c->id()));
+//                this->mapView()->citiesGraphics().value(n->id())->startBattle();
+        if(this->player()->type() == PlayerType::AI && randomAttackCity->country()->player()->type() == PlayerType::AI){
+            this->startBattleAI_AI(c,randomAttackCity);
+            c->setUsed(true);
+        }else if (this->player()->type() == PlayerType::AI && randomAttackCity->country()->player()->type() == PlayerType::HUMAIN) {
+            QPair<City*,City*> battle(c,randomAttackCity);
+            QPair<Country*,Country*> cntry(c->country(),randomAttackCity->country());
+            m_battlesForP1 << QPair<QPair<City*,City*>,QPair<Country*,Country*>>(battle,cntry);
+            c->setUsed(true);
+        }
+
     }
 
 }
@@ -396,7 +431,7 @@ void MapAI::startBattleAI_AI(City *c, City *n)
     int y = n->power();
     int r = qrand()%(x+y);
     int e = (x-(x-y))/2;
-    if(r<(x-e)){
+    if(r<=(x-e)){
 
         /// attacker win
         n->country()->removeCity(n);
@@ -441,7 +476,7 @@ void MapAI::startBattleAI_AI(City *c, City *n)
             n->removeUnit(u->id());
             u->deleteLater();
         }
-    }else if(r>(x+e)) {
+    }else if(r>=(x+e)) {
         /// deffender win
         int unitToRomoveA = qrand()%c->units().size();
         int unitToRomoveD = qrand()%n->units().size();

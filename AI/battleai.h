@@ -7,7 +7,9 @@ class BFrame;
 class Player;
 class BattleForm;
 class City;
+class Unit;
 class BMapScene;
+class UnitGraphics;
 class BattleAI : public QObject
 {
     Q_OBJECT
@@ -15,24 +17,33 @@ class BattleAI : public QObject
     Q_PROPERTY(BMapScene* scene READ scene WRITE setScene NOTIFY sceneChanged)
     Q_PROPERTY(Player* player READ player WRITE setPlayer NOTIFY playerChanged)
     Q_PROPERTY(City* city READ city WRITE setCity NOTIFY cityChanged)
-    Q_PROPERTY(QMap<QString,QList<BFrame*>> dangerFrames READ dangerFrames WRITE setDangerFrames NOTIFY dangerFramesChanged)
-    Q_PROPERTY(QMap<BFrame*,BFrame*> availableAttacks READ availableAttacks WRITE setAvailableAttacks NOTIFY availableAttacksChanged)
-
+    Q_PROPERTY(QMap<BFrame*,QStringList> dangerFrames READ dangerFrames WRITE setDangerFrames NOTIFY dangerFramesChanged)
+    Q_PROPERTY(QMultiMap<BFrame*,BFrame*> availableAttacks READ availableAttacks WRITE setAvailableAttacks NOTIFY availableAttacksChanged)
+    Q_PROPERTY(bool acceptOrProposeDraw READ acceptOrProposeDraw WRITE setAcceptOrProposeDraw NOTIFY acceptOrProposeDrawChanged)
     BattleForm* m_battleForm;
     Player* m_player;
-    QMap<QString,QList<BFrame*>> m_dangerFrames;
-    QMap<BFrame*,BFrame*> m_availableAttacks;
+    QMap<BFrame*,QStringList> m_dangerFrames;
+    QMultiMap<BFrame*,BFrame*> m_availableAttacks;
 
 
     City* m_city;
+    City *enemyCity;
 
     BMapScene* m_scene;
 
-public:
+    bool m_acceptOrProposeDraw;
 
+public:
 
     QList<QPair<BFrame*,BFrame*>> animationList;
     int animationCount;
+
+    QList<BFrame*> toBeSurroundedFrames;
+    QMultiMap<int,QPair<UnitGraphics*,BFrame*>> toSurroundMoves;
+    QList<QPair<BFrame*,BFrame*>> forkMoves;
+    QList<BFrame*> threatenedUnits;
+    QList<QPair<BFrame*,BFrame*>> createThreatPossib;
+    QMultiMap<int,QPair<BFrame*,BFrame*>> movesRating;
 
     explicit BattleAI(QObject *parent = nullptr);
 
@@ -42,35 +53,59 @@ public:
 
     Q_INVOKABLE void selectGenerals();
 
+    void playTurn();
+    void detectSurroundingFrames();
+    void detectDangerFrames();
+    void studyDraw();
+    void studySurrender();
+    void detectThretenedUnits();
+    void detectAttackOpportunities();
+    void detectForkPossibilities();
+
+    void buildStrategy();
+    int findPathTogenerals(int layer,BFrame *f,Unit *u);
+
+    bool hasTypeOfUnits(City *c,QString s);
+
+    void applyMoves();
+
+    QList<BFrame*> attackListForFrame(BFrame *f,Unit *u);
+    QList<BFrame*> moveListForFrame(BFrame *f,Unit *u);
+    bool isAffectedInFrame(BFrame *des,Unit *u);
 
     BattleForm* battleForm() const;
     Player* player() const;
-    QMap<QString,QList<BFrame*>> dangerFrames() const;
-    QMap<BFrame*,BFrame*> availableAttacks() const;
+    QMap<BFrame*,QStringList> dangerFrames() const;
+    QMultiMap<BFrame*,BFrame*> availableAttacks() const;
 
     City* city() const;
 
     BMapScene* scene() const;
 
+    bool acceptOrProposeDraw() const;
+
 signals:
 
     void battleFormChanged(BattleForm* battleForm);
     void playerChanged(Player* player);
-    void dangerFramesChanged(QMap<QString,QList<BFrame*>> dangerFrames);
-    void availableAttacksChanged(QMap<BFrame*,BFrame*> availableAttacks);
+    void dangerFramesChanged(QMap<BFrame*,QStringList>dangerFrames);
+    void availableAttacksChanged(QMultiMap<BFrame*,BFrame*> availableAttacks);
 
     void cityChanged(City* city);
 
     void sceneChanged(BMapScene* scene);
 
+    void acceptOrProposeDrawChanged(bool acceptOrProposeDraw);
+
 public slots:
 
     void setBattleForm(BattleForm* battleForm);
     void setPlayer(Player* player);
-    void setDangerFrames(QMap<QString,QList<BFrame*>> dangerFrames);
-    void setAvailableAttacks(QMap<BFrame*,BFrame*> availableAttacks);
+    void setDangerFrames(QMap<BFrame*,QStringList> dangerFrames);
+    void setAvailableAttacks(QMultiMap<BFrame*,BFrame*> availableAttacks);
     void setCity(City* city);
     void setScene(BMapScene* scene);
+    void setAcceptOrProposeDraw(bool acceptOrProposeDraw);
 };
 
 #endif // BATTLEAI_H

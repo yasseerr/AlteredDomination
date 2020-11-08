@@ -224,12 +224,14 @@ void CityGraphics::startBattle()
         if(mapView()->selectedCityGraphics()->city()->country()->player()->type()== PlayerType::HUMAIN)
             mapView()->selectedCityGraphics()->deSelect();
         emit mapView()->attackerWon(this->city());
+        this->city()->setUsed(true);
         return;
     }
 
     mapView()->setEnabled(false);
     mapView()->battleForm = new BattleForm();
     mapView()->battleForm->bScene()->setCurrentPlayer(mapView()->activePlayer());
+    mapView()->battleForm->bScene()->setCurrentCityPlaying(mapView()->selectedCityGraphics()->city());
     BattleMap *bm = new BattleMap(mapView()->selectedCityGraphics()->city(),this->city(),mapView()->battleForm);
     mapView()->battleForm->bScene()->setBmap(bm);
 
@@ -353,6 +355,7 @@ void CityGraphics::setPower(int power)
 
 void CityGraphics::onAttackerWon()
 {
+    this->city()->setUsed(true);
     emit mapView()->attackerWon(this->city());
 }
 

@@ -15,6 +15,7 @@ LinkGraphics::LinkGraphics(LinkN *l,QObject *parent) : QObject(parent),m_link(l)
      setOpacity(0.2);
     if(l->des()->country() == l->dep()->country())setPen(QPen(l->des()->country()->color(),3,Qt::DashDotLine));
 
+
 }
 
 LinkN* LinkGraphics::link() const

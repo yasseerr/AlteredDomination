@@ -10,73 +10,6 @@ Item {
     property var toAddUnits: []
     property var toAddUnitsCost: []
     property int totalCost: 0
-    Component{
-        id : typegenerator
-        Item{
-            id:mainRect
-            property string name: ""
-            property string src: ""
-            property bool isSctd: false
-            property int cost: 0
-            width: 80
-            height: 80
-            visible: true
-            clip: true
-            Rectangle{
-                id:fillr
-                anchors.fill: parent
-                color: "#ffffff"
-                opacity: 0.4
-                radius: 10
-                border.width: 5
-            }
-            Image {
-                id: typeImg
-                width: 80
-                height: 80
-                source: mainRect.src
-                anchors.fill: parent
-                anchors.margins: 10
-            }
-            MouseArea{
-                id:ma
-                hoverEnabled: true
-                anchors.fill: parent
-                onEntered: {
-                    mainRect.scale = 1.1;
-                    fillr.color=mainRect.isSctd?"#ff0000":"#00ffff";
-                    infoText.text = mainRect.name+" : "+mainRect.cost+"$";
-                }
-                onExited: {mainRect.scale = 1; fillr.color="#ffffff"}
-                onPressed: {
-                    if(mainRect.isSctd){
-                        adUnitUI.totalCost -= addedRectangle1.children[adUnitUI.toAddUnits.length-1].cost
-                        addedRectangle1.children[adUnitUI.toAddUnits.length-1].destroy()
-                        adUnitUI.toAddUnits.pop()
-                        adUnitUI.toAddUnitsCost.pop()
-                        return;
-                    }
-                    /// > funds
-                    if((adUnitUI.totalCost+mainRect.cost)>cityGraphics.city.country.funds){
-                        return
-                    }
-
-                    adUnitUI.toAddUnits.push(mainRect.name)
-                    adUnitUI.toAddUnitsCost.push(mainRect.cost)
-                    var i = adUnitUI.toAddUnits.length-1;
-                    var obj = typegenerator.createObject(addedRectangle1,{"x":85*(i%5),"y":5+Math.floor(i/5)*85});
-                    obj.src = "qrc:/data/units/"+mainRect.name+".png";
-                    addedRectangle1.height =addedRectangle1.childrenRect.height
-                    obj.isSctd = true
-                    obj.cost = mainRect.cost
-                    adUnitUI.totalCost += mainRect.cost
-                }
-
-            }
-
-        }
-    }
-
     Rectangle {
         id: rectangle
         color: "#99867070"
@@ -118,8 +51,8 @@ Item {
             x: 0
             y: 247
             height: 176
-//            ScrollBar.vertical.interactive:true
-//            ScrollBar.vertical.policy : ScrollBar.AlwaysOn
+            //            ScrollBar.vertical.interactive:true
+            //            ScrollBar.vertical.policy : ScrollBar.AlwaysOn
 
             verticalScrollBarPolicy: 0
             highlightOnFocus: true
@@ -171,9 +104,9 @@ Item {
                         for(var i =0;i< adUnitUI.toAddUnits.length;i++){
                             cityGraphics.addUnitFromQml(adUnitUI.toAddUnits[i],adUnitUI.toAddUnitsCost[i])
                         }
-//                        adUnitUI.toAddUnits.forEach(function(element){ cityGraphics.addUnitFromQml(element)})
-//                        cityGraphics.setPower(cityGraphics.power + adUnitUI.totalCost)
-//                        cityGraphics.city.setPower(cityGraphics.city.power + adUnitUI.totalCost)
+                        //                        adUnitUI.toAddUnits.forEach(function(element){ cityGraphics.addUnitFromQml(element)})
+                        //                        cityGraphics.setPower(cityGraphics.power + adUnitUI.totalCost)
+                        //                        cityGraphics.city.setPower(cityGraphics.city.power + adUnitUI.totalCost)
                         cityGraphics.city.country.funds -= adUnitUI.totalCost
                         adUnitUI.toAddUnits= [];
                         adUnitUI.toAddUnitsCost= [];
@@ -260,6 +193,126 @@ Item {
         }
 
     }
+
+    Component{
+        id : typegenerator
+        Item{
+            id:mainRect
+            property string name: ""
+            property string src: ""
+            property bool isSctd: false
+            property int cost: 0
+            width: 80
+            height: 80
+            visible: true
+            clip: true
+            Rectangle{
+                id:fillr
+                anchors.fill: parent
+                color: "#ffffff"
+                opacity: 0.4
+                radius: 10
+                border.width: 5
+            }
+            Image {
+                id: typeImg
+                width: 80
+                height: 80
+                source: mainRect.src
+                anchors.fill: parent
+                anchors.margins: 10
+            }
+            MouseArea{
+                id:ma
+                hoverEnabled: true
+                anchors.fill: parent
+                onEntered: {
+                    mainRect.scale = 1.1;
+                    fillr.color=mainRect.isSctd?"#ff0000":"#00ffff";
+                    infoText.text = mainRect.name+" : "+mainRect.cost+"$";
+                }
+                onExited: {mainRect.scale = 1; fillr.color="#ffffff"}
+                onPressed: {
+                    if(mainRect.isSctd){
+                        adUnitUI.totalCost -= addedRectangle1.children[adUnitUI.toAddUnits.length-1].cost
+                        addedRectangle1.children[adUnitUI.toAddUnits.length-1].destroy()
+                        adUnitUI.toAddUnits.pop()
+                        adUnitUI.toAddUnitsCost.pop()
+                        return;
+                    }
+
+                    for(var c =0; c<parseInt(unitPerClickGroup.current.text);c++){
+
+                        /// > funds
+                        if((adUnitUI.totalCost+mainRect.cost)>cityGraphics.city.country.funds){
+                            return
+                        }
+
+                        adUnitUI.toAddUnits.push(mainRect.name)
+                        adUnitUI.toAddUnitsCost.push(mainRect.cost)
+                        var i = adUnitUI.toAddUnits.length-1;
+                        var obj = typegenerator.createObject(addedRectangle1,{"x":85*(i%5),"y":5+Math.floor(i/5)*85});
+                        obj.src = "qrc:/data/units/"+mainRect.name+".png";
+                        addedRectangle1.height =addedRectangle1.childrenRect.height
+                        obj.isSctd = true
+                        obj.cost = mainRect.cost
+                        adUnitUI.totalCost += mainRect.cost
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    GroupBox {
+        id: groupBox
+        x: 8
+        y: 73
+        width: 292
+        height: 49
+        checkable: false
+        flat: false
+        anchors.left: parent.left
+        anchors.leftMargin: 8
+        anchors.top: parent.top
+        anchors.topMargin: 8
+        title: qsTr("Unit Per click")
+
+        Row {
+            id: row
+            anchors.topMargin: 0
+            spacing: 16
+            anchors.fill: parent
+            ExclusiveGroup{ id: unitPerClickGroup }
+            RadioButton {
+                id: radioButton1
+                text: qsTr("1")
+                checked: true
+                exclusiveGroup: unitPerClickGroup
+            }
+
+            RadioButton {
+                id: radioButton3
+                text: qsTr("3")
+                checked: false
+                exclusiveGroup: unitPerClickGroup
+            }
+
+            RadioButton {
+                id: radioButton5
+                text: qsTr("5")
+                checked: false
+                exclusiveGroup: unitPerClickGroup
+            }
+        }
+
+
+    }
+
+
+
+
     
 
 }

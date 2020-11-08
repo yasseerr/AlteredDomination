@@ -266,6 +266,7 @@ Item{
                     id: attackMouseArea
                     hoverEnabled: true
                     anchors.fill: parent
+                    enabled : cityGraphics.mapView.turnNumber !=0;
                     onEntered: {
                         attackRect.color = Qt.lighter(investRect.color);
                         infoText.text="Attack"+(unitsrectangle.childrenRect.width>0?"":"(no units)") ;
@@ -458,8 +459,8 @@ Item{
                 id: text2
                 x: 275
                 y: 13
-                color: "#d60404"
-                text: cityGraphics.city.used?"city is already used":""
+                color: "#ffffff"
+                text: cityGraphics.mapView.turnNumber ==0?"turn 0 no attack ":cityGraphics.city.used?"city is already used":""
                 anchors.horizontalCenter: parent.horizontalCenter
                 font.pixelSize: 14
             }
