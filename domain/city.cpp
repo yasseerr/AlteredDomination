@@ -1,5 +1,8 @@
 #include "city.h"
+#include "country.h"
 #include "unit.h"
+
+#include <QVariantList>
 City::City(QObject *parent) : QObject(parent),m_id(0),m_name(""),m_x(0),m_y(0),m_type(K100G),m_income(0),m_power(0),m_used(false)
 {
 
@@ -83,6 +86,32 @@ int City::power() const
 bool City::used() const
 {
     return m_used;
+}
+
+QVariant City::toVariant()
+{
+    QVariantMap ret;
+
+    QVariantList neiboursVar;
+    foreach (int n, neigboursId()) {
+        neiboursVar << n;
+    }
+    QVariantList unitsVar;
+    foreach (Unit *u, this->units().values()) {
+        unitsVar << u->toVariant();
+    }
+
+    ret.insert("id",m_id);
+    ret.insert("name",m_name);
+    ret.insert("country",m_country->name());
+    ret.insert("x",m_x);
+    ret.insert("y",m_y);
+    ret.insert("cityType",4);
+    ret.insert("income",m_income);
+    ret.insert("neighbours",neiboursVar);
+    ret.insert("units",unitsVar);
+
+    return ret;
 }
 
 void City::setId(int id)

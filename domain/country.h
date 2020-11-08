@@ -4,6 +4,7 @@
 #include <QColor>
 #include <QImage>
 #include <QObject>
+#include <QVariant>
 
 class City;
 class Player;
@@ -43,7 +44,7 @@ class Country : public QObject
 public:
     void addCity(City *c);
     void removeCity(City *c);
-
+    QVariant toVariant();
 
     explicit Country(QObject *parent = nullptr);
 

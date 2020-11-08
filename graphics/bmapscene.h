@@ -6,9 +6,14 @@
 #include<QDeadlineTimer>
 #include <QGraphicsScene>
 #include <QObject>
+#include <QQuickView>
+#include <QQuickWidget>
 #include <domain/battlemap.h>
 #include <domain/player.h>
 #include <domain/unit.h>
+
+#include<graphics/animations.h>
+
 
 class BFrame;
 class UnitGraphics;
@@ -47,8 +52,6 @@ class BMapScene :  public QGraphicsScene
 
     Player* m_currentPlayer;
 
-
-
     BFrame* m_selectedFrame;
 
     QDeadlineTimer* m_turnTimer;
@@ -64,6 +67,7 @@ class BMapScene :  public QGraphicsScene
     BattleAI* m_battleAI;
 
 
+
 public:
 
     enum BattlePhase{
@@ -74,6 +78,8 @@ public:
     Q_ENUM(BattlePhase)
 
     BMapScene::BattlePhase m_phase;
+
+    Animations *animItem;
 
     explicit BMapScene(QObject *parent = nullptr);
 

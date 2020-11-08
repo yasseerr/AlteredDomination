@@ -2,6 +2,7 @@ import QtQuick 2.0
 import QtQuick.Controls 1.6
 import QtQuick.Window 2.0
 import QtGraphicalEffects 1.0
+import QtMultimedia 5.0
 import City 1.0
 
 Item{
@@ -269,6 +270,7 @@ Item{
                     enabled : cityGraphics.mapView.turnNumber !=0;
                     onEntered: {
                         attackRect.color = Qt.lighter(investRect.color);
+                        hoverAudio.play()
                         infoText.text="Attack"+(unitsrectangle.childrenRect.width>0?"":"(no units)") ;
                     }
                     onExited: {attackRect.color = "#e0bb72"; infoText.text="";}
@@ -382,8 +384,8 @@ Item{
                     id: investMouseArea
                     anchors.fill: parent
                     hoverEnabled: true
-                    onEntered: {investRect.color = Qt.lighter(investRect.color); infoText.text="invest" ; }
-                    onExited: {investRect.color = "#e0bb72"; infoText.text="";}
+                    onEntered: {investRect.color = Qt.lighter(investRect.color); infoText.text="invest" ;bomb.play() }
+                    onExited: {investRect.color = "#e0bb72"; infoText.text="";bomb.stop()}
                     onPressed: investRect.color = "#00ff00"
                     onReleased: investRect.color = "#e0bb72"
                 }
@@ -469,6 +471,9 @@ Item{
         }
 
     }
-
+    Audio{
+        id:bomb
+        source: "qrc:/data/sounds/explosion.wav"
+    }
 
 }

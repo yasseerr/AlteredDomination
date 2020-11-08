@@ -4,7 +4,8 @@
 #
 #-------------------------------------------------
 
-QT       += core gui svg quick quickwidgets
+QT       += core multimedia gui svg quick quickwidgets
+
 
 CONFIG += resources_big
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -45,7 +46,9 @@ SOURCES += \
     graphics/bframe.cpp \
     battleform.cpp \
     AI/mapai.cpp \
-    AI/battleai.cpp
+    AI/battleai.cpp \
+    graphics/animations.cpp \
+    graphics/homemenu.cpp
 
 HEADERS += \
         mainmenu.h \
@@ -67,7 +70,9 @@ HEADERS += \
     graphics/bframe.h \
     battleform.h \
     AI/mapai.h \
-    AI/battleai.h
+    AI/battleai.h \
+    graphics/animations.h \
+    graphics/homemenu.h
 
 FORMS += \
         mainmenu.ui \

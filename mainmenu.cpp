@@ -6,7 +6,7 @@
 #include <QQuickItem>
 #include <QThread>
 #include<AI/mapai.h>
-MainMenu::MainMenu(QWidget *parent) :
+MainMenu::MainMenu(QString c, int m,int t,QString gameSave, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::MainMenu)
 {
@@ -15,12 +15,13 @@ MainMenu::MainMenu(QWidget *parent) :
     connect(m_mapView,&MapView::attackerWon,this,&MainMenu::onAttackerWon);
 
     ///---- temporary setting the active player country-----------
-    m_activePlayerStr = "fr";
-    m_mapView->setActivePStr(m_activePlayerStr);
+//    m_activePlayerStr = "fr";
+    m_mapView->setActivePStr(c);
+    m_mapView->setMode(static_cast<MapView::GameMode>(m));
     m_mapView->mapAI()->setMapView(m_mapView);
 
 
-    m_mapView->loadFromJson();
+    t==0? m_mapView->loadFromJson():m_mapView->loadFromJsonString(gameSave);
     ui->CitiesDisplayUI->hide();
     ui->horizontalLayout_2->addWidget(m_mapView);
 
@@ -40,6 +41,7 @@ MainMenu::MainMenu(QWidget *parent) :
 
 }
 
+
 MainMenu::~MainMenu()
 {
     delete ui;
@@ -54,6 +56,8 @@ QString MainMenu::activePlayerStr() const
 {
     return m_activePlayerStr;
 }
+
+
 
 void MainMenu::startGame()
 {
@@ -145,9 +149,11 @@ void MainMenu::runNextTurn()
     m_mapView->setEnabled(true);
     m_mapView->setActuelPlayer(m_mapView->activePlayer());
     reDisplayCountries();
+    m_mapView->autoSave();
 }
 
 void MainMenu::onAttackerWon(City *C)
 {
     reDisplayCities();
 }
+

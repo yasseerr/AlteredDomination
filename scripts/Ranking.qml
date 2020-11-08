@@ -46,8 +46,10 @@ Item {
             source: "qrc:/data/mapmtex.jpg"
         }
     }
-    ScrollView{
+    Flickable{
         id : countriesScroll
+        contentHeight: countriesItem.height
+        contentWidth: 170
         anchors.leftMargin: 5
         anchors.fill: parent
         Flow {

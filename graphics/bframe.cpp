@@ -181,6 +181,7 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
                 u->city()->removeUnit(u->id());
                 u->deleteLater();
                 ug->deleteLater();
+                bmapS()->animItem->runAnimation(this->x(),this->y());
                 bmapS()->selectedFrame()->unitG()->moveAnimation(this);
                 checkWineLose();
                 bmapS()->cheCkEndTurn();

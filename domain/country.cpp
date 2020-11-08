@@ -2,6 +2,9 @@
 #include "country.h"
 #include "player.h"
 
+#include <QVariantList>
+#include <QVariantMap>
+
 Country::Country(QObject *parent) : QObject(parent)
 {
     m_income = 0;
@@ -19,6 +22,23 @@ void Country::removeCity(City *c)
 {
     m_cities.removeOne(c);
     this->setIncome(this->income()-c->income());
+}
+
+QVariant Country::toVariant()
+{
+    QVariantMap ret;
+    QVariantList citiesVar;
+    foreach (City *c, this->cities()) {
+        citiesVar << c->toVariant();
+    }
+    ret.insert("id",m_id);
+    ret.insert("name",m_name);
+    ret.insert("color",m_color.name());
+    ret.insert("flag",m_intID);
+    ret.insert("funds",m_funds);
+    ret.insert("cities",citiesVar);
+
+    return ret;
 }
 
 int Country::id() const

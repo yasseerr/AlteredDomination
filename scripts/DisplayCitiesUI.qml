@@ -2,6 +2,7 @@ import QtQuick 2.0
 import QtQuick.Controls 1.6
 import "../scripts" as MItems
 Item {
+    id: item1
     width: 100
     height: 479
     visible: true
@@ -50,9 +51,14 @@ Item {
             source: "qrc:/data/mapmtex.jpg"
         }
     }
-    ScrollView{
+    Flickable{
         id : citiesScroll
-        anchors.fill: parent
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        anchors.top: parent.top
+        contentHeight: citiesItem.height
+        contentWidth: 100
         Flow {
             id: citiesItem
             width: 100

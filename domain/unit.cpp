@@ -55,6 +55,14 @@ int Unit::power() const
     return m_power;
 }
 
+QVariant Unit::toVariant()
+{
+    QVariantMap ret;
+    ret.insert("name",m_name);
+    ret.insert("power",m_power);
+    return ret;
+}
+
 void Unit::setId(int id)
 {
     if (m_id == id)

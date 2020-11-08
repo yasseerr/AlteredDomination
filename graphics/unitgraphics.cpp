@@ -4,6 +4,7 @@
 #include "bframe.h"
 
 #include <QPainter>
+#include<QtMath>
 #include <QPropertyAnimation>
 
 #include <domain/country.h>
@@ -114,6 +115,9 @@ void UnitGraphics::moveAnimation(BFrame *f)
 {
     bmapS()->thereIsAnimationRunning = true;
     this->frame()->setUnitG(nullptr);
+//    qreal rad = qAtan(qFabs((f->y()-this->frame()->y()))/qFabs(f->x()-this->frame()->x()));
+//    this->setRotation(qRadiansToDegrees(rad));
+
     this->setFrame(f);
     QPropertyAnimation *moveAnim = new QPropertyAnimation(this,"pos",this);
     connect(moveAnim,&QPropertyAnimation::stateChanged,this,&UnitGraphics::moveAnimationEnded);

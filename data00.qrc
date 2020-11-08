@@ -324,5 +324,67 @@
         <file>scripts/BattleResult.qml</file>
         <file>data/icons/ranking.png</file>
         <file>scripts/Ranking.qml</file>
+        <file>data/map6.svg</file>
+        <file>data/map7.svg</file>
+        <file>data/mapBG10.jpg</file>
+        <file>data/mapBG9.png</file>
+        <file>scripts/Animations.qml</file>
+        <file>data/animations/explosion.jpg</file>
+        <file>data/animations/explosion.png</file>
+        <file>data/animations/explosion2.png</file>
+        <file>data/sounds/hover.wav</file>
+        <file>data/sounds/explosion.wav</file>
+        <file>scripts/home/HomeMenu.qml</file>
+        <file>data/Albedo.jpg</file>
+        <file>data/animations/EarthRotation/0.png</file>
+        <file>data/animations/EarthRotation/1.png</file>
+        <file>data/animations/EarthRotation/2.png</file>
+        <file>data/animations/EarthRotation/3.png</file>
+        <file>data/animations/EarthRotation/4.png</file>
+        <file>data/animations/EarthRotation/5.png</file>
+        <file>data/animations/EarthRotation/6.png</file>
+        <file>data/animations/EarthRotation/7.png</file>
+        <file>data/animations/EarthRotation/8.png</file>
+        <file>data/animations/EarthRotation/9.png</file>
+        <file>data/animations/EarthRotation/10.png</file>
+        <file>data/animations/EarthRotation/11.png</file>
+        <file>data/animations/EarthRotation/12.png</file>
+        <file>data/animations/EarthRotation/13.png</file>
+        <file>data/animations/EarthRotation/14.png</file>
+        <file>data/animations/EarthRotation/15.png</file>
+        <file>data/animations/EarthRotation/16.png</file>
+        <file>data/animations/EarthRotation/17.png</file>
+        <file>data/fonts/DESTROY_.ttf</file>
+        <file>data/icons/metalsign.png</file>
+        <file>scripts/home/HomeMenuComponant.qml</file>
+        <file>data/fonts/District.ttf</file>
+        <file>data/fonts/Coalition_v2..ttf</file>
+        <file>data/icons/sign.png</file>
+        <file>data/sounds/hoverhome.mp3</file>
+        <file>data/sounds/hoverhome.wav</file>
+        <file>data/sounds/click.wav</file>
+        <file>data/sounds/hover.mp3</file>
+        <file>data/icons/homeA.png</file>
+        <file>data/icons/homeB.png</file>
+        <file>data/sounds/battleambiant.MP3</file>
+        <file>data/sounds/ambiant1.MP3</file>
+        <file>data/icons/circle.png</file>
+        <file>scripts/home/NewGame.qml</file>
+        <file>scripts/home/LoadGame.qml</file>
+        <file>scripts/home/Multiplayer.qml</file>
+        <file>data/icons/versus.png</file>
+        <file>scripts/home/Tutorial.qml</file>
+        <file>scripts/home/Setting.qml</file>
+        <file>data/map_2.json</file>
+        <file>data/gamesaves.json</file>
+        <file>data/map_mask.svg</file>
+        <file>data/sea.jpg</file>
+        <file>data/sea2.png</file>
+        <file>data/sea2.jpg</file>
+        <file>data/sea3.png</file>
+        <file>data/sea3.jpg</file>
+        <file>data/map_mask_2.svg</file>
+        <file>data/map_mask_2.png</file>
+        <file>data/mapciecle.png</file>
     </qresource>
 </RCC>

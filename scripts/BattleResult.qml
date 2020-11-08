@@ -154,8 +154,8 @@ Item {
             onEntered: okbgrectangle.gradient.stops[0].color = Qt.lighter("#dddddd")
             onExited: okbgrectangle.gradient.stops[0].color = "#1b4825"
             onClicked: {
-                bform.closeYet = true;
                 battleResultUI.hide();
+                bform.closeYet = true;                
                 battleResultUI.deleteLater()
             }
         }

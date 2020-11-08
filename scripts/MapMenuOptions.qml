@@ -116,12 +116,16 @@ Item {
             anchors.fill: parent
             onEntered: saveitem.scale = 1.04
             onExited: saveitem.scale = 1
+            onClicked: {
+                mapView.saveGame()
+                menuOpt.hide()
+            }
         }
 
     }
 
     Item {
-        id: loaditem
+        id: settingitem
         x: 189
         width: 277
         height: 47
@@ -130,7 +134,7 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
 
         Rectangle {
-            id: loadrectangle
+            id: settingrectangle
             radius: 5
             gradient: Gradient {
                 GradientStop {
@@ -150,9 +154,9 @@ Item {
         }
 
         Text {
-            id: loadtext
+            id: settingtext
             color: "#ffffff"
-            text: qsTr("Load")
+            text: qsTr("Setting")
             font.italic: true
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
@@ -161,11 +165,11 @@ Item {
         }
 
         MouseArea {
-            id: loadmouseArea
+            id: settingmouseArea
             hoverEnabled: true
             anchors.fill: parent
-            onEntered: loaditem.scale = 1.04
-            onExited: loaditem.scale = 1
+            onEntered: settingitem.scale = 1.04
+            onExited: settingitem.scale = 1
         }
     }
 
@@ -176,7 +180,7 @@ Item {
         width: 277
         height: 47
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: loaditem.bottom
+        anchors.top: settingitem.bottom
         anchors.topMargin: 10
 
         Rectangle {
@@ -216,6 +220,10 @@ Item {
             anchors.fill: parent
             onEntered: homeitem.scale = 1.04
             onExited: homeitem.scale = 1
+            onClicked: {
+                menuOpt.hide()
+                mapView.returnHome()
+            }
         }
     }
 
@@ -266,6 +274,7 @@ Item {
             anchors.fill: parent
             onEntered: exititem.scale = 1.04
             onExited: exititem.scale = 1
+            onClicked: mapView.quitGame()
         }
     }
 }

@@ -7,6 +7,8 @@
 
 #include <AI/battleai.h>
 
+#include <QGraphicsProxyWidget>
+#include <QPalette>
 #include <battleform.h>
 
 BMapScene::BMapScene(QObject *parent) : QGraphicsScene(parent),
@@ -15,10 +17,13 @@ BMapScene::BMapScene(QObject *parent) : QGraphicsScene(parent),
     m_phase(BMapScene::BattlePhase::STARTING),
     m_selectedFrame(nullptr),
     m_turnTimer(new QDeadlineTimer()),
-    m_turncount(0)
+    m_turncount(0),
+    animItem(new Animations(this))
 {
     thereIsAnimationRunning =false;
     setBackgroundBrush(QPixmap(":/data/mapBG7.jpg"));
+    animItem->setZValue(10);
+    this->addItem(animItem);
 
 
 }

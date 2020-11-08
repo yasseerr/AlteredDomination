@@ -235,11 +235,13 @@ void CityGraphics::startBattle()
     BattleMap *bm = new BattleMap(mapView()->selectedCityGraphics()->city(),this->city(),mapView()->battleForm);
     mapView()->battleForm->bScene()->setBmap(bm);
 
-    connect(mapView()->battleForm,&BattleForm::battleEnded,this,onBattleEnded);
-    connect(mapView()->battleForm,&BattleForm::battleEndedA,this,onAttackerWon);
+
+
+    connect(mapView()->battleForm,SIGNAL(battleEnded()),this,SLOT(onBattleEnded()));
+    connect(mapView()->battleForm,SIGNAL(battleEndedA()),this,SLOT(onAttackerWon()));
 
     mapView()->battleForm->publishMaptoQMl();
-    mapView()->battleForm->show();
+    mapView()->battleForm->showFullScreen();
 //    mapView()->battleForm->battleAI()->placeUnits();
 
 }

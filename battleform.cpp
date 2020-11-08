@@ -124,6 +124,7 @@ void BattleForm::draw()
 
 void BattleForm::onBattleEndedA()
 {
+    this->hide();
     battleResultUI->show();
     if(bScene()->bmap()->attacker()->country()->player() == this->bScene()->currentPlayer())
         this->setResultText("Congratulation You toke over "+bScene()->bmap()->deffender()->name()+", Nice Fight");
@@ -147,6 +148,7 @@ void BattleForm::onBattleEndedA()
 
 void BattleForm::onBattleEndedD()
 {
+    this->hide();
     battleResultUI->show();
     if(bScene()->bmap()->attacker()->country()->player() == this->bScene()->currentPlayer())
         this->setResultText("You couldn't take "+bScene()->bmap()->deffender()->name()+",maby next time!");

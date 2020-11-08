@@ -2,6 +2,7 @@
 #define UNIT_H
 
 #include <QObject>
+#include <QVariant>
 class City;
 class Unit : public QObject
 {
@@ -51,6 +52,8 @@ public:
     bool used() const;
 
     int power() const;
+
+    QVariant toVariant();
 
 signals:
 

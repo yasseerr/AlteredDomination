@@ -20,6 +20,7 @@ class MapAI;
 class MapView :public QGraphicsView
 {
     Q_OBJECT
+
     Q_PROPERTY(QGraphicsScene* mapScene READ mapScene WRITE setMapScene NOTIFY mapSceneChanged)
     Q_PROPERTY(Map* map READ map WRITE setMap NOTIFY mapChanged)
     Q_PROPERTY(QMap<int,CityGraphics*> citiesGraphics READ citiesGraphics WRITE setCitiesGraphics NOTIFY citiesGraphicsChanged)
@@ -33,6 +34,7 @@ class MapView :public QGraphicsView
     Q_PROPERTY(QString activePStr READ activePStr WRITE setActivePStr NOTIFY activePStrChanged)
     Q_PROPERTY(MapAI* mapAI READ mapAI WRITE setMapAI NOTIFY mapAIChanged)
     Q_PROPERTY(int turnNumber READ turnNumber WRITE setTurnNumber NOTIFY turnNumberChanged)
+    Q_PROPERTY(GameMode mode READ mode WRITE setMode NOTIFY modeChanged)
     Map* m_map;
 
     QMap<int,CityGraphics*> m_citiesGraphics;
@@ -69,6 +71,8 @@ class MapView :public QGraphicsView
 
     int m_turnNumber;
 
+
+
 public:
     QQuickView *CityUI;
     QQuickView *addUnitUI;
@@ -78,7 +82,10 @@ public:
     BattleForm *battleForm;
     QWidget *par1;
 
-
+    enum GameMode{
+        GDP,CITYCOUNT
+    };
+    GameMode m_mode;
     MapView(QObject *parent);
 
     Map* map() const;
@@ -88,6 +95,12 @@ public:
     QGraphicsSvgItem* mapGraphics() const;
 
     void loadFromJson();
+    void loadFromJsonString(QString gamesave);
+
+
+    Q_INVOKABLE void saveGame();
+    Q_INVOKABLE void quitGame();
+    void autoSave();
 
     QGraphicsView* view() const;
 
@@ -112,6 +125,8 @@ public:
     MapAI* mapAI() const;
 
     int turnNumber() const;
+
+    GameMode mode() const;
 
 public slots:
 
@@ -150,7 +165,11 @@ public slots:
 
     void setTurnNumber(int turnNumber);
 
+    void setMode(GameMode mode);
+
 signals:
+
+    Q_INVOKABLE void returnHome();
 
     void zoomChange(double z);
     void mapChanged(Map* map);
@@ -170,6 +189,7 @@ signals:
     void turnNumberChanged(int turnNumber);
 
     void battleEndedAISignal();
+    void modeChanged(GameMode mode);
 };
 
 #endif // MAPVIEW_H

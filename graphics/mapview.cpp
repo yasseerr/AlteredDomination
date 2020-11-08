@@ -2,7 +2,10 @@
 #include "mapview.h"
 
 #include <QApplication>
+#include <QBitmap>
 #include <QCoreApplication>
+#include <QDir>
+#include <QGraphicsOpacityEffect>
 #include <QGraphicsProxyWidget>
 #include <QJsonArray>
 #include <QJsonDocument>
@@ -12,6 +15,8 @@
 #include <QQmlContext>
 #include <QRgb>
 #include <QScrollBar>
+#include <QSvgRenderer>
+#include <qdatetime.h>
 #include <qdebug.h>
 #include <qgraphicssceneevent.h>
 #include <domain/city.h>
@@ -61,6 +66,7 @@ MapView::MapView(QObject *parent):QGraphicsView()
     menuOptUI->setFlags(Qt::ToolTip);
 //    CityUI->setAttribute(Qt::WA_TranslucentBackground);
     menuOptUI->rootContext()->setContextProperty("menuOpt",menuOptUI);
+    menuOptUI->rootContext()->setContextProperty("mapView",this);
 
 
     qmlRegisterType<City>("City",1,0,"City");
@@ -114,8 +120,8 @@ MapView::MapView(QObject *parent):QGraphicsView()
 
      ///creating the mapgraphics and add it to the view
     glob  = new QGraphicsItemGroup();
-    m_mapGraphics = new  QGraphicsSvgItem(":/data/map.svg");
-    m_mapGraphics->setOpacity(0.7);
+    m_mapGraphics = new  QGraphicsSvgItem(":/data/map_mask.svg");
+    m_mapGraphics->setOpacity(0.6);
     this->m_mapScene->addItem(m_mapGraphics);
     //glob->setAcceptHoverEvents(true);
     m_mapGraphics->setScale(zoomLevel);
@@ -126,7 +132,25 @@ MapView::MapView(QObject *parent):QGraphicsView()
     testRect->setFont(QFont("Arial",60));
     m_mapScene->addItem(testRect);
 
-    QPixmap *pItem = new QPixmap(":/data/mapBG4.jpg");
+    /// teting the opacity mask
+
+
+
+//    QImage *pItemp = new QImage(":/data/mapBG8.jpg");
+//    QGraphicsRectItem *rec = new QGraphicsRectItem(0,0,3000,1000);
+//    rec->setBrush(*pItemp);
+//    QGraphicsOpacityEffect *eff = new QGraphicsOpacityEffect();
+//    eff->setOpacity(0.5);
+//    eff->setEnabled(true);
+//    QBitmap *mask = new QBitmap(":/data/map_mask_2.png");
+//    eff->setOpacityMask(*mask);
+
+//    rec->setGraphicsEffect(eff);
+//    m_mapScene->addItem(rec);
+//    pmi->setScale(4);
+
+
+    QPixmap *pItem = new QPixmap(":/data/sea3.jpg");
     m_mapScene->setBackgroundBrush(*pItem);
 //    pItem->moveBy(-725,30);
     this->setScene(m_mapScene);
@@ -171,9 +195,10 @@ void MapView::loadFromJson()
 
 
     /// configuring the file
-    QFile jsonFile(":/data/map.json");
-    jsonFile.open(QIODevice::ReadOnly|QIODevice::Text);
-    QTextStream in(&jsonFile);
+    QFile *jsonFile;
+    jsonFile = m_mode==MapView::GDP? new QFile(":/data/map.json"):new QFile(":/data/map_2.json");
+    jsonFile->open(QIODevice::ReadOnly|QIODevice::Text);
+    QTextStream in(jsonFile);
     QJsonDocument doc = QJsonDocument::fromJson(in.readAll().toLocal8Bit());
 
     /// loading
@@ -201,7 +226,7 @@ void MapView::loadFromJson()
         p->setid(country->id());
         p->setCountry(country);
         country->setPlayer(p);
-        if(country->intID()== this->activePStr()){
+        if(country->name()== this->activePStr()){
             p->setName("Player 1");
             p->setType(PlayerType::HUMAIN);
             m_activePlayer = p;
@@ -301,6 +326,229 @@ void MapView::loadFromJson()
         }
     }
 
+}
+
+void MapView::loadFromJsonString(QString gamesave)
+{
+    /// loading materials for cities
+    QImage *M10 = new QImage(":/data/cities/10M.png");
+    QImage *M1 = new QImage(":/data/cities/1m.png");
+    QImage *K500 = new QImage(":/data/cities/500k.png");
+    QImage *K100 = new QImage(":/data/cities/100k.png");
+    QImage *bgImage = new QImage(":/data/cities/bg.png");
+
+    /// loading units types
+    QJsonDocument doc = QJsonDocument::fromJson(gamesave.toLocal8Bit());
+
+    /// loading
+//    if(doc.isEmpty() || !doc.isArray()){
+//        qDebug() << "empty or not array";
+//        return;
+//    }
+    QJsonArray countries = doc.object().value("countries").toArray();
+    foreach (QJsonValue valueJ, countries) {
+        QJsonObject countryJ = valueJ.toObject();
+        QJsonValue citiesV = countryJ.value("cities");
+        QJsonArray cities = citiesV.toArray();
+
+        /// creation of the country object
+        Country *country = new Country();
+        country->setId(countryJ.value("id").toInt());
+        country->setName(countryJ.value("name").toString());
+        country->setIntID(countryJ.value("flag").toString());
+        country->setFlag(QImage(":/data/flags/"+countryJ.value("flag").toString()+".png"));
+        country->setColor(QColor(countryJ.value("color").toString()));
+        this->map()->countries().insert(country->id(),country);
+
+        /// creation of the Player object
+        Player *p = new Player(this);
+        p->setid(country->id());
+        p->setCountry(country);
+        country->setPlayer(p);
+        if(country->name()== this->activePStr()){
+            p->setName("Player 1");
+            p->setType(PlayerType::HUMAIN);
+            m_activePlayer = p;
+            m_actuelPlayer = p;
+        }else {
+            p->setName("AI_"+country->name());
+            p->setType(PlayerType::AI);
+        }
+        m_players.append(p);
+
+        foreach (QJsonValue cityV, cities) {
+            QJsonObject cityJ = cityV.toObject();
+
+            /// the creation of the city object
+            City *city = new City();
+            city->setId(cityJ.value("id").toInt());
+            city->setName(cityJ.value("name").toString());
+            city->setX(cityJ.value("x").toInt()/**2.8346*zoomLevel*/);
+            city->setY(cityJ.value("y").toInt()/**2.8346*zoomLevel*/);
+            city->setType(static_cast<CityType>(cityJ.value("cityType").toInt()));
+            city->setIncome(cityJ.value("income").toInt());
+            city->setMap(this->map());
+
+            this->map()->cities().insert(city->id(),city);
+            city->setCountry(country);
+            country->addCity(city);
+
+            /// loading the neigbours
+            QJsonValue neigboursV = cityJ.value("neighbours");
+            QJsonArray neighbours = neigboursV.toArray();
+            QList<int> nTmp;
+
+            foreach (QJsonValue neighbourV, neighbours) {
+                nTmp.append(neighbourV.toInt());
+            }
+            city->setNeigboursId(nTmp);
+
+            /// loading the units
+
+            QJsonValue unitsVt = cityJ.value("units");
+            QJsonArray unitst = unitsVt.toArray();
+            foreach (QJsonValue unitVt, unitst) {
+                QJsonObject unitO = unitVt.toObject();
+                Unit *ut = new Unit();
+                ut->setType(unitO.value("name").toString());
+                ut->setPower(unitO.value("power").toInt());
+                ut->setName(unitO.value("name").toString());
+                city->addUnit(ut);
+
+            }
+
+            /// cityGraphics
+            QImage *cityImg;
+            if((int)city->type()<4){
+                cityImg = K100;
+            }else if ((int)city->type() <7) {
+                cityImg = K500;
+            }else if ((int)city->type() <10) {
+                cityImg = M1;
+            }else {
+                cityImg = M10;
+            }
+            CityGraphics *cityG = new CityGraphics(city,cityImg);
+            cityG->bgImage = bgImage;
+//            this->citiesGraphics().insert(city->id(),cityG);
+            cityG->setPos(city->x(),city->y());
+            cityG->setScale(0.09);
+            cityG->setMapView(this);
+//            cityG->setParentItem(glob);
+            m_mapScene->addItem(cityG);
+            m_citiesGraphics.insert(city->id(),cityG);
+            connect(this,&MapView::zoomChange,cityG,&CityGraphics::zoomChanged);
+
+//            QGraphicsRectItem *cityR = new QGraphicsRectItem(QRectF(city.x(),city.y(),60,60),glob);
+//            cityR->setBrush(Qt::red);
+
+        }
+        country->setFunds(countryJ.value("funds").toInt());
+    }
+    if(m_actuelPlayer->country()->cities().size()>0){
+        this->centerOn(m_activePlayer->country()->cities().at(0)->x(),
+                       m_activePlayer->country()->cities().at(0)->y());
+    }
+
+
+    /// neighbours graphics
+    foreach (CityGraphics *cG, m_citiesGraphics) {
+        foreach (int neighbourID, cG->city()->neigboursId()) {
+//            if(!citiesGraphics().contains(neighbourID)) return;
+            bool exi = false;
+            foreach (LinkGraphics *lgt, citiesGraphics().value(neighbourID)->links()) {
+                if(lgt->link()->des() == cG->city()) {
+                    exi=true;
+                }
+            }
+            if(exi) continue;
+            LinkN *l = new LinkN(this);
+            l->setDep(cG->city());
+            l->setDes(this->citiesGraphics().value(neighbourID)->city());
+
+            cG->city()->addNeighbour(this->citiesGraphics().value(neighbourID)->city());
+            this->citiesGraphics().value(neighbourID)->city()->addNeighbour(cG->city());
+
+            LinkGraphics *lg = new LinkGraphics(l,this);
+            m_links.append(lg);
+            cG->m_links.append(lg);
+            citiesGraphics().value(neighbourID)->m_links.append(lg);
+            m_mapScene->addItem(lg);
+            connect(this,&MapView::zoomChange,lg,&LinkGraphics::zoomChanged);
+
+        }
+    }
+
+
+
+}
+
+void MapView::saveGame()
+{
+    QFile f (QDir::currentPath()+"/gamesaves.json");
+    f.open(QFile::ReadWrite|QFile::Text);
+//    qDebug()<< f.errorString();
+    QTextStream ts(&f);
+//    ts << "salem";
+    /// the big object --the save----
+
+    QVariantMap saveObj;
+    QVariantList countriesList;
+    foreach (Player *p, this->players()) {
+        countriesList << p->country()->toVariant();
+    }
+    QDate d  = QDate::currentDate();
+
+    saveObj.insert("country",this->activePlayer()->country()->name());
+    saveObj.insert("turn",this->turnNumber());
+    saveObj.insert("date",d.toString());
+    saveObj.insert("flag",activePlayer()->country()->intID());
+    saveObj.insert("countries",countriesList);
+
+    QJsonDocument doc = QJsonDocument::fromJson(ts.readAll().toLocal8Bit());
+    QJsonArray ar = doc.array();
+    ar.append(QJsonValue::fromVariant(saveObj));
+    doc.setArray(ar);
+    f.resize(0);
+    ts << doc.toJson();
+    f.close();
+}
+
+void MapView::quitGame()
+{
+    QCoreApplication::quit();
+}
+
+void MapView::autoSave()
+{
+    QFile f (QDir::currentPath()+"/gamesaves.json");
+    f.open(QFile::ReadWrite|QFile::Text);
+//    qDebug()<< f.errorString();
+    QTextStream ts(&f);
+//    ts << "salem";
+    /// the big object --the save----
+
+    QVariantMap saveObj;
+    QVariantList countriesList;
+    foreach (Player *p, this->players()) {
+        countriesList << p->country()->toVariant();
+    }
+    QDate d  = QDate::currentDate();
+
+    saveObj.insert("country",this->activePlayer()->country()->name());
+    saveObj.insert("turn",this->turnNumber());
+    saveObj.insert("date",d.toString());
+    saveObj.insert("flag",activePlayer()->country()->intID());
+    saveObj.insert("countries",countriesList);
+
+    QJsonDocument doc = QJsonDocument::fromJson(ts.readAll().toLocal8Bit());
+    QJsonArray ar = doc.array();
+    ar.removeAt(0);
+    ar.insert(0,QJsonValue::fromVariant(saveObj));
+    doc.setArray(ar);
+    f.resize(0);
+    ts << doc.toJson();
+    f.close();
 }
 
 QGraphicsView *MapView::view() const
@@ -406,6 +654,11 @@ MapAI *MapView::mapAI() const
 int MapView::turnNumber() const
 {
     return m_turnNumber;
+}
+
+MapView::GameMode MapView::mode() const
+{
+    return m_mode;
 }
 
 
@@ -596,5 +849,14 @@ void MapView::setTurnNumber(int turnNumber)
 
     m_turnNumber = turnNumber;
     emit turnNumberChanged(m_turnNumber);
+}
+
+void MapView::setMode(MapView::GameMode mode)
+{
+    if (m_mode == mode)
+        return;
+
+    m_mode = mode;
+    emit modeChanged(m_mode);
 }
 

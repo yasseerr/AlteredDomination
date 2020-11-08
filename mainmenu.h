@@ -13,12 +13,16 @@ class MainMenu : public QWidget
     Q_OBJECT
     Q_PROPERTY(MapView* mapView READ mapView WRITE setMapView NOTIFY mapViewChanged)
     Q_PROPERTY(QString activePlayerStr READ activePlayerStr WRITE setActivePlayerStr NOTIFY activePlayerStrChanged)
+
 public:
-    explicit MainMenu(QWidget *parent = 0);
+
+    explicit MainMenu(QString c,int m,int t,QString gameSave,QWidget *parent = 0);
+    MainMenu(QString gamesave,QWidget *parent = 0);
     ~MainMenu();
     MapView* mapView() const;
 
     QString activePlayerStr() const;
+
 
 public slots  :
     void startGame();
@@ -33,6 +37,8 @@ public slots  :
     Q_INVOKABLE void focusOnCity(City *c);
     Q_INVOKABLE void runNextTurn();
     void onAttackerWon(City *C);
+
+
 signals:
     void mapViewChanged(MapView* mapView);
     void activePlayerStrChanged(QString activePlayerStr);
@@ -43,6 +49,7 @@ signals:
     void sendCountryToRanking(Country *c,int r);
     void clearCountriesInRanking();
 
+
 private:
 
     Ui::MainMenu *ui;
@@ -50,6 +57,7 @@ private:
     MapView *m_mapView;
 
     QString m_activePlayerStr;
+
 };
 
 #endif // MAINMENU_H

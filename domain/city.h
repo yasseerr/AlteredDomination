@@ -3,6 +3,7 @@
 
 #include <QMap>
 #include <QObject>
+#include <QVariant>
 
 class Country;
 class Map;
@@ -88,6 +89,8 @@ public:
     int power() const;
 
     bool used() const;
+
+    QVariant toVariant();
 
 signals:
 

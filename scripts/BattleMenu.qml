@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Particles 2.0
+import QtGraphicalEffects 1.0
 Item {
     id: item1
     width: 1200
@@ -78,8 +79,7 @@ Item {
             onEntered: surrenderrectangle.color = Qt.lighter("#f50e0e")
             onExited: surrenderrectangle.color = "#f50e0e"
             onClicked:{
-                console.log(bscene.currentCityPlaying.country.player.name!=bscene.currentPlayer.name);
-                if((bscene.currentCityPlaying.country.player.name != bscene.currentPlayer.name))return;
+                if((bscene.currentCityPlaying.country.player != bscene.currentPlayer))return;
                 battleForm.surrender()
                 battleForm.battleEnded()
             }
@@ -357,7 +357,7 @@ Item {
         y: 38
         color: "#ffffff"
         visible:bscene.phase == 3
-        text:  battleForm.bScene.currentCityPlaying == attacker?"'"+attacker.country.player.name+"' has "+bscene.generalsToChooseA+" move(s)":
+        text:  bscene.currentCityPlaying == attacker?"'"+attacker.country.player.name+"' has "+bscene.generalsToChooseA+" move(s)":
                                                                  "'"+deffender.country.player.name+"' has "+
                                                                  bscene.generalsToChooseD+" move(s)";
         anchors.verticalCenterOffset: -30
@@ -366,12 +366,7 @@ Item {
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         font.pixelSize: 18
-        Connections{
-            target: bscene
-            onPhaseChanged:{
-                console.log(bscene.phase == 1)
-            }
-        }
+
     }
 
     Text {
@@ -380,8 +375,8 @@ Item {
         color: "#ffffff"
         text: battleForm.battleAI.acceptOrProposeDraw?"-"+bscene.currentPlayer.name+"- wants a draw":""
         anchors.top: stattext2.bottom
-        anchors.topMargin: 1
-        font.pixelSize: 10
+        anchors.topMargin: 4
+        font.pixelSize: 13
         anchors.horizontalCenter: parent.horizontalCenter
         font.bold: true
         visible: bscene.phase == 3
@@ -398,6 +393,19 @@ Item {
         anchors.top: parent.top
         anchors.topMargin: 7
         source: "qrc:/data/flags/"+attacker.country.intID+".png"
+        layer.enabled: true
+        layer.effect: OpacityMask{
+            maskSource:Item {
+                width: attackerimage.width
+                height: attackerimage.height
+                Rectangle{
+                    anchors.centerIn: parent
+                    width: attackerimage.width
+                    height: attackerimage.height
+                    radius:16
+                }
+            }
+        }
     }
 
     Image {
@@ -410,6 +418,19 @@ Item {
         anchors.leftMargin: 231
         anchors.left: attackerimage.right
         source: "qrc:/data/flags/"+deffender.country.intID+".png"
+        layer.enabled: true
+        layer.effect: OpacityMask{
+            maskSource:Item {
+                width: deffenderimage.width
+                height: deffenderimage.height
+                Rectangle{
+                    anchors.centerIn: parent
+                    width: deffenderimage.width
+                    height: deffenderimage.height
+                    radius:16
+                }
+            }
+        }
     }
 
     Text {
@@ -604,7 +625,7 @@ Item {
             x: 37
             y: 8
             color: "#f1e9e9"
-            text: "TurnCount : "+battleForm.bScene.turncount
+            text: "TurnCount : "+bscene.turncount
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             verticalAlignment: Text.AlignVCenter
