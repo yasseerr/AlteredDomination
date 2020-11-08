@@ -16,9 +16,14 @@ HomeMenu::HomeMenu():QQuickView(),game(nullptr)
     QTextStream st2(&savesFile);
     setSavesData(st2.readAll());
 
+    QFile tutoFile(":/data/tutorial.json");
+    tutoFile.open(QIODevice::ReadOnly|QIODevice::Text);
+    QTextStream st3(&tutoFile);
+    setTutoData(st3.readAll());
+
 
     this->rootContext()->setContextProperty("homeClass",this);
-    this->setSource(QUrl("qrc:/scripts/home/HomeMenu.qml"));
+    this->setSource(QUrl("qrc:/scripts/home/Intro.qml"));
     this->showMaximized();
 
 }
@@ -63,6 +68,11 @@ QString HomeMenu::savesData() const
     return m_savesData;
 }
 
+QString HomeMenu::tutoData() const
+{
+    return m_tutoData;
+}
+
 void HomeMenu::setMapData(QString mapData)
 {
     if (m_mapData == mapData)
@@ -84,7 +94,6 @@ void HomeMenu::setSavesData(QString savesData)
 void HomeMenu::onReturnHome()
 {
     game->hide();
-
     QFile savesFile(QDir::currentPath()+"/gameSaves.json");
     savesFile.open(QIODevice::ReadOnly|QIODevice::Text);
     QTextStream st2(&savesFile);
@@ -92,4 +101,13 @@ void HomeMenu::onReturnHome()
 
     this->showMaximized();
     game->deleteLater();
+}
+
+void HomeMenu::setTutoData(QString tutoData)
+{
+    if (m_tutoData == tutoData)
+        return;
+
+    m_tutoData = tutoData;
+    emit tutoDataChanged(m_tutoData);
 }

@@ -210,22 +210,26 @@ void CityGraphics::startBattle()
     this->mapView()->selectedCityGraphics()->city()->setUsed(true);
     /// ---------- i cas the deffender haz no unit--------------
     if(this->city()->units().size() == 0){
-        this->city()->country()->removeCity(this->city());
-        this->city()->setCountry(this->mapView()->selectedCityGraphics()->city()->country());
-        this->mapView()->selectedCityGraphics()->city()->country()->addCity(this->city());
+            this->city()->country()->removeCity(this->city());
+            this->city()->setCountry(this->mapView()->selectedCityGraphics()->city()->country());
+            this->mapView()->selectedCityGraphics()->city()->country()->addCity(this->city());
 
 
-        foreach (Unit *u, this->mapView()->selectedCityGraphics()->city()->units()) {
-            this->city()->addUnit(u);
-            u->setCity(this->city());
-            this->mapView()->selectedCityGraphics()->city()->removeUnit(u->id());
-        }
+            foreach (Unit *u, this->mapView()->selectedCityGraphics()->city()->units()) {
+                this->city()->addUnit(u);
+                u->setCity(this->city());
+                this->mapView()->selectedCityGraphics()->city()->removeUnit(u->id());
+            }
 
-        if(mapView()->selectedCityGraphics()->city()->country()->player()->type()== PlayerType::HUMAIN)
-            mapView()->selectedCityGraphics()->deSelect();
-        emit mapView()->attackerWon(this->city());
-        this->city()->setUsed(true);
-        return;
+            Player *p = mapView()->selectedCityGraphics()->city()->country()->player();
+            if(mapView()->selectedCityGraphics()->city()->country()->player()->type()== PlayerType::HUMAIN)
+                mapView()->selectedCityGraphics()->deSelect();
+            emit mapView()->attackerWon(this->city());
+            this->city()->setUsed(true);
+            if(p->type() == PlayerType::AI){
+                mapView()->mapAI()->launchBattleAI_Player();
+            }
+            return;
     }
 
     mapView()->setEnabled(false);

@@ -410,6 +410,8 @@ void MapAI::StudyAttackPossibilities()
         City *randomAttackCity = citiesToAttack.at(qrand()%citiesToAttack.size());
 //                this->mapView()->setSelectedCityGraphics(mapView()->citiesGraphics().value(c->id()));
 //                this->mapView()->citiesGraphics().value(n->id())->startBattle();
+
+//        qDebug() << c->name() << "  " << randomAttackCity->name();
         if(this->player()->type() == PlayerType::AI && randomAttackCity->country()->player()->type() == PlayerType::AI){
             this->startBattleAI_AI(c,randomAttackCity);
             c->setUsed(true);
@@ -418,15 +420,15 @@ void MapAI::StudyAttackPossibilities()
             QPair<Country*,Country*> cntry(c->country(),randomAttackCity->country());
             m_battlesForP1 << QPair<QPair<City*,City*>,QPair<Country*,Country*>>(battle,cntry);
             c->setUsed(true);
-        }
 
+        }
     }
 
 }
 
 void MapAI::startBattleAI_AI(City *c, City *n)
 {
-    if(this->mapView()->turnNumber() == 0)return;
+//    if(this->mapView()->turnNumber() == 0)return;
     int x = c->power();
     int y = n->power();
     int r = qrand()%(x+y);
@@ -648,6 +650,7 @@ void MapAI::launchBattleAI_Player()
     City *deffender = battle.second;
 
     if(attacker->country() != cntry.first || deffender->country() != cntry.second){
+        qDebug() << attacker->name() << "  " << deffender->name();
         this->launchBattleAI_Player();
         return;
     }

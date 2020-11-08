@@ -110,6 +110,9 @@ public:
 
 
     void cheCkEndTurn();
+    void zoomIN();
+    void zoomOUT();
+
 
     City* currentCityPlaying() const;
 

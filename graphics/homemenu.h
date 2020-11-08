@@ -9,8 +9,10 @@ class HomeMenu : public QQuickView
     Q_OBJECT
     Q_PROPERTY(QString mapData READ mapData WRITE setMapData NOTIFY mapDataChanged)
     Q_PROPERTY(QString savesData READ savesData WRITE setSavesData NOTIFY savesDataChanged)
+    Q_PROPERTY(QString tutoData READ tutoData WRITE setTutoData NOTIFY tutoDataChanged)
     QString m_mapData;    
-    QString m_savesData;
+    QString m_savesData;    
+    QString m_tutoData;
 
 public:
     MainMenu *game;
@@ -24,14 +26,19 @@ public:
     QString mapData() const;
     QString savesData() const;
 
+    QString tutoData() const;
+
 public slots:
     void setMapData(QString mapData);
     void setSavesData(QString savesData);
     void onReturnHome();
 
+    void setTutoData(QString tutoData);
+
 signals:
     void mapDataChanged(QString mapData);
     void savesDataChanged(QString savesData);
+    void tutoDataChanged(QString tutoData);
 };
 
 #endif // HOMEMENU_H

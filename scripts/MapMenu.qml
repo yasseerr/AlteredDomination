@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtMultimedia 5.8
 
 Item {
     id : root
@@ -216,7 +217,7 @@ Item {
         }
         anchors.bottomMargin: 5
         anchors.top: parent.top
-        anchors.left: mainMenuItem.right
+        anchors.left: turnItem.right
         anchors.bottom: parent.bottom
     }
 
@@ -225,7 +226,7 @@ Item {
         x: -3
         y: -3
         width: 157
-        anchors.leftMargin: 7
+        anchors.leftMargin: 5
         anchors.topMargin: 7
         Rectangle {
             id: inrectangle
@@ -286,7 +287,7 @@ Item {
         }
         anchors.bottomMargin: 7
         anchors.top: parent.top
-        anchors.left: endturnItem.right
+        anchors.left: mainMenuItem.right
         anchors.bottom: parent.bottom
     }
 
@@ -409,6 +410,129 @@ Item {
         anchors.bottomMargin: 5
         anchors.left: incomeItem.right
         anchors.top: parent.top
+    }
+    Item {
+        id: zoomInitem
+        width: 30
+        height: 30
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: actualPimage.left
+        anchors.rightMargin: 30
+        visible: true
+        anchors.left: statusBar.right
+        anchors.leftMargin: 5
+
+        Rectangle {
+            id: zoomInrectangle
+            radius: 6
+            border.width: 2
+            gradient: Gradient {
+                GradientStop {
+                    position: 0
+                    color: "#ffffff"
+                }
+
+                GradientStop {
+                    position: 1
+                    color: "#b41414"
+                }
+            }
+            anchors.fill: parent
+        }
+
+        Text {
+            id: zoomINtext
+            text: qsTr("+")
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            font.pixelSize: 18
+        }
+
+        MouseArea {
+            id: zoomInmouseArea
+            anchors.fill: parent
+            hoverEnabled: true
+            onEntered: {
+                infotext.text  = "zoom in"
+                zoomInrectangle.gradient.stops[1].color = Qt.lighter("#b41414")
+            }
+            onExited: {
+                infotext.text  = ""
+                zoomInrectangle.gradient.stops[1].color = "#b41414"
+            }
+            onClicked: {
+//                battleForm.zoomIN()
+                mainmenu.mapView.zoomIn()
+            }
+        }
+    }
+
+    Item {
+        id: zoomOutitem
+        x: 2
+        width: 30
+        height: 30
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: zoomInitem.left
+        anchors.rightMargin: 3
+        visible: true
+        Rectangle {
+            id: zoomOutrectangle
+            radius: 6
+            gradient: Gradient {
+                GradientStop {
+                    position: 0
+                    color: "#ffffff"
+                }
+
+                GradientStop {
+                    position: 1
+                    color: "#b41414"
+                }
+            }
+            anchors.fill: parent
+            border.width: 2
+        }
+
+        Text {
+            id: zoomOuttext
+            text: qsTr("-")
+            anchors.verticalCenter: parent.verticalCenter
+            font.pixelSize: 18
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+
+        MouseArea {
+            id: zoomOutmouseArea
+            anchors.fill: parent
+            hoverEnabled: true
+            onEntered: {
+                infotext.text  = "zoom out"
+                zoomOutrectangle.gradient.stops[1].color = Qt.lighter("#b41414")
+            }
+            onExited: {
+                infotext.text  = ""
+                zoomOutrectangle.gradient.stops[1].color = "#b41414"
+            }
+            onClicked: {
+//                battleForm.zoomOUt()
+                mainmenu.mapView.zoomOut()
+            }
+        }
+        anchors.left: statusBar.right
+        anchors.leftMargin: 5
+    }
+    Audio{
+        id : ambiantMap
+        autoPlay: true
+        volume: 1
+        playlist: Playlist{
+            id: ambiantListMap
+            playbackMode: Playlist.Loop
+            PlaylistItem{ source: "qrc:/data/sounds/map1.mp3"}
+//            PlaylistItem{ source: "qrc:/data/sounds/map2.wav"}
+//            PlaylistItem{ source: "qrc:/data/sounds/map3.wav"}
+        }
     }
 
 }

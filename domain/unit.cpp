@@ -58,7 +58,7 @@ int Unit::power() const
 QVariant Unit::toVariant()
 {
     QVariantMap ret;
-    ret.insert("name",m_name);
+    ret.insert("type",m_type);
     ret.insert("power",m_power);
     return ret;
 }

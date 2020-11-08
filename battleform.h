@@ -24,6 +24,7 @@ class BattleForm : public QWidget
 public:
 
     QQuickView  *battleResultUI;
+    qreal previousScale;
 
     explicit BattleForm(QWidget *parent = 0);
     ~BattleForm();
@@ -43,6 +44,7 @@ public slots:
     Q_INVOKABLE void play();
     Q_INVOKABLE void surrender();
     Q_INVOKABLE void draw();
+    Q_INVOKABLE void zoom(qreal z);
 
     void onBattleEndedA();
     void onBattleEndedD();

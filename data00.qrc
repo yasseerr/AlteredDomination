@@ -386,5 +386,52 @@
         <file>data/map_mask_2.svg</file>
         <file>data/map_mask_2.png</file>
         <file>data/mapciecle.png</file>
+        <file>scripts/home/Intro.qml</file>
+        <file>data/logo/adlogo.svg</file>
+        <file>data/logo/afkaarlogo.svg</file>
+        <file>data/sounds/units/afv.wav</file>
+        <file>data/sounds/units/afvexplosion.wav</file>
+        <file>data/sounds/units/antiaircraft.wav</file>
+        <file>data/sounds/units/antiaircraftexplosion.wav</file>
+        <file>data/sounds/units/artillery.wav</file>
+        <file>data/sounds/units/artilleryexplosion.wav</file>
+        <file>data/sounds/units/attackhelicopter.wav</file>
+        <file>data/sounds/units/attackhelicopterexplosion.wav</file>
+        <file>data/sounds/units/explosion.wav</file>
+        <file>data/sounds/units/fighter.wav</file>
+        <file>data/sounds/units/fighterexplosion.wav</file>
+        <file>data/sounds/units/mlrs.wav</file>
+        <file>data/sounds/units/mlrsexplosion.wav</file>
+        <file>data/sounds/units/modernarmor.wav</file>
+        <file>data/sounds/units/modernarmorexplosion.wav</file>
+        <file>data/sounds/units/rocketlauncher.wav</file>
+        <file>data/sounds/units/rocketlauncherexplosion.wav</file>
+        <file>data/sounds/units/sniper.wav</file>
+        <file>data/sounds/units/sniperexplosion.wav</file>
+        <file>data/sounds/units/soldier.wav</file>
+        <file>data/sounds/units/soldierexplosion.wav</file>
+        <file>data/sounds/units/tank.wav</file>
+        <file>data/sounds/units/tankexplosion.wav</file>
+        <file>data/sounds/battle1.wav</file>
+        <file>data/sounds/intro.wav</file>
+        <file>data/sounds/map1.wav</file>
+        <file>data/sounds/map2.wav</file>
+        <file>data/sounds/map3.wav</file>
+        <file>data/sounds/map1.mp3</file>
+        <file>data/sounds/introbattle.wav</file>
+        <file>data/tutorial.json</file>
+        <file>data/icons/multiplayericon.svg</file>
+        <file>data/units/movements/soldier.svg</file>
+        <file>data/icons/singleplayericon.svg</file>
+        <file>data/units/movements/afv.svg</file>
+        <file>data/units/movements/antiaircraft.svg</file>
+        <file>data/units/movements/artillery.svg</file>
+        <file>data/units/movements/fighter.svg</file>
+        <file>data/units/movements/helicopter.svg</file>
+        <file>data/units/movements/mlrs.svg</file>
+        <file>data/units/movements/modernarmor.svg</file>
+        <file>data/units/movements/rocketlauncher.svg</file>
+        <file>data/units/movements/sniper.svg</file>
+        <file>data/units/movements/tank.svg</file>
     </qresource>
 </RCC>

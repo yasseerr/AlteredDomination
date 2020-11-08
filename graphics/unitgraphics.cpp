@@ -13,6 +13,7 @@
 UnitGraphics::UnitGraphics(QObject *parent) : QObject(parent)
 {
     setTransformOriginPoint(50,50);
+
 }
 
 void UnitGraphics::setUnit(Unit *unit)
@@ -22,6 +23,16 @@ void UnitGraphics::setUnit(Unit *unit)
 
     m_unit = unit;
     emit unitChanged(m_unit);
+
+//    sourseAudioE = new QFile(":/data/sounds/units/"+m_unit->type()+"explosion.wav");
+//    sourseAudioM = new QFile(":/data/sounds/units/"+m_unit->type()+".wav");
+
+//    sourseAudioE->open(QIODevice::ReadOnly);
+//    sourseAudioM->open(QIODevice::ReadOnly);
+
+   explosionAudio = new QSound(":/data/sounds/units/"+m_unit->type()+"explosion.wav",this);
+   movementAudio = new QSound(":/data/sounds/units/"+m_unit->type()+".wav");
+
 }
 
 void UnitGraphics::setBmapS(BMapScene *bmapS)
@@ -123,7 +134,11 @@ void UnitGraphics::moveAnimation(BFrame *f)
     connect(moveAnim,&QPropertyAnimation::stateChanged,this,&UnitGraphics::moveAnimationEnded);
     moveAnim->setEndValue(mapFromScene(f->pos()));
     if(bmapS()->phase() == BMapScene::PLACING) moveAnim->setDuration(200);
-    else moveAnim->setDuration(700);
+    else{
+        moveAnim->setDuration(700);
+        this->movementAudio->play();
+    }
     moveAnim->setEasingCurve(QEasingCurve::InOutCubic);
+
     moveAnim->start();
 }

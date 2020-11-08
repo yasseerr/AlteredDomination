@@ -17,8 +17,6 @@ Animations::Animations(QObject *parent) : QObject(parent),
 
 
     //sounds
-    s= new QSound(":/data/sounds/explosion.wav");
-    s->play();
 
 //    QFile *f  = new QFile(":/data/sounds/explosion.wav");
 //    f->open(QIODevice::ReadOnly);
@@ -48,7 +46,7 @@ void Animations::runAnimation(int xp,int yp)
     this->setPos(xp*100,yp*100);
     this->setVisible(true);
     m_animtionTimer->start();
-    s->play(":/data/sounds/explosion.wav");
+//    s->play(":/data/sounds/explosion.wav");
 }
 
 void Animations::onTimerTick()

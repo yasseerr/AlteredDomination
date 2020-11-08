@@ -4,6 +4,9 @@
 #include <QGraphicsItem>
 #include <QObject>
 #include <QPropertyAnimation>
+#include <QSound>
+//#include <QAudioOutput>
+#include <QFile>
 #include "domain/unit.h"
 class BMapScene;
 class BFrame;
@@ -24,7 +27,11 @@ class UnitGraphics : public QObject,public QGraphicsItem
     bool m_isGeneral;
 
 public:
+//    QFile *sourseAudioM;
+//    QFile *sourseAudioE;
 
+    QSound *movementAudio;
+    QSound *explosionAudio;
     explicit UnitGraphics(QObject *parent = nullptr);
 
 signals:

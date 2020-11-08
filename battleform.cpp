@@ -13,6 +13,7 @@ BattleForm::BattleForm(QWidget *parent) :
     m_battleAI(new BattleAI(this))
 
 {
+    previousScale = 1;
     m_closeYet = false;
 //    this->setWindowFlags(Qt::ToolTip);
     ui->setupUi(this);
@@ -120,6 +121,12 @@ void BattleForm::surrender()
 void BattleForm::draw()
 {
     this->onBattleEndedD();
+}
+
+void BattleForm::zoom(qreal z)
+{
+    ui->graphicsView->scale((1/previousScale)*z,(1/previousScale)*z);
+    previousScale = z;
 }
 
 void BattleForm::onBattleEndedA()

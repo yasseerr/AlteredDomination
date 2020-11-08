@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Particles 2.0
 import QtGraphicalEffects 1.0
+import QtQuick.Controls 2.0
 Item {
     id: item1
     width: 1200
@@ -186,7 +187,7 @@ Item {
                 readymouseArea.hoverEnabled = false
                 stattext.text = "turn 1 : "+bscene.generalsToChooseA
                 readytext.text = "playing .."
-//                drawmouseArea.enabled = true
+                //                drawmouseArea.enabled = true
                 drawmouseArea.hoverEnabled = true
                 surrendermouseArea.enabled = true
 
@@ -358,8 +359,8 @@ Item {
         color: "#ffffff"
         visible:bscene.phase == 3
         text:  bscene.currentCityPlaying == attacker?"'"+attacker.country.player.name+"' has "+bscene.generalsToChooseA+" move(s)":
-                                                                 "'"+deffender.country.player.name+"' has "+
-                                                                 bscene.generalsToChooseD+" move(s)";
+                                                      "'"+deffender.country.player.name+"' has "+
+                                                      bscene.generalsToChooseD+" move(s)";
         anchors.verticalCenterOffset: -30
         anchors.horizontalCenterOffset: 0
         font.bold: true
@@ -635,7 +636,35 @@ Item {
     }
 
 
+    Text{
+        id: zoomText
+        color: "#ffffff"
+        text: "Zoom - +"
+        font.pointSize: 12
+        anchors.bottom: zoomslider.top
+        anchors.bottomMargin: 5
+        anchors.horizontalCenter: zoomslider.horizontalCenter
 
 
+    }
+
+    Slider {
+        id: zoomslider
+        x: 397
+        y: 30
+        width: 139
+        height: 28
+        live: false
+        from: 0.1
+        to: 2
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: statusBar.right
+        anchors.leftMargin: 10
+        value: 1
+        onValueChanged: {
+            console.log(value)
+            battleForm.zoom(value)
+        }
+    }
 
 }

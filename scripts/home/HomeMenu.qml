@@ -10,7 +10,7 @@ Item {
     property int frame: 0
     property var mapFile: JSON.parse(homeClass.mapData)
     property var savesFile: JSON.parse(homeClass.savesData)
-
+    property var tutoFile: JSON.parse(homeClass.tutoData)
     Image {
         id: bgimage
         visible: true
@@ -212,25 +212,23 @@ Item {
     }
 
 
-    Audio{
-        id:au
-        source: "qrc:/data/sounds/hover.wav"
-    }
-    Audio{
-        id:battleAmbiant
-        autoPlay: false
-        source: "qrc:/data/sounds/battleambiant.MP3"
-        loops: Audio.Infinite
-        volume: 0.6
-    }
-    Audio{
-        id:bgAmbiant
-        autoPlay: false
-        source: "qrc:/data/sounds/ambiant1.MP3"
-        loops: Audio.Infinite
-        volume: 0.5
-    }
-
-
+//    Audio{
+//        id:au
+//        source: "qrc:/data/sounds/hover.wav"
+//    }
+//    Audio{
+//        id:battleAmbiant
+//        autoPlay: false
+//        source: "qrc:/data/sounds/battleambiant.MP3"
+//        loops: Audio.Infinite
+//        volume: 0.6
+//    }
+//    Audio{
+//        id:bgAmbiant
+//        autoPlay: false
+//        source: "qrc:/data/sounds/ambiant1.MP3"
+//        loops: Audio.Infinite
+//        volume: 0.8
+//    }
 
 }

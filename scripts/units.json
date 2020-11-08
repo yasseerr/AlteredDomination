@@ -13,10 +13,10 @@
                     {"x":-2,"y":0,"dependencies":[{"x":-1,"y":0}]}
                 ],
         "attacks":[
-                   {"x":1,"y":1,"affect":["human"],"dependencies":[]},
-                   {"x":-1,"y":1,"affect":["human"],"dependencies":[]},
-                   {"x":-1,"y":-1,"affect":["human"],"dependencies":[]},
-                   {"x":1,"y":-1,"affect":["human"],"dependencies":[]}
+                   {"x":2,"y":1,"affect":["human"],"dependencies":[]},
+                   {"x":-2,"y":1,"affect":["human"],"dependencies":[]},
+                   {"x":-2,"y":-1,"affect":["human"],"dependencies":[]},
+                   {"x":2,"y":-1,"affect":["human"],"dependencies":[]}
                   ]
     },    
     {
@@ -56,10 +56,10 @@
                     {"x":-2,"y":0,"dependencies":[{"x":-1,"y":0}]}
                 ],
         "attacks":[
-                   {"x":1,"y":1,"affect":["machin"],"dependencies":[]},
-                   {"x":-1,"y":1,"affect":["machin"],"dependencies":[]},
-                   {"x":-1,"y":-1,"affect":["machin"],"dependencies":[]},
-                   {"x":1,"y":-1,"affect":["machin"],"dependencies":[]}
+                   {"x":2,"y":1,"affect":["machin"],"dependencies":[]},
+                   {"x":-2,"y":1,"affect":["machin"],"dependencies":[]},
+                   {"x":-2,"y":-1,"affect":["machin"],"dependencies":[]},
+                   {"x":2,"y":-1,"affect":["machin"],"dependencies":[]}
                   ]
     },
     {
@@ -71,11 +71,17 @@
                  {"x":1,"y":0,"dependencies":[]},
                  {"x":-1,"y":0,"dependencies":[]},
                  {"x":0,"y":1,"dependencies":[]},
-                 {"x":0,"y":-1,"dependencies":[]}
+                 {"x":0,"y":-1,"dependencies":[]},
+                 {"x":2,"y":0,"dependencies":[]},
+                 {"x":-2,"y":0,"dependencies":[]},
+                 {"x":0,"y":2,"dependencies":[]},
+                 {"x":0,"y":-2,"dependencies":[]}
                 ],
         "attacks":[
                     {"x":4,"y":0,"affect":["land"],"dependencies":[]},
-                    {"x":-4,"y":0,"affect":["land"],"dependencies":[]}
+                    {"x":-4,"y":0,"affect":["land"],"dependencies":[]},
+                    {"x":0,"y":4,"affect":["land"],"dependencies":[]},
+                    {"x":0,"y":-4,"affect":["land"],"dependencies":[]}
                   ]
     },
     {
@@ -181,7 +187,11 @@
                     {"x":-2,"y":-1,"affect":["air"],"dependencies":[]},
                     {"x":-2,"y":-2,"affect":["air"],"dependencies":[]},
                     {"x":0,"y":2,"affect":["air"],"dependencies":[]},
-                    {"x":0,"y":-2,"affect":["air"],"dependencies":[]}
+                    {"x":0,"y":-2,"affect":["air"],"dependencies":[]},
+                    {"x":1,"y":2,"affect":["air"],"dependencies":[]},
+                    {"x":1,"y":-2,"affect":["air"],"dependencies":[]},
+                    {"x":-1,"y":2,"affect":["air"],"dependencies":[]},
+                    {"x":-1,"y":-2,"affect":["air"],"dependencies":[]}
                   ]
     },
     {
@@ -224,14 +234,21 @@
         "types":["machin","land"],
         "cost":90,
         "moves":[
-                 {"x":1,"y":1,"dependencies":[]},
-                 {"x":2,"y":2,"dependencies":[{"x":1,"y":1}]},
-                 {"x":-1,"y":1,"dependencies":[]},
-                 {"x":-2,"y":-2,"dependencies":[{"x":-1,"y":-1}]},
-                 {"x":-1,"y":1,"dependencies":[]},
-                 {"x":-2,"y":2,"dependencies":[{"x":-1,"y":1}]},
-                 {"x":1,"y":-1,"dependencies":[]},
-                 {"x":2,"y":-2,"dependencies":[{"x":1,"y":-1}]}
+                    {"x":1,"y":1,"dependencies":[]},
+                    {"x":1,"y":-1,"dependencies":[]},
+                    {"x":-1,"y":1,"dependencies":[]},
+                    {"x":-1,"y":-1,"dependencies":[]},
+
+                    {"x":2,"y":2,"dependencies":[{"x":1,"y":1}]},
+                    {"x":2,"y":-2,"dependencies":[{"x":1,"y":-1}]},
+                    {"x":-2,"y":2,"dependencies":[{"x":-1,"y":1}]},
+                    {"x":-2,"y":-2,"dependencies":[{"x":-1,"y":-1}]},
+
+                    {"x":3,"y":3,"dependencies":[{"x":1,"y":1},{"x":2,"y":2}]},
+                    {"x":3,"y":-3,"dependencies":[{"x":1,"y":-1},{"x":2,"y":-2}]},
+                    {"x":-3,"y":3,"dependencies":[{"x":-1,"y":1},{"x":-2,"y":2}]},
+                    {"x":-3,"y":-3,"dependencies":[{"x":-1,"y":-1},{"x":-2,"y":-2}]}
+
                 ],
         "attacks":[
                     {"x":5,"y":1,"affect":["land"],"dependencies":[]},

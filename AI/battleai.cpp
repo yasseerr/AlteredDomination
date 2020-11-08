@@ -14,7 +14,7 @@
 
 BattleAI::BattleAI(QObject *parent) : QObject(parent),m_player(nullptr),m_city(nullptr),animationCount(0),m_acceptOrProposeDraw(false)
 {
-
+    gameEnded =false;
 }
 
 void BattleAI::placeUnits()
@@ -548,8 +548,9 @@ void BattleAI::applyMoves()
 
     /// attacks and escaping
     QList<QPair<BFrame*,BFrame*>> ratingList = movesRating.values();
-    while (a>0 && ratingList.size()>0) {
+    while (a>0 && ratingList.size()>0 && !gameEnded) {
         while(scene()->thereIsAnimationRunning)QCoreApplication::processEvents();
+        if(scene()->bmap()->deffenderMoves() == 0||scene()->bmap()->attackerMoves()==0)return;
         QPair<BFrame*,BFrame*> topMove = ratingList.last();
         ratingList.removeLast();
         for (int i = 0; i < ratingList.size(); ++i) {

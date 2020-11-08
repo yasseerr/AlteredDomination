@@ -121,7 +121,7 @@ MapView::MapView(QObject *parent):QGraphicsView()
      ///creating the mapgraphics and add it to the view
     glob  = new QGraphicsItemGroup();
     m_mapGraphics = new  QGraphicsSvgItem(":/data/map_mask.svg");
-    m_mapGraphics->setOpacity(0.6);
+    m_mapGraphics->setOpacity(0.8);
     this->m_mapScene->addItem(m_mapGraphics);
     //glob->setAcceptHoverEvents(true);
     m_mapGraphics->setScale(zoomLevel);
@@ -345,6 +345,8 @@ void MapView::loadFromJsonString(QString gamesave)
 //        qDebug() << "empty or not array";
 //        return;
 //    }
+    zoomLevel = doc.object().value("zoom").toInt();
+    m_mapGraphics->setScale(zoomLevel);
     QJsonArray countries = doc.object().value("countries").toArray();
     foreach (QJsonValue valueJ, countries) {
         QJsonObject countryJ = valueJ.toObject();
@@ -410,11 +412,10 @@ void MapView::loadFromJsonString(QString gamesave)
             foreach (QJsonValue unitVt, unitst) {
                 QJsonObject unitO = unitVt.toObject();
                 Unit *ut = new Unit();
-                ut->setType(unitO.value("name").toString());
+                ut->setType(unitO.value("type").toString());
                 ut->setPower(unitO.value("power").toInt());
-                ut->setName(unitO.value("name").toString());
+                ut->setName(unitO.value("type").toString());
                 city->addUnit(ut);
-
             }
 
             /// cityGraphics
@@ -491,7 +492,6 @@ void MapView::saveGame()
     QTextStream ts(&f);
 //    ts << "salem";
     /// the big object --the save----
-
     QVariantMap saveObj;
     QVariantList countriesList;
     foreach (Player *p, this->players()) {
@@ -503,6 +503,7 @@ void MapView::saveGame()
     saveObj.insert("turn",this->turnNumber());
     saveObj.insert("date",d.toString());
     saveObj.insert("flag",activePlayer()->country()->intID());
+    saveObj.insert("zoom",zoomLevel);
     saveObj.insert("countries",countriesList);
 
     QJsonDocument doc = QJsonDocument::fromJson(ts.readAll().toLocal8Bit());
@@ -539,6 +540,7 @@ void MapView::autoSave()
     saveObj.insert("turn",this->turnNumber());
     saveObj.insert("date",d.toString());
     saveObj.insert("flag",activePlayer()->country()->intID());
+    saveObj.insert("zoom",zoomLevel);
     saveObj.insert("countries",countriesList);
 
     QJsonDocument doc = QJsonDocument::fromJson(ts.readAll().toLocal8Bit());

@@ -67,6 +67,21 @@ Item {
 
     }
 
+    Rectangle {
+        id: linkrectangle
+        color: "#00000000"
+        border.color: "#000000"
+        anchors.right: parent.right
+        anchors.rightMargin: 30
+        anchors.left: parent.left
+        anchors.leftMargin: 30
+        anchors.bottom: exitItem.bottom
+        anchors.bottomMargin: 10
+        anchors.top: continueItem.top
+        anchors.topMargin: 10
+        border.width: 9
+    }
+
     FontLoader{
         id:titleFont
         source: "qrc:/data/fonts/DESTROY_.ttf"
@@ -366,6 +381,7 @@ Item {
         anchors.rightMargin: 10
     }
 
+
     Item {
         id: settingItem
         x: 11
@@ -578,5 +594,6 @@ Item {
         anchors.rightMargin: 10
         anchors.leftMargin: 10
     }
+
 
 }

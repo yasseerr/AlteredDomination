@@ -24,6 +24,9 @@ BMapScene::BMapScene(QObject *parent) : QGraphicsScene(parent),
     setBackgroundBrush(QPixmap(":/data/mapBG7.jpg"));
     animItem->setZValue(10);
     this->addItem(animItem);
+    QSound *s= new QSound(":/data/sounds/introbattle.wav");
+    s->play();
+
 
 
 }
@@ -114,6 +117,7 @@ void BMapScene::cheCkEndTurn()
         }
     }
 }
+
 
 City *BMapScene::currentCityPlaying() const
 {

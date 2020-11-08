@@ -8,6 +8,8 @@
 
 #include <domain/city.h>
 
+#include <AI/battleai.h>
+
 BFrame::BFrame(QObject *parent) : QObject(parent),
     m_bmapS(nullptr),
     m_toAttack(false),
@@ -163,6 +165,7 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
             }
             ///attack
             else if (toAttack()) {
+                bmapS()->selectedFrame()->unitG()->explosionAudio->play();
                 bmapS()->selectedFrame()->unHighlight();
                 bmapS()->selectedFrame()->unitG()->unit()->setUsed(true);
                 Unit *u = this->unitG()->unit();
@@ -301,9 +304,12 @@ void BFrame::unHighlight()
 void BFrame::checkWineLose()
 {
     if(bmapS()->bmap()->attackerMoves()==0){
+        this->bmapS()->battleAI()->gameEnded = true;
         emit this->bmapS()->battleEndedD();
     }else if (bmapS()->bmap()->deffenderMoves() == 0) {
+        this->bmapS()->battleAI()->gameEnded = true;
         emit this->bmapS()->battleEndedA();
+
     }
 }
 
@@ -393,7 +399,7 @@ void BFrame::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
         painter->fillRect(boundingRect(),Qt::blue);
 ///--------------------move to ---------------------------
     if(toMoveTo())
-        painter->fillRect(boundingRect(),Qt::green);
+        painter->fillRect(QRectF(30,30,40,40),Qt::green);
 ///--------------------attack to ---------------------------
     if(toAttack())
         painter->fillRect(boundingRect(),Qt::red);

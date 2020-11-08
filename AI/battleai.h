@@ -28,7 +28,6 @@ class BattleAI : public QObject
 
     City* m_city;
     City *enemyCity;
-
     BMapScene* m_scene;
 
     bool m_acceptOrProposeDraw;
@@ -37,6 +36,7 @@ public:
 
     QList<QPair<BFrame*,BFrame*>> animationList;
     int animationCount;
+    bool gameEnded;
 
     QList<BFrame*> toBeSurroundedFrames;
     QMultiMap<int,QPair<UnitGraphics*,BFrame*>> toSurroundMoves;
