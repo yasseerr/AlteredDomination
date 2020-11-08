@@ -23,6 +23,7 @@ signals:
 void linkChanged(LinkN* link);
 
 public slots:
+void updateAfterBattle();
 void setLink(LinkN* link);
 void zoomChanged();
 };

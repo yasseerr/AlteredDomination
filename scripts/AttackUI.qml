@@ -337,7 +337,7 @@ Item {
         Rectangle {
             id: rectangle
             x: 192
-            width: (sourceCity.power*400)/(destinationCity.power+sourceCity.power)
+            width: (sourceCity.city.power*400)/(destinationCity.city.power+sourceCity.city.power)
             color: "#00ff00"
             anchors.right: parent.right
             anchors.rightMargin: 0
@@ -352,6 +352,15 @@ Item {
             opacity: 0.3
             anchors.fill: parent
             source: "qrc:/data/icons/statustexture.jpg"
+        }
+
+        MouseArea {
+            id: mouseArea
+            anchors.fill: parent
+            onClicked: {
+                console.log(sourceCity.city.power+" "+destinationCity.city.power+" "
+                            +(sourceCity.city.power*400)/(destinationCity.city.power+sourceCity.city.power))
+            }
         }
 
     }

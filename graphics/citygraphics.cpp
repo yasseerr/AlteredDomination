@@ -13,6 +13,9 @@
 #include <domain/country.h>
 #include <domain/unit.h>
 
+#include <AI/battleai.h>
+#include <AI/mapai.h>
+
 
 CityGraphics::CityGraphics(City *city_p,QImage *cityImg_p):cityImg(cityImg_p),m_city(city_p),m_toAttack(false),m_moveToIt(false)
 {
@@ -86,7 +89,7 @@ void CityGraphics::hoverLeaveEvent(QGraphicsSceneHoverEvent *ev)
         ln->setOpacity(0.2);
         if(ln->link()->des()->country() == ln->link()->dep()->country())ln->setPen(QPen(ln->link()->des()->country()->color(),
                                                                                         3,Qt::DashDotLine));
-        else ln->setPen(QPen(Qt::red,3,Qt::DotLine));
+        else ln->setPen(QPen(Qt::red,2,Qt::DotLine));
     }
 }
 
@@ -106,6 +109,7 @@ void CityGraphics::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
 //------------------------------ movement system-------------------------------------------------
     if(moveToIt()){
+        this->mapView()->selectedCityGraphics()->city()->setUsed(true);
         mapView()->moveUnitUI->rootContext()->setContextProperty("sourceCity",mapView()->selectedCityGraphics());
         mapView()->moveUnitUI->rootContext()->setContextProperty("destinationCity",this);
 
@@ -170,6 +174,7 @@ bool CityGraphics::toAttack() const
 
 void CityGraphics::moveUnits()
 {
+    if(this->city()->used())return;
     foreach (City *c,this->city()->neighbours()) {
         if(!(this->city()->country() == c->country()))continue;
         this->mapView()->citiesGraphics().value(c->id())->setMoveToIt(true);
@@ -181,6 +186,7 @@ void CityGraphics::moveUnits()
 
 void CityGraphics::attack()
 {
+    if(this->city()->used())return;
     if(this->city()->units().size()==0)return;
     foreach (City *c,this->city()->neighbours()) {
         if((this->city()->country() == c->country()))continue;
@@ -201,26 +207,29 @@ void CityGraphics::cancelAttack()
 
 void CityGraphics::startBattle()
 {
+    this->mapView()->selectedCityGraphics()->city()->setUsed(true);
     /// ---------- i cas the deffender haz no unit--------------
     if(this->city()->units().size() == 0){
-        this->city()->country()->cities().removeOne(this->city());
+        this->city()->country()->removeCity(this->city());
         this->city()->setCountry(this->mapView()->selectedCityGraphics()->city()->country());
         this->mapView()->selectedCityGraphics()->city()->country()->addCity(this->city());
+
+
         foreach (Unit *u, this->mapView()->selectedCityGraphics()->city()->units()) {
             this->city()->addUnit(u);
+            u->setCity(this->city());
             this->mapView()->selectedCityGraphics()->city()->removeUnit(u->id());
         }
-        this->mapView()->selectedCityGraphics()->city()->country()->setIncome(this->mapView()->selectedCityGraphics()->
-                                                                              city()->country()->income()
-                                                                              +this->city()->income());
-        mapView()->selectedCityGraphics()->deSelect();
+
+        if(mapView()->selectedCityGraphics()->city()->country()->player()->type()== PlayerType::HUMAIN)
+            mapView()->selectedCityGraphics()->deSelect();
         emit mapView()->attackerWon(this->city());
         return;
     }
 
     mapView()->setEnabled(false);
     mapView()->battleForm = new BattleForm();
-    mapView()->battleForm->bScene()->setCurrentPlayer(mapView()->selectedCityGraphics()->city()->country()->player());
+    mapView()->battleForm->bScene()->setCurrentPlayer(mapView()->activePlayer());
     BattleMap *bm = new BattleMap(mapView()->selectedCityGraphics()->city(),this->city(),mapView()->battleForm);
     mapView()->battleForm->bScene()->setBmap(bm);
 
@@ -229,6 +238,8 @@ void CityGraphics::startBattle()
 
     mapView()->battleForm->publishMaptoQMl();
     mapView()->battleForm->show();
+//    mapView()->battleForm->battleAI()->placeUnits();
+
 }
 
 int CityGraphics::power() const
@@ -274,12 +285,13 @@ void CityGraphics::setUnitsG(QList<UnitGraphics *> unitsG)
     emit unitsGChanged(m_unitsG);
 }
 
-void CityGraphics::addUnitFromQml(QString type)
+void CityGraphics::addUnitFromQml(QString type,int cost)
 {
     Unit *tmp = new Unit();
     tmp->setCity(this->city());
     tmp->setName(QString::number(tmp->id())+"_"+city()->name());
     tmp->setType(type);
+    tmp->setPower(cost);
     city()->addedUnitSig(type);
     city()->addUnit(tmp);
 
@@ -318,9 +330,20 @@ void CityGraphics::deSelect()
 void CityGraphics::onBattleEnded()
 {
     mapView()->battleForm->hide();
+    Player *p = mapView()->battleForm->bScene()->bmap()->attacker()->country()->player();
+    foreach (LinkGraphics *l,mapView()->citiesGraphics().value(mapView()->battleForm->bScene()->bmap()->deffender()->id())->links()) {
+        l->updateAfterBattle();
+    }
     mapView()->battleForm->deleteLater();
-    mapView()->selectedCityGraphics()->deSelect();
+    if(mapView()->selectedCityGraphics() != nullptr)  mapView()->selectedCityGraphics()->deSelect();
     mapView()->setEnabled(true);
+
+    /// the AI attack system
+    if(p->type() == PlayerType::AI){
+        mapView()->mapAI()->launchBattleAI_Player();
+    }
+
+
 }
 
 void CityGraphics::setPower(int power)

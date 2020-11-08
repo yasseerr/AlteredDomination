@@ -16,6 +16,7 @@
 #include <qgraphicssceneevent.h>
 #include <domain/city.h>
 #include <domain/unit.h>
+#include <AI/mapai.h>
 
 
 MapView::MapView(QObject *parent):QGraphicsView()
@@ -125,7 +126,7 @@ MapView::MapView(QObject *parent):QGraphicsView()
     testRect->setFont(QFont("Arial",60));
     m_mapScene->addItem(testRect);
 
-    QPixmap *pItem = new QPixmap(":/data/mapBG.jpg");
+    QPixmap *pItem = new QPixmap(":/data/mapBG4.jpg");
     m_mapScene->setBackgroundBrush(*pItem);
 //    pItem->moveBy(-725,30);
     this->setScene(m_mapScene);
@@ -134,6 +135,10 @@ MapView::MapView(QObject *parent):QGraphicsView()
     CityUI->hide();
     addUnitUI->hide();
 
+
+    /// the map AI
+    m_mapAI = new MapAI(this);
+    m_turnNumber = 0;
 }
 
 
@@ -223,7 +228,7 @@ void MapView::loadFromJson()
             this->map()->cities().insert(city->id(),city);
             city->setCountry(country);
             country->addCity(city);
-            country->setIncome(country->income()+city->income());
+
             /// loading the neigbours
             QJsonValue neigboursV = cityJ.value("neighbours");
             QJsonArray neighbours = neigboursV.toArray();
@@ -391,6 +396,16 @@ QList<Player *> MapView::players() const
 QString MapView::activePStr() const
 {
     return m_activePStr;
+}
+
+MapAI *MapView::mapAI() const
+{
+    return m_mapAI;
+}
+
+int MapView::turnNumber() const
+{
+    return m_turnNumber;
 }
 
 
@@ -563,5 +578,23 @@ void MapView::setActivePStr(QString activePStr)
 
     m_activePStr = activePStr;
     emit activePStrChanged(m_activePStr);
+}
+
+void MapView::setMapAI(MapAI *mapAI)
+{
+    if (m_mapAI == mapAI)
+        return;
+
+    m_mapAI = mapAI;
+    emit mapAIChanged(m_mapAI);
+}
+
+void MapView::setTurnNumber(int turnNumber)
+{
+    if (m_turnNumber == turnNumber)
+        return;
+
+    m_turnNumber = turnNumber;
+    emit turnNumberChanged(m_turnNumber);
 }
 

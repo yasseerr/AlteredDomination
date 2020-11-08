@@ -315,5 +315,11 @@
         <file>data/units/rocketlauncher.png</file>
         <file>data/units/fighter.png</file>
         <file>data/mapBG3.jpg</file>
+        <file>scripts/ai_js.js</file>
+        <file>data/mapBG4.jpg</file>
+        <file>data/mapBG5.jpg</file>
+        <file>data/mapBG6.jpg</file>
+        <file>data/mapBG7.jpg</file>
+        <file>data/mapBG8.jpg</file>
     </qresource>
 </RCC>

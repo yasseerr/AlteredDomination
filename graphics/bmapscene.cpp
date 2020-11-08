@@ -3,6 +3,9 @@
 #include "unitgraphics.h"
 
 #include <domain/city.h>
+#include <domain/country.h>
+
+#include <AI/battleai.h>
 
 BMapScene::BMapScene(QObject *parent) : QGraphicsScene(parent),
     m_bmap(nullptr),
@@ -12,9 +15,15 @@ BMapScene::BMapScene(QObject *parent) : QGraphicsScene(parent),
     m_turnTimer(new QDeadlineTimer()),
     m_turncount(0)
 {
+    thereIsAnimationRunning =false;
+    setBackgroundBrush(QPixmap(":/data/mapBG7.jpg"));
 
-    setBackgroundBrush(QPixmap(":/data/mapBG3.jpg"));
 
+}
+
+void BMapScene::removeUnitG(Unit *u)
+{
+    m_units.remove(u);
 
 }
 
@@ -29,7 +38,7 @@ QMap<QPair<int, int>, BFrame *> BMapScene::frames() const
     return m_frames;
 }
 
-QList<UnitGraphics *> BMapScene::units() const
+QMap<Unit*,UnitGraphics *> BMapScene::units() const
 {
     return m_units;
 }
@@ -76,12 +85,18 @@ void BMapScene::cheCkEndTurn()
         if(this->generalsToChooseA() == 0){
             this->setGeneralsToChooseD(bmap()->deffenderMoves());
             this->setCurrentCityPlaying(this->bmap()->deffender());
+            foreach (Unit *u, bmap()->deffender()->units()) {
+                u->setUsed(false);
+            }
         }
     }else if (this->currentCityPlaying() == m_bmap->deffender()) {
         this->setGeneralsToChooseD(generalsToChooseD()-1);
         if(this->generalsToChooseD() == 0){
             this->setGeneralsToChooseA(bmap()->attackerMoves());
             this->setCurrentCityPlaying(this->bmap()->attacker());
+            foreach (Unit *u, bmap()->attacker()->units()) {
+                u->setUsed(false);
+            }
         }
     }
 }
@@ -89,6 +104,11 @@ void BMapScene::cheCkEndTurn()
 City *BMapScene::currentCityPlaying() const
 {
     return m_currentCityPlaying;
+}
+
+BattleAI *BMapScene::battleAI() const
+{
+    return m_battleAI;
 }
 
 void BMapScene::setBmap(BattleMap *bmap)
@@ -122,6 +142,7 @@ void BMapScene::setBmap(BattleMap *bmap)
     for (int i = 0; i < m_bmap->attacker()->units().size(); ++i) {
         UnitGraphics *ug = new UnitGraphics(this);
         ug->setUnit(m_bmap->attacker()->units().values().at(i));
+        m_units.insert(ug->unit(),ug);
         ug->setIsGeneral(false);
         QPair<int,int> tmpp;
         tmpp.first = i/m_bmap->size().y();
@@ -134,6 +155,7 @@ void BMapScene::setBmap(BattleMap *bmap)
     for (int i = 0; i < m_bmap->deffender()->units().size(); ++i) {
         UnitGraphics *ug = new UnitGraphics(this);
         ug->setUnit(m_bmap->deffender()->units().values().at(i));
+        m_units.insert(ug->unit(),ug);
         ug->setIsGeneral(false);
         QPair<int,int> tmpp;
         tmpp.first = m_bmap->size().x()-(i/m_bmap->size().y())-1;
@@ -143,7 +165,14 @@ void BMapScene::setBmap(BattleMap *bmap)
         ug->setBmapS(this);
         ug->setParentItem(ug->frame());
     }
-
+    /// the AI
+    if(m_bmap->attacker()->country()->player()->type() == PlayerType::AI){
+        this->battleAI()->setPlayer(m_bmap->attacker()->country()->player());
+        this->battleAI()->setCity(m_bmap->attacker());
+    }else if(m_bmap->deffender()->country()->player()->type() == PlayerType::AI){
+        this->battleAI()->setPlayer(m_bmap->deffender()->country()->player());
+        this->battleAI()->setCity(m_bmap->deffender());
+    }
 }
 
 void BMapScene::setframes(QMap<QPair<int, int>, BFrame *> frames)
@@ -155,7 +184,7 @@ void BMapScene::setframes(QMap<QPair<int, int>, BFrame *> frames)
     emit framesChanged(m_frames);
 }
 
-void BMapScene::setUnits(QList<UnitGraphics *> units)
+void BMapScene::setUnits(QMap<Unit*,UnitGraphics *> units)
 {
     if (m_units == units)
         return;
@@ -234,6 +263,15 @@ void BMapScene::setCurrentCityPlaying(City *currentCityPlaying)
 
     m_currentCityPlaying = currentCityPlaying;
     emit currentCityPlayingChanged(m_currentCityPlaying);
+}
+
+void BMapScene::setBattleAI(BattleAI *battleAI)
+{
+    if (m_battleAI == battleAI)
+        return;
+
+    m_battleAI = battleAI;
+    emit battleAIChanged(m_battleAI);
 }
 
 

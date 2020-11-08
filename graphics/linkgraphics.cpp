@@ -5,7 +5,7 @@
 LinkGraphics::LinkGraphics(LinkN *l,QObject *parent) : QObject(parent),m_link(l)
 {
 
-    setPen(QPen(Qt::red,3,Qt::DotLine));
+    setPen(QPen(Qt::red,2,Qt::DotLine));
     this->setLine(
                 l->dep()->x()+40,
                 l->dep()->y()+40,
@@ -20,6 +20,20 @@ LinkGraphics::LinkGraphics(LinkN *l,QObject *parent) : QObject(parent),m_link(l)
 LinkN* LinkGraphics::link() const
 {
     return m_link;
+}
+
+void LinkGraphics::updateAfterBattle()
+{
+    setPen(QPen(Qt::red,2,Qt::DotLine));
+    this->setLine(
+                m_link->dep()->x()+40,
+                m_link->dep()->y()+40,
+                m_link->des()->x()+40,
+                m_link->des()->y()+40
+                );
+     setOpacity(0.2);
+    if(m_link->des()->country() == m_link->dep()->country())setPen(QPen(m_link->des()->country()->color(),3,Qt::DashDotLine));
+    this->update();
 }
 
 void LinkGraphics::setLink(LinkN* link)

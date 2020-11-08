@@ -1,3 +1,4 @@
+#include "city.h"
 #include "country.h"
 #include "player.h"
 
@@ -10,6 +11,14 @@ Country::Country(QObject *parent) : QObject(parent)
 void Country::addCity(City *c)
 {
     m_cities.append(c);
+    this->setIncome(this->income()+c->income());
+    c->setCountry(this);
+}
+
+void Country::removeCity(City *c)
+{
+    m_cities.removeOne(c);
+    this->setIncome(this->income()-c->income());
 }
 
 int Country::id() const

@@ -8,9 +8,11 @@
 #include <QObject>
 #include <domain/battlemap.h>
 #include <domain/player.h>
+#include <domain/unit.h>
 
 class BFrame;
 class UnitGraphics;
+class BattleAI;
 
 enum BattlePhase{
 
@@ -24,7 +26,7 @@ class BMapScene :  public QGraphicsScene
     Q_OBJECT
     Q_PROPERTY(BattleMap* bmap READ bmap WRITE setBmap NOTIFY bmapChanged)
     Q_PROPERTY(QMap<QPair<int,int>,BFrame*> frames READ frames WRITE setframes NOTIFY framesChanged)
-    Q_PROPERTY(QList<UnitGraphics*> units READ units WRITE setUnits NOTIFY unitsChanged)
+    Q_PROPERTY(QMap<Unit*,UnitGraphics*> units READ units WRITE setUnits NOTIFY unitsChanged)
     Q_PROPERTY(Player* currentPlayer READ currentPlayer WRITE setCurrentPlayer NOTIFY currentPlayerChanged)
     Q_PROPERTY(City* currentCityPlaying READ currentCityPlaying WRITE setCurrentCityPlaying NOTIFY currentCityPlayingChanged)
     Q_PROPERTY(BattlePhase phase READ phase WRITE setPhase NOTIFY phaseChanged)
@@ -33,12 +35,13 @@ class BMapScene :  public QGraphicsScene
     Q_PROPERTY(int turncount READ turncount WRITE setTurncount NOTIFY turncountChanged)
     Q_PROPERTY(int  generalsToChooseA READ generalsToChooseA WRITE setGeneralsToChooseA NOTIFY generalsToChooseAChanged)
     Q_PROPERTY(int generalsToChooseD READ generalsToChooseD WRITE setGeneralsToChooseD NOTIFY generalsToChooseDChanged)
+    Q_PROPERTY(BattleAI* battleAI READ battleAI WRITE setBattleAI NOTIFY battleAIChanged)
 
     BattleMap* m_bmap;
 
     QMap<QPair<int,int>,BFrame*> m_frames;
 
-    QList<UnitGraphics*> m_units;
+    QMap<Unit*,UnitGraphics*> m_units;
 
     Player* m_currentPlayer;
 
@@ -56,14 +59,24 @@ class BMapScene :  public QGraphicsScene
 
     City* m_currentCityPlaying;
 
+    BattleAI* m_battleAI;
+
+
+
 public:
+
     explicit BMapScene(QObject *parent = nullptr);
+
+
+    void removeUnitG(Unit *u);
+
+    bool thereIsAnimationRunning;
 
     BattleMap* bmap() const;
 
     QMap<QPair<int,int>,BFrame*> frames() const;
 
-    QList<UnitGraphics*> units() const;
+    QMap<Unit*,UnitGraphics*> units() const;
 
     Player* currentPlayer() const;
 
@@ -84,13 +97,15 @@ public:
 
     City* currentCityPlaying() const;
 
+    BattleAI* battleAI() const;
+
 signals:
 
     void bmapChanged(BattleMap* bmap);
 
     void framesChanged(QMap<QPair<int,int>,BFrame*> frames);
 
-    void unitsChanged(QList<UnitGraphics*> units);
+    void unitsChanged(QMap<Unit*,UnitGraphics*> units);
 
     void currentPlayerChanged(Player* currentPlayer);
 
@@ -111,10 +126,12 @@ signals:
     void battleEndedA();
     void battleEndedD();
 
+    void battleAIChanged(BattleAI* battleAI);
+
 public slots:
     void setBmap(BattleMap* bmap);
     void setframes(QMap<QPair<int,int>,BFrame*> frames);
-    void setUnits(QList<UnitGraphics*> units);
+    void setUnits(QMap<Unit*,UnitGraphics*> units);
     void setCurrentPlayer(Player* currentPlayer);
     void setPhase(BattlePhase phase);
     void setSelectedFrame(BFrame* selectedFrame);
@@ -123,6 +140,7 @@ public slots:
     void setGeneralsToChooseA(int generalsToChooseA);
     void setGeneralsToChooseD(int generalsToChooseD);
     void setCurrentCityPlaying(City* currentCityPlaying);
+    void setBattleAI(BattleAI* battleAI);
 };
 
 #endif // BMAPSCENE_H

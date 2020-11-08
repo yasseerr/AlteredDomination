@@ -65,7 +65,7 @@ public slots:
     void setToAttack(bool toAttack);
 
     void zoomChanged(double z);
-    Q_INVOKABLE void addUnitFromQml(QString type);
+    Q_INVOKABLE void addUnitFromQml(QString type,int cost);
     Q_INVOKABLE void sendUnitToNeighbour(int idU);
     Q_INVOKABLE void receiveUnitFromNeighbour(int idU);
     Q_INVOKABLE void deSelect();

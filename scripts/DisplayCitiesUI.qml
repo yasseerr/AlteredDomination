@@ -21,6 +21,12 @@ Item {
             obj.mm = mainmenu
         }
     }
+    Connections{
+        target: mainmenu
+        onClearCitiesInDisplay: {
+            citiesItem.children=[]
+        }
+    }
     Rectangle {
         id: bg
         border.width: 4

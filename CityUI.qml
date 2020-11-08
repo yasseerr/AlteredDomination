@@ -284,6 +284,7 @@ Item{
 
                 Image {
                     id: attackImage
+                    antialiasing: true
                     clip: true
                     anchors.fill: parent
                     source: "qrc:/data/icons/attack.png"
@@ -451,6 +452,16 @@ Item{
                     }
                 }
 
+            }
+
+            Text {
+                id: text2
+                x: 275
+                y: 13
+                color: "#d60404"
+                text: cityGraphics.city.used?"city is already used":""
+                anchors.horizontalCenter: parent.horizontalCenter
+                font.pixelSize: 14
             }
 
 

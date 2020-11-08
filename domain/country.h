@@ -42,6 +42,7 @@ class Country : public QObject
 
 public:
     void addCity(City *c);
+    void removeCity(City *c);
 
 
     explicit Country(QObject *parent = nullptr);

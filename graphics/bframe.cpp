@@ -2,6 +2,7 @@
 #include "bmapscene.h"
 #include "unitgraphics.h"
 
+#include <QDebug>
 #include <QGraphicsSceneMouseEvent>
 #include <QPainter>
 
@@ -38,6 +39,7 @@ void BFrame::hoverLeaveEvent(QGraphicsSceneHoverEvent *event)
 
 void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
+    if(bmapS()->thereIsAnimationRunning)return;
 ///-------------------placing--------------------------------
     if(this->bmapS()->phase() == BattlePhase::PLACING){
         if(this == this->bmapS()->selectedFrame())return;
@@ -110,6 +112,7 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
             if(event->button() == Qt::LeftButton){
                 if(bmapS()->generalsToChooseA() == 0) return;
                 unitG()->setIsGeneral(true);
+                unitG()->unit()->setType("soldier");
                 bmapS()->setGeneralsToChooseA(bmapS()->generalsToChooseA()-1);
                 unitG()->update();
                 return;
@@ -124,6 +127,7 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
             if(event->button() == Qt::LeftButton){
                 if(bmapS()->generalsToChooseD() == 0) return;
                 unitG()->setIsGeneral(true);
+                unitG()->unit()->setType("soldier");
                 bmapS()->setGeneralsToChooseD(bmapS()->generalsToChooseD()-1);
                 unitG()->update();
                 return;
@@ -143,12 +147,14 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
         if(bmapS()->selectedFrame() == nullptr){
             if(this->unitG() == nullptr) return;
             if(this->unitG()->unit()->city() != bmapS()->currentCityPlaying())return;
+            if(this->unitG()->unit()->used())return;
             highlightMovesAttacks();
         }else{
             if(this->bmapS()->selectedFrame()->unitG()->unit()->city() != bmapS()->currentCityPlaying())return;
             ///-------move to------------
             if(toMoveTo()){
                 bmapS()->selectedFrame()->unHighlight();
+                bmapS()->selectedFrame()->unitG()->unit()->setUsed(true);
                 bmapS()->selectedFrame()->unitG()->moveAnimation(this);
                 bmapS()->cheCkEndTurn();
 //                this->setUnitG(bmapS()->selectedFrame()->unitG());
@@ -157,15 +163,16 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
             ///attack
             else if (toAttack()) {
                 bmapS()->selectedFrame()->unHighlight();
+                bmapS()->selectedFrame()->unitG()->unit()->setUsed(true);
                 Unit *u = this->unitG()->unit();
                 UnitGraphics *ug = this->unitG();
+                bmapS()->removeUnitG(u);
                 if(ug->isGeneral()){
                     if(u->city() == bmapS()->bmap()->attacker())
                         bmapS()->bmap()->setAttackerMoves(bmapS()->bmap()->attackerMoves()-1);
                     else
                         bmapS()->bmap()->setDeffenderMoves(bmapS()->bmap()->deffenderMoves()-1);
                 }
-                u->city()->setPower(u->city()->power()-u->power());
                 this->setUnitG(nullptr);
                 this->update();
                 u->city()->removeUnit(u->id());
@@ -181,6 +188,14 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
         }
     }
     update();
+}
+
+void BFrame::mousePressEventAI()
+{
+    QGraphicsSceneMouseEvent *event = new QGraphicsSceneMouseEvent();
+    event->setPos(QPointF(10,10));
+    event->setButton(Qt::LeftButton);
+    this->mousePressEvent(event);
 }
 
 void BFrame::highlightMovesAttacks()

@@ -7,6 +7,8 @@
 #include <QPropertyAnimation>
 
 #include <domain/country.h>
+
+#include <AI/battleai.h>
 UnitGraphics::UnitGraphics(QObject *parent) : QObject(parent)
 {
     setTransformOriginPoint(50,50);
@@ -53,7 +55,10 @@ void UnitGraphics::moveAnimationEnded(QPropertyAnimation::State stat)
     if(stat != QPropertyAnimation::Stopped) return;
     this->setPos(0,0);
     this->frame()->setUnitG(this);
-
+    bmapS()->thereIsAnimationRunning = false;
+    if(this->unit()->city()->country()->player()->type() == PlayerType::AI){
+        this->bmapS()->battleAI()->runAnimation();
+    }
 }
 
 
@@ -106,6 +111,7 @@ bool UnitGraphics::isGeneral() const
 
 void UnitGraphics::moveAnimation(BFrame *f)
 {
+    bmapS()->thereIsAnimationRunning = true;
     this->frame()->setUnitG(nullptr);
     this->setFrame(f);
     QPropertyAnimation *moveAnim = new QPropertyAnimation(this,"pos",this);

@@ -5,7 +5,7 @@
 #include <QQmlContext>
 #include <QQuickItem>
 #include <QThread>
-
+#include<AI/mapai.h>
 MainMenu::MainMenu(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::MainMenu)
@@ -15,8 +15,9 @@ MainMenu::MainMenu(QWidget *parent) :
     connect(m_mapView,&MapView::attackerWon,this,&MainMenu::onAttackerWon);
 
     ///---- temporary setting the active player country-----------
-    m_activePlayerStr = "dz";
+    m_activePlayerStr = "fr";
     m_mapView->setActivePStr(m_activePlayerStr);
+    m_mapView->mapAI()->setMapView(m_mapView);
 
 
     m_mapView->loadFromJson();
@@ -77,6 +78,7 @@ void MainMenu::setActivePlayerStr(QString activePlayerStr)
 
 void MainMenu::reDisplayCities()
 {
+    emit clearCitiesInDisplay();
     foreach (City *c, m_mapView->activePlayer()->country()->cities()) {
         emit sendCityToDisplay(c);
     }
@@ -90,17 +92,45 @@ void MainMenu::focusOnCity(City *c)
 void MainMenu::runNextTurn()
 {
     m_mapView->setEnabled(false);
+
+    /// distributing money
     foreach (Player *p, m_mapView->players()) {
-        p->country()->setFunds(p->country()->funds()+p->country()->income());
+        if(p == m_mapView->activePlayer()) continue;
+        m_mapView->mapAI()->setPlayer(p);
+        m_mapView->mapAI()->distributeFunds();
+        m_mapView->mapAI()->moveUnitsToFrontLine();
+    }
+
+
+    /// attack
+    foreach (Player *p, m_mapView->players()) {
         if(p == m_mapView->activePlayer()) continue;
         m_mapView->setActuelPlayer(p);
-//        QThread::msleep(200);
+        /// the attack ai
+        m_mapView->mapAI()->setPlayer(p);
+        m_mapView->mapAI()->StudyAttackPossibilities();
     }
+
+    foreach (Player *p, m_mapView->players()) {
+        p->country()->setFunds(p->country()->funds()+p->country()->income());
+        qDebug()<<p->country()->name()+" : "+QString::number( p->country()->income());
+    }
+
+   m_mapView->mapAI()->launchBattleAI_Player();
+
+    /// set all the cities usable
+    foreach (Player *p, m_mapView->players()) {
+        foreach (City *c, p->country()->cities()) {
+            c->setUsed(false);
+        }
+    }
+
+    mapView()->setTurnNumber(mapView()->turnNumber()+1);
     m_mapView->setEnabled(true);
     m_mapView->setActuelPlayer(m_mapView->activePlayer());
 }
 
 void MainMenu::onAttackerWon(City *C)
 {
-    sendCityToDisplay(C);
+    reDisplayCities();
 }

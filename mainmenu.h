@@ -37,6 +37,7 @@ signals:
     void activePlayerStrChanged(QString activePlayerStr);
 
     void sendCityToDisplay(City *c);
+    void clearCitiesInDisplay();
 
 private:
 

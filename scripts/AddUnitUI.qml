@@ -8,6 +8,7 @@ Item {
     visible: true
     property var unitsTypes: JSON.parse(mapUI.unitsText());
     property var toAddUnits: []
+    property var toAddUnitsCost: []
     property int totalCost: 0
     Component{
         id : typegenerator
@@ -52,6 +53,7 @@ Item {
                         adUnitUI.totalCost -= addedRectangle1.children[adUnitUI.toAddUnits.length-1].cost
                         addedRectangle1.children[adUnitUI.toAddUnits.length-1].destroy()
                         adUnitUI.toAddUnits.pop()
+                        adUnitUI.toAddUnitsCost.pop()
                         return;
                     }
                     /// > funds
@@ -60,6 +62,7 @@ Item {
                     }
 
                     adUnitUI.toAddUnits.push(mainRect.name)
+                    adUnitUI.toAddUnitsCost.push(mainRect.cost)
                     var i = adUnitUI.toAddUnits.length-1;
                     var obj = typegenerator.createObject(addedRectangle1,{"x":85*(i%5),"y":5+Math.floor(i/5)*85});
                     obj.src = "qrc:/data/units/"+mainRect.name+".png";
@@ -165,10 +168,15 @@ Item {
                     id: submitmouseArea
                     anchors.fill: parent
                     onClicked: {
-                        adUnitUI.toAddUnits.forEach(function(element){ cityGraphics.addUnitFromQml(element)})
-                        cityGraphics.setPower(cityGraphics.power + adUnitUI.totalCost)
+                        for(var i =0;i< adUnitUI.toAddUnits.length;i++){
+                            cityGraphics.addUnitFromQml(adUnitUI.toAddUnits[i],adUnitUI.toAddUnitsCost[i])
+                        }
+//                        adUnitUI.toAddUnits.forEach(function(element){ cityGraphics.addUnitFromQml(element)})
+//                        cityGraphics.setPower(cityGraphics.power + adUnitUI.totalCost)
+//                        cityGraphics.city.setPower(cityGraphics.city.power + adUnitUI.totalCost)
                         cityGraphics.city.country.funds -= adUnitUI.totalCost
                         adUnitUI.toAddUnits= [];
+                        adUnitUI.toAddUnitsCost= [];
                         addedRectangle1.children =[]
                         adUnitUI.totalCost = 0;
                         cityUI.show()

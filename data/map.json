@@ -10521,7 +10521,7 @@
 				"y": 70,
 				"cityType": 7,
 				"income": 400,
-				"neighbours": [161,915]
+                "neighbours": [161,915,713]
 			},
 			{
 				"id": 900,

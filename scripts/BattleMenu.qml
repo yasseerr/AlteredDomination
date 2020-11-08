@@ -229,11 +229,13 @@ Item {
 
         MouseArea {
             id: promotemouseArea
+            enabled: false
             anchors.fill: parent
-            hoverEnabled: true
+            hoverEnabled: false
             onEntered: promoterectangle.color = Qt.lighter("#1131a2")
             onExited: promoterectangle.color = "#1131a2"
             onClicked: {
+
                 placeitem.scale = 1
                 placemouseArea.enabled =  false
                 placemouseArea.hoverEnabled = false
@@ -246,7 +248,7 @@ Item {
                 promotetext.text = "prmoting .."
 
 //                readymouseArea.enabled = true
-//                readymouseArea.hoverEnabled = true
+//                readymouseArea.hoverEnabled = true                
                 battleForm.setPromote()
             }
         }
@@ -272,7 +274,7 @@ Item {
         y: 35
         width: 90
         height: 50
-        scale: 1.2
+        scale: 1
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         anchors.rightMargin: 10
@@ -292,14 +294,30 @@ Item {
             scale: 1.3
             hoverEnabled: true
             anchors.fill: parent
+            onEntered: placerectangle.color = Qt.lighter("#a21171")
+            onExited: placerectangle.color = "#a21171"
+            onClicked: {
+
+                placeitem.scale = 1.2
+                placemouseArea.enabled =  false
+                placemouseArea.hoverEnabled = false
+                placerectangle.color = "#888888"
+                stattext.text = "enemy is placing units... "
+                placetext.text = "placing ..."
+
+                promotemouseArea.enabled =  true
+                promotemouseArea.hoverEnabled = true
+
+                battleForm.battleAI.placeUnits()
+            }
         }
 
-        Text {
+       Text {
             id: placetext
             x: 6
             y: 16
             color: "#f6f3f3"
-            text: "Placing .."
+            text: "Placed"
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
             font.bold: true
@@ -424,6 +442,13 @@ Item {
             opacity: 0.3
             anchors.fill: parent
             source: "qrc:/data/icons/statustexture.jpg"
+        }
+        MouseArea {
+            id: mouseArea
+            anchors.fill: parent
+            onClicked: {
+                console.log(deffender.power+" "+attacker.power+" "+(deffender.power*400)/(deffender.power+attacker.power))
+            }
         }
 
     }

@@ -25,6 +25,7 @@ class City : public QObject
     Q_PROPERTY(int income READ income WRITE setIncome NOTIFY incomeChanged)
     Q_PROPERTY(QMap<int,Unit*> units READ units WRITE setUnits NOTIFY unitsChanged)
     Q_PROPERTY(int power READ power WRITE setPower NOTIFY powerChanged)
+    Q_PROPERTY(bool used READ used WRITE setUsed NOTIFY usedChanged)
 
 
     Q_OBJECT
@@ -52,6 +53,8 @@ class City : public QObject
     QList<int> m_neigboursId;
 
     int m_power;
+
+    bool m_used;
 
 public:
     explicit City(QObject *parent = nullptr);
@@ -84,6 +87,8 @@ public:
 
     int power() const;
 
+    bool used() const;
+
 signals:
 
     void idChanged(int id);
@@ -112,6 +117,8 @@ signals:
 
     void powerChanged(int power);
 
+    void usedChanged(bool used);
+
 public slots:
     void setId(int id);
     void setName(QString name);
@@ -126,6 +133,7 @@ public slots:
     void setNeigboursId(QList<int> neigboursId);
     void addNeighbour(City *c);
     void setPower(int power);
+    void setUsed(bool used);
 };
 
 #endif // CITY_H

@@ -43,7 +43,9 @@ SOURCES += \
     domain/uattack.cpp \
     graphics/bmapscene.cpp \
     graphics/bframe.cpp \
-    battleform.cpp
+    battleform.cpp \
+    AI/mapai.cpp \
+    AI/battleai.cpp
 
 HEADERS += \
         mainmenu.h \
@@ -63,7 +65,9 @@ HEADERS += \
     domain/uattack.h \
     graphics/bmapscene.h \
     graphics/bframe.h \
-    battleform.h
+    battleform.h \
+    AI/mapai.h \
+    AI/battleai.h
 
 FORMS += \
         mainmenu.ui \

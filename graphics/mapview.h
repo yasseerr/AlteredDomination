@@ -16,6 +16,7 @@
 #include <domain/player.h>
 class CityGraphics;
 class LinkGraphics;
+class MapAI;
 class MapView :public QGraphicsView
 {
     Q_OBJECT
@@ -30,7 +31,8 @@ class MapView :public QGraphicsView
     Q_PROPERTY(Player* activePlayer READ activePlayer WRITE setActivePlayer NOTIFY activePlayerChanged)
     Q_PROPERTY(QList<Player*> players READ players WRITE setPlayers NOTIFY playersChanged)
     Q_PROPERTY(QString activePStr READ activePStr WRITE setActivePStr NOTIFY activePStrChanged)
-
+    Q_PROPERTY(MapAI* mapAI READ mapAI WRITE setMapAI NOTIFY mapAIChanged)
+    Q_PROPERTY(int turnNumber READ turnNumber WRITE setTurnNumber NOTIFY turnNumberChanged)
     Map* m_map;
 
     QMap<int,CityGraphics*> m_citiesGraphics;
@@ -62,6 +64,10 @@ class MapView :public QGraphicsView
     QList<Player*> m_players;
 
     QString m_activePStr;
+
+    MapAI* m_mapAI;
+
+    int m_turnNumber;
 
 public:
     QQuickView *CityUI;
@@ -103,6 +109,10 @@ public:
 
     QString activePStr() const;
 
+    MapAI* mapAI() const;
+
+    int turnNumber() const;
+
 public slots:
 
     void setMap(Map* map);
@@ -136,6 +146,10 @@ public slots:
 
     void setActivePStr(QString activePStr);
 
+    void setMapAI(MapAI* mapAI);
+
+    void setTurnNumber(int turnNumber);
+
 signals:
 
     void zoomChange(double z);
@@ -152,6 +166,10 @@ signals:
 
     void activePStrChanged(QString activePStr);
     void attackerWon(City *C);
+    void mapAIChanged(MapAI* mapAI);
+    void turnNumberChanged(int turnNumber);
+
+    void battleEndedAISignal();
 };
 
 #endif // MAPVIEW_H
