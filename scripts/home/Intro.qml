@@ -57,7 +57,7 @@ Item {
         running: true
         PropertyAnimation{
             target: afkaarimage
-            duration: 2000
+            duration: 20
             property: "opacity"
             from : 0
             to : 1
@@ -65,32 +65,32 @@ Item {
         PauseAnimation{ duration: 1000}
         PropertyAnimation{
             target: afkaarimage
-            duration: 1000
+            duration: 10
             property: "opacity"
             from : 1
             to : 0
         }
-        PauseAnimation{ duration: 251}
+        PauseAnimation{ duration: 2}
         ParallelAnimation{
             PropertyAnimation{
                 target: adimage
-                duration: 1000
+                duration: 10
                 property: "opacity"
                 from : 0
                 to : 1
             }
             PropertyAnimation{
                 target: adimage
-                duration: 1000
+                duration: 10
                 property: "scale"
                 from : 0
                 to : 1
             }
         }
-        PauseAnimation{ duration: 2000}
+        PauseAnimation{ duration: 20}
         PropertyAnimation{
             target: adimage
-            duration: 1000
+            duration: 10
             property: "opacity"
             from : 1
             to : 0
@@ -99,6 +99,7 @@ Item {
              script: {
                 rectangle.visible =false
                 homeloader.visible = true
+
              }
         }
     }

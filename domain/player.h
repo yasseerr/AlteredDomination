@@ -4,7 +4,7 @@
 #include <QObject>
 
 enum PlayerType{
-  HUMAIN,AI
+  HUMAIN,AI,NET
 };
 class Country;
 class Player : public QObject

@@ -13,7 +13,6 @@
 UnitGraphics::UnitGraphics(QObject *parent) : QObject(parent)
 {
     setTransformOriginPoint(50,50);
-
 }
 
 void UnitGraphics::setUnit(Unit *unit)

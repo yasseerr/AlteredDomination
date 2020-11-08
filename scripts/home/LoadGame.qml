@@ -167,6 +167,8 @@ Item {
                     gameSaverectangle.gradient.stops[0].color = "#e6681717"
                 }
                 onClicked: {
+                    bgAmbiant.stop()
+                    battleAmbiant.stop()
                     homeClass.loadGame(root2.gameSave.country,root2.gameSave.turn,JSON.stringify(root2.gameSave))
                 }
             }

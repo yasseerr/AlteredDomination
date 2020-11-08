@@ -433,5 +433,9 @@
         <file>data/units/movements/rocketlauncher.svg</file>
         <file>data/units/movements/sniper.svg</file>
         <file>data/units/movements/tank.svg</file>
+        <file>scripts/multiplayer/MultiplayerUnitSelection.qml</file>
+        <file>data/icons/homebutton.svg</file>
+        <file>data/icons/homebuttonrotate.svg</file>
+        <file>scripts/home/HomeButton.qml</file>
     </qresource>
 </RCC>

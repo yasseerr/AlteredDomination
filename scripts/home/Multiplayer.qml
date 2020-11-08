@@ -99,6 +99,7 @@ Item {
             }
 
             ComboBox {
+                property var tmp: []
                 id: countrycomboBox
                 x: 25
                 y: 83
@@ -111,7 +112,13 @@ Item {
                 flat: false
                 displayText: "Country : "+currentText
                 textRole: ""
-                model: ["Algeria","Tunisia","Lybia"]
+//                model: ["Algeria","Tunisia","Lybia"]
+                Component.onCompleted: {
+                    for(var i =0 ;i<mapFile.length ;i++){
+                        countrycomboBox.tmp.push(mapFile[i].name)
+                    }
+                    model = tmp
+                }
             }
 
             ComboBox {
@@ -254,6 +261,10 @@ Item {
                 onExited: {
                     findrectangle.gradient.stops[0].color = "#405d27"
                 }
+                onClicked: {
+                    busyIndicator.running = true
+                    homeClass.entermatchmaking(createiptext.text,joiniptext.text,countrycomboBox.currentText)
+                }
             }
 
         }
@@ -320,22 +331,30 @@ Item {
             anchors.rightMargin: 10
             anchors.bottom: parent.bottom
             anchors.right: createItem.left
-            Rectangle {
-                id: createiprectangle
-                width: 120
-                color: "#00000000"
-                radius: 1
-                anchors.fill: parent
-                border.width: 2
-            }
+//            Rectangle {
+//                id: createiprectangle
+//                width: 120
+//                color: "#00000000"
+//                radius: 1
+//                anchors.fill: parent
+//                border.width: 2
+//            }
 
-            Text {
+            TextField {
                 id: createiptext
                 color: "#000000"
                 text: qsTr("192.168.1.1")
                 anchors.centerIn: parent
+                anchors.fill: parent
                 font.pixelSize: 13
                 font.bold: false
+                placeholderText: "ip"
+                background: Rectangle {
+                    color: "#00000000"
+                    radius: 1
+                    anchors.fill: parent
+                    border.width: 2
+                }
             }
             anchors.bottomMargin: 10
         }
@@ -411,9 +430,12 @@ Item {
                 border.width: 2
             }
         }
-
-
-
+        BusyIndicator {
+            id: busyIndicator
+            running: false
+            anchors.centerIn: parent
+        }
     }
+
 
 }

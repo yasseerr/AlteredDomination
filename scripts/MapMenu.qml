@@ -526,13 +526,15 @@ Item {
         id : ambiantMap
         autoPlay: true
         volume: 1
-        playlist: Playlist{
-            id: ambiantListMap
-            playbackMode: Playlist.Loop
-            PlaylistItem{ source: "qrc:/data/sounds/map1.mp3"}
-//            PlaylistItem{ source: "qrc:/data/sounds/map2.wav"}
-//            PlaylistItem{ source: "qrc:/data/sounds/map3.wav"}
-        }
+        loops: Audio.Infinite
+        source: "qrc:/data/sounds/map1.mp3"
+//        playlist: Playlist{
+//            id: ambiantListMap
+//            playbackMode: Playlist.Loop
+//            PlaylistItem{ source: "qrc:/data/sounds/map1.mp3"}
+////            PlaylistItem{ source: "qrc:/data/sounds/map2.wav"}
+////            PlaylistItem{ source: "qrc:/data/sounds/map3.wav"}
+//        }
     }
 
 }

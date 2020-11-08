@@ -8,17 +8,22 @@
 #include <AI/battleai.h>
 
 #include <QGraphicsProxyWidget>
+#include <QJsonDocument>
 #include <QPalette>
 #include <battleform.h>
 
-BMapScene::BMapScene(QObject *parent) : QGraphicsScene(parent),
+BMapScene::BMapScene(QTcpSocket *serv, QObject *parent) : QGraphicsScene(parent),
+    m_serverSocket(serv),
     m_bmap(nullptr),
     m_currentPlayer(nullptr),
     m_phase(BMapScene::BattlePhase::STARTING),
     m_selectedFrame(nullptr),
     m_turnTimer(new QDeadlineTimer()),
     m_turncount(0),
-    animItem(new Animations(this))
+    animItem(new Animations(this)),
+    m_isMultiplayer(false),
+    m_isOpponateReady(false),
+    m_isMeReady(false)
 {
     thereIsAnimationRunning =false;
     setBackgroundBrush(QPixmap(":/data/mapBG7.jpg"));
@@ -26,15 +31,11 @@ BMapScene::BMapScene(QObject *parent) : QGraphicsScene(parent),
     this->addItem(animItem);
     QSound *s= new QSound(":/data/sounds/introbattle.wav");
     s->play();
-
-
-
 }
 
 void BMapScene::removeUnitG(Unit *u)
 {
     m_units.remove(u);
-
 }
 
 BattleMap *BMapScene::bmap() const
@@ -116,6 +117,57 @@ void BMapScene::cheCkEndTurn()
             }
         }
     }
+    if(this->currentCityPlaying()->country()->player()->type() == PlayerType::HUMAIN)emit setViewEnable(true);
+    else emit setViewEnable(false);
+}
+
+void BMapScene::sendChangeInPos(BFrame *framDep, BFrame *framDes)
+{
+    QVariantMap messageVariant;
+    messageVariant.insert("code",6);
+    messageVariant.insert("x1",framDep->x());
+    messageVariant.insert("y1",framDep->y());
+    messageVariant.insert("x2",framDes->x());
+    messageVariant.insert("y2",framDes->y());
+    QJsonDocument doc = QJsonDocument::fromVariant(messageVariant);
+
+    QByteArray dataToSend;
+    QDataStream outData(&dataToSend,QIODevice::WriteOnly);
+    outData << (quint16) doc.toJson().size();
+    dataToSend.append(doc.toJson());
+    m_serverSocket->write(dataToSend);
+}
+
+void BMapScene::sendChangeStateMultiplayer(QString st)
+{
+    QVariantMap messageVariant;
+    messageVariant.insert("code",7);
+    messageVariant.insert("stat",st);
+    QJsonDocument doc = QJsonDocument::fromVariant(messageVariant);
+
+    QByteArray dataToSend;
+    QDataStream outData(&dataToSend,QIODevice::WriteOnly);
+    outData << (quint16) doc.toJson().size();
+    dataToSend.append(doc.toJson());
+    m_serverSocket->write(dataToSend);
+
+}
+
+void BMapScene::sendPromote(BFrame *fr,int unset)
+{
+    QVariantMap messageVariant;
+    messageVariant.insert("code",8);
+    messageVariant.insert("x",fr->x());
+    messageVariant.insert("y",fr->y());
+    messageVariant.insert("unset",unset);
+    QJsonDocument doc = QJsonDocument::fromVariant(messageVariant);
+
+    QByteArray dataToSend;
+    QDataStream outData(&dataToSend,QIODevice::WriteOnly);
+    outData << (quint16) doc.toJson().size();
+    dataToSend.append(doc.toJson());
+    m_serverSocket->write(dataToSend);
+
 }
 
 
@@ -127,6 +179,26 @@ City *BMapScene::currentCityPlaying() const
 BattleAI *BMapScene::battleAI() const
 {
     return m_battleAI;
+}
+
+bool BMapScene::isMultiplayer() const
+{
+    return m_isMultiplayer;
+}
+
+QTcpSocket *BMapScene::serverSocket() const
+{
+    return m_serverSocket;
+}
+
+bool BMapScene::isOpponateReady() const
+{
+    return m_isOpponateReady;
+}
+
+bool BMapScene::isMeReady() const
+{
+    return m_isMeReady;
 }
 
 void BMapScene::setBmap(BattleMap *bmap)
@@ -295,6 +367,42 @@ void BMapScene::setBattleAI(BattleAI *battleAI)
 
     m_battleAI = battleAI;
     emit battleAIChanged(m_battleAI);
+}
+
+void BMapScene::setIsMultiplayer(bool isMultiplayer)
+{
+    if (m_isMultiplayer == isMultiplayer)
+        return;
+
+    m_isMultiplayer = isMultiplayer;
+    emit isMultiplayerChanged(m_isMultiplayer);
+}
+
+void BMapScene::setServerSocket(QTcpSocket *serverSocket)
+{
+    if (m_serverSocket == serverSocket)
+        return;
+
+    m_serverSocket = serverSocket;
+    emit serverSocketChanged(m_serverSocket);
+}
+
+void BMapScene::setIsOpponateReady(bool isOpponateReady)
+{
+    if (m_isOpponateReady == isOpponateReady)
+        return;
+
+    m_isOpponateReady = isOpponateReady;
+    emit isOpponateReadyChanged(m_isOpponateReady);
+}
+
+void BMapScene::setIsMeReady(bool isMeReady)
+{
+    if (m_isMeReady == isMeReady)
+        return;
+
+    m_isMeReady = isMeReady;
+    emit isMeReadyChanged(m_isMeReady);
 }
 
 

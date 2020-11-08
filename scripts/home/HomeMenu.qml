@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtMultimedia 5.0
 import QtQuick.Particles 2.0
+import QtGraphicalEffects 1.0
 Item {
     id: root
     width: 640
@@ -16,22 +17,22 @@ Item {
         visible: true
         fillMode: Image.Tile
         anchors.fill: parent
-        source: "qrc:/data/mapBG8.jpg"
+        source: "qrc:/data/mapmtex.jpg"
     }
 
     Rectangle {
         id: bgrectangle
+        opacity: 1
         gradient: Gradient {
             GradientStop {
                 position: 0
-                color: "#042846"
+                color: "#e690cafd"
             }
 
             GradientStop {
                 position: 1
-                color: "#e6004e92"
+                color: "#e6010130"
             }
-
 
         }
         anchors.fill: parent
@@ -46,6 +47,17 @@ Item {
 
     }
 
+    Image {
+        id: afkaarimage
+        width: 300
+        height: 70
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 10
+        anchors.left: parent.left
+        anchors.leftMargin: 10
+        source: "qrc:/data/logo/afkaarlogo.svg"
+    }
+
     NumberAnimation {
         target: root
         property: "frame"
@@ -54,7 +66,7 @@ Item {
         to:17
         easing.type: Easing.Linear
         loops: NumberAnimation.Infinite
-        running: true
+        running: false
     }
 
     Item {
@@ -150,12 +162,12 @@ Item {
 
         ParallelAnimation{
             id: rotationAnimation
+            running: false
             NumberAnimation {
                 target: rotationItem
                 property: "rotation"
                 from :0
                 to : -360
-                running: true
                 loops: NumberAnimation.Infinite
                 duration: 6000
                 easing.type: Easing.Linear
@@ -178,11 +190,13 @@ Item {
                 duration: 6000
                 easing.type: Easing.Linear
             }
-            running: true
+
         }
 
 
     }
+
+
 
     Loader{
         id:menuLoader
@@ -194,6 +208,7 @@ Item {
         anchors.topMargin: 0
         anchors.right: parent.right
         anchors.rightMargin: 30
+
 
     }
 
@@ -212,23 +227,35 @@ Item {
     }
 
 
-//    Audio{
-//        id:au
-//        source: "qrc:/data/sounds/hover.wav"
-//    }
-//    Audio{
-//        id:battleAmbiant
-//        autoPlay: false
-//        source: "qrc:/data/sounds/battleambiant.MP3"
-//        loops: Audio.Infinite
-//        volume: 0.6
-//    }
-//    Audio{
-//        id:bgAmbiant
-//        autoPlay: false
-//        source: "qrc:/data/sounds/ambiant1.MP3"
-//        loops: Audio.Infinite
-//        volume: 0.8
-//    }
+    Audio{
+        id:au
+        source: "qrc:/data/sounds/hover.wav"
+    }
+    Audio{
+        id:battleAmbiant
+        autoPlay: false
+        source: "qrc:/data/sounds/battleambiant.MP3"
+        loops: Audio.Infinite
+        volume: 0.3
+    }
+    Audio{
+        id:bgAmbiant
+        autoPlay: false
+        source: "qrc:/data/sounds/ambiant1.MP3"
+        loops: Audio.Infinite
+        volume: 0.4
+    }
+    Timer{
+        id :audiooffset
+        running: true
+        interval: 8000
+        onTriggered: {
+            bgAmbiant.play()
+            battleAmbiant.play()
+        }
+
+    }
+
+
 
 }

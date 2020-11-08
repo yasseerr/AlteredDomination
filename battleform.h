@@ -20,13 +20,15 @@ class BattleForm : public QWidget
     Q_PROPERTY(BattleAI* battleAI READ battleAI WRITE setBattleAI NOTIFY battleAIChanged)
     Q_PROPERTY(QString resultText READ resultText WRITE setResultText NOTIFY resultTextChanged)
     Q_PROPERTY(bool closeYet READ closeYet WRITE setCloseYet NOTIFY closeYetChanged)
+    Q_PROPERTY(bool isMultiplayer READ isMultiplayer WRITE setIsMultiplayer NOTIFY isMultiplayerChanged)
+    Q_PROPERTY(QTcpSocket* serverSocket READ serverSocket WRITE setServerSocket NOTIFY serverSocketChanged)
 
 public:
 
     QQuickView  *battleResultUI;
     qreal previousScale;
 
-    explicit BattleForm(QWidget *parent = 0);
+    explicit BattleForm(QTcpSocket *serv = nullptr,QWidget *parent = 0);
     ~BattleForm();
 
     BMapScene* bScene() const;
@@ -37,6 +39,10 @@ public:
 
     bool closeYet() const;
 
+    bool isMultiplayer() const;
+
+    QTcpSocket* serverSocket() const;
+
 public slots:
     void setBScene(BMapScene* bScene);
     void publishMaptoQMl();
@@ -45,6 +51,7 @@ public slots:
     Q_INVOKABLE void surrender();
     Q_INVOKABLE void draw();
     Q_INVOKABLE void zoom(qreal z);
+    void setViewEnalble(bool b);
 
     void onBattleEndedA();
     void onBattleEndedD();
@@ -53,6 +60,10 @@ public slots:
     void setResultText(QString resultText);
 
     void setCloseYet(bool closeYet);
+
+    void setIsMultiplayer(bool isMultiplayer);
+
+    void setServerSocket(QTcpSocket* serverSocket);
 
 signals:
     void bSceneChanged(BMapScene* bScene);
@@ -65,12 +76,18 @@ signals:
 
     void closeYetChanged(bool closeYet);
 
+    void isMultiplayerChanged(bool isMultiplayer);
+
+    void serverSocketChanged(QTcpSocket* serverSocket);
+
 private:
     Ui::BattleForm *ui;
     BMapScene* m_bScene;
     BattleAI* m_battleAI;
     QString m_resultText;
     bool m_closeYet;
+    bool m_isMultiplayer;
+    QTcpSocket* m_serverSocket;
 };
 
 #endif // BATTLEFORM_H

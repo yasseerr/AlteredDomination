@@ -20,6 +20,7 @@ class BattleMap : public QObject
     Q_PROPERTY(QMap<QString,UnitType*> unitetypes READ unitetypes WRITE setUnitetypes NOTIFY unitetypesChanged)
     Q_PROPERTY(int baseSize READ baseSize WRITE setBaseSize NOTIFY baseSizeChanged)
 
+
     City* m_attacker;
 
     City* m_deffender;

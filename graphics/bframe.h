@@ -41,6 +41,7 @@ public:
     virtual void hoverLeaveEvent(QGraphicsSceneHoverEvent *event);
     virtual void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void mousePressEventAI();
+    void mouseRightPressEventAI();
 
     void highlightMovesAttacks();
     void unHighlight();

@@ -6,6 +6,7 @@
 City::City(QObject *parent) : QObject(parent),m_id(0),m_name(""),m_x(0),m_y(0),m_type(K100G),m_income(0),m_power(0),m_used(false)
 {
 
+
 }
 
 int City::id() const

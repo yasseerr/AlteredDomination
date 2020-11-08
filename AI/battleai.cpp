@@ -188,6 +188,7 @@ void BattleAI::runAnimation()
     if(animationList.size()==0){
         scene()->setPhase(BMapScene::PROMOTING);
         this->selectGenerals();
+        m_battleForm->bScene()->setCurrentCityPlaying(enemyCity);
         return;
     }
     animationCount++;

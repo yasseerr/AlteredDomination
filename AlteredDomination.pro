@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core multimedia gui svg quick quickwidgets
+QT       += core multimedia network gui svg quick quickwidgets
 
 
 CONFIG += resources_big
@@ -49,7 +49,9 @@ SOURCES += \
     AI/mapai.cpp \
     AI/battleai.cpp \
     graphics/animations.cpp \
-    graphics/homemenu.cpp
+    graphics/homemenu.cpp \
+    multiplayer/multiplayergame.cpp \
+    multiplayer/serverengin.cpp
 
 HEADERS += \
         mainmenu.h \
@@ -73,7 +75,9 @@ HEADERS += \
     AI/mapai.h \
     AI/battleai.h \
     graphics/animations.h \
-    graphics/homemenu.h
+    graphics/homemenu.h \
+    multiplayer/multiplayergame.h \
+    multiplayer/serverengin.h
 
 FORMS += \
         mainmenu.ui \

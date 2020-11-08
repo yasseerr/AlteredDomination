@@ -51,6 +51,7 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
                 if(this->unitG() == nullptr){
                      return;
                 }else{
+                    if(this->unitG()->unit()->city() != bmapS()->currentCityPlaying()) return;
                     m_bmapS->setSelectedFrame(this);
                     this->setIsSeletedFrame(true);
                 }
@@ -58,7 +59,8 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
                 if(this->unitG() == nullptr){
                     if(this->bmapS()->selectedFrame()->unitG()->unit()->city() != bmapS()->bmap()->attacker())return;
 //                     this->setUnitG(bmapS()->selectedFrame()->unitG());
-                     this->bmapS()->selectedFrame()->unitG()->moveAnimation(this);
+                    if(bmapS()->isMultiplayer()) bmapS()->sendChangeInPos(bmapS()->selectedFrame(),this);
+                    this->bmapS()->selectedFrame()->unitG()->moveAnimation(this);
                     this->bmapS()->selectedFrame()->setIsSeletedFrame(false);
                     this->bmapS()->selectedFrame()->update();
                     this->bmapS()->setSelectedFrame(nullptr);
@@ -67,6 +69,7 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
 //                    UnitGraphics *tmp = m_bmapS->selectedFrame()->unitG();
 //                    bmapS()->selectedFrame()->setUnitG(this->unitG());
 //                    this->setUnitG(tmp);
+                    if(bmapS()->isMultiplayer()) bmapS()->sendChangeInPos(bmapS()->selectedFrame(),this);
                     this->bmapS()->selectedFrame()->unitG()->moveAnimation(this);
                     this->unitG()->moveAnimation(bmapS()->selectedFrame());
                     this->bmapS()->selectedFrame()->setIsSeletedFrame(false);
@@ -76,11 +79,12 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
             }
         }
         ///*******************deffender************************
-        else if (this->x()> this->bmapS()->bmap()->size().x()-4) {
+        else if(this->x()> this->bmapS()->bmap()->size().x()-4){
             if(this->bmapS()->selectedFrame() == nullptr){
                 if(this->unitG() == nullptr){
                      return;
                 }else{
+                    if(this->unitG()->unit()->city() != bmapS()->currentCityPlaying()) return;
                     m_bmapS->setSelectedFrame(this);
                     this->setIsSeletedFrame(true);
                 }
@@ -88,6 +92,7 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
                 if(this->unitG() == nullptr){
                     if(this->bmapS()->selectedFrame()->unitG()->unit()->city() != bmapS()->bmap()->deffender())return;
 //                     this->setUnitG(bmapS()->selectedFrame()->unitG());
+                    if(bmapS()->isMultiplayer()) bmapS()->sendChangeInPos(bmapS()->selectedFrame(),this);
                     this->bmapS()->selectedFrame()->unitG()->moveAnimation(this);
                     this->bmapS()->selectedFrame()->setIsSeletedFrame(false);
                     this->bmapS()->selectedFrame()->update();
@@ -95,7 +100,8 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
                 }else{
                     if(this->bmapS()->selectedFrame()->unitG()->unit()->city() != bmapS()->bmap()->deffender())return;
 //                     this->setUnitG(bmapS()->selectedFrame()->unitG());
-                     this->bmapS()->selectedFrame()->unitG()->moveAnimation(this);
+                    if(bmapS()->isMultiplayer()) bmapS()->sendChangeInPos(bmapS()->selectedFrame(),this);
+                    this->bmapS()->selectedFrame()->unitG()->moveAnimation(this);
                     this->unitG()->moveAnimation(bmapS()->selectedFrame());
                     this->bmapS()->selectedFrame()->setIsSeletedFrame(false);
                     this->bmapS()->selectedFrame()->update();
@@ -111,8 +117,10 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
         if(unitG() == nullptr)return;
         if(unitG()->unit()->city() == bmapS()->bmap()->attacker()){
             /// attacker
+            if(bmapS()->currentCityPlaying() != bmapS()->bmap()->attacker())return;
             if(event->button() == Qt::LeftButton){
                 if(bmapS()->generalsToChooseA() == 0) return;
+                if(bmapS()->isMultiplayer())bmapS()->sendPromote(this,1);
                 unitG()->setIsGeneral(true);
                 unitG()->unit()->setType("soldier");
                 bmapS()->setGeneralsToChooseA(bmapS()->generalsToChooseA()-1);
@@ -120,14 +128,17 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
                 return;
             }else if (event->button() == Qt::RightButton) {
                 if(!unitG()->isGeneral())return;
+                if(bmapS()->isMultiplayer())bmapS()->sendPromote(this,-1);
                 unitG()->setIsGeneral(false);
                 bmapS()->setGeneralsToChooseA(bmapS()->generalsToChooseA()+1);
             }
 
         }else {
             /// deffender
+            if(bmapS()->currentCityPlaying() != bmapS()->bmap()->deffender())return;
             if(event->button() == Qt::LeftButton){
                 if(bmapS()->generalsToChooseD() == 0) return;
+                if(bmapS()->isMultiplayer())bmapS()->sendPromote(this,1);
                 unitG()->setIsGeneral(true);
                 unitG()->unit()->setType("soldier");
                 bmapS()->setGeneralsToChooseD(bmapS()->generalsToChooseD()-1);
@@ -135,6 +146,7 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
                 return;
             }else if (event->button() == Qt::RightButton) {
                 if(!unitG()->isGeneral())return;
+                if(bmapS()->isMultiplayer())bmapS()->sendPromote(this,-1);
                 unitG()->setIsGeneral(false);
                 bmapS()->setGeneralsToChooseD(bmapS()->generalsToChooseD()+1);
             }
@@ -158,6 +170,7 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
             if(toMoveTo()){
                 bmapS()->selectedFrame()->unHighlight();
                 bmapS()->selectedFrame()->unitG()->unit()->setUsed(true);
+                if(bmapS()->isMultiplayer()) bmapS()->sendChangeInPos(bmapS()->selectedFrame(),this);
                 bmapS()->selectedFrame()->unitG()->moveAnimation(this);
                 bmapS()->cheCkEndTurn();
 //                this->setUnitG(bmapS()->selectedFrame()->unitG());
@@ -185,6 +198,7 @@ void BFrame::mousePressEvent(QGraphicsSceneMouseEvent *event)
                 u->deleteLater();
                 ug->deleteLater();
                 bmapS()->animItem->runAnimation(this->x(),this->y());
+                if(bmapS()->isMultiplayer()) bmapS()->sendChangeInPos(bmapS()->selectedFrame(),this);
                 bmapS()->selectedFrame()->unitG()->moveAnimation(this);
                 checkWineLose();
                 bmapS()->cheCkEndTurn();
@@ -202,6 +216,14 @@ void BFrame::mousePressEventAI()
     QGraphicsSceneMouseEvent *event = new QGraphicsSceneMouseEvent();
     event->setPos(QPointF(10,10));
     event->setButton(Qt::LeftButton);
+    this->mousePressEvent(event);
+}
+
+void BFrame::mouseRightPressEventAI()
+{
+    QGraphicsSceneMouseEvent *event = new QGraphicsSceneMouseEvent();
+    event->setPos(QPointF(10,10));
+    event->setButton(Qt::RightButton);
     this->mousePressEvent(event);
 }
 

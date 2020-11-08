@@ -13,7 +13,7 @@
 #include <domain/unit.h>
 
 #include<graphics/animations.h>
-
+#include<QTcpSocket>
 
 class BFrame;
 class UnitGraphics;
@@ -42,6 +42,10 @@ class BMapScene :  public QGraphicsScene
     Q_PROPERTY(int  generalsToChooseA READ generalsToChooseA WRITE setGeneralsToChooseA NOTIFY generalsToChooseAChanged)
     Q_PROPERTY(int generalsToChooseD READ generalsToChooseD WRITE setGeneralsToChooseD NOTIFY generalsToChooseDChanged)
     Q_PROPERTY(BattleAI* battleAI READ battleAI WRITE setBattleAI NOTIFY battleAIChanged)
+    Q_PROPERTY(bool isMultiplayer READ isMultiplayer WRITE setIsMultiplayer NOTIFY isMultiplayerChanged)
+    Q_PROPERTY(QTcpSocket* serverSocket READ serverSocket WRITE setServerSocket NOTIFY serverSocketChanged)
+    Q_PROPERTY(bool isOpponateReady READ isOpponateReady WRITE setIsOpponateReady NOTIFY isOpponateReadyChanged)
+    Q_PROPERTY(bool isMeReady READ isMeReady WRITE setIsMeReady NOTIFY isMeReadyChanged)
 
 
     BattleMap* m_bmap;
@@ -68,6 +72,14 @@ class BMapScene :  public QGraphicsScene
 
 
 
+    bool m_isMultiplayer;
+
+    QTcpSocket* m_serverSocket;
+
+    bool m_isOpponateReady;
+
+    bool m_isMeReady;
+
 public:
 
     enum BattlePhase{
@@ -81,7 +93,7 @@ public:
 
     Animations *animItem;
 
-    explicit BMapScene(QObject *parent = nullptr);
+    explicit BMapScene(QTcpSocket *serv = nullptr,QObject *parent = nullptr);
 
 
     void removeUnitG(Unit *u);
@@ -114,9 +126,22 @@ public:
     void zoomOUT();
 
 
+    void sendChangeInPos(BFrame *framDep,BFrame *framDes);
+    void sendChangeStateMultiplayer(QString st);
+    void sendPromote(BFrame *fr,int unset);
+
+
     City* currentCityPlaying() const;
 
     BattleAI* battleAI() const;
+
+    bool isMultiplayer() const;
+
+    QTcpSocket* serverSocket() const;
+
+    bool isOpponateReady() const;
+
+    bool isMeReady() const;
 
 signals:
 
@@ -144,8 +169,17 @@ signals:
 
     void battleEndedA();
     void battleEndedD();
+    void setViewEnable(bool isE);
 
     void battleAIChanged(BattleAI* battleAI);
+
+    void isMultiplayerChanged(bool isMultiplayer);
+
+    void serverSocketChanged(QTcpSocket* serverSocket);
+
+    void isOpponateReadyChanged(bool isOpponateReady);
+
+    void isMeReadyChanged(bool isMeReady);
 
 public slots:
     void setBmap(BattleMap* bmap);
@@ -160,6 +194,10 @@ public slots:
     void setGeneralsToChooseD(int generalsToChooseD);
     void setCurrentCityPlaying(City* currentCityPlaying);
     void setBattleAI(BattleAI* battleAI);
+    void setIsMultiplayer(bool isMultiplayer);
+    void setServerSocket(QTcpSocket* serverSocket);
+    void setIsOpponateReady(bool isOpponateReady);
+    void setIsMeReady(bool isMeReady);
 };
 
 #endif // BMAPSCENE_H

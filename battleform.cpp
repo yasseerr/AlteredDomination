@@ -7,25 +7,27 @@
 #include <domain/city.h>
 #include <domain/country.h>
 #include <domain/unit.h>
-BattleForm::BattleForm(QWidget *parent) :
+BattleForm::BattleForm(QTcpSocket *serv, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::BattleForm),
-    m_battleAI(new BattleAI(this))
-
+    m_battleAI(new BattleAI(this)),
+    m_serverSocket(serv)
 {
     previousScale = 1;
     m_closeYet = false;
+    m_isMultiplayer = false;
 //    this->setWindowFlags(Qt::ToolTip);
     ui->setupUi(this);
     qmlRegisterType<BMapScene>();
     qmlRegisterType<BattleMap>();
     qmlRegisterType<BattleAI>();
-    m_bScene = new BMapScene(this);
+    m_bScene = new BMapScene(m_serverSocket,this);
     ui->graphicsView->setScene(m_bScene);
     ui->battleMenu->rootContext()->setContextProperty("battleForm",this);
 
     connect(m_bScene,&BMapScene::battleEndedA,this,&BattleForm::onBattleEndedA);
     connect(m_bScene,&BMapScene::battleEndedD,this,&BattleForm::onBattleEndedD);
+    connect(m_bScene,&BMapScene::setViewEnable,this,&BattleForm::setViewEnalble);
 
 
     this->setWindowTitle("Let the battle begin ...");
@@ -71,6 +73,16 @@ bool BattleForm::closeYet() const
     return m_closeYet;
 }
 
+bool BattleForm::isMultiplayer() const
+{
+    return m_isMultiplayer;
+}
+
+QTcpSocket *BattleForm::serverSocket() const
+{
+    return m_serverSocket;
+}
+
 void BattleForm::setBScene(BMapScene *bScene)
 {
     if (m_bScene == bScene)
@@ -97,12 +109,32 @@ void BattleForm::publishMaptoQMl()
 
 void BattleForm::play()
 {
-    bScene()->setPhase(BMapScene::PLAYING);
-    bScene()->setGeneralsToChooseA(bScene()->bmap()->attackerMoves());
-    bScene()->setGeneralsToChooseD(bScene()->bmap()->deffenderMoves());
-    bScene()->setCurrentCityPlaying(bScene()->bmap()->attacker());
-    this->setWindowTitle(m_bScene->bmap()->attacker()->country()->name()+" VS "+m_bScene->bmap()->deffender()->country()->name());
-    if(bScene()->bmap()->attacker()->country()->player()->type() == PlayerType::AI)this->bScene()->battleAI()->playTurn();
+    if(isMultiplayer()){
+        if(bScene()->isOpponateReady()){
+            bScene()->sendChangeStateMultiplayer("play");
+            bScene()->setPhase(BMapScene::PLAYING);
+            bScene()->setGeneralsToChooseA(bScene()->bmap()->attackerMoves());
+            bScene()->setGeneralsToChooseD(bScene()->bmap()->deffenderMoves());
+            bScene()->setCurrentCityPlaying(bScene()->bmap()->attacker());
+            this->setWindowTitle(m_bScene->bmap()->attacker()->country()->name()+
+                                 " VS "+m_bScene->bmap()->deffender()->country()->name());
+            bScene()->setIsMeReady(false);
+            bScene()->setIsOpponateReady(false);
+        }
+        else{
+            setViewEnalble(false);
+            bScene()->setIsMeReady(true);
+            bScene()->sendChangeStateMultiplayer("play");
+        }
+
+    }else{
+        bScene()->setPhase(BMapScene::PLAYING);
+        bScene()->setGeneralsToChooseA(bScene()->bmap()->attackerMoves());
+        bScene()->setGeneralsToChooseD(bScene()->bmap()->deffenderMoves());
+        bScene()->setCurrentCityPlaying(bScene()->bmap()->attacker());
+        this->setWindowTitle(m_bScene->bmap()->attacker()->country()->name()+" VS "+m_bScene->bmap()->deffender()->country()->name());
+        if(bScene()->bmap()->attacker()->country()->player()->type() == PlayerType::AI)this->bScene()->battleAI()->playTurn();
+    }
 }
 
 void BattleForm::surrender()
@@ -127,6 +159,11 @@ void BattleForm::zoom(qreal z)
 {
     ui->graphicsView->scale((1/previousScale)*z,(1/previousScale)*z);
     previousScale = z;
+}
+
+void BattleForm::setViewEnalble(bool b)
+{
+    ui->graphicsView->setEnabled(b);
 }
 
 void BattleForm::onBattleEndedA()
@@ -191,8 +228,41 @@ void BattleForm::setCloseYet(bool closeYet)
     emit closeYetChanged(m_closeYet);
 }
 
+void BattleForm::setIsMultiplayer(bool isMultiplayer)
+{
+    if (m_isMultiplayer == isMultiplayer)
+        return;
+
+    m_isMultiplayer = isMultiplayer;
+    this->bScene()->setIsMultiplayer(isMultiplayer);
+    emit isMultiplayerChanged(m_isMultiplayer);
+}
+
+void BattleForm::setServerSocket(QTcpSocket *serverSocket)
+{
+    if (m_serverSocket == serverSocket)
+        return;
+
+    m_serverSocket = serverSocket;
+    emit serverSocketChanged(m_serverSocket);
+}
+
 void BattleForm::setPromote()
 {
-    m_battleAI->animationList.clear();
-    m_battleAI->runAnimation();
+    if(isMultiplayer()){
+        bScene()->setIsMeReady(true);
+        bScene()->sendChangeStateMultiplayer("promote");
+        if(!bScene()->isOpponateReady())ui->graphicsView->setEnabled(false);
+        else{
+            bScene()->setPhase(BMapScene::PROMOTING);
+            ui->graphicsView->setEnabled(true);
+            bScene()->setIsMeReady(false);
+            bScene()->setIsOpponateReady(false);
+        }
+
+    }else{
+        m_battleAI->animationList.clear();
+        m_battleAI->runAnimation();
+    }
+
 }

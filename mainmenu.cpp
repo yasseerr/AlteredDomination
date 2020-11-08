@@ -12,6 +12,7 @@ MainMenu::MainMenu(QString c, int m,int t,QString gameSave, QWidget *parent) :
 {
     ui->setupUi(this);
     m_mapView = new MapView(this);
+    m_mapView->setRenderHints(QPainter::Antialiasing|QPainter::SmoothPixmapTransform|QPainter::HighQualityAntialiasing);
     connect(m_mapView,&MapView::attackerWon,this,&MainMenu::onAttackerWon);
 
     ///---- temporary setting the active player country-----------

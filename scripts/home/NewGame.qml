@@ -157,6 +157,8 @@ Item {
                         startbgrectangle.gradient.stops[0].color = "#ccf30c0c"
                     }
                     onClicked: {
+                        bgAmbiant.stop()
+                        battleAmbiant.stop()
                         homeClass.startGame(countrycomboBox.currentText,modecomboBox.currentIndex)
                     }
                 }

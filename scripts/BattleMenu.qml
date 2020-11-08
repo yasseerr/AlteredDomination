@@ -168,7 +168,6 @@ Item {
             border.width: 2
             anchors.fill: parent
         }
-
         MouseArea {
             id: readymouseArea
             enabled: ((bscene.generalsToChooseA == 0)&&(bscene.generalsToChooseD == 0))?true:false
@@ -239,9 +238,9 @@ Item {
 
         MouseArea {
             id: promotemouseArea
-            enabled: false
+            enabled: bform.isMultiplayer
             anchors.fill: parent
-            hoverEnabled: false
+            hoverEnabled: bform.isMultiplayer
             onEntered: promoterectangle.color = Qt.lighter("#1131a2")
             onExited: promoterectangle.color = "#1131a2"
             onClicked: {
@@ -285,6 +284,7 @@ Item {
         width: 90
         height: 50
         scale: 1
+        visible: !bform.isMultiplayer
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         anchors.rightMargin: 10
@@ -318,7 +318,7 @@ Item {
                 promotemouseArea.enabled =  true
                 promotemouseArea.hoverEnabled = true
 
-                battleForm.battleAI.placeUnits()
+                if(!battleForm.isMultiplayer) battleForm.battleAI.placeUnits()
             }
         }
 
